@@ -182,3 +182,17 @@ section { margin-bottom: 60px; }
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
     .hero-title { font-size: 2.5rem; }
 }
+/* Add spacing between top row and bottom row of cards */
+.section-grid {
+  margin-top: 3rem;   /* Add space above each section grid */
+}
+
+/* Add spacing between stacked card sections */
+.feature-row + .feature-row {
+  margin-top: 4rem;   /* Add more space between rows */
+}
+
+/* Ensure each card has space below it */
+.feature-card {
+  margin-bottom: 2rem;
+}
