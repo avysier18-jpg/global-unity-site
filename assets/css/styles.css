@@ -50,7 +50,8 @@ ul { list-style: none; }
 .text-center { text-align: center; }
 
 /* CARD POLISH: Flex column ensures equal height tiles & bottom-aligned links */
-.card {
+/* Added .tile selector to ensure new HTML elements inherit card styling */
+.card, .tile {
     background: var(--card-bg);
     padding: 25px;
     border-radius: 8px;
@@ -61,7 +62,7 @@ ul { list-style: none; }
 }
 
 /* Content fills space so link pushes to bottom */
-.card h3, .card p {
+.card h3, .card p, .tile h3, .tile p {
     margin-bottom: 15px;
 }
 
@@ -204,6 +205,29 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
 /* Remove border from last room */
 .library-room:last-of-type {
     border-bottom: none;
+}
+
+/* V2 Header styles */
+.room-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 1rem;
+}
+
+.room-header h2 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--text-muted);
+    padding-bottom: 15px;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.room-intro {
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
 }
 
 .room-title { 
