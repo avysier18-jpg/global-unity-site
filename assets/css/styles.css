@@ -34,7 +34,14 @@ ul { list-style: none; }
 }
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+/* UPDATED: 3-column grid with explicit columns for responsiveness */
+.grid-3 { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
 .text-center { text-align: center; }
 .card {
     background: var(--card-bg);
@@ -193,7 +200,17 @@ section { margin-bottom: 60px; }
 .footer-col a:hover { color: var(--accent-color); }
 .footer-bottom { text-align: center; margin-top: 40px; border-top: 1px solid #233554; padding-top: 20px; font-size: 0.8rem; color: var(--text-muted); }
 
-/* Mobile Responsive */
+
+/* --- Responsive Logic --- */
+
+/* 1. Tablet Layout (Medium screens) */
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 2. Existing Mobile Nav Breakpoint */
 @media (max-width: 768px) {
     .mobile-nav-toggle { display: block; }
     .main-nav {
@@ -208,9 +225,21 @@ section { margin-bottom: 60px; }
     }
     .main-nav.active { display: block; }
     .main-nav ul { flex-direction: column; gap: 15px; }
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    
+    /* We handled grid-3 above and below, so we only force grid-2 here */
+    .grid-2 { grid-template-columns: 1fr; }
+    
     .hero-title { font-size: 2.5rem; }
 }
+
+/* 3. Phone Layout (Small screens) */
+@media (max-width: 600px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* Add spacing between top row and bottom row of cards */
 .section-grid {
   margin-top: 3rem;   /* Add space above each section grid */
