@@ -203,3 +203,17 @@ section { margin-bottom: 60px; }
 .feature-card {
   margin-bottom: 2rem;
 }
+/* Add spacing between top row and bottom row of cards */
+.section-grid {
+  margin-top: 3rem;   /* Add space above each section grid */
+}
+
+/* Add spacing between stacked card sections */
+.feature-row + .feature-row {
+  margin-top: 4rem;   /* Add more space between rows */
+}
+
+/* Ensure each card has space below it */
+.feature-card {
+  margin-bottom: 2rem;
+}
