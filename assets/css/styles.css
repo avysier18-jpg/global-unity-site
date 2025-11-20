@@ -122,9 +122,6 @@ section { margin-bottom: 60px; }
     text-align: center;
     margin-bottom: 20px;
     padding: 4rem 1.5rem;
-
-
-  
 }
 
 .page-header p { text-align: center; max-width: 700px; margin: 0 auto 40px auto; color: var(--text-muted); }
@@ -143,7 +140,17 @@ section { margin-bottom: 60px; }
 .doorway-card h3 { color: var(--highlight-color); margin-bottom: 10px; }
 
 /* Truth Library Rooms */
-.library-room { margin-bottom: 80px; }
+.library-room { 
+    padding: 4rem 0;        /* Consistent vertical spacing */
+    margin-bottom: 3rem;    /* Space between rooms */
+    border-bottom: 1px solid #233554; /* Subtle separation matching header color */
+}
+
+/* Remove border from last room */
+.library-room:last-of-type {
+    border-bottom: none;
+}
+
 .room-title { border-bottom: 1px solid var(--text-muted); padding-bottom: 10px; margin-bottom: 30px; color: var(--accent-color); }
 .tile h3 { color: var(--text-main); margin-bottom: 10px; }
 .tile p { color: var(--text-muted); font-size: 0.9rem; }
@@ -255,4 +262,3 @@ section {
   position: static;        /* no absolute/relative overlap tricks */
   margin: 0;               /* reset any negative margins */
 }
-
