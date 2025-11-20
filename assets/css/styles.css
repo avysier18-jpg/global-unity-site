@@ -23,9 +23,9 @@ body {
     color: var(--text-main);
     font-family: var(--font-main);
     line-height: 1.6;
-    padding-top: 80px; /* Prevent header overlap if header is fixed */
+    /* Initial offset for fixed header, but layout spacing below handles the rest */
+    padding-top: 80px; 
 }
-
 
 a { color: var(--highlight-color); text-decoration: none; transition: 0.3s; }
 a:hover { color: var(--accent-color); }
@@ -40,7 +40,7 @@ ul { list-style: none; }
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
-/* UPDATED: 3-column grid with explicit columns for responsiveness */
+/* 3-column grid with explicit columns for responsiveness */
 .grid-3 { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
@@ -48,20 +48,32 @@ ul { list-style: none; }
 }
 
 .text-center { text-align: center; }
+
+/* CARD POLISH: Flex column ensures equal height tiles & bottom-aligned links */
 .card {
     background: var(--card-bg);
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-} 
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Forces equal height in grid cells */
+}
+
+/* Content fills space so link pushes to bottom */
+.card h3, .card p {
+    margin-bottom: 15px;
+}
+
 /* Links inside evidence tiles */
 .card.tile .tile-link {
   display: inline-block;
-  margin-top: 0.4rem;
+  margin-top: auto; /* Pushes this link to the bottom of the card */
   font-size: 0.85rem;
   font-weight: 600;
   color: #6ca9ff;
   text-decoration: underline;
+  word-break: break-word; /* Prevents long paths from breaking layout */
 }
 
 .card.tile .tile-link:hover {
@@ -88,11 +100,16 @@ ul { list-style: none; }
     z-index: 1000;
     padding: 15px 0;
     border-bottom: 1px solid #233554;
+    /* Ensure exact height matches body padding-top to prevent layout jumps */
+    height: 80px; 
+    display: flex;
+    align-items: center;
 }
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .logo { font-size: 1.5rem; font-weight: 800; color: var(--accent-color); letter-spacing: 1px; }
 .main-nav ul { display: flex; gap: 20px; }
@@ -127,32 +144,47 @@ ul { list-style: none; }
 }
 .counter-placeholder { font-size: 3rem; font-weight: bold; color: white; }
 
-/* Sections */
-section { margin-bottom: 60px; }
-.section-mission h2, .section-steps h2, .section-why h2, .page-header h1 {
+/* Sections - General Spacing */
+section { margin-bottom: 0; /* We control spacing via padding in polished layout */ }
+
+.section-mission h2, .section-steps h2, .section-why h2 {
     color: var(--text-main);
     text-align: center;
     margin-bottom: 20px;
     padding: 4rem 1.5rem;
 }
 
-.page-header p { text-align: center; max-width: 700px; margin: 0 auto 40px auto; color: var(--text-muted); }
+/* Page Header Polish */
+.page-header {
+    text-align: center;
+    padding: 3rem 0 1rem 0; /* More breathing room top, less bottom to connect to nav */
+    margin-bottom: 2rem;
+}
+.page-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-main); }
+.page-header p { 
+    text-align: center; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    color: var(--text-muted); 
+}
 
-/* New Room Navigation */
+/* Room Navigation Bar */
 .room-nav {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
-  margin: 2rem 0 3rem 0;
+  gap: 1.5rem;
+  margin: 2rem auto 1rem auto; /* Center aligned margin */
   flex-wrap: wrap;
+  padding-bottom: 1rem;
 }
 
 .room-nav a {
   color: var(--highlight-color);
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 2px solid var(--highlight-color);
-  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 0.2rem; /* Better touch target */
+  transition: all 0.2s ease;
 }
 
 .room-nav a:hover {
@@ -160,24 +192,13 @@ section { margin-bottom: 60px; }
   border-bottom-color: var(--accent-color);
 }
 
-/* Steps Grid */
-.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-.step-card { background: var(--card-bg); padding: 20px; text-align: center; border-radius: 8px; }
-.step-num { display: block; font-size: 2rem; color: var(--accent-color); font-weight: bold; margin-bottom: 10px; }
-
-/* Doorways */
-.doorway-card {
-    transition: transform 0.2s;
-    text-align: center;
-}
-.doorway-card:hover { transform: translateY(-5px); }
-.doorway-card h3 { color: var(--highlight-color); margin-bottom: 10px; }
-
-/* Truth Library Rooms */
+/* Truth Library Rooms Polish */
 .library-room { 
     padding: 4rem 0;        /* Consistent vertical spacing */
-    margin-bottom: 3rem;    /* Space between rooms */
-    border-bottom: 1px solid #233554; /* Subtle separation matching header color */
+    margin-bottom: 0;       
+    border-bottom: 1px solid #233554;
+    /* FIXED: Scroll margin ensures sticky header doesn't cover section title on click */
+    scroll-margin-top: 100px; 
 }
 
 /* Remove border from last room */
@@ -185,7 +206,14 @@ section { margin-bottom: 60px; }
     border-bottom: none;
 }
 
-.room-title { border-bottom: 1px solid var(--text-muted); padding-bottom: 10px; margin-bottom: 30px; color: var(--accent-color); }
+.room-title { 
+    border-bottom: 1px solid var(--text-muted); 
+    padding-bottom: 10px; 
+    margin-bottom: 30px; 
+    color: var(--accent-color); 
+    margin-top: 0;
+}
+
 .tile h3 { color: var(--text-main); margin-bottom: 10px; }
 .tile p { color: var(--text-muted); font-size: 0.9rem; }
 
@@ -237,26 +265,28 @@ section { margin-bottom: 60px; }
     }
 }
 
-/* 2. Existing Mobile Nav Breakpoint */
+/* 2. Mobile Nav Breakpoint */
 @media (max-width: 768px) {
     .mobile-nav-toggle { display: block; }
     .main-nav {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 80px; /* Matches header height */
         left: 0;
         width: 100%;
         background: var(--card-bg);
         padding: 20px;
         box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+        border-bottom: 1px solid #233554;
     }
     .main-nav.active { display: block; }
     .main-nav ul { flex-direction: column; gap: 15px; }
     
-    /* We handled grid-3 above and below, so we only force grid-2 here */
     .grid-2 { grid-template-columns: 1fr; }
-    
     .hero-title { font-size: 2.5rem; }
+    
+    /* Adjust room nav for small screens */
+    .room-nav { gap: 1rem; }
 }
 
 /* 3. Phone Layout (Small screens) */
@@ -264,57 +294,25 @@ section { margin-bottom: 60px; }
     .grid-3 {
         grid-template-columns: 1fr;
     }
+    .library-room {
+        padding: 3rem 0; /* Slightly smaller padding on mobile */
+    }
 }
 
+/* Misc Utility Spacing */
+.section-steps { margin-bottom: 3rem; }
+.section-doorways { margin-top: 3rem; }
 
-/* Add spacing between top row and bottom row of cards */
-.section-grid {
-  margin-top: 3rem;   /* Add space above each section grid */
-}
-
-/* Add spacing between stacked card sections */
-.feature-row + .feature-row {
-  margin-top: 4rem;   /* Add more space between rows */
-}
-
-/* Ensure each card has space below it */
-.feature-card {
-  margin-bottom: 2rem;
-}
-/* --- Layout fixes: steps section & doorway cards --- */
-
-/* Give each big section some breathing room */
-section {
-  padding: 4rem 1.5rem;
-}
-
-/* Extra spacing after the "How to Use This Site" section */
-.section-steps {
-  margin-bottom: 3rem;
-}
-
-/* Extra spacing before the doorway cards section */
-.section-doorways {
-  margin-top: 3rem;
-}
-
-/* Make the top row (01–04) a proper grid with gaps */
-.section-steps .steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;               /* space between the step cards */
-}
-
-/* Make the doorway cards row a grid with gaps too */
+/* Steps Grid & Doorways Grid */
+.section-steps .steps-grid,
 .section-doorways .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;               /* space between the bottom cards */
+  gap: 24px;
 }
 
-/* Make sure cards themselves aren’t using weird positioning */
 .step-card,
 .card.doorway-card {
-  position: static;        /* no absolute/relative overlap tricks */
-  margin: 0;               /* reset any negative margins */
+  position: static; 
+  margin: 0;
 }
