@@ -203,17 +203,41 @@ section { margin-bottom: 60px; }
 .feature-card {
   margin-bottom: 2rem;
 }
-/* Add spacing between top row and bottom row of cards */
-.section-grid {
-  margin-top: 3rem;   /* Add space above each section grid */
+/* --- Layout fixes: steps section & doorway cards --- */
+
+/* Give each big section some breathing room */
+section {
+  padding: 4rem 1.5rem;
 }
 
-/* Add spacing between stacked card sections */
-.feature-row + .feature-row {
-  margin-top: 4rem;   /* Add more space between rows */
+/* Extra spacing after the "How to Use This Site" section */
+.section-steps {
+  margin-bottom: 3rem;
 }
 
-/* Ensure each card has space below it */
-.feature-card {
-  margin-bottom: 2rem;
+/* Extra spacing before the doorway cards section */
+.section-doorways {
+  margin-top: 3rem;
 }
+
+/* Make the top row (01–04) a proper grid with gaps */
+.section-steps .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;               /* space between the step cards */
+}
+
+/* Make the doorway cards row a grid with gaps too */
+.section-doorways .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;               /* space between the bottom cards */
+}
+
+/* Make sure cards themselves aren’t using weird positioning */
+.step-card,
+.card.doorway-card {
+  position: static;        /* no absolute/relative overlap tricks */
+  margin: 0;               /* reset any negative margins */
+}
+
