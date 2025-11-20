@@ -256,11 +256,3 @@ section {
   margin: 0;               /* reset any negative margins */
 }
 
-/* Consistent vertical spacing for Truth Library rooms */
-.library-room {
-  padding: 4rem 0;       /* top + bottom spacing */
-}
-
-.library-room + .library-room {
-  margin-top: 2rem;      /* separation between rooms */
-}
