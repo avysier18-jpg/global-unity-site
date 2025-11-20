@@ -41,7 +41,22 @@ ul { list-style: none; }
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+} 
+/* Links inside evidence tiles */
+.card.tile .tile-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6ca9ff;
+  text-decoration: underline;
 }
+
+.card.tile .tile-link:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .highlight-card { border: 1px solid var(--highlight-color); }
 .btn {
     display: inline-block;
