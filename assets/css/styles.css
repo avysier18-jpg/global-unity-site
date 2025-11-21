@@ -427,3 +427,7 @@ section { margin-bottom: 0; }
   position: static; 
   margin: 0;
 }
+/* Ensure pages have space before the footer */
+main {
+  padding-bottom: 4rem;
+}
