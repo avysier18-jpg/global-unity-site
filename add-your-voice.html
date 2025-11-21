@@ -1,83 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add Your Voice | Global Unity</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    
-    <header class="site-header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">GLOBAL UNITY</a>
-            <button class="mobile-nav-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="truth-library.html">Truth Library</a></li>
-                    <li><a href="transparency-evidence.html">Transparency</a></li>
-                    <li><a href="our-actions.html">Our Actions</a></li>
-                    <li><a href="rising-together.html">Rising Together</a></li>
-                    <li><a href="add-your-voice.html" class="active">Add Your Voice</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="updates.html">Updates</a></li>
-                    <li><a href="officials-media.html">Officials & Media</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main class="container narrow-content">
-        <div class="page-header">
-            <h1>Add Your Voice</h1>
-            <p>Your experience is data. By sharing your reality, you help us paint a true picture of the world.</p>
-        </div>
+<header class="site-header">
+    <div class="container nav-pattern nav-container">
+        <a href="index.html" class="logo">GLOBAL UNITY</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="truth-library.html">Truth Library</a></li>
+                <li><a href="transparency-evidence.html">Transparency &amp; Evidence</a></li>
+                <li><a href="our-actions.html">Our Actions</a></li>
+                <li><a href="rising-together.html">Rising Together</a></li>
+                <li><a href="add-your-voice.html" class="active">Add Your Voice</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="officials-media.html">For Officials &amp; Media</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <form class="contact-form card">
-            <div class="form-group">
-                <label for="name">Name (Optional)</label>
-                <input type="text" id="name" name="name" placeholder="How should we address you?">
+<main class="container">
+
+    <!-- HERO -->
+    <div class="page-header">
+        <h1 class="page-title">ADD YOUR VOICE</h1>
+        <p class="page-subtitle">
+            This form is for people who want to contribute lived evidence to the Truth Library and
+            Transparency work. Your experience helps reveal patterns that numbers alone cannot show.
+        </p>
+    </div>
+
+    <!-- WHY THIS FORM EXISTS -->
+    <section class="library-room">
+        <h2>Why We Collect Stories</h2>
+        <div class="grid-3">
+            <article class="tile">
+                <h3>To Ground the Data</h3>
+                <p>
+                    Charts and documents can describe what is happening in systems, but they do not
+                    show what it feels like to live through those decisions. Your story helps anchor
+                    the numbers in real life.
+                </p>
+            </article>
+
+            <article class="tile">
+                <h3>To See Systemic Patterns</h3>
+                <p>
+                    When many people describe similar struggles in housing, wages, debt, health, or
+                    education, those stories become evidence of broader patterns—not isolated incidents.
+                </p>
+            </article>
+
+            <article class="tile">
+                <h3>To Inform Future Actions</h3>
+                <p>
+                    Lived experiences help guide which questions are asked in oversight work and where
+                    energy should be focused. They also help us check whether official responses match
+                    what people on the ground are actually facing.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- SAFETY & PRIVACY -->
+    <section class="library-room" id="safety">
+        <h2 class="room-title">Safety, Privacy &amp; Boundaries</h2>
+        <p class="room-intro">
+            Please read this before sharing. We want this space to be as safe and respectful as possible.
+        </p>
+
+        <div class="grid-3">
+            <article class="tile">
+                <h3>Your Choice, Your Control</h3>
+                <p>
+                    You decide how much to share. You can keep identifying details vague if that feels
+                    safer. Stories may be summarized or anonymized when we look at patterns.
+                </p>
+            </article>
+
+            <article class="tile">
+                <h3>What We Do With Submissions</h3>
+                <p>
+                    Submissions are used to understand patterns and, when appropriate, to create
+                    anonymized examples for the Truth Library and oversight work. We do not sell your
+                    information or use it for advertising.
+                </p>
+            </article>
+
+            <article class="tile">
+                <h3>What This Is <em>Not</em></h3>
+                <p>
+                    This is not a legal service, crisis line, or medical provider. We cannot give legal
+                    advice, guarantee outcomes, or respond to emergencies. If you are unsafe, please
+                    contact local emergency services or a trusted crisis organization.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="library-room">
+        <h2 class="room-title">Share Your Experience</h2>
+        <p class="room-intro">
+            You can share as little or as much as feels right. Required fields are marked. Optional
+            fields help us understand context, but you may leave them blank.
+        </p>
+
+        <form class="contact-form">
+            <div>
+                <label for="story">Your Story <span style="opacity:0.8;">(required)</span></label>
+                <textarea id="story" name="story" required
+                    placeholder="Describe what happened, when it happened, how it affected you or your family, and anything you want others to understand.">
+                </textarea>
             </div>
-            <div class="form-group">
-                <label for="email">Email (Optional)</label>
-                <input type="email" id="email" name="email" placeholder="If you want updates">
-            </div>
-            <div class="form-group">
-                <label for="category">Category</label>
+
+            <div>
+                <label for="category">Main Category <span style="opacity:0.8;">(optional)</span></label>
                 <select id="category" name="category">
-                    <option value="cost-of-living">Cost of Living</option>
-                    <option value="housing">Housing</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="education">Education</option>
-                    <option value="general">General Observation</option>
+                    <option value="">Choose a category…</option>
+                    <option>Housing &amp; Stability</option>
+                    <option>Income &amp; Wages</option>
+                    <option>Debt &amp; Financial Pressure</option>
+                    <option>Education &amp; Children</option>
+                    <option>Health &amp; Well-Being</option>
+                    <option>Discrimination &amp; Systemic Barriers</option>
+                    <option>Other / Not Sure</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="story">Your Story / Message</label>
-                <textarea id="story" name="story" rows="6" placeholder="What is your reality right now?"></textarea>
+
+            <div>
+                <label for="location">City / Region <span style="opacity:0.8;">(optional)</span></label>
+                <input id="location" name="location" type="text" placeholder="Example: Detroit, MI · rural NC · Bay Area">
             </div>
-            <button type="button" class="btn full-width">Submit (Mockup)</button>
+
+            <div>
+                <label for="timeframe">Approximate Timeframe <span style="opacity:0.8;">(optional)</span></label>
+                <input id="timeframe" name="timeframe" type="text" placeholder="Example: 2018–2020, last year, ongoing">
+            </div>
+
+            <div>
+                <label for="email">Email for Follow-Up <span style="opacity:0.8;">(optional)</span></label>
+                <input id="email" name="email" type="email" placeholder="Only if you’re open to being contacted about your story">
+            </div>
+
+            <div>
+                <label for="extra">Anything else you want us to know? <span style="opacity:0.8;">(optional)</span></label>
+                <textarea id="extra" name="extra"
+                    placeholder="Additional context, hopes, concerns, or anything that doesn’t fit above.">
+                </textarea>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="consent">
+                    I understand that my story may be used in anonymized or summarized form for education and
+                    oversight purposes.
+                </label>
+            </div>
+
+            <button type="submit" class="btn-primary">Submit Story</button>
         </form>
 
-        <section class="disclaimer-section">
-            <h3>Disclaimer & Safety</h3>
-            <ul>
-                <li><strong>Not Advice:</strong> This site does not provide legal, medical, or financial advice.</li>
-                <li><strong>Anonymity:</strong> Submissions may be anonymized and summarized before publication to protect your identity.</li>
-                <li><strong>Respect:</strong> We do not publish hate speech or calls to violence.</li>
-            </ul>
-        </section>
-    </main>
+        <p class="room-intro" style="margin-top: 1rem;">
+            <strong>Important:</strong> Submitting this form does not create an attorney–client relationship or
+            guarantee any specific action. It is a way to contribute to collective understanding and
+            transparency efforts.
+        </p>
+    </section>
 
-    <footer class="site-footer">
-        <div class="container footer-grid">
-             <div class="footer-col"><h4>Global Unity</h4><p>Justice. Truth. Freedom.</p></div>
-             <div class="footer-col"><h4>Explore</h4><ul><li><a href="about.html">About Us</a></li><li><a href="truth-library.html">Truth Library</a></li></ul></div>
-             <div class="footer-col"><h4>Info & Trust</h4><ul><li><a href="about.html">Safety & Privacy</a></li><li><a href="officials-media.html">For Officials & Media</a></li></ul></div>
+    <!-- LINK BACK INTO THE ECOSYSTEM -->
+    <section class="library-room">
+        <h2 class="room-title">See Where Your Voice Fits</h2>
+        <div class="grid-3">
+            <article class="tile">
+                <h3>Truth Library</h3>
+                <p>See how stories like yours help explain the larger patterns in our systems.</p>
+                <a class="tile-link" href="truth-library.html">Visit Truth Library →</a>
+            </article>
+
+            <article class="tile">
+                <h3>Transparency &amp; Evidence</h3>
+                <p>Explore charts, documents, and data that relate to the experiences people share.</p>
+                <a class="tile-link" href="transparency-evidence.html">View evidence →</a>
+            </article>
+
+            <article class="tile">
+                <h3>Our Actions</h3>
+                <p>See how lived experiences help guide formal actions aimed at accountability and repair.</p>
+                <a class="tile-link" href="our-actions.html">See our actions →</a>
+            </article>
         </div>
-        <div class="footer-bottom container"><p>&copy; 2023 Global Unity.</p></div>
-    </footer>
-    <script src="assets/js/main.js"></script>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-layout">
+        <div class="footer-col">
+            <h3 class="footer-title">GLOBAL UNITY</h3>
+            <p class="footer-text">Justice. Truth. Freedom. People, data, and courage — together.</p>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Explore</h4>
+            <ul class="footer-list">
+                <li><a href="truth-library.html">Truth Library</a></li>
+                <li><a href="transparency-evidence.html">Transparency &amp; Evidence</a></li>
+                <li><a href="rising-together.html">Rising Together</a></li>
+                <li><a href="our-actions.html">Our Actions</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-heading">Trust &amp; Contact</h4>
+            <ul class="footer-list">
+                <li><a href="about.html#safety">Safety &amp; Privacy</a></li>
+                <li><a href="about.html#methods">Methods &amp; Sources</a></li>
+                <li><a href="officials-media.html">For Officials &amp; Media</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom container">
+        <p>&copy; 2025 Global Unity. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
