@@ -431,3 +431,12 @@ section { margin-bottom: 0; }
 main {
   padding-bottom: 4rem;
 }
+/* More breathing room between section blocks on all content pages */
+.library-room {
+  margin-bottom: 3rem; /* add space under each block */
+}
+
+/* Make sure stacked tiles within a section don't overlap vertically */
+.library-room .tile {
+  margin-bottom: 1.5rem;
+}
