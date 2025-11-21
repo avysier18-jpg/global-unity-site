@@ -23,7 +23,6 @@ body {
     color: var(--text-main);
     font-family: var(--font-main);
     line-height: 1.6;
-    /* Initial offset for fixed header, but layout spacing below handles the rest */
     padding-top: 80px; 
 }
 
@@ -49,8 +48,7 @@ ul { list-style: none; }
 
 .text-center { text-align: center; }
 
-/* CARD POLISH: Flex column ensures equal height tiles & bottom-aligned links */
-/* Added .tile selector to ensure new HTML elements inherit card styling */
+/* Card & Tile Styling */
 .card, .tile {
     background: var(--card-bg);
     padding: 25px;
@@ -58,23 +56,21 @@ ul { list-style: none; }
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Forces equal height in grid cells */
+    height: 100%; 
 }
 
-/* Content fills space so link pushes to bottom */
 .card h3, .card p, .tile h3, .tile p {
     margin-bottom: 15px;
 }
 
-/* Links inside evidence tiles */
 .card.tile .tile-link {
   display: inline-block;
-  margin-top: auto; /* Pushes this link to the bottom of the card */
+  margin-top: auto; 
   font-size: 0.85rem;
   font-weight: 600;
   color: #6ca9ff;
   text-decoration: underline;
-  word-break: break-word; /* Prevents long paths from breaking layout */
+  word-break: break-word; 
 }
 
 .card.tile .tile-link:hover {
@@ -101,7 +97,6 @@ ul { list-style: none; }
     z-index: 1000;
     padding: 15px 0;
     border-bottom: 1px solid #233554;
-    /* Ensure exact height matches body padding-top to prevent layout jumps */
     height: 80px; 
     display: flex;
     align-items: center;
@@ -145,8 +140,8 @@ ul { list-style: none; }
 }
 .counter-placeholder { font-size: 3rem; font-weight: bold; color: white; }
 
-/* Sections - General Spacing */
-section { margin-bottom: 0; /* We control spacing via padding in polished layout */ }
+/* Sections */
+section { margin-bottom: 0; }
 
 .section-mission h2, .section-steps h2, .section-why h2 {
     color: var(--text-main);
@@ -155,10 +150,10 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
     padding: 4rem 1.5rem;
 }
 
-/* Page Header Polish */
+/* Page Header */
 .page-header {
     text-align: center;
-    padding: 3rem 0 1rem 0; /* More breathing room top, less bottom to connect to nav */
+    padding: 3rem 0 1rem 0; 
     margin-bottom: 2rem;
 }
 .page-header h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-main); }
@@ -169,12 +164,12 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
     color: var(--text-muted); 
 }
 
-/* Room Navigation Bar */
+/* Room Navigation */
 .room-nav {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin: 2rem auto 1rem auto; /* Center aligned margin */
+  margin: 2rem auto 1rem auto; 
   flex-wrap: wrap;
   padding-bottom: 1rem;
 }
@@ -184,7 +179,7 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
   font-weight: 700;
   text-decoration: none;
   border-bottom: 2px solid transparent;
-  padding: 0.5rem 0.2rem; /* Better touch target */
+  padding: 0.5rem 0.2rem; 
   transition: all 0.2s ease;
 }
 
@@ -193,27 +188,20 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
   border-bottom-color: var(--accent-color);
 }
 
-/* Truth Library Rooms Polish */
+/* Truth Library Rooms */
 .library-room { 
-    padding: 4rem 0;        /* Consistent vertical spacing */
+    padding: 4rem 0;       
     margin-bottom: 0;       
     border-bottom: 1px solid #233554;
-    /* FIXED: Scroll margin ensures sticky header doesn't cover section title on click */
     scroll-margin-top: 100px; 
 }
+.library-room:last-of-type { border-bottom: none; }
 
-/* Remove border from last room */
-.library-room:last-of-type {
-    border-bottom: none;
-}
-
-/* V2 Header styles */
 .room-header {
     text-align: center;
     margin-bottom: 30px;
     padding: 0 1rem;
 }
-
 .room-header h2 {
     color: var(--accent-color);
     margin-bottom: 15px;
@@ -222,14 +210,12 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
     display: inline-block;
     font-size: 1.8rem;
 }
-
 .room-intro {
     color: var(--text-muted);
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
 }
-
 .room-title { 
     border-bottom: 1px solid var(--text-muted); 
     padding-bottom: 10px; 
@@ -256,11 +242,15 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
 }
 .timeline-date { font-weight: bold; color: var(--accent-color); margin-bottom: 5px; }
 
-/* Form - General */
+/* --- GLOBAL FORM STYLES (General) --- */
 .narrow-content { max-width: 700px; }
 .form-group { margin-bottom: 20px; }
 .form-group label { display: block; margin-bottom: 8px; color: var(--text-main); }
-.form-group input, .form-group textarea, .form-group select {
+
+/* Default input style (careful not to break checkbox) */
+.form-group input:not([type="checkbox"]), 
+.form-group textarea, 
+.form-group select {
     width: 100%;
     padding: 10px;
     background: #060f1d;
@@ -270,43 +260,102 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
 }
 .full-width { width: 100%; }
 
-/* Rising Together – story form layout */
+
+/* --- RISING TOGETHER / ADD YOUR VOICE FORM POLISH --- */
 .contact-form {
   max-width: 720px;
-  margin: 1.5rem auto 0 auto;
+  margin: 2rem auto; /* Increased margin */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem; /* Increased gap between fields */
 }
+
 .contact-form label {
   font-size: 0.95rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
-  color: var(--text-main); /* Adjusted to match site theme */
-  display: block;
-}
-.contact-form textarea,
-.contact-form select {
-  width: 100%;
-  padding: 0.65rem 0.75rem;
-  border-radius: 6px;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  background-color: rgba(15, 23, 42, 0.9);
+  margin-bottom: 0.5rem;
   color: var(--text-main);
-  font-size: 0.95rem;
+  display: block;
+  letter-spacing: 0.5px; /* Polished typography */
+}
+
+/* Refined Inputs */
+.contact-form textarea,
+.contact-form select,
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  width: 100%;
+  padding: 0.85rem 1rem; /* More breathing room inside inputs */
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background-color: rgba(17, 34, 64, 0.6); /* Slightly lighter/transparent bg */
+  color: var(--text-main);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s; /* Smooth transition */
+}
+
+/* Focus State (Crucial for polish) */
+.contact-form textarea:focus,
+.contact-form select:focus,
+.contact-form input:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.1);
+}
+
+.contact-form textarea {
+  min-height: 150px;
   resize: vertical;
 }
-.contact-form textarea {
-  min-height: 120px;
+
+/* Placeholder text styling */
+.contact-form ::placeholder {
+    color: var(--text-muted);
+    opacity: 0.6;
 }
-.contact-form button.btn-primary {
+
+/* Checkbox Fix: Ensure it doesn't stretch to 100% width */
+.contact-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    transform: scale(1.2); /* Make it slightly easier to click */
+    cursor: pointer;
+}
+
+/* Checkbox Label Wrapper */
+.contact-form .checkbox-row {
+    display: flex;
+    align-items: flex-start; /* Aligns box with top line of text */
+    gap: 10px;
+    margin-top: 0.5rem;
+}
+.contact-form .checkbox-row label {
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Submit Button Polish */
+.contact-form button.btn-primary, 
+.contact-form button[type="submit"] {
   align-self: flex-start;
-  padding: 0.6rem 1.4rem;
+  background: var(--highlight-color);
+  color: var(--bg-color);
+  padding: 0.8rem 2rem;
   border: none;
   border-radius: 9999px;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-size: 1rem;
   cursor: pointer;
+  margin-top: 1rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -334,7 +383,7 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
     .main-nav {
         display: none;
         position: absolute;
-        top: 80px; /* Matches header height */
+        top: 80px; 
         left: 0;
         width: 100%;
         background: var(--card-bg);
@@ -348,7 +397,6 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
     .grid-2 { grid-template-columns: 1fr; }
     .hero-title { font-size: 2.5rem; }
     
-    /* Adjust room nav for small screens */
     .room-nav { gap: 1rem; }
 }
 
@@ -358,7 +406,7 @@ section { margin-bottom: 0; /* We control spacing via padding in polished layout
         grid-template-columns: 1fr;
     }
     .library-room {
-        padding: 3rem 0; /* Slightly smaller padding on mobile */
+        padding: 3rem 0; 
     }
 }
 
