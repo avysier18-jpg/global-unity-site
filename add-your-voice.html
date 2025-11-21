@@ -119,6 +119,7 @@
             fields help us understand context, but you may leave them blank.
         </p>
 
+        <!-- Updated action to point to the new file -->
         <form
           name="add-your-voice"
           method="POST"
@@ -252,5 +253,22 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var cat = params.get("category");
+    if (!cat) return;
+
+    var select = document.getElementById("category");
+    if (!select) return;
+
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].text === cat) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  })();
+</script>
 </body>
 </html>
