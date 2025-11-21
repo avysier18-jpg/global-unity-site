@@ -440,3 +440,7 @@ main {
 .library-room .tile {
   margin-bottom: 1.5rem;
 }
+/* Highlight the "What's Coming Next" card */
+.highlight-card {
+    border: 1px solid #38bdf8;
+}
