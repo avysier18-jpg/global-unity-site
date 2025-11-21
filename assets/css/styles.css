@@ -78,6 +78,15 @@ ul { list-style: none; }
   text-decoration: none;
 }
 
+/* Rising Together CTA highlight */
+.rt-cta .tile {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.rt-cta .tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
+}
+
 .highlight-card { border: 1px solid var(--highlight-color); }
 .btn {
     display: inline-block;
@@ -426,21 +435,4 @@ section { margin-bottom: 0; }
 .card.doorway-card {
   position: static; 
   margin: 0;
-}
-/* Ensure pages have space before the footer */
-main {
-  padding-bottom: 4rem;
-}
-/* More breathing room between section blocks on all content pages */
-.library-room {
-  margin-bottom: 3rem; /* add space under each block */
-}
-
-/* Make sure stacked tiles within a section don't overlap vertically */
-.library-room .tile {
-  margin-bottom: 1.5rem;
-}
-/* Highlight the "What's Coming Next" card */
-.highlight-card {
-    border: 1px solid #38bdf8;
 }
