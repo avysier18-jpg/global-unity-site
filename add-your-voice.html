@@ -119,7 +119,22 @@
             fields help us understand context, but you may leave them blank.
         </p>
 
-        <form class="contact-form">
+        <form
+          name="add-your-voice"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+          class="contact-form"
+        >
+            <!-- Netlify Forms hidden form-name field -->
+            <input type="hidden" name="form-name" value="add-your-voice" />
+
+            <!-- Netlify spam honeypot (hidden from humans) -->
+            <p style="display:none;">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+
             <div>
                 <label for="story">Your Story <span style="opacity:0.8;">(required)</span></label>
                 <textarea id="story" name="story" required
@@ -163,9 +178,9 @@
                 </textarea>
             </div>
 
-            <div>
-                <label>
-                    <input type="checkbox" name="consent">
+            <div class="checkbox-row">
+                <input type="checkbox" id="consent" name="consent">
+                <label for="consent">
                     I understand that my story may be used in anonymized or summarized form for education and
                     oversight purposes.
                 </label>
