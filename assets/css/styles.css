@@ -535,4 +535,49 @@ section { margin-bottom: 0; }
   position: static; 
   margin: 0;
 }
+/* Global Unity AI Section */
+.ai-section {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.ai-card {
+  background: #0F1B33; /* matches other tiles */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 760px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ai-card h2 {
+  margin-bottom: 12px;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.ai-card p {
+  font-size: 18px;
+  color: #c9d8f1;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.ai-button {
+  display: inline-block;
+  background: #2E9FFF; /* same as homepage buttons */
+  color: #0B0E1A;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.ai-button:hover {
+  background: #49B8FF;
+}
 
