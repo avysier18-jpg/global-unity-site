@@ -535,41 +535,4 @@ section { margin-bottom: 0; }
   position: static; 
   margin: 0;
 }
-.ai-assistant {
-    padding: 60px 0;
-    text-align: center;
-}
 
-.ai-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    background: #192133;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(124, 98, 255, 0.2);
-}
-
-.ai-assistant h2 {
-    color: #b9a6ff;
-    margin-bottom: 10px;
-}
-
-.ai-subtext {
-    color: #d6d6d6;
-    margin-bottom: 25px;
-    font-size: 1.1rem;
-}
-
-.ai-button {
-    padding: 12px 24px;
-    background: #8f6aff;
-    color: #fff;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.ai-button:hover {
-    background: #7a55ff;
-}
