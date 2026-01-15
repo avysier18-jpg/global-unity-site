@@ -4,40 +4,280 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>You Asked for Proof</title>
-  <meta name="description" content="Simple proof links for the claims in the public explainer." />
+  <meta name="description" content="Acts 1–9 on the left. Mirror system on the right (coming soon)." />
+
   <style>
     :root { color-scheme: light; }
-    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; }
-    .wrap { max-width: 780px; margin: 0 auto; padding: 20px; }
-    h1 { font-size: 1.6rem; margin: 0 0 6px; }
-    p  { margin: 10px 0; }
-    .sub { color: #444; margin-top: 0; }
-    .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 14px 14px 10px; margin: 14px 0; background: #fff; }
-    .card h2 { font-size: 1.05rem; margin: 0 0 8px; }
-    ul { margin: 8px 0 10px 18px; padding: 0; }
-    li { margin: 6px 0; }
-    a { word-break: break-word; }
-    .footer { margin-top: 18px; padding-top: 14px; border-top: 1px solid #eee; color: #444; font-size: 0.95rem; }
-    .note { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 12px; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.5;
+      background: #f7f7f8;
+      color: #111;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e9e9ee;
+    }
+    .header-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+    .sub {
+      margin: 6px 0 0;
+      color: #444;
+      font-size: 0.95rem;
+    }
+    .header-left {
+      min-width: 240px;
+    }
+    .header-actions a {
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #0b57d0;
+    }
+    .header-actions a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e9e9ee;
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .note {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 12px;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .acts h2 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    details {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: #fff;
+      margin: 10px 0;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 650;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .act-body {
+      margin-top: 10px;
+      color: #222;
+      font-size: 0.98rem;
+    }
+
+    .mini {
+      font-size: 0.92rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .mirror {
+      position: sticky;
+      top: 16px;
+    }
+    .mirror h2 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f1f5ff;
+      border: 1px solid #d9e4ff;
+      color: #1d4ed8;
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    .mirror-box {
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px dashed #cfcfd6;
+      background: #fbfbfc;
+      min-height: 420px;
+    }
+
+    .footer {
+      margin-top: 16px;
+      color: #444;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    .footer a { color: #0b57d0; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    /* Mobile layout */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .mirror { position: static; }
+      .mirror-box { min-height: 240px; }
+    }
   </style>
 </head>
-<body>
-  <main class="wrap">
-    <h1>You Asked for Proof. Here It Is.</h1>
-    <p class="sub">Short claims + official links. No long reading required.</p>
 
-    <div class="note">
-      <p><strong>How to use this page:</strong> skim the claim, then tap the links if you want the source.</p>
+<body>
+  <header>
+    <div class="header-wrap">
+      <div class="header-left">
+        <h1>You Asked for Proof</h1>
+        <p class="sub">Acts 1–9 on the left. Mirror system on the right (coming soon).</p>
+      </div>
+      <div class="header-actions">
+        <a href="/">Go to Global Unity →</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <!-- LEFT: ACTS -->
+      <section class="card acts">
+        <h2>Layer 1: The Story (Acts 1–9)</h2>
+        <div class="note">
+          <strong>How to use:</strong> Tap an Act to open it. Read top to bottom.  
+          When the Mirror panel is live, it will show “what was said vs what was done.”
+        </div>
+
+        <!-- ACT 1 -->
+        <details open>
+          <summary>Act 1 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 1 text here]</p>
+          </div>
+        </details>
+
+        <!-- ACT 2 -->
+        <details>
+          <summary>Act 2 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 2 text here]</p>
+          </div>
+        </details>
+
+        <!-- ACT 3 -->
+        <details>
+          <summary>Act 3 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 3 text here]</p>
+          </div>
+        </details>
+
+        <!-- ACT 4 -->
+        <details>
+          <summary>Act 4 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 4 text here]</p>
+          </div>
+        </details>
+
+        <!-- ACT 5 -->
+        <details>
+          <summary>Act 5 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 5 text here]</p>
+          </div>
+        </details>
+
+        <!-- ACT 6 -->
+        <details>
+          <summary>Act 6 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 6 text here]</p>
+          </div>
+        </details>
+
+        <!-- ACT 7 -->
+        <details>
+          <summary>Act 7 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 7 text here]</p>
+          </div>
+        </details>
+
+        <!-- ACT 8 -->
+        <details>
+          <summary>Act 8 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 8 text here]</p>
+          </div>
+        </details>
+
+        <!-- ACT 9 -->
+        <details>
+          <summary>Act 9 — [Title]</summary>
+          <div class="act-body">
+            <p>[Paste Act 9 text here]</p>
+          </div>
+        </details>
+
+        <p class="mini">
+          Want sources and links? (Optional) you can add a button later that points to Layer 3 proof links.
+        </p>
+      </section>
+
+      <!-- RIGHT: MIRROR PLACEHOLDER -->
+      <aside class="card mirror">
+        <h2>Mirror: “Said vs Done”</h2>
+        <span class="pill">Coming soon</span>
+
+        <div class="mirror-box">
+          <p><strong>What will appear here:</strong></p>
+          <ul>
+            <li>What officials said (quotes)</li>
+            <li>What data shows happened</li>
+            <li>The contradiction, shown clearly</li>
+          </ul>
+          <p class="mini">
+            When Hei ships the Mirror system, this panel can become an embedded app, iframe, or live feed.
+          </p>
+        </div>
+      </aside>
+
     </div>
 
-    <!-- PASTE YOUR SECTIONS HERE -->
-    
-  
-
-
     <div class="footer">
-      <p><strong>You Want Proof?</strong></p>
-      <p><a href="/">Go to Global Unity →</a></p>
+      <p>© 2026 Global Unity. All rights reserved.</p>
     </div>
   </main>
 </body>
