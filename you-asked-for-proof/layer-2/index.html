@@ -298,7 +298,157 @@
           </div>
         </details>
 
-       
+
+        import html
+
+items = [
+  {
+    "arg": 'Argument 1: "401(k)s give people freedom and control over their retirement."',
+    "resp": "Control requires real options. Most workers must keep contributing to retire at all, and they can't protect themselves from market crashes without giving up the growth they need. The choice between \"take market risk\" or \"don't retire comfortably\" isn't really freedom—it's a constrained set of options where one path is clearly worse."
+  },
+  {
+    "arg": 'Argument 2: "If you just invest in index funds and don\'t look at it, you\'ll be fine."',
+    "resp": "That works when life stays stable for 30-40 years. But if you lose your job during a recession when markets are down, or face medical bills, or need to retire early, you can't just \"not look at it.\" The strategy assumes uninterrupted contributions and no emergencies—conditions many workers don't have, especially when they need it most."
+  },
+  {
+    "arg": 'Argument 3: "Fees are tiny now—like 0.1% for index funds. That\'s not the problem."',
+    "resp": "Low-cost index funds are a real improvement, and workers who have access to them do benefit. The point isn't that fees are massive—it's that they're collected regardless of whether your account went up or down that year, and they compound over time. A 0.5% difference over 40 years can mean tens of thousands of dollars less at retirement."
+  },
+  {
+    "arg": 'Argument 4: "People just need to save more and spend less."',
+    "resp": "Many people are already saving through 401(k)s and still struggling. The issue isn't effort—it's that savings are exposed to market risk, rising costs, and crashes workers can't control. When housing, healthcare, and childcare take up more of each paycheck, \"just save more\" doesn't address why costs are rising faster than wages."
+  },
+  {
+    "arg": 'Argument 5: "The stock market always goes up in the long run."',
+    "resp": "Over very long periods, yes—but timing matters. If you retire in 2008 or 2022 after a crash, your savings are lower right when you need them. Workers don't control when they retire; health, layoffs, and caregiving force timing. \"The market recovers eventually\" doesn't help if you can't wait."
+  },
+  {
+    "arg": 'Argument 6: "Target-date funds handle everything automatically. Workers don\'t need to do anything."',
+    "resp": "Target-date funds do make investing simpler, which is helpful. But they don't eliminate market risk—they just shift the mix over time. If markets crash near your retirement date, your balance still drops. Automation helps with allocation, but it doesn't protect against timing or the need to sell during downturns."
+  },
+  {
+    "arg": 'Argument 7: "Pensions failed all the time too. This isn\'t worse."',
+    "resp": "Some pensions did fail, but when they did, the Pension Benefit Guaranty Corporation (PBGC) often provided partial coverage, and the company carried the funding risk. With 401(k)s, workers carry all the market risk themselves. Both systems have problems, but the shift moved risk from employers to individuals without giving workers the tools institutions use to manage it."
+  },
+  {
+    "arg": 'Argument 8: "Rich people lose money in crashes too."',
+    "resp": "They do, but the impact is different. Someone with $5 million who loses 30% still has $3.5 million. Someone with $100,000 who loses 30% has $70,000—and might not be able to retire. Wealthy investors also have access to hedges, diversification across asset classes, and advisors that most workers don't. The percentage loss might be the same, but the consequences aren't."
+  },
+  {
+    "arg": 'Argument 9: "Financial literacy would fix this. People just don\'t understand investing."',
+    "resp": "Education helps, but no amount of individual financial literacy can offset a system designed around complexity, fees, and risk exposure. Even highly educated people—doctors, lawyers, professors—struggle with retirement adequacy. The problem isn't that people are uninformed; it's that the system requires constant contributions, perfect timing, and decades of stability that many people don't have."
+  },
+  {
+    "arg": 'Argument 10: "Workers can adjust their contributions and investments anytime."',
+    "resp": "They can adjust, but most don't have the knowledge, time, or confidence to do it effectively. And even if they do, reacting to market swings often hurts returns—selling low and buying high. The flexibility exists on paper, but in practice most workers stay in their default allocations and hope things work out."
+  },
+  {
+    "arg": 'Argument 11: "Institutions have fancy tools but they underperform index funds anyway."',
+    "resp": "That's often true—many actively managed funds do worse than simple indexing after fees. The difference isn't that institutions always get better returns; it's that they can respond to volatility in real time. Workers are locked into passive strategies and feel every swing, while institutions can hedge, rebalance, or exit positions. Flexibility matters even if it doesn't always produce higher returns."
+  },
+  {
+    "arg": 'Argument 12: "This sounds like you\'re against the stock market."',
+    "resp": "Not at all. The stock market can build wealth over time. The issue is that workers are now required to use it for retirement without the safety net pensions provided, and without the tools or stability needed to manage the risk well. It's not about the market being bad—it's about whether individual workers should carry all the risk alone."
+  },
+  {
+    "arg": 'Argument 13: "The Fed helps everyone when they lower rates, not just the rich."',
+    "resp": "Fed policy does affect everyone, but not evenly or at the same time. Lower rates can help with mortgages and car loans, but they also inflate asset prices—stocks, bonds, real estate—which benefits people who already own assets more than people trying to save for them. The effects aren't neutral; they flow through the financial system first and reach households unevenly."
+  },
+  {
+    "arg": 'Argument 14: "If you contribute consistently through crashes, you actually benefit from lower prices."',
+    "resp": "That's true when you have job security and can keep contributing during downturns. But recessions often come with layoffs, pay cuts, and emergencies that force people to stop contributing or even withdraw early. The dollar-cost averaging advantage is real, but it depends on stability many workers lose exactly when markets are down."
+  },
+  {
+    "arg": 'Argument 15: "This is just how capitalism works."',
+    "resp": "Capitalism takes many forms. Other countries face the same market forces but designed retirement systems with stronger safety nets—mandatory employer contributions, public pension floors, portable benefits with less individual risk. The U.S. system is one version of capitalism, not the only version. Different rules produce different outcomes."
+  },
+  {
+    "arg": 'Argument 16: "I\'m doing fine with my 401(k). This doesn\'t apply to me."',
+    "resp": "That's great, and it shows the system can work for people with stable jobs, good income, and the ability to contribute consistently. The question isn't whether anyone succeeds—it's whether the system works well on average, especially for people facing job instability, health issues, caregiving, or just bad timing. Individual success doesn't disprove systematic patterns."
+  },
+  {
+    "arg": 'Argument 17: "Social Security will cover the basics anyway."',
+    "resp": "Social Security helps, but it was designed to supplement pensions, not replace them entirely. Average benefits are around $1,900/month—enough to survive, but not enough to retire comfortably for most people. And future benefits face uncertainty depending on policy choices. The system assumes 401(k)s will fill the gap, which means workers still carry the market risk."
+  },
+  {
+    "arg": 'Argument 18: "You\'re just scaring people and making them feel hopeless."',
+    "resp": "The goal isn't to create fear—it's to explain how the system actually works so people understand why retirement feels harder than it used to. Clarity helps people make better decisions, hold the system accountable, and recognize that financial stress isn't personal failure. Understanding the structure is the first step toward changing it."
+  },
+  {
+    "arg": 'Argument 19: “Employer match fixes it — that’s free money.”',
+    "resp": "Employer matches help a lot, but they’re uneven. Many workers don’t get a match, and many can’t contribute enough to fully capture it. A match doesn’t remove market risk or timing risk — it just improves the starting math for people who already have stable income and access."
+  },
+  {
+    "arg": 'Argument 20: “Just increase the contribution rate — problem solved.”',
+    "resp": "Increasing contributions helps if you can afford it. But the system assumes households can consistently divert a larger share of income even while housing, healthcare, and childcare consume more of each paycheck. The issue isn’t that saving is pointless — it’s that the ability to save is not evenly distributed."
+  },
+  {
+    "arg": 'Argument 21: “You can just work longer.”',
+    "resp": "Working longer is a privilege, not a universal option. Health issues, caregiving, layoffs, and age discrimination force many people out earlier than planned. Telling everyone to work longer turns a structural fragility into a personal obligation."
+  },
+  {
+    "arg": 'Argument 22: “Sequence-of-returns risk is solved by bonds near retirement.”',
+    "resp": "Reducing stock exposure helps, but it doesn’t eliminate the risk that a downturn hits near retirement. Bond-heavy portfolios can still drop when rates rise, and inflation can erode “safe” returns. The problem is not just allocation — it’s that retirees are forced to sell assets to live."
+  },
+  {
+    "arg": 'Argument 23: “Annuities solve this — just buy guaranteed income.”',
+    "resp": "Annuities can help, but they come with tradeoffs: pricing, complexity, insurer risk, loss of liquidity, and often high fees or opaque terms. They’re also not widely adopted inside 401(k)s, and many workers don’t have enough assets to convert into meaningful guaranteed income."
+  },
+  {
+    "arg": 'Argument 24: “The real issue is people panic-sell — that’s their fault.”',
+    "resp": "Some panic-selling happens, but it’s not just emotion. People sell because they lose jobs, face medical costs, or need cash. In a system where survival expenses can arrive at the same time as market crashes, “just don’t sell” is advice that assumes stability."
+  },
+  {
+    "arg": 'Argument 25: “401(k) loans let people avoid selling — so it’s fine.”',
+    "resp": "Loans can help in emergencies, but they add risk: job loss can trigger repayment, and default can become a taxable distribution with penalties. Also, money pulled out is money not compounding. Loans reduce damage for some — but they’re a symptom of fragility, not a solution."
+  },
+  {
+    "arg": 'Argument 26: “Rollovers exist — just move it to an IRA and manage it better.”',
+    "resp": "Rollovers help people who have time, knowledge, and confidence. But they also increase the chance of mistakes, scams, and high-fee products, and they shift responsibility even further onto individuals. “Manage it better” is not a policy — it’s an expectation."
+  },
+  {
+    "arg": 'Argument 27: “If people didn’t cash out when they change jobs, they’d be fine.”',
+    "resp": "Leakage is real — but again, people cash out because they need liquidity during unstable periods. You can’t solve systemic instability by blaming people for using their own money to survive. A retirement system shouldn’t depend on decades of uninterrupted calm."
+  },
+  {
+    "arg": 'Argument 28: “This is why you diversify — real estate, side businesses, etc.”',
+    "resp": "Diversification is smart, but it’s also unequal. Many households can’t buy property, can’t access business capital, and can’t take entrepreneurial risk while living paycheck-to-paycheck. Advice that requires spare capital is not universal advice."
+  },
+  {
+    "arg": 'Argument 29: “The problem is Social Security — just fix that.”',
+    "resp": "Strengthening Social Security would reduce pressure, but it doesn’t fully solve the broader shift: retirement is now anchored to market exposure for most workers. Fixing Social Security helps the floor; it doesn’t address the ceiling volatility most people depend on."
+  },
+  {
+    "arg": 'Argument 30: “You’re ignoring that pensions were often unfair — they favored lifers.”',
+    "resp": "That’s true: pensions rewarded long tenure and could exclude mobile workers. But solving unfairness by replacing predictability with market risk creates a different kind of inequality. The better question is: can we preserve portability and provide a stable income floor without pushing all volatility onto individuals?"
+  },
+  {
+    "arg": 'Argument 31: “It’s not a system problem — it’s a wage problem.”',
+    "resp": "Wages are a major part of it. But even with higher wages, the system still concentrates risk on individuals through market timing, volatility, and the need to sell assets during downturns. Wage improvements help, but they don’t remove the structural fragility."
+  },
+  {
+    "arg": 'Argument 32: “If you’re worried, just hold more cash.”',
+    "resp": "Cash reduces volatility but increases long-run inflation risk. It’s a tradeoff: less short-term drawdown risk, more long-term purchasing-power erosion. The fact that “safety” and “growth” are forced into a personal tradeoff is part of the structural issue."
+  },
+]
+
+def details_block(title: str, response: str) -> str:
+  return f"""<details>
+  <summary>{html.escape(title)}</summary>
+  <div class="act-body">
+    <p>{html.escape(response)}</p>
+  </div>
+</details>"""
+
+print("<!-- Arguments & Calm Responses (Layer 2 / Tab 2) -->")
+for it in items:
+  print(details_block(it["arg"], it["resp"]))
+
+
+
+
+
+
       </section>
 
       <!-- RIGHT: MIRROR PLACEHOLDER -->
