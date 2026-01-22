@@ -1,1 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Layer 5 — Visual Summary + Enter the Truth Library</title>
+  <meta name="description" content="Layer 5: visual summary for each act/layer and the only gateway into the Truth Library." />
+
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; background: #f7f7f8; color: #111; }
+    header { background: #fff; border-bottom: 1px solid #e9e9ee; }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 14px 16px; display: flex; gap: 12px; align-items: baseline; justify-content: space-between; flex-wrap: wrap; }
+    h1 { margin: 0; font-size: 1.15rem; line-height: 1.2; }
+    .sub { margin: 6px 0 0; color: #444; font-size: 0.95rem; }
+    .header-actions a { font-size: 0.95rem; text-decoration: none; color: #0b57d0; }
+    .header-actions a:hover { text-decoration: underline; }
+
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 16px; }
+    .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; align-items: start; }
+
+    .card { background: #fff; border: 1px solid #e9e9ee; border-radius: 14px; padding: 14px; }
+    .note { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 12px; color: #333; font-size: 0.95rem; }
+    .mini { font-size: 0.92rem; color: #555; margin-top: 10px; }
+    .navline { margin: 0 0 10px; font-size: 0.95rem; }
+    .navline a { color: #0b57d0; text-decoration: none; }
+    .navline a:hover { text-decoration: underline; }
+
+    details { border: 1px solid #eee; border-radius: 12px; padding: 10px 12px; background: #fff; margin: 12px 0; }
+    summary { cursor: pointer; font-weight: 650; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    .act-body { margin-top: 10px; color: #222; font-size: 0.98rem; }
+
+    .placeholder {
+      border: 1px dashed #cfcfd6;
+      background: #fbfbfc;
+      border-radius: 12px;
+      padding: 12px;
+      min-height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      text-align: center;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid #e9e9ee;
+      background: #fff;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid #d9e4ff;
+      background: #f1f5ff;
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 650;
+    }
+    .cta a:hover { text-decoration: underline; }
+
+    .footer { margin-top: 16px; color: #444; font-size: 0.95rem; text-align: center; }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-wrap">
+      <div>
+        <h1>Layer 5 — Visual Summary + Enter the Truth Library</h1>
+        <p class="sub">This page is the gateway from the QR layers into the evidence archive.</p>
+      </div>
+      <div class="header-actions">
+        <!-- Keep this minimal. You said Layer 5 is the only gateway. -->
+        <a href="/you-asked-for-proof/layer-4/">← Back to Layer 4</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <!-- LEFT COLUMN: Visual tabs (all closed by default) -->
+      <section class="card">
+        <div class="note">
+          <strong>How to use:</strong> Tap a tab to open it. Each tab will hold an image (or a few images) that represent an Act or a Layer.
+        </div>
+
+        <!-- You can rename these however you want later. All start CLOSED because no `open` attribute. -->
+        <details>
+          <summary>Layer 1 — Story (Acts)</summary>
+          <div class="act-body">
+            <div class="placeholder">Image(s) for Layer 1 go here</div>
+            <p class="mini">Tip: use 1–3 images that summarize Acts 1–9 visually.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Layer 2 — The Chain</summary>
+          <div class="act-body">
+            <div class="placeholder">Image(s) for Layer 2 go here</div>
+            <p class="mini">Tip: one diagram-style image works best here.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Layer 3 — Proof (Concept)</summary>
+          <div class="act-body">
+            <div class="placeholder">Image(s) for Layer 3 go here</div>
+            <p class="mini">Tip: screenshots of 1–2 official sources, cropped cleanly.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Layer 4 — Incentives & Attention</summary>
+          <div class="act-body">
+            <div class="placeholder">Image(s) for Layer 4 go here</div>
+            <p class="mini">Tip: one “attention loop” visual + one education visual.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Layer 5 — What to do next</summary>
+          <div class="act-body">
+            <div class="placeholder">Optional image(s) for Layer 5 go here</div>
+            <p class="mini">Tip: this can be a simple “map” image pointing to Truth Library.</p>
+          </div>
+        </details>
+
+      </section>
+
+      <!-- RIGHT COLUMN: Gateway explanation + Truth Library link -->
+      <aside class="card">
+        <h2 style="margin:0 0 10px; font-size:1.05rem;">Where the proof lives</h2>
+
+        <p>
+          The documents, data, and official sources are organized inside our Truth Library.
+          This is where you can verify claims directly and explore the evidence.
+        </p>
+
+        <div class="cta">
+          <p><strong>Enter the Truth Library</strong></p>
+          <p class="mini">This is the only gateway from the QR layers into the main evidence archive.</p>
+          <a href="/truth-library">Go to Truth Library →</a>
+        </div>
+
+        <p class="mini">
+          If you want the full Global Unity site later, you can navigate from inside the Truth Library.
+        </p>
+      </aside>
+
+    </div>
+
+    <div class="footer">
+      <p>© 2026 Global Unity. All rights reserved.</p>
+    </div>
+  </main>
+</body>
+</html>
 
