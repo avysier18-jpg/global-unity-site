@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Welcome</title>
-  <meta name="description" content="Acts 1–9 on the left. Mirror system on the right (coming soon)." />
+  <title>Layer 1 — Why You’ll Never Retire</title>
+  <meta name="description" content="Acts on the left. Mirror system on the right (coming soon)." />
 
   <style>
     :root { color-scheme: light; }
@@ -16,10 +16,7 @@
       color: #111;
     }
 
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e9e9ee;
-    }
+    header { background: #fff; border-bottom: 1px solid #e9e9ee; }
     .header-wrap {
       max-width: 1200px;
       margin: 0 auto;
@@ -30,93 +27,24 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    h1 {
-      margin: 0;
-      font-size: 1.15rem;
-      line-height: 1.2;
-    }
-    .sub {
-      margin: 6px 0 0;
-      color: #444;
-      font-size: 0.95rem;
-    }
-    .header-left {
-      min-width: 240px;
-    }
-    .header-actions a {
-      font-size: 0.95rem;
-      text-decoration: none;
-      color: #0b57d0;
-    }
+    h1 { margin: 0; font-size: 1.15rem; line-height: 1.2; }
+    .sub { margin: 6px 0 0; color: #444; font-size: 0.95rem; }
+    .header-actions a { font-size: 0.95rem; text-decoration: none; color: #0b57d0; }
     .header-actions a:hover { text-decoration: underline; }
 
-    .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px;
-    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 16px; }
+    .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; align-items: start; }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 16px;
-      align-items: start;
-    }
+    .card { background: #fff; border: 1px solid #e9e9ee; border-radius: 14px; padding: 14px; }
+    .note { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 12px; color: #333; font-size: 0.95rem; }
+    .mini { font-size: 0.92rem; color: #555; margin-top: 10px; }
 
-    .card {
-      background: #fff;
-      border: 1px solid #e9e9ee;
-      border-radius: 14px;
-      padding: 14px;
-    }
-
-    .note {
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 12px;
-      color: #333;
-      font-size: 0.95rem;
-    }
-
-    .acts h2 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-    }
-
-    details {
-      border: 1px solid #eee;
-      border-radius: 12px;
-      padding: 10px 12px;
-      background: #fff;
-      margin: 10px 0;
-    }
-    summary {
-      cursor: pointer;
-      font-weight: 650;
-      list-style: none;
-    }
+    details { border: 1px solid #eee; border-radius: 12px; padding: 10px 12px; background: #fff; margin: 10px 0; }
+    summary { cursor: pointer; font-weight: 650; list-style: none; }
     summary::-webkit-details-marker { display: none; }
-    .act-body {
-      margin-top: 10px;
-      color: #222;
-      font-size: 0.98rem;
-    }
+    .act-body { margin-top: 10px; color: #222; font-size: 0.98rem; }
 
-    .mini {
-      font-size: 0.92rem;
-      color: #555;
-      margin-top: 10px;
-    }
-
-    .mirror {
-      position: sticky;
-      top: 16px;
-    }
-    .mirror h2 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-    }
+    .mirror { position: sticky; top: 16px; }
     .pill {
       display: inline-block;
       padding: 6px 10px;
@@ -127,7 +55,6 @@
       font-size: 0.9rem;
       font-weight: 650;
     }
-
     .mirror-box {
       margin-top: 10px;
       padding: 12px;
@@ -137,16 +64,14 @@
       min-height: 420px;
     }
 
-    .footer {
-      margin-top: 16px;
-      color: #444;
-      font-size: 0.95rem;
-      text-align: center;
-    }
-    .footer a { color: #0b57d0; text-decoration: none; }
-    .footer a:hover { text-decoration: underline; }
+    /* Arguments formatting (no nested details) */
+    .arg { margin: 14px 0; padding-top: 12px; border-top: 1px solid #f0f0f0; }
+    .arg:first-child { border-top: none; padding-top: 0; }
+    .arg p { margin: 6px 0; }
+    .arg .label { font-weight: 700; }
 
-    /* Mobile layout */
+    .footer { margin-top: 16px; color: #444; font-size: 0.95rem; text-align: center; }
+
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
       .mirror { position: static; }
@@ -158,434 +83,122 @@
 <body>
   <header>
     <div class="header-wrap">
-      <div class="header-left">
-        <h1>Layer 1: Why You’ll Never Retire & If this was an accident, why wasn’t it reversed? 
- </h1>
-        <p class="sub">Acts 1–9 on the left. Mirror system on the right (coming soon).</p>
+      <div>
+        <h1>Layer 1: Why You’ll Never Retire &amp; If this was an accident, why wasn’t it reversed?</h1>
+        <p class="sub">Acts on the left. Mirror system on the right (coming soon).</p>
       </div>
-    
+      <div class="header-actions">
+        <a href="/">Go to Global Unity →</a>
+      </div>
     </div>
   </header>
- 
-<section class="card" style="margin-top:12px;">
-  <h2 style="margin:0 0 6px; font-size:1.05rem;">Core Agencies Involved (Start Here)</h2>
-
-  <p class="mini">
-    These are the main government actors connected to the retirement, housing, inflation,
-    and market rules discussed in Acts 1–9.
-  </p>
-
-  <ul class="mini">
-    <li><strong>Congress</strong> — writes laws and budgets</li>
-    <li><strong>U.S. Treasury</strong> — bonds and government financing</li>
-    <li><strong>Federal Reserve</strong> — monetary policy and crisis stabilization</li>
-    <li><strong>Department of Labor</strong> — retirement plan rules under ERISA</li>
-    <li><strong>Social Security Administration</strong> — Social Security system</li>
-    <li><strong>Bureau of Labor Statistics (BLS)</strong> — inflation measures such as CPI</li>
-    <li><strong>Securities and Exchange Commission (SEC)</strong> — investment rules and disclosures</li>
-  </ul>
-
-  <p class="mini" style="margin-top:8px;">
-    Full agency map: see <strong>Layer 5 / Truth Library</strong> for the complete list
-    (20+ agencies and related bodies).
-  </p>
-</section>
-
 
   <main class="wrap">
-    
-       
- 
+    <div class="grid">
 
+      <!-- LEFT COLUMN -->
+      <section class="card">
 
-      <!-- LEFT: ACTS -->
-      <section class="card acts">
-        <h2>Welcome </h2>
         <div class="note">
           <strong>How to use:</strong> Tap an Act to open it. Read top to bottom.  
           When the Mirror panel is live, it will show “what was said vs what was done.”
         </div>
-        
 
+        <!-- Core agencies INSIDE left column -->
+        <section class="card" style="margin-top:12px;">
+          <h2 style="margin:0 0 6px; font-size:1.05rem;">Core Agencies Involved (Start Here)</h2>
 
-        <!-- ACT 1 -->
+          <p class="mini">
+            These are the main government actors connected to the retirement, housing, inflation,
+            and market rules discussed in Acts 1–9.
+          </p>
+
+          <ul class="mini">
+            <li><strong>Congress</strong> — writes laws and budgets</li>
+            <li><strong>U.S. Treasury</strong> — bonds and government financing</li>
+            <li><strong>Federal Reserve</strong> — monetary policy and crisis stabilization</li>
+            <li><strong>Department of Labor</strong> — retirement plan rules under ERISA</li>
+            <li><strong>Social Security Administration</strong> — Social Security system</li>
+            <li><strong>Bureau of Labor Statistics (BLS)</strong> — inflation measures such as CPI</li>
+            <li><strong>Securities and Exchange Commission (SEC)</strong> — investment rules and disclosures</li>
+          </ul>
+
+          <p class="mini" style="margin-top:8px;">
+            Full agency map: see <strong>Layer 5 / Truth Library</strong> for the complete list (20+ agencies and related bodies).
+          </p>
+        </section>
+
+        <!-- ACTS -->
         <details open>
-          <summary>Act 1 — Retirement Risk Shifted to Workers </summary>
+          <summary>Act 1 — Retirement Risk Shifted to Workers</summary>
           <div class="act-body">
             <p>Before, many long-tenured workers—especially at large employers and unionized workplaces—had pensions that offered more predictable retirement income than today’s system. It was not universal, and it was not perfectly guaranteed, but the big difference was this: if the plan came up short, the company carried most of the shortfall risk, not the worker.</p>
-<p>Over time, a mix of policy changes and business incentives reshaped retirement. ERISA (1974) created protections for retirement plans and introduced IRAs. Later tax-code changes—including the Revenue Act of 1978 and 1981 IRS rules—accelerated 401(k)-style salary deferrals. Employers steadily shifted away from pensions toward market-linked retirement accounts, moving more retirement risk onto workers.</p>
-<p>Pensions were market-exposed too—but the sponsor carried the funding and shortfall risk. 401(k)s move that residual risk onto workers.</p>
-<p>This shift increased portability and reduced employer liability, but it also tied retirement security more tightly to financial markets. If markets crash, workers can lose years of savings—even if they did nothing wrong.</p>
-<p>“Over time, employers shifted from pensions to market-linked accounts, moving retirement risk onto workers.”</p>
-</p>
+            <p>Over time, a mix of policy changes and business incentives reshaped retirement. ERISA (1974) created protections for retirement plans and introduced IRAs. Later tax-code changes—including the Revenue Act of 1978 and 1981 IRS rules—accelerated 401(k)-style salary deferrals. Employers steadily shifted away from pensions toward market-linked retirement accounts, moving more retirement risk onto workers.</p>
+            <p>Pensions were market-exposed too—but the sponsor carried the funding and shortfall risk. 401(k)s move that residual risk onto workers.</p>
+            <p>This shift increased portability and reduced employer liability, but it also tied retirement security more tightly to financial markets. If markets crash, workers can lose years of savings—even if they did nothing wrong.</p>
+            <p><strong>“Over time, employers shifted from pensions to market-linked accounts, moving retirement risk onto workers.”</strong></p>
           </div>
         </details>
 
-        <!-- ACT 2 -->
         <details>
           <summary>Act 2 — The Illusion of Control</summary>
           <div class="act-body">
             <p>After pensions declined, workers were told they were now “in control” of their retirement. Many workers are nudged—and increasingly auto-enrolled in larger plans—into deferring part of their paycheck into a 401(k), which is then invested in markets. This money comes from people’s labor—their time, their work, their lives.</p>
- <p>Whether markets rise or fall, fees and administrative costs are typically collected regardless of market direction. Workers can change contribution rates, but most workers can’t avoid meaningful market and inflation risk and still build a viable retirement—especially without a pension.</p>
- <p>Portability is a real benefit. It helped workers leave bad jobs and keep savings. But portability did not require shifting this much risk onto workers. Other systems show you can have portability with stronger protections—such as mandatory employer contributions and a public retirement floor—without forcing individuals to carry most of the risk alone.</p>
- <p>“Workers’ retirement savings became dependent on markets, while fees are collected regardless of outcomes.”</p>
-</p>
-          </div>
-           <div class="act-body">
-             <summary>Context Note — Risk Was Shifted Without Preparation</summary>
-             <p> As retirement and financial risk shifted from companies to workers, financial literacy was not made a consistent, nationwide requirement. Students are required to study math, English, science, and social studies for many years, but learning how money, debt, taxes, markets, and retirement systems work is usually optional or briefly covered.</p>
- <p> Requirements are expanding fast in many states, but depth, teacher training, and implementation vary widely—so preparation is still uneven. Major education reforms, including No Child Left Behind, focused on testing and academic benchmarks, not on preparing students to manage complex financial systems.</p>
- <p> Education helps, but no amount of individual financial literacy can fully offset a system built around complexity, fees, and unequal tools. When responsibility increases without preparation, poor outcomes are predictable—not personal failure.</p>
- <p> “Financial risk was made mandatory, but financial education was not.” </p>
-             </div>
+            <p>Whether markets rise or fall, fees and administrative costs are typically collected regardless of market direction. Workers can change contribution rates, but most workers can’t avoid meaningful market and inflation risk and still build a viable retirement—especially without a pension.</p>
+            <p>Portability is a real benefit. It helped workers leave bad jobs and keep savings. But portability did not require shifting this much risk onto workers.</p>
+            <p><strong>“Workers’ retirement savings became dependent on markets, while fees are collected regardless of outcomes.”</strong></p>
 
-        </details>
-
-        <!-- ACT 3 -->
-        <details>
-          <summary>Act 3 — Why Inflation Feels Worse Than the Numbers
-</summary>
-          <div class="act-body">
-            <p>As workers were pushed to manage retirement and housing on their own, inflation measurement became more important. Inflation is supposed to show how much more expensive life is getting.</p>
- <p>CPI includes food and rent, but housing is measured mainly through rent and ‘owners’ equivalent rent (OER),’ not home prices or mortgage payments. This approach can lag what people feel, especially when home prices and mortgage costs rise quickly.</p>
- <p>CPI methods are designed to measure an average, comparable basket over time—but they can diverge from what specific households experience, particularly when housing costs jump unevenly.</p>
- <p>Some wages, many benefits, Social Security COLAs (CPI-W), and tax brackets (chained CPI-U / C-CPI-U) are tied to inflation measures. When those measures lag lived housing costs, many households feel squeezed.</p>
- <p>“When pay and benefits rely on measures that lag lived costs, people fall behind even when official numbers look stable.”</p>
-</p>
+            <div class="note" style="margin-top:12px;">
+              <strong>Context Note — Risk Was Shifted Without Preparation</strong>
+              <p class="mini" style="margin:8px 0 0;">As retirement and financial risk shifted from companies to workers, financial literacy was not made a consistent, nationwide requirement… “Financial risk was made mandatory, but financial education was not.”</p>
+            </div>
           </div>
         </details>
 
-        <!-- ACT 4 -->
+        <details><summary>Act 3 — Why Inflation Feels Worse Than the Numbers</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Act 4 — Housing Became an Investment</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Act 5 — Social Security and Uncertainty</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Act 6 — Market Stabilization Comes First</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Act 7 — Access to Opportunity Is Restricted</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Act 8 — Complexity, Scarcity, and Accountability</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Act 9 — Division Over Understanding</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+
+        <details><summary>Act 10 — The Limits of Voting</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>The Other Side Says</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Theory of Change — How Systems Actually Shift</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Bridge Sentence</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+        <details><summary>Final Note</summary><div class="act-body"><p>... (keep your existing text here) ...</p></div></details>
+
+        <!-- ONE Arguments tab (closed) — do NOT nest <details> inside -->
         <details>
-          <summary>Act 4 — Housing Became an Investment</summary>
+          <summary>Arguments &amp; Calm Responses</summary>
           <div class="act-body">
-            <p>For long stretches in the mid-to-late 20th century, homeownership was broadly reachable for middle-income wages—before affordability diverged sharply in many metros.</p>
- <p>After 2008, ultra-low rates and market-stability policies made cheap capital more available to large buyers. At the same time, limited housing supply—often shaped by local zoning—kept prices high. Investors also had advantages in speed, scale, and financing, which helped them buy homes many families couldn’t.</p>
- <p>Investor purchases rose after the crash, and in some metros investors with financing and scale advantages competed directly with families—but nationally, supply constraints remain the dominant driver. Families who could no longer buy were pushed into renting.</p>
- <p>Housing increasingly functioned as a financial asset.</p>
-<p> “Cheap capital plus limited supply pushed housing further into an investment asset.” </p>
+            <div class="arg">
+              <p class="label">Argument A:</p>
+              <p>“Yes, but that’s just how capitalism works.”</p>
+              <p class="label">Calm response:</p>
+              <p>Capitalism can work in many ways…</p>
+            </div>
+
+            <div class="note" style="margin-top:12px;">
+              <p><strong>Closing anchor:</strong> “This project does not ask whether the system is legal or inevitable…”</p>
+            </div>
           </div>
         </details>
 
-        <!-- ACT 5 -->
-        <details>
-          <summary>Act 5 — Social Security and Uncertainty</summary>
-          <div class="act-body">
-            <p>Social Security was presented as a safe backup for retirement. Workers paid in every paycheck, believing their money was being saved for when they got older.</p>
-<p>By law, Social Security trust funds are invested in special Treasury bonds. The cash is used as part of overall government financing, and the trust funds hold Treasury promises that must be paid later.</p>
-<p>Trust fund reserves are currently projected to be depleted around 2033 (per the most recent Trustees Report), after which ongoing income would still pay about 77% of scheduled benefits unless the law changes. These projections shift with economic conditions, but the underlying structural uncertainty remains.</p>
-<p>The uncertainty comes from demographics plus policy choices—not from workers failing to contribute.</p>
-<p>“Social Security relies on future policy decisions, which is why the system feels uncertain.”</p>
-</p>
+        <!-- NEXT tab (open) -->
+        <details open>
+          <summary>Next — Go to Layer 1.5</summary>
+          <div class="act-body" style="text-align:center;">
+            <p><strong>Click Here For Layer 1.5</strong></p>
+            <p>The next page covers jobs and trade shifts in the same broad era.</p>
+            <p><a href="/you-asked-for-proof/layer-1-5/">Continue to Layer 1.5 →</a></p>
           </div>
         </details>
 
-        <!-- ACT 6 -->
-        <details>
-          <summary>Act 6 — Market Stabilization Comes First</summary>
-          <div class="act-body">
-            <p>(Fed policy, crisis response, recovery timing)
-<p>The financial system holds large amounts of government bonds and market assets. When those assets lose value, the system itself is at risk.</p>
-<p>During periods of stress, the Federal Reserve responds to stabilize the system. The U.S. Treasury issues bonds to the public, and the Federal Reserve can later buy and sell those bonds in secondary markets as part of monetary policy, creating or removing bank reserves electronically. This helps keep credit flowing and prevents payment systems from breaking down.</p>
-<p>There has long been debate—inside and around the Fed—about the trade-offs of this approach. Critics argue that very low rates and market support can inflate asset prices and increase inequality; defenders argue these actions are necessary to prevent deeper economic collapse.</p>
-<p>Both views recognize the same sequence: stabilizing the financial system is treated as the first move, because if credit plumbing fails, households are hit next. Even when policy is meant to cushion the broader economy, asset markets usually recover first. Household losses—job loss, foreclosures, depleted savings—often take longer to heal.</p>
-<p>“Markets are stabilized first, while households often feel the damage longer.”</p>
-</p>
-          </div>
-        </details>
+      </section>
 
-        <!-- ACT 7 -->
-        <details>
-          <summary>Act 7 — Access to Opportunity Is Restricted
-</summary>
-          <div class="act-body">
-            <p>Accredited investor rules, baseline inequality of upside)
-<p>Separately from crisis response, markets also differ in who is allowed to access the highest-growth opportunities during normal times.</p>
-<p>Under U.S. securities rules, most early-stage investments are limited to “accredited investors,” defined by income and net worth.</p>
-<p>These rules exist for real reasons. Early-stage companies often fail, have limited disclosure, no liquid exit, and little recourse if things go wrong. Without guardrails, people could lose savings they cannot afford to lose. In that sense, the rules are designed as protection.</p>
-<p>At the same time, early-stage investing is where some of the fastest value growth can occur. By the time companies reach public markets, a significant portion of gains may already have accrued to earlier investors—though not always, and not for every company. Public markets can still deliver long-term returns, but early access changes the compounding path.</p>
-<p>The result is a trade-off: protection is provided by restricting access, but the restriction also reserves the highest-growth opportunities for those who already have wealth, time, networks, and diversification capacity. Even if access rules changed, these non-monetary advantages would still favor the wealthy.</p>
-<p>Recent reforms such as crowdfunding and Regulation A have expanded access somewhat, but participation remains capped and outcomes are mixed. Fraud risk persists, and retail investors still lack the resources professional investors use to evaluate early deals.</p>
-<p>This does not mean protection is wrong. It means the system balances protection and access in a way that systematically concentrates early upside, while the broader public primarily participates later—when risk remains, but early compounding has already occurred.</p>
-<p>“Protection is real, but so is the concentration of early upside.”</p>
-<p>“Different rules, different reasons—yet the same result: protection and upside accumulate at the top, while risk and delay are spread outward.”</p>
-</p>
-          </div>
-        </details>
-
-        <!-- ACT 8 -->
-        <details>
-          <summary>Act 8 — Complexity, Scarcity, and Accountability
-</summary>
-          <div class="act-body">
-            <p>When the Fed buys bonds in secondary markets, it creates bank reserves—settlement balances that keep payments and credit functioning. These reserves are not household money.</p>
- <p>Public finance is often described in household-budget terms, which produces a scarcity mindset, even when the system itself can continue operating.</p>
- <p>Some complexity exists because modern economies are real and complicated. But not all complexity serves a functional purpose. Necessary complexity helps systems work; unnecessary complexity—such as opaque fee structures, overlapping rules, and hard-to-read disclosures—creates a gap where insiders can operate and regular people can’t. That gap is where accountability breaks down and the same outcomes repeat.</p>
- <p>“Money can stabilize the system, while the public experiences the story as scarcity.”</p>
-</p>
-          </div>
-        </details>
-
-        <!-- ACT 9 -->
-        <details>
-          <summary>Act 9 — Division Over Understanding</summary>
-          <div class="act-body">
-            <p>By this point, many people struggle with money, housing, and retirement—problems almost everyone wants solved.</p>
- <p>Instead, attention is pulled toward constant cultural conflict. Social media and news platforms amplify anger and division because that content performs best. You don’t need coordination for this—engagement-driven systems naturally amplify outrage.</p>
- <p>While people argue with each other, financial structures and incentive rules remain out of focus. Wealth concentration continues. Structural questions are rarely addressed.</p>
- <p>“When people fight over culture, they stop questioning the money system.”</p>
-</p>
-          </div>
-        </details>
-
-           <!-- ACT 10 -->
-        <details>
-          <summary>Act 10 — The Limits of Voting</summary>
-          <div class="act-body">
-            <p>Voting matters. It chooses who holds office.</p>
-<p>But voting alone does not change the rules that shape money, housing, and retirement. Those rules are written into law, enforced by agencies, and protected over time. Changing them requires rule changes, enforcement, and accountability—not just elections.</p>
-<p>When people are taught that voting is the only tool for change, deeper systems remain untouched and the same outcomes repeat.</p>
-<p>Voting chooses leaders.</p>
-<p>Systems change when rules are challenged and enforced.</p>
-<p>“Voting matters—but it doesn’t change systems by itself.”</p>
-</p>
-          </div>
-        </details>
-
-          <!-- The Other Side Says -->
-        <details>
-          <summary>The Other Side Says</summary>
-          <div class="act-body">
-            <p>Some people argue these changes were trade-offs. They say pensions could trap workers in one job, and 401(k)s made retirement savings portable. They say CPI methods are meant to measure an average basket fairly. They say the Fed stabilizes banks first because a broken payment system would crush households next.
-</p>
-<p>This project agrees that some trade-offs are real. But when one side of every trade-off consistently receives protection while the other absorbs risk—across retirement, housing, inflation measurement, and crisis response—that repeated pattern suggests structural incentives, not accident.</p>
-
-</p>
- </div>
-        </details>
-
-          <!-- Theory of Change — How Systems Actually Shift -->
-        <details>
-          <summary>Theory of Change — How Systems Actually Shift</summary>
-          <div class="act-body">
-           <p> This does not require a secret plan or coordinated intent. When laws and incentives reward lower employer liability and higher financial-market flows, the same outcomes can emerge over time.</p>
-<p>In history, major changes didn’t happen because people were simply right. They happened when people built enough collective power that leaders had to respond—through organizing, public pressure, legal challenges, and sustained attention. Courts and agencies often respond after power shifts, not before.</p>
-<p>Today that power is weaker because people are exhausted, divided, and busy surviving. Clarity is the first step toward building collective power when organizing is economically punished and legally constrained. People cannot consent to outcomes they are not able to understand.</p>
-
-</p>
-             </div>
-        </details>
-
-          <!-- Bridge Sentence-->
-        <details>
-          <summary>Bridge Sentence</summary>
-          <div class="act-body">
-           <p> These changes didn’t just affect retirement. They reshaped how markets work, how daily life feels, and how pressure spreads into housing, work, relationships, and society.
-</p>
-
-</p>
- </div>
-        </details>
-
-          <!-- Final Note-->
-        <details>
-          <summary>Final Note</summary>
-          <div class="act-body">
-           <p> This analysis describes structural incentives, not villains. When responsibility is shifted without equal tools, education, or protections, predictable outcomes follow.</p>
-
- </div>
-        </details>
-
-          <!-- Arguments & Calm Responses-->
-         <details>
-          <summary>Arguments & Calm Responses</summary>
-
-            <section class="card" style="margin-top:16px;">
-  <h2></h2>
-  <div class="note">
-    <strong>How to use:</strong> If you disagree with an Act, tap a common argument below and read the calm response.
-  </div>
-
-  <!-- Paste the argument items here -->
-</section>
-<details>
-  <summary>Argument A: “Yes, but that’s just how capitalism works.”</summary>
-  <div class="act-body">
-    <p>Capitalism can work in many ways. The question isn’t whether markets exist, but how risk and protection are distributed. When the same system consistently protects capital during downturns while exposing workers to losses, that outcome reflects design choices within capitalism — not an unavoidable law of nature.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument B: “Yes, but people voted for this.”</summary>
-  <div class="act-body">
-    <p>Democratic choice requires informed consent. When financial systems are complex, financial literacy is uneven, and outcomes are framed in household-budget terms that obscure how the system actually works, people cannot meaningfully consent to the results. Legal outcomes are not the same as informed choices.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument C: “Yes, but complexity is necessary.”</summary>
-  <div class="act-body">
-    <p>Some complexity is necessary in a modern economy. But not all complexity serves a functional purpose. Opaque fee structures, overlapping rules, and hard-to-read disclosures do not make systems safer — they make accountability harder. The gap between necessary complexity and unnecessary opacity is where problems persist.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument D: “Yes, but I think these trade-offs are worth it.”</summary>
-  <div class="act-body">
-    <p>That is a value judgment. This project does not argue that trade-offs don’t exist — it shows that the same side consistently receives protection while the other absorbs risk. Whether that is acceptable is a separate question, but the pattern itself is observable.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument E: “401(k)s gave workers freedom and opportunity.”</summary>
-  <div class="act-body">
-    <p>Portability is a real benefit. It allowed workers to leave bad jobs and keep savings. The issue is not portability — it’s that portability was paired with risk-shifting that was not inevitable. Other systems combine portability with stronger protections and a public retirement floor.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument F: “Pensions failed too — they weren’t safe.”</summary>
-  <div class="act-body">
-    <p>That’s true. Pensions were not perfectly guaranteed and were exposed to markets. The difference is who carried the shortfall risk. In pensions, employers absorbed most of the risk. In 401(k)s, workers do.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument G: “Inflation measurement is accurate — it’s just math.”</summary>
-  <div class="act-body">
-    <p>Inflation measures are designed to track averages. But averages can diverge from lived experience, especially when housing costs rise unevenly. When wages, benefits, and tax brackets are tied to those averages, many households feel squeezed even if the measure itself is technically correct.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument H: “Housing costs are about zoning, not Wall Street.”</summary>
-  <div class="act-body">
-    <p>Supply constraints are a major driver of housing costs. At the same time, cheap capital and investor advantages amplified the effects of scarcity in some markets. These factors interacted — one does not cancel out the other.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument I: “The Fed saved banks because it had to.”</summary>
-  <div class="act-body">
-    <p>Stabilizing the financial system can be necessary to prevent broader collapse. The observation here is about sequence: asset markets are stabilized first, while households often experience longer-lasting damage. That pattern has consequences.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument J: “Social Security math just doesn’t work anymore.”</summary>
-  <div class="act-body">
-    <p>Demographics matter, and financing gaps are real. The point is not denial of math, but recognition that outcomes depend on policy choices. The system can be adjusted — or not — through legislation.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument K: “Financial literacy doesn’t actually help people.”</summary>
-  <div class="act-body">
-    <p>Education helps, but it cannot overcome structural disadvantages. No amount of individual literacy can fully offset a system built around complexity, fees, and unequal access to tools. The issue is not personal intelligence — it’s system design.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument L: “People choose culture wars because they care more.”</summary>
-  <div class="act-body">
-    <p>People care deeply about values and identity. At the same time, engagement-driven systems amplify anger because it holds attention longer. This doesn’t remove agency — it explains why certain conflicts dominate attention while structural issues fade.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument M: “You’re implying a conspiracy.”</summary>
-  <div class="act-body">
-    <p>This analysis explicitly rejects conspiracy. It describes emergent outcomes from incentives. When laws and rewards align in a certain direction, similar results can appear without coordination or intent.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument N: “So what’s your solution?”</summary>
-  <div class="act-body">
-    <p>This project is not a policy platform. Its purpose is to make systems visible. Historically, meaningful change followed that visibility — when people stopped blaming each other and began recognizing shared structural problems. Clarity comes before solutions.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument O: “Even if this is true, the world is better now.”</summary>
-  <div class="act-body">
-    <p>Some indicators have improved over time. The question here is narrower: why retirement security, housing affordability, and financial stability have become more fragile for many workers, even as productivity and wealth increased. Both can be true at once.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument P: “The Fed saves banks because it has to. Everyone benefits.”</summary>
-  <div class="act-body">
-    <p>Stabilizing the financial system can be necessary to prevent broader collapse. The observation here is not that intervention is wrong, but that recovery happens in a sequence. Asset markets and balance sheets stabilize first, while households often take longer to recover from job loss, foreclosures, and depleted savings. Timing matters.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument Q: “If banks weren’t stabilized first, households would suffer even more.”</summary>
-  <div class="act-body">
-    <p>That may be true. The point is not to deny the risk of collapse, but to recognize that protection mechanisms prioritize system integrity before household recovery, which has lasting distributional effects.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument R: “Accredited investor rules protect people from scams.”</summary>
-  <div class="act-body">
-    <p>Yes. Early-stage investments are risky, illiquid, and often fail. Protection is a legitimate goal. The issue is that protection is achieved by restricting access, which also reserves the highest-growth opportunities for those who already have wealth and resources.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument S: “Early investing is risky anyway—public markets still offer returns.”</summary>
-  <div class="act-body">
-    <p>Public markets can and do provide long-term returns. The distinction here is about compounding paths. Early access changes how gains accumulate over time, even if later participation is still possible.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument T: “Even without the rule, wealthy people would dominate early investing.”</summary>
-  <div class="act-body">
-    <p>That’s likely true. Wealthy investors also have time, networks, legal support, and diversification capacity. The rule does not create inequality by itself—but it formalizes and reinforces existing advantages.</p>
-  </div>
-</details>
-
-<details>
-  <summary>Argument U: “You’re just saying wealthy people have advantages.”</summary>
-  <div class="act-body">
-    <p>Yes. The purpose here is to show that those advantages appear across different mechanisms—during crises and during normal times—because protection and access rules consistently favor those who already have wealth. The repetition is the pattern.</p>
-  </div>
-</details>
-
-<div class="note" style="margin-top:12px;">
-  <strong>Closing anchor:</strong>
-  <p style="margin:8px 0 0;">“This project does not ask whether the system is legal or inevitable. It asks whether the outcomes are consistently aligned — and who bears the risk when they are not.”</p>
-</div>
-
-          
-
-
-        <p class="mini">
-          
-        </p>
-      
-       
-        </details open>
-<details>
-
- <summary>Click Here For Layer 1.5</summary>
-  <div class="act-body">
-           <div class="card" style="margin-top:16px; text-align:center;">
-  <p><strong>The next page shows how the system actually works.</strong></p>
-  <p></p>
-  <p>
-    <a href="/you-asked-for-proof/layer-1-5/">Continue to Layer 1.5→ </a>
-  </p>
-</div> 
-  
-      </section> 
-  
-      
- 
-      <!-- RIGHT: MIRROR PLACEHOLDER -->
+      <!-- RIGHT COLUMN -->
       <aside class="card mirror">
         <h2>Mirror: “Said vs Done”</h2>
         <span class="pill">Coming soon</span>
