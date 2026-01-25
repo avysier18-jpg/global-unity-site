@@ -66,6 +66,73 @@
 
     .footer { margin-top: 16px; color: #444; font-size: 0.95rem; text-align: center; }
 
+    /* NEW: Styles for agencies section */
+    .agencies-section {
+      background: #fff;
+      border: 1px solid #e9e9ee;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+    .agencies-section h2 {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+    }
+    .agency-category {
+      margin-bottom: 16px;
+    }
+    .agency-category h3 {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+      color: #0b57d0;
+    }
+    .agency-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .agency-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.92rem;
+      color: #333;
+    }
+    .agency-list li:last-child {
+      border-bottom: none;
+    }
+    .agency-list strong {
+      color: #111;
+    }
+    .why-matters {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 12px;
+      margin-top: 16px;
+    }
+    .why-matters h3 {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      color: #111;
+    }
+    .why-matters ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .why-matters li {
+      font-size: 0.92rem;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    .key-insight {
+      font-style: italic;
+      color: #444;
+      font-size: 0.92rem;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #eee;
+    }
+
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
     }
@@ -87,6 +154,90 @@
   </header>
 
   <main class="wrap">
+
+    <!-- NEW: Government Agencies Section -->
+    <section class="agencies-section">
+      <h2>All Government Agencies Connected to Retirement, Housing, Markets, and Financial Systems</h2>
+
+      <div class="agency-category">
+        <h3>Core Federal Agencies (Most Critical)</h3>
+        <ol class="agency-list">
+          <li><strong>Federal Reserve (The Fed)</strong> — Controls interest rates, creates bank reserves, stabilizes markets during crises</li>
+          <li><strong>U.S. Department of the Treasury</strong> — Issues government bonds, manages national debt</li>
+          <li><strong>Congress</strong> — Writes laws that changed pensions to 401(k)s, controls budgets, creates regulations</li>
+          <li><strong>Social Security Administration (SSA)</strong> — Manages Social Security, invests trust funds in Treasury bonds</li>
+          <li><strong>Internal Revenue Service (IRS)</strong> — Collects taxes, enforces 401(k) rules and tax code</li>
+          <li><strong>Department of Labor</strong> — Oversees ERISA, regulates pensions and 401(k) plans</li>
+          <li><strong>Bureau of Labor Statistics (BLS)</strong> — Calculates inflation (CPI, CPI-W, Chained CPI)</li>
+          <li><strong>Securities and Exchange Commission (SEC)</strong> — Regulates investments, enforces accredited investor rules</li>
+        </ol>
+      </div>
+
+      <div class="agency-category">
+        <h3>Housing &amp; Financial Crisis Agencies</h3>
+        <ol class="agency-list">
+          <li><strong>Department of Housing and Urban Development (HUD)</strong> — Housing policy and regulations</li>
+          <li><strong>Federal Housing Finance Agency (FHFA)</strong> — Oversees Fannie Mae and Freddie Mac</li>
+          <li><strong>Federal Deposit Insurance Corporation (FDIC)</strong> — Insures banks, stabilizes banking system</li>
+          <li><strong>Office of the Comptroller of the Currency (OCC)</strong> — Regulates national banks</li>
+          <li><strong>Consumer Financial Protection Bureau (CFPB)</strong> — Consumer financial protection (created post-2008)</li>
+        </ol>
+      </div>
+
+      <div class="agency-category">
+        <h3>Pension &amp; Retirement Oversight</h3>
+        <ol class="agency-list">
+          <li><strong>Pension Benefit Guaranty Corporation (PBGC)</strong> — Insures private pension plans when they fail</li>
+        </ol>
+      </div>
+
+      <div class="agency-category">
+        <h3>Monetary Policy &amp; Crisis Response</h3>
+        <ol class="agency-list">
+          <li><strong>Federal Open Market Committee (FOMC)</strong> — Part of the Fed, sets monetary policy</li>
+          <li><strong>Financial Stability Oversight Council (FSOC)</strong> — Monitors systemic financial risks (created post-2008)</li>
+        </ol>
+      </div>
+
+      <div class="agency-category">
+        <h3>Courts &amp; Enforcement</h3>
+        <ol class="agency-list">
+          <li><strong>Federal Courts (Judiciary)</strong> — Enforce compliance, judicial review of regulations, can force agencies to follow laws</li>
+        </ol>
+      </div>
+
+      <div class="agency-category">
+        <h3>Education &amp; Systems Literacy</h3>
+        <ol class="agency-list">
+          <li><strong>Department of Education</strong> — Federal education policy, though curriculum is often state-controlled</li>
+          <li><strong>State Education Agencies</strong> — Set curriculum standards, implement financial literacy requirements (varies by state)</li>
+        </ol>
+      </div>
+
+      <div class="agency-category">
+        <h3>Executive Branch</h3>
+        <ol class="agency-list">
+          <li><strong>The Presidency</strong> — Appointments of agency heads (Fed Chair, SEC Chair, etc.), executive orders, enforcement priorities, emergency powers</li>
+        </ol>
+      </div>
+
+      <div class="why-matters">
+        <h3>Why This Matters:</h3>
+        <p>Many people think "the government" is one thing helping or hurting them. In reality:</p>
+        <ul>
+          <li>These agencies often have conflicting priorities</li>
+          <li>Some stabilize banks first (Fed, Treasury, FDIC)</li>
+          <li>Some measure inflation in ways that lag real costs (BLS)</li>
+          <li>Some enforce rules that shifted retirement risk to workers (Department of Labor, IRS)</li>
+          <li>Some restrict investment opportunities to the wealthy (SEC)</li>
+          <li>Congress writes the laws that created these systems</li>
+          <li>Courts can force change but only when challenged</li>
+        </ul>
+        <p class="key-insight">The system isn't one entity—it's 20+ agencies with different rules, priorities, and incentives. Understanding which agency controls which part of your financial life helps you know where to direct pressure and who to hold accountable.</p>
+      </div>
+    </section>
+    <!-- END: Government Agencies Section -->
+
     <div class="grid">
 
       <!-- LEFT COLUMN: Visual tabs (all closed by default) -->
@@ -124,7 +275,7 @@
           <summary>Layer 4 — Incentives & Attention</summary>
           <div class="act-body">
             <div class="placeholder">Image(s) for Layer 4 go here</div>
-            <p class="mini">Tip: one “attention loop” visual + one education visual.</p>
+            <p class="mini">Tip: one "attention loop" visual + one education visual.</p>
           </div>
         </details>
 
@@ -132,7 +283,7 @@
           <summary>Layer 5 — What to do next</summary>
           <div class="act-body">
             <div class="placeholder">Optional image(s) for Layer 5 go here</div>
-            <p class="mini">Tip: this can be a simple “map” image pointing to Truth Library.</p>
+            <p class="mini">Tip: this can be a simple "map" image pointing to Truth Library.</p>
           </div>
         </details>
 
@@ -166,4 +317,3 @@
   </main>
 </body>
 </html>
-
