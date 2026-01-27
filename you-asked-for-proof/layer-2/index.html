@@ -37,6 +37,95 @@
 
     .footer { margin-top: 16px; color: #444; font-size: 0.95rem; text-align: center; }
 
+    /* Flow diagram sidebar */
+    .flow-sidebar {
+        position: sticky;
+        top: 2rem;
+    }
+    .flow-diagram {
+        margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flow-step {
+        background: #112240;
+        border: 1px solid #1d3a5c;
+        border-radius: 8px;
+        padding: 12px 16px;
+        text-align: center;
+        width: 100%;
+        max-width: 220px;
+    }
+    .flow-step.highlight {
+        border-color: #f5a623;
+        background: #1a2a40;
+    }
+    .flow-icon {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+    .flow-label {
+        color: #ccd6f6;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    .flow-note {
+        color: #8892b0;
+        font-size: 0.75rem;
+        margin-top: 4px;
+    }
+    .flow-arrow {
+        color: #64ffda;
+        font-size: 1.2rem;
+        margin: 8px 0;
+    }
+    .flow-split {
+        display: flex;
+        gap: 12px;
+        background: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+    }
+    .flow-branch {
+        background: #112240;
+        border: 1px solid #1d3a5c;
+        border-radius: 8px;
+        padding: 10px 12px;
+        text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.8rem;
+        color: #a8b2d1;
+    }
+    .flow-icon-small {
+        font-size: 1rem;
+    }
+    .flow-result {
+        font-weight: 600;
+        font-size: 0.75rem;
+    }
+    .flow-result.good {
+        color: #64ffda;
+    }
+    .flow-result.bad {
+        color: #ff6b6b;
+    }
+    .flow-summary {
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid #1d3a5c;
+        font-size: 0.85rem;
+        color: #a8b2d1;
+        text-align: center;
+    }
+    .flow-summary strong {
+        color: #64ffda;
+    }
+
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
     }
@@ -382,6 +471,70 @@
           </div>
         </details>
       </section>
+
+<!-- RIGHT: HOW IT WORKS SIDEBAR -->
+<aside class="card flow-sidebar">
+<h2>How It Works</h2>
+<p class="mini">The path from paycheck to retirement — and where risk enters.</p>
+
+<div class="flow-diagram">
+
+<div class="flow-step">
+  <div class="flow-icon">💵</div>
+  <div class="flow-label">Your Paycheck</div>
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step">
+  <div class="flow-icon">📥</div>
+  <div class="flow-label">401(k) Contribution</div>
+  <div class="flow-note">Auto-enrolled or voluntary</div>
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step">
+  <div class="flow-icon">📈</div>
+  <div class="flow-label">Invested in Markets</div>
+  <div class="flow-note">Stocks, bonds, target-date funds</div>
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step flow-split">
+  <div class="flow-branch up">
+    <span class="flow-icon-small">📈</span>
+    <span>Markets rise</span>
+    <span class="flow-result good">Balance grows</span>
+  </div>
+  <div class="flow-branch down">
+    <span class="flow-icon-small">📉</span>
+    <span>Markets fall</span>
+    <span class="flow-result bad">Balance drops</span>
+  </div>
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step highlight">
+  <div class="flow-icon">💸</div>
+  <div class="flow-label">Fees Charged Either Way</div>
+  <div class="flow-note">Expense ratios, admin costs</div>
+</div>
+
+<div class="flow-arrow">↓</div>
+
+<div class="flow-step">
+  <div class="flow-icon">⏱️</div>
+  <div class="flow-label">Retirement Timing</div>
+  <div class="flow-note">Depends on markets, not just effort</div>
+</div>
+
+</div>
+
+<p class="flow-summary"><strong>The pattern:</strong> Your labor goes in. Markets decide what comes out. Fees are collected regardless.</p>
+</aside>
 
     </div>
 
