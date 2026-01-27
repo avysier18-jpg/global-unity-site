@@ -78,7 +78,7 @@
       .mirror-box { min-height: 240px; }
     }
 
-    /* Mirror sidebar mini-cards */
+    /* Mirror mini-cards */
     .mirror-sidebar {
         margin-top: 1rem;
     }
@@ -87,20 +87,16 @@
         border: 1px solid #1d3a5c;
         border-radius: 8px;
         margin-bottom: 12px;
-        padding: 0;
-    }
-    .mirror-card-mini summary {
         padding: 12px 14px;
         cursor: pointer;
         font-size: 0.9rem;
         line-height: 1.4;
         color: #ccd6f6;
+        transition: border-color 0.2s, background 0.2s;
     }
-    .mirror-card-mini summary::-webkit-details-marker {
-        display: none;
-    }
-    .mirror-card-mini[open] summary {
-        border-bottom: 1px solid #1d3a5c;
+    .mirror-card-mini:hover {
+        border-color: #64ffda;
+        background: #1a3a5c;
     }
     .mirror-said {
         color: #8892b0;
@@ -110,24 +106,102 @@
         color: #64ffda;
         font-size: 0.85rem;
     }
-    .mirror-expand {
-        padding: 12px 14px;
-        font-size: 0.85rem;
-        color: #a8b2d1;
-    }
-    .mirror-expand p {
-        margin: 0 0 8px;
-    }
-    .mirror-expand a {
-        color: #64ffda;
-    }
     .mirror-method {
         margin-top: 16px;
         font-size: 0.8rem;
         color: #8892b0;
     }
-    .mirror-method a {
+
+    /* Mirror modal styles */
+    .mirror-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 25, 47, 0.9);
+        z-index: 1000;
+    }
+    .mirror-modal-overlay.active {
+        display: block;
+    }
+    .mirror-modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #0a192f;
+        border: 1px solid #1d3a5c;
+        border-radius: 12px;
+        padding: 24px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 85vh;
+        overflow-y: auto;
+        z-index: 1001;
+        color: #ccd6f6;
+    }
+    .mirror-modal.active {
+        display: block;
+    }
+    .mirror-modal-close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #8892b0;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 1;
+    }
+    .mirror-modal-close:hover {
         color: #64ffda;
+    }
+    .mirror-modal h2 {
+        margin: 0 0 8px;
+        color: #ccd6f6;
+        font-size: 1.4rem;
+    }
+    .mirror-subject {
+        color: #64ffda;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    .mirror-modal .mirror-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    @media (max-width: 600px) {
+        .mirror-modal .mirror-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .mirror-modal .mirror-box {
+        background: #112240;
+        border: 1px solid #1d3a5c;
+        border-radius: 8px;
+        padding: 16px;
+        min-height: auto;
+    }
+    .mirror-modal .mirror-box h3 {
+        margin: 0 0 10px;
+        color: #ccd6f6;
+        font-size: 1rem;
+    }
+    .mirror-modal .mirror-box p {
+        margin: 0 0 8px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #a8b2d1;
+    }
+    .mirror-cite {
+        font-size: 0.8rem;
+        color: #8892b0;
+        font-style: italic;
     }
   </style>
 </head>
@@ -565,62 +639,148 @@
 
 <div class="mirror-sidebar">
 
-<details class="mirror-card-mini">
-<summary>
+<div class="mirror-card-mini" onclick="openMirrorModal('dol')">
 <strong>DOL — SECURE 2.0</strong><br>
 <span class="mirror-said">Said: "Evaluating implementation"</span><br>
 <span class="mirror-record">Record: Deadline passed Dec 2024, no rule issued</span>
-</summary>
-<div class="mirror-expand">
-<p><strong>Statute:</strong> SECURE 2.0 Act §338 required paper benefit statement rule by Dec 31, 2024.</p>
-<p><strong>Status:</strong> Proposed rule submitted to OMB Sept 2025 — nine months late. No final rule.</p>
-<p><a href="/truth-library/mirror/dol-secure2/">View full Mirror page →</a></p>
 </div>
-</details>
 
-<details class="mirror-card-mini">
-<summary>
+<div class="mirror-card-mini" onclick="openMirrorModal('treasury')">
 <strong>Treasury — FSOC</strong><br>
 <span class="mirror-said">Said: "System remains resilient"</span><br>
 <span class="mirror-record">Record: Did not evaluate if inputs capture household stress</span>
-</summary>
-<div class="mirror-expand">
-<p><strong>Statute:</strong> Dodd-Frank requires FSOC to identify risks to financial stability with reasoned analysis.</p>
-<p><strong>Status:</strong> 2023 FSOC Report acknowledged household vulnerability but did not evaluate whether CPI/PCE inputs capture actual cost pressures.</p>
-<p><a href="/truth-library/mirror/treasury-fsoc/">View full Mirror page →</a></p>
 </div>
-</details>
 
-<details class="mirror-card-mini">
-<summary>
+<div class="mirror-card-mini" onclick="openMirrorModal('hhs')">
 <strong>HHS — Publication Duties</strong><br>
 <span class="mirror-said">Said: "Coordinating research"</span><br>
 <span class="mirror-record">Record: No §110(g) report published since 2015</span>
-</summary>
-<div class="mirror-expand">
-<p><strong>Statute:</strong> FSMA §110(g) requires biennial Food Safety Research Plan.</p>
-<p><strong>Status:</strong> Last report published May 2015. No subsequent reports for 2017, 2019, 2021, or 2023 cycles.</p>
-<p><a href="/truth-library/mirror/hhs-publication/">View full Mirror page →</a></p>
 </div>
-</details>
 
-<details class="mirror-card-mini">
-<summary>
+<div class="mirror-card-mini" onclick="openMirrorModal('nhtsa')">
 <strong>NHTSA — MAP-21</strong><br>
 <span class="mirror-said">Said: "Studying technologies"</span><br>
 <span class="mirror-record">Record: Deadline passed Oct 2015, no rule issued</span>
-</summary>
-<div class="mirror-expand">
-<p><strong>Statute:</strong> MAP-21 required rear-seat belt reminder rule by Oct 2015.</p>
-<p><strong>Status:</strong> NPRM issued Aug 2023 — eight years late. No final rule.</p>
-<p><a href="/truth-library/mirror/nhtsa-map21/">View full Mirror page →</a></p>
 </div>
-</details>
 
 </div>
 
 <p class="mirror-method"><strong>Method:</strong> Each Mirror page uses the same four-part structure: what the statute required, what the agency said, what the record shows, and what courts can and cannot compel. <a href="/truth-library/mirror/">View all Mirror pages →</a></p>
 </aside>
+
+<!-- Mirror Modal Overlay -->
+<div class="mirror-modal-overlay" id="mirrorOverlay" onclick="closeMirrorModal()"></div>
+
+<!-- DOL Modal -->
+<div class="mirror-modal" id="modal-dol">
+    <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
+    <h2>DOL — SECURE 2.0 Paper Statement Rule</h2>
+    <p class="mirror-subject">Rulemaking delay</p>
+    <div class="mirror-grid">
+        <div class="mirror-box">
+            <h3>What the Statute Required</h3>
+            <p>SECURE 2.0 Act §338 required DOL to update 29 C.F.R. § 2520.104b-1(c) to require at least one annual paper benefit statement for retirement plan participants.</p>
+            <p class="mirror-cite">Deadline: December 31, 2024</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What the Agency Said</h3>
+            <p>DOL indicated it was soliciting public input via Request for Information (August 2023), evaluating implementation approaches, and considering changes to electronic disclosure safe harbors.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What the Record Shows</h3>
+            <p>December 31, 2024: Statutory deadline passed without final rule. September 30, 2025: Proposed rule submitted to OMB (RIN 1210-AC27). No final rule issued; proposed rule text not yet public.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What Courts Can/Cannot Compel</h3>
+            <p><strong>Can:</strong> Declare agency action unlawfully withheld; order issuance by court-set deadline.</p>
+            <p><strong>Cannot:</strong> Design regulation content; dictate policy choices; supervise ongoing operations.</p>
+        </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 0.85rem;"><a href="/truth-library/mirror/dol-secure2/" style="color: #64ffda;">View full Mirror page →</a></p>
+</div>
+
+<!-- Treasury Modal -->
+<div class="mirror-modal" id="modal-treasury">
+    <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
+    <h2>Treasury — FSOC Risk Assessment</h2>
+    <p class="mirror-subject">Risk-input evaluation</p>
+    <div class="mirror-grid">
+        <div class="mirror-box">
+            <h3>What the Statute Required</h3>
+            <p>Dodd-Frank Act (12 U.S.C. §§ 5321–5323) requires Treasury/FSOC to identify, assess, and report on risks to U.S. financial stability with reasoned decision-making.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What the Agency Said</h3>
+            <p>2023 FSOC Annual Report stated U.S. financial system "remains resilient," identified inflation and household vulnerability as risks, and relied on CPI/PCE measures as inputs.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What the Record Shows</h3>
+            <p>Report acknowledged household vulnerability but did not evaluate whether CPI/PCE input assumptions adequately capture cost pressures relevant to household financial stress and systemic risk.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What Courts Can/Cannot Compel</h3>
+            <p><strong>Can:</strong> Declare action arbitrary/capricious; vacate and remand for reasoned reconsideration.</p>
+            <p><strong>Cannot:</strong> Dictate how inflation should be measured; select economic models; resolve policy disputes.</p>
+        </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 0.85rem;"><a href="/truth-library/mirror/treasury-fsoc/" style="color: #64ffda;">View full Mirror page →</a></p>
+</div>
+
+<!-- HHS Modal -->
+<div class="mirror-modal" id="modal-hhs">
+    <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
+    <h2>HHS — Statutory Publication Duties</h2>
+    <p class="mirror-subject">Publication delay</p>
+    <div class="mirror-grid">
+        <div class="mirror-box">
+            <h3>What the Statute Required</h3>
+            <p>FSMA § 110(g) requires biennial Food Safety Research Plan publication. ACA § 3011 requires annual National Health Care Quality Strategy updates.</p>
+            <p class="mirror-cite">Deadlines: Biennial / Annual</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What the Agency Said</h3>
+            <p>HHS stated it is coordinating food safety research across agencies and publishing related reports through AHRQ's National Healthcare Quality and Disparities Report.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What the Record Shows</h3>
+            <p>May 2015: Last § 110(g)-titled biennial report published. No subsequent publications for 2017, 2019, 2021, or 2023 cycles located on FDA's public FSMA repository.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What Courts Can/Cannot Compel</h3>
+            <p><strong>Can:</strong> Declare action unlawfully withheld; order publication by court-set deadline.</p>
+            <p><strong>Cannot:</strong> Dictate report content; direct research priorities; supervise operations beyond ordering publication.</p>
+        </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 0.85rem;"><a href="/truth-library/mirror/hhs-publication/" style="color: #64ffda;">View full Mirror page →</a></p>
+</div>
+
+<!-- NHTSA Modal -->
+<div class="mirror-modal" id="modal-nhtsa">
+    <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
+    <h2>NHTSA — MAP-21 Rear-Seat Belt Reminder</h2>
+    <p class="mirror-subject">Rulemaking delay</p>
+    <div class="mirror-grid">
+        <div class="mirror-box">
+            <h3>What the Statute Required</h3>
+            <p>MAP-21 (49 U.S.C. § 30106) required NHTSA to issue a final rule requiring rear-seat belt reminders in new passenger vehicles.</p>
+            <p class="mirror-cite">Deadline: October 1, 2015</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What the Agency Said</h3>
+            <p>NHTSA stated it was studying technologies and considering implementation approaches for rear-seat belt reminder systems.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What the Record Shows</h3>
+            <p>October 2015: Statutory deadline passed. August 2023: NPRM finally issued — eight years late. As of filing: No final rule issued.</p>
+        </div>
+        <div class="mirror-box">
+            <h3>What Courts Can/Cannot Compel</h3>
+            <p><strong>Can:</strong> Declare action unlawfully withheld; order issuance by court-set deadline.</p>
+            <p><strong>Cannot:</strong> Design rule content; dictate technology requirements; supervise ongoing rulemaking.</p>
+        </div>
+    </div>
+    <p style="margin-top: 16px; font-size: 0.85rem;"><a href="/truth-library/mirror/nhtsa-map21/" style="color: #64ffda;">View full Mirror page →</a></p>
+</div>
 
 </div>
 
@@ -628,5 +788,27 @@
 <p>© 2026 Global Unity. All rights reserved.</p>
 </div>
 </main>
+
+<script>
+function openMirrorModal(agency) {
+    document.getElementById('mirrorOverlay').classList.add('active');
+    document.getElementById('modal-' + agency).classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMirrorModal() {
+    document.getElementById('mirrorOverlay').classList.remove('active');
+    document.querySelectorAll('.mirror-modal').forEach(function(modal) {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeMirrorModal();
+    }
+});
+</script>
 </body>
 </html>
