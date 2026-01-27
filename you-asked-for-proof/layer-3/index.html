@@ -30,15 +30,136 @@
     a { word-break: break-word; }
 
     .mirror { position: sticky; top: 16px; }
-    .pill { display: inline-block; padding: 6px 10px; border-radius: 999px; background: #f1f5ff; border: 1px solid #d9e4ff; color: #1d4ed8; font-size: 0.9rem; font-weight: 650; }
-    .mirror-box { margin-top: 10px; padding: 12px; border-radius: 12px; border: 1px dashed #cfcfd6; background: #fbfbfc; min-height: 420px; }
+
+    /* Mirror mini-cards */
+    .mirror-sidebar {
+        margin-top: 1rem;
+    }
+    .mirror-card-mini {
+        background: #112240;
+        border: 1px solid #1d3a5c;
+        border-radius: 8px;
+        padding: 12px 14px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #ccd6f6;
+        transition: border-color 0.2s, background 0.2s;
+    }
+    .mirror-card-mini:hover {
+        border-color: #64ffda;
+        background: #1a3a5c;
+    }
+    .mirror-said {
+        color: #8892b0;
+        font-size: 0.85rem;
+    }
+    .mirror-record {
+        color: #64ffda;
+        font-size: 0.85rem;
+    }
+    .mirror-method {
+        margin-top: 16px;
+        font-size: 0.8rem;
+        color: #8892b0;
+    }
+
+    /* Mirror modal styles */
+    .mirror-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 25, 47, 0.9);
+        z-index: 1000;
+    }
+    .mirror-modal-overlay.active {
+        display: block;
+    }
+    .mirror-modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #0a192f;
+        border: 1px solid #1d3a5c;
+        border-radius: 12px;
+        padding: 24px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 85vh;
+        overflow-y: auto;
+        z-index: 1001;
+        color: #ccd6f6;
+    }
+    .mirror-modal.active {
+        display: block;
+    }
+    .mirror-modal-close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #8892b0;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 1;
+    }
+    .mirror-modal-close:hover {
+        color: #64ffda;
+    }
+    .mirror-modal h2 {
+        margin: 0 0 8px;
+        color: #ccd6f6;
+        font-size: 1.4rem;
+    }
+    .mirror-subject {
+        color: #64ffda;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    .mirror-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    @media (max-width: 600px) {
+        .mirror-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .mirror-box {
+        background: #112240;
+        border: 1px solid #1d3a5c;
+        border-radius: 8px;
+        padding: 16px;
+    }
+    .mirror-box h3 {
+        margin: 0 0 10px;
+        color: #ccd6f6;
+        font-size: 1rem;
+    }
+    .mirror-box p {
+        margin: 0 0 8px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #a8b2d1;
+    }
+    .mirror-cite {
+        font-size: 0.8rem;
+        color: #8892b0;
+        font-style: italic;
+    }
 
     .footer { margin-top: 16px; color: #444; font-size: 0.95rem; text-align: center; }
 
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
       .mirror { position: static; }
-      .mirror-box { min-height: 240px; }
     }
     details {
   border: 1px solid #eee;
@@ -363,23 +484,55 @@ summary::-webkit-details-marker { display: none; }
         </div>
       </section>
 
-      <!-- RIGHT -->
-      <aside class="card mirror">
-        <h2 style="margin:0 0 10px; font-size:1.05rem;">Mirror: “Said vs Done”</h2>
-        <span class="pill">Coming soon</span>
+<!-- RIGHT: MIRROR SIDEBAR -->
+<aside class="card mirror">
+<h2>Mirror: Said vs Done</h2>
+<p class="mini">Layer 3 explains how agencies hold power through rulemaking. This Mirror entry shows what happens when an agency misses a congressionally-mandated deadline — across multiple administrations.</p>
 
-        <div class="mirror-box">
-          <p><strong>What will appear here:</strong></p>
-          <ul>
-            <li>What officials said (quotes)</li>
-            <li>What data shows happened</li>
-            <li>The contradiction, shown clearly</li>
-          </ul>
-          <p class="mini">
-            When Hei ships the Mirror system, this panel can become an embedded app, iframe, or live feed.
-          </p>
-        </div>
-      </aside>
+<div class="mirror-sidebar">
+
+<div class="mirror-card-mini" onclick="openMirrorModal('nhtsa')">
+<strong>NHTSA — MAP-21</strong><br>
+<span class="mirror-said">Said: "Studying technologies"</span><br>
+<span class="mirror-record">Record: Deadline passed Oct 2015, no rule issued</span>
+</div>
+
+</div>
+
+<p class="mirror-method"><strong>Why this matters:</strong> Congress set a deadline. The agency missed it by 8+ years — through multiple presidents. Systems persist even when leaders change.</p>
+</aside>
+
+<!-- MIRROR MODAL -->
+<div id="mirror-modal-overlay" class="mirror-modal-overlay" onclick="closeMirrorModal()"></div>
+
+<div id="mirror-modal-nhtsa" class="mirror-modal">
+  <button class="mirror-modal-close" onclick="closeMirrorModal()">×</button>
+  <h2>NHTSA — MAP-21 Rear-Seat Belt Reminders</h2>
+  <p class="mirror-subject">Subject: Rulemaking delay</p>
+
+  <div class="mirror-grid">
+    <div class="mirror-box">
+      <h3>1. Statute Required</h3>
+      <p>MAP-21 §31501 required NHTSA to issue a final rule on rear-seat belt reminders by October 1, 2015.</p>
+      <p class="mirror-cite">Source: Pub. L. 112-141, §31501</p>
+    </div>
+    <div class="mirror-box">
+      <h3>2. Agency Said</h3>
+      <p>NHTSA stated it was "studying reminder technologies" and "evaluating effectiveness" before proceeding with rulemaking.</p>
+      <p class="mirror-cite">Source: NHTSA regulatory agenda</p>
+    </div>
+    <div class="mirror-box">
+      <h3>3. Record Shows</h3>
+      <p>The statutory deadline passed on October 1, 2015. NHTSA issued a Notice of Proposed Rulemaking (NPRM) in August 2023 — nearly eight years after the deadline. No final rule has been issued.</p>
+      <p class="mirror-cite">Source: 88 Fed. Reg. 57603</p>
+    </div>
+    <div class="mirror-box">
+      <h3>4. Courts Can / Cannot</h3>
+      <p><strong>Can:</strong> Issue a writ of mandamus under 5 U.S.C. §706(1) compelling NHTSA to complete the rulemaking, or set a court-ordered deadline.</p>
+      <p><strong>Cannot:</strong> Dictate the technical content of the rule or override NHTSA's engineering and safety judgments.</p>
+    </div>
+  </div>
+</div>
 
     </div>
 
@@ -387,5 +540,21 @@ summary::-webkit-details-marker { display: none; }
       <p>© 2026 Global Unity. All rights reserved.</p>
     </div>
   </main>
+
+<script>
+function openMirrorModal(agency) {
+    document.getElementById('mirror-modal-overlay').classList.add('active');
+    document.getElementById('mirror-modal-' + agency).classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeMirrorModal() {
+    document.getElementById('mirror-modal-overlay').classList.remove('active');
+    document.querySelectorAll('.mirror-modal').forEach(m => m.classList.remove('active'));
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMirrorModal();
+});
+</script>
 </body>
 </html>
