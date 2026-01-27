@@ -77,6 +77,58 @@
       .mirror { position: static; }
       .mirror-box { min-height: 240px; }
     }
+
+    /* Mirror sidebar mini-cards */
+    .mirror-sidebar {
+        margin-top: 1rem;
+    }
+    .mirror-card-mini {
+        background: #112240;
+        border: 1px solid #1d3a5c;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding: 0;
+    }
+    .mirror-card-mini summary {
+        padding: 12px 14px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #ccd6f6;
+    }
+    .mirror-card-mini summary::-webkit-details-marker {
+        display: none;
+    }
+    .mirror-card-mini[open] summary {
+        border-bottom: 1px solid #1d3a5c;
+    }
+    .mirror-said {
+        color: #8892b0;
+        font-size: 0.85rem;
+    }
+    .mirror-record {
+        color: #64ffda;
+        font-size: 0.85rem;
+    }
+    .mirror-expand {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+        color: #a8b2d1;
+    }
+    .mirror-expand p {
+        margin: 0 0 8px;
+    }
+    .mirror-expand a {
+        color: #64ffda;
+    }
+    .mirror-method {
+        margin-top: 16px;
+        font-size: 0.8rem;
+        color: #8892b0;
+    }
+    .mirror-method a {
+        color: #64ffda;
+    }
   </style>
 </head>
 
@@ -506,22 +558,68 @@
 
 
 
-<!-- RIGHT: MIRROR PLACEHOLDER -->
+<!-- RIGHT: MIRROR SIDEBAR -->
 <aside class="card mirror">
-<h2>Mirror: “Said vs Done”</h2>
-<span class="pill">Coming soon</span>
+<h2>Mirror: Said vs Done</h2>
+<p class="mini">The Mirror shows discrete agency failures — deadlines missed, reports not published. Each card shows what an agency said versus what the record shows. Tap any card to see the full Mirror page.</p>
 
-<div class="mirror-box">
-<p><strong>What will appear here:</strong></p>
-<ul>
-<li>What officials said (quotes)</li>
-<li>What data shows happened</li>
-<li>The contradiction, shown clearly</li>
-</ul>
-<p class="mini">
-When Hei ships the Mirror system, this panel can become an embedded app, iframe, or live feed.
-</p>
+<div class="mirror-sidebar">
+
+<details class="mirror-card-mini">
+<summary>
+<strong>DOL — SECURE 2.0</strong><br>
+<span class="mirror-said">Said: "Evaluating implementation"</span><br>
+<span class="mirror-record">Record: Deadline passed Dec 2024, no rule issued</span>
+</summary>
+<div class="mirror-expand">
+<p><strong>Statute:</strong> SECURE 2.0 Act §338 required paper benefit statement rule by Dec 31, 2024.</p>
+<p><strong>Status:</strong> Proposed rule submitted to OMB Sept 2025 — nine months late. No final rule.</p>
+<p><a href="/truth-library/mirror/dol-secure2/">View full Mirror page →</a></p>
 </div>
+</details>
+
+<details class="mirror-card-mini">
+<summary>
+<strong>Treasury — FSOC</strong><br>
+<span class="mirror-said">Said: "System remains resilient"</span><br>
+<span class="mirror-record">Record: Did not evaluate if inputs capture household stress</span>
+</summary>
+<div class="mirror-expand">
+<p><strong>Statute:</strong> Dodd-Frank requires FSOC to identify risks to financial stability with reasoned analysis.</p>
+<p><strong>Status:</strong> 2023 FSOC Report acknowledged household vulnerability but did not evaluate whether CPI/PCE inputs capture actual cost pressures.</p>
+<p><a href="/truth-library/mirror/treasury-fsoc/">View full Mirror page →</a></p>
+</div>
+</details>
+
+<details class="mirror-card-mini">
+<summary>
+<strong>HHS — Publication Duties</strong><br>
+<span class="mirror-said">Said: "Coordinating research"</span><br>
+<span class="mirror-record">Record: No §110(g) report published since 2015</span>
+</summary>
+<div class="mirror-expand">
+<p><strong>Statute:</strong> FSMA §110(g) requires biennial Food Safety Research Plan.</p>
+<p><strong>Status:</strong> Last report published May 2015. No subsequent reports for 2017, 2019, 2021, or 2023 cycles.</p>
+<p><a href="/truth-library/mirror/hhs-publication/">View full Mirror page →</a></p>
+</div>
+</details>
+
+<details class="mirror-card-mini">
+<summary>
+<strong>NHTSA — MAP-21</strong><br>
+<span class="mirror-said">Said: "Studying technologies"</span><br>
+<span class="mirror-record">Record: Deadline passed Oct 2015, no rule issued</span>
+</summary>
+<div class="mirror-expand">
+<p><strong>Statute:</strong> MAP-21 required rear-seat belt reminder rule by Oct 2015.</p>
+<p><strong>Status:</strong> NPRM issued Aug 2023 — eight years late. No final rule.</p>
+<p><a href="/truth-library/mirror/nhtsa-map21/">View full Mirror page →</a></p>
+</div>
+</details>
+
+</div>
+
+<p class="mirror-method"><strong>Method:</strong> Each Mirror page uses the same four-part structure: what the statute required, what the agency said, what the record shows, and what courts can and cannot compel. <a href="/truth-library/mirror/">View all Mirror pages →</a></p>
 </aside>
 
 </div>
