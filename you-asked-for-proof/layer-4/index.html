@@ -33,6 +33,66 @@
 
     .footer { margin-top: 16px; color: #444; font-size: 0.95rem; text-align: center; }
 
+    /* Loop diagram sidebar */
+    .loop-sidebar {
+        position: sticky;
+        top: 2rem;
+    }
+    .loop-diagram {
+        margin: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .loop-step {
+        background: #112240;
+        border: 1px solid #1d3a5c;
+        border-radius: 8px;
+        padding: 12px 16px;
+        text-align: center;
+        width: 100%;
+        max-width: 220px;
+    }
+    .loop-step.highlight {
+        border-color: #f5a623;
+        background: #1a2a40;
+    }
+    .loop-icon {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+    .loop-label {
+        color: #ccd6f6;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    .loop-note {
+        color: #8892b0;
+        font-size: 0.75rem;
+        margin-top: 4px;
+    }
+    .loop-arrow {
+        color: #64ffda;
+        font-size: 1.2rem;
+        margin: 8px 0;
+    }
+    .loop-return {
+        color: #f5a623;
+        font-size: 0.9rem;
+        margin-top: 12px;
+    }
+    .loop-summary {
+        margin-top: 16px;
+        padding-top: 12px;
+        border-top: 1px solid #1d3a5c;
+        font-size: 0.85rem;
+        color: #a8b2d1;
+        text-align: center;
+    }
+    .loop-summary strong {
+        color: #64ffda;
+    }
+
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
     }
@@ -498,6 +558,58 @@ summary::-webkit-details-marker { display: none; }
           <p><a href="/you-asked-for-proof/layer-5/">Continue to Layer 5 →</a></p>
         </div>
       </section>
+
+<!-- RIGHT: ATTENTION LOOP SIDEBAR -->
+<aside class="card loop-sidebar">
+<h2>The Attention Loop</h2>
+<p class="mini">Why conflict spreads faster than system explanation — and why the pattern repeats.</p>
+
+<div class="loop-diagram">
+
+<div class="loop-step">
+  <div class="loop-icon">👁️</div>
+  <div class="loop-label">Attention</div>
+  <div class="loop-note">Platforms measure engagement</div>
+</div>
+
+<div class="loop-arrow">↓</div>
+
+<div class="loop-step">
+  <div class="loop-icon">📈</div>
+  <div class="loop-label">Growth</div>
+  <div class="loop-note">More users, more time on platform</div>
+</div>
+
+<div class="loop-arrow">↓</div>
+
+<div class="loop-step">
+  <div class="loop-icon">💰</div>
+  <div class="loop-label">Revenue</div>
+  <div class="loop-note">Ads, data, subscriptions</div>
+</div>
+
+<div class="loop-arrow">↓</div>
+
+<div class="loop-step">
+  <div class="loop-icon">🏰</div>
+  <div class="loop-label">Protect Position</div>
+  <div class="loop-note">Market dominance, lobbying</div>
+</div>
+
+<div class="loop-arrow">↓</div>
+
+<div class="loop-step highlight">
+  <div class="loop-icon">🔁</div>
+  <div class="loop-label">Amplify What Holds Attention</div>
+  <div class="loop-note">Conflict > Explanation</div>
+</div>
+
+<div class="loop-arrow loop-return">↩️ Loop repeats</div>
+
+</div>
+
+<p class="loop-summary"><strong>The result:</strong> Outrage spreads. Systems stay hidden. Division repeats — not by plan, but by incentive.</p>
+</aside>
 
     </div>
 
