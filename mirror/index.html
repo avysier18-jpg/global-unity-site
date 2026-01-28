@@ -122,6 +122,157 @@
         .tool-card a:hover {
             text-decoration: underline;
         }
+
+        /* Mirror mini-cards */
+        .mirror-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 1.5rem;
+        }
+        .mirror-card-mini {
+            background: #112240;
+            border: 1px solid #1d3a5c;
+            border-radius: 8px;
+            padding: 16px 18px;
+            cursor: pointer;
+            color: #ccd6f6;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .mirror-card-mini:hover {
+            border-color: #64ffda;
+            background: #1a3a5c;
+        }
+        .mirror-card-mini strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .mirror-said {
+            color: #8892b0;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .mirror-record {
+            color: #64ffda;
+            font-size: 0.85rem;
+            display: block;
+        }
+
+        /* Mirror modal styles */
+        .mirror-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 25, 47, 0.9);
+            z-index: 1000;
+        }
+        .mirror-modal-overlay.active {
+            display: block;
+        }
+        .mirror-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #0a192f;
+            border: 1px solid #1d3a5c;
+            border-radius: 12px;
+            padding: 24px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            z-index: 1001;
+            color: #ccd6f6;
+        }
+        .mirror-modal.active {
+            display: block;
+        }
+        .mirror-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: #8892b0;
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .mirror-modal-close:hover {
+            color: #64ffda;
+        }
+        .mirror-modal h2 {
+            margin: 0 0 8px;
+            color: #ccd6f6;
+            font-size: 1.4rem;
+            padding-right: 40px;
+        }
+        .mirror-subject {
+            color: #64ffda;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .mirror-modal .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 600px) {
+            .mirror-modal .modal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .mirror-modal .modal-box {
+            background: #112240;
+            border: 1px solid #1d3a5c;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .mirror-modal .modal-box h3 {
+            margin: 0 0 10px;
+            color: #ccd6f6;
+            font-size: 1rem;
+        }
+        .mirror-modal .modal-box p {
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #a8b2d1;
+        }
+        .mirror-modal .modal-box ul {
+            margin: 8px 0 0 16px;
+            padding: 0;
+            font-size: 0.9rem;
+            color: #a8b2d1;
+        }
+        .mirror-modal .modal-box li {
+            margin: 4px 0;
+        }
+        .mirror-cite {
+            font-size: 0.8rem;
+            color: #8892b0;
+            font-style: italic;
+        }
+        .modal-link {
+            display: block;
+            margin-top: 16px;
+            text-align: center;
+        }
+        .modal-link a {
+            color: #64ffda;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .modal-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -178,44 +329,30 @@
 
         <section class="library-room">
             <h2 class="room-title">Mirror Pages</h2>
+            <p style="font-size: 0.9rem; color: #8892b0; margin-bottom: 8px;">Click any card to see the full breakdown.</p>
 
-            <table class="mirror-table">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Agency</th>
-                        <th>Subject</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>MAP-21 Rear-Seat Belt Reminder Rule</td>
-                        <td>NHTSA</td>
-                        <td>Rulemaking delay</td>
-                        <td><a href="/truth-library/mirror/nhtsa-map21/">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>SECURE 2.0 Paper Statement Rule</td>
-                        <td>DOL</td>
-                        <td>Rulemaking delay</td>
-                        <td><a href="/truth-library/mirror/dol-secure2/">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Statutory Publication Duties</td>
-                        <td>HHS</td>
-                        <td>Publication delay</td>
-                        <td><a href="/truth-library/mirror/hhs-publication/">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>FSOC Risk Assessment</td>
-                        <td>Treasury</td>
-                        <td>Risk-input evaluation</td>
-                        <td><a href="/truth-library/mirror/treasury-fsoc/">View</a></td>
-                    </tr>
-                    <!-- Additional mirror pages can be added here -->
-                </tbody>
-            </table>
+            <div class="mirror-cards">
+                <div class="mirror-card-mini" onclick="openMirrorModal('nhtsa')">
+                    <strong>NHTSA — MAP-21 Belt Reminder</strong>
+                    <span class="mirror-said">Said: "Studying technologies"</span>
+                    <span class="mirror-record">Record: Deadline Oct 2015, no final rule</span>
+                </div>
+                <div class="mirror-card-mini" onclick="openMirrorModal('dol')">
+                    <strong>DOL — SECURE 2.0</strong>
+                    <span class="mirror-said">Said: "Evaluating implementation"</span>
+                    <span class="mirror-record">Record: Deadline Dec 2024, no rule issued</span>
+                </div>
+                <div class="mirror-card-mini" onclick="openMirrorModal('hhs')">
+                    <strong>HHS — Publication Duties</strong>
+                    <span class="mirror-said">Said: "Coordinating research"</span>
+                    <span class="mirror-record">Record: Biennial reports not maintained</span>
+                </div>
+                <div class="mirror-card-mini" onclick="openMirrorModal('treasury')">
+                    <strong>Treasury — FSOC Risk</strong>
+                    <span class="mirror-said">Said: "System remains resilient"</span>
+                    <span class="mirror-record">Record: Risk inputs not evaluated</span>
+                </div>
+            </div>
 
             <p style="margin-top: 24px; font-size: 0.9rem; color: #ccd6f6;">
                 <strong>Method:</strong> Each page uses the same four-part structure: what the statute required, what the agency said, what the record shows, and what courts can and cannot compel.
@@ -349,5 +486,160 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+
+    <!-- Mirror Modal Overlay -->
+    <div class="mirror-modal-overlay" id="mirrorOverlay" onclick="closeMirrorModal()"></div>
+
+    <!-- NHTSA Modal -->
+    <div class="mirror-modal" id="modal-nhtsa">
+        <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
+        <h2>NHTSA — MAP-21 Rear-Seat Belt Reminder Rule</h2>
+        <p class="mirror-subject">Rulemaking delay</p>
+        <div class="modal-grid">
+            <div class="modal-box">
+                <h3>What the Statute Required</h3>
+                <p>MAP-21 required NHTSA to amend FMVSS to require rear-seat belt reminder systems.</p>
+                <p class="mirror-cite">Deadline: October 2015</p>
+            </div>
+            <div class="modal-box">
+                <h3>What the Agency Said</h3>
+                <p>NHTSA stated it was studying rear-seat belt reminder technologies and evaluating safety benefits.</p>
+            </div>
+            <div class="modal-box">
+                <h3>What the Record Shows</h3>
+                <ul>
+                    <li>October 2015: Deadline passed without final rule</li>
+                    <li>2015-2023: No final rule issued</li>
+                    <li>August 2023: NPRM published</li>
+                    <li>As of filing: No final rule issued</li>
+                </ul>
+            </div>
+            <div class="modal-box">
+                <h3>What Courts Can/Cannot Compel</h3>
+                <p><strong>Can:</strong> Declare action unlawfully withheld; order issuance by court-set deadline.</p>
+                <p><strong>Cannot:</strong> Design safety standard; dictate technical specifications.</p>
+            </div>
+        </div>
+        <div class="modal-link"><a href="/truth-library/mirror/nhtsa-map21/">View full Mirror page &rarr;</a></div>
+    </div>
+
+    <!-- DOL Modal -->
+    <div class="mirror-modal" id="modal-dol">
+        <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
+        <h2>DOL — SECURE 2.0 Paper Statement Rule</h2>
+        <p class="mirror-subject">Rulemaking delay</p>
+        <div class="modal-grid">
+            <div class="modal-box">
+                <h3>What the Statute Required</h3>
+                <p>SECURE 2.0 Act §338 required DOL to update regulations to require at least one annual paper benefit statement for retirement plan participants.</p>
+                <p class="mirror-cite">Deadline: December 31, 2024</p>
+            </div>
+            <div class="modal-box">
+                <h3>What the Agency Said</h3>
+                <p>DOL indicated it was soliciting public input via RFI (August 2023), evaluating implementation approaches, and considering changes to electronic disclosure safe harbors.</p>
+            </div>
+            <div class="modal-box">
+                <h3>What the Record Shows</h3>
+                <ul>
+                    <li>August 2023: RFI published</li>
+                    <li>December 31, 2024: Deadline passed without final rule</li>
+                    <li>September 30, 2025: Proposed rule submitted to OMB</li>
+                    <li>As of filing: No final rule issued</li>
+                </ul>
+            </div>
+            <div class="modal-box">
+                <h3>What Courts Can/Cannot Compel</h3>
+                <p><strong>Can:</strong> Declare action unlawfully withheld; order issuance by court-set deadline.</p>
+                <p><strong>Cannot:</strong> Design regulation content; dictate policy choices.</p>
+            </div>
+        </div>
+        <div class="modal-link"><a href="/truth-library/mirror/dol-secure2/">View full Mirror page &rarr;</a></div>
+    </div>
+
+    <!-- HHS Modal -->
+    <div class="mirror-modal" id="modal-hhs">
+        <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
+        <h2>HHS — Statutory Publication Duties</h2>
+        <p class="mirror-subject">Publication delay</p>
+        <div class="modal-grid">
+            <div class="modal-box">
+                <h3>What the Statute Required</h3>
+                <p>FSMA § 110(g): Publish biennial Food Safety and Food Defense Research Plan. ACA § 3011: Submit and publish annual National Health Care Quality Strategy updates.</p>
+                <p class="mirror-cite">Deadlines: Biennial (FSMA); Annual (ACA)</p>
+            </div>
+            <div class="modal-box">
+                <h3>What the Agency Said</h3>
+                <p>HHS agencies stated they are coordinating food safety research across HHS, USDA, and DHS, and publishing related reports through AHRQ.</p>
+            </div>
+            <div class="modal-box">
+                <h3>What the Record Shows</h3>
+                <ul>
+                    <li>May 2015: FDA/HHS published biennial report citing FSMA § 110(g)</li>
+                    <li>2017-2023 cycles: No subsequent § 110(g) research plans located</li>
+                    <li>National Quality Strategy: Annual updates not consistently published</li>
+                </ul>
+            </div>
+            <div class="modal-box">
+                <h3>What Courts Can/Cannot Compel</h3>
+                <p><strong>Can:</strong> Declare action unlawfully withheld; order publication by deadline.</p>
+                <p><strong>Cannot:</strong> Dictate content of reports; direct research priorities.</p>
+            </div>
+        </div>
+        <div class="modal-link"><a href="/truth-library/mirror/hhs-publication/">View full Mirror page &rarr;</a></div>
+    </div>
+
+    <!-- Treasury Modal -->
+    <div class="mirror-modal" id="modal-treasury">
+        <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
+        <h2>Treasury — FSOC Risk Assessment</h2>
+        <p class="mirror-subject">Risk-input evaluation</p>
+        <div class="modal-grid">
+            <div class="modal-box">
+                <h3>What the Statute Required</h3>
+                <p>Dodd-Frank Act (12 U.S.C. §§ 5321-5323) requires Treasury/FSOC to identify, assess, and report on risks to U.S. financial stability, including household financial vulnerability.</p>
+                <p class="mirror-cite">Standard: Reasoned decision-making under APA</p>
+            </div>
+            <div class="modal-box">
+                <h3>What the Agency Said</h3>
+                <p>2023 FSOC Annual Report stated U.S. financial system "remains resilient," identified inflation and household vulnerability as systemic risks, and relied on CPI/PCE measures as inputs.</p>
+            </div>
+            <div class="modal-box">
+                <h3>What the Record Shows</h3>
+                <ul>
+                    <li>December 2023: FSOC Annual Report published</li>
+                    <li>Risk inputs: Report relied on CPI/PCE measures with substitution assumptions</li>
+                    <li>Omission: Report did not evaluate whether inputs adequately capture household financial stress</li>
+                </ul>
+            </div>
+            <div class="modal-box">
+                <h3>What Courts Can/Cannot Compel</h3>
+                <p><strong>Can:</strong> Declare action arbitrary/capricious; vacate and remand for reasoned reconsideration.</p>
+                <p><strong>Cannot:</strong> Dictate how inflation should be measured; select economic models.</p>
+            </div>
+        </div>
+        <div class="modal-link"><a href="/truth-library/mirror/treasury-fsoc/">View full Mirror page &rarr;</a></div>
+    </div>
+
+    <script>
+    function openMirrorModal(agency) {
+        document.getElementById('mirrorOverlay').classList.add('active');
+        document.getElementById('modal-' + agency).classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMirrorModal() {
+        document.getElementById('mirrorOverlay').classList.remove('active');
+        document.querySelectorAll('.mirror-modal').forEach(function(modal) {
+            modal.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeMirrorModal();
+        }
+    });
+    </script>
 </body>
 </html>
