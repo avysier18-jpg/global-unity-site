@@ -362,6 +362,136 @@
                 font-size: 1.1rem;
             }
         }
+
+        /* Interactive Pipeline */
+        .pipeline-container {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .pipeline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .pipeline-step-interactive {
+            background: #112240;
+            border: 1px solid #1d3a5c;
+            border-radius: 12px;
+            padding: 20px 16px;
+            min-width: 120px;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s, transform 0.2s;
+        }
+        .pipeline-step-interactive:hover {
+            border-color: #64ffda;
+            background: #1a3a5c;
+            transform: translateY(-2px);
+        }
+        .pipeline-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        .pipeline-label {
+            color: #ccd6f6;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .pipeline-arrow-interactive {
+            color: #64ffda;
+            font-size: 1.5rem;
+            padding: 0 4px;
+        }
+        .pipeline-footer {
+            margin-top: 20px;
+            color: #8892b0;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 700px) {
+            .pipeline {
+                flex-direction: column;
+            }
+            .pipeline-arrow-interactive {
+                transform: rotate(90deg);
+                padding: 8px 0;
+            }
+        }
+
+        /* Pipeline modals */
+        .pipeline-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 25, 47, 0.9);
+            z-index: 1000;
+        }
+        .pipeline-modal-overlay.active {
+            display: block;
+        }
+        .pipeline-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #0a192f;
+            border: 1px solid #1d3a5c;
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            z-index: 1001;
+            color: #ccd6f6;
+        }
+        .pipeline-modal.active {
+            display: block;
+        }
+        .pipeline-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: #8892b0;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        .pipeline-modal-close:hover {
+            color: #64ffda;
+        }
+        .pipeline-modal h2 {
+            margin: 0 0 20px;
+            color: #64ffda;
+            font-size: 1.5rem;
+        }
+        .pipeline-modal h3 {
+            margin: 20px 0 10px;
+            color: #ccd6f6;
+            font-size: 1rem;
+        }
+        .pipeline-modal p {
+            margin: 0 0 10px;
+            color: #a8b2d1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .pipeline-modal ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .pipeline-modal li {
+            color: #a8b2d1;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
     </style>
 </head>
 <body>
@@ -413,6 +543,37 @@
             <p class="pipeline-caption">Each Mirror page follows the same structure.</p>
         </section>
         <!-- ========== END PART A ========== -->
+
+        <!-- Interactive Pipeline -->
+        <div class="pipeline-container">
+            <div class="pipeline">
+                <div class="pipeline-step-interactive" onclick="openPipelineModal('law')">
+                    <div class="pipeline-icon">📜</div>
+                    <div class="pipeline-label">Law / Statute</div>
+                </div>
+                <div class="pipeline-arrow-interactive">→</div>
+                <div class="pipeline-step-interactive" onclick="openPipelineModal('agency')">
+                    <div class="pipeline-icon">🏛️</div>
+                    <div class="pipeline-label">Agency Statement</div>
+                </div>
+                <div class="pipeline-arrow-interactive">→</div>
+                <div class="pipeline-step-interactive" onclick="openPipelineModal('record')">
+                    <div class="pipeline-icon">📁</div>
+                    <div class="pipeline-label">Public Record</div>
+                </div>
+                <div class="pipeline-arrow-interactive">→</div>
+                <div class="pipeline-step-interactive" onclick="openPipelineModal('court')">
+                    <div class="pipeline-icon">⚖️</div>
+                    <div class="pipeline-label">Court Limits</div>
+                </div>
+                <div class="pipeline-arrow-interactive">→</div>
+                <div class="pipeline-step-interactive" onclick="openPipelineModal('mirror')">
+                    <div class="pipeline-icon">📄</div>
+                    <div class="pipeline-label">Mirror Page</div>
+                </div>
+            </div>
+            <p class="pipeline-footer">Same structure. Every time.</p>
+        </div>
 
         <section class="library-room">
             <h2 class="room-title">Mirror Pages</h2>
@@ -713,6 +874,85 @@
         </div>
     </div>
 
+    <!-- Pipeline Modal Overlay -->
+    <div id="pipeline-modal-overlay" class="pipeline-modal-overlay" onclick="closePipelineModal()"></div>
+
+    <!-- LAW MODAL -->
+    <div id="pipeline-modal-law" class="pipeline-modal">
+        <button class="pipeline-modal-close" onclick="closePipelineModal()">×</button>
+        <h2>Law / Statute</h2>
+        <h3>What this shows</h3>
+        <p>This box shows what the law says the agency must do.</p>
+        <p>We list the exact law, section number, and deadline (if there is one). This is the rule the agency is required to follow.</p>
+        <h3>Where it comes from</h3>
+        <ul>
+            <li>Congress.gov</li>
+            <li>U.S. Code</li>
+            <li>Public laws</li>
+            <li>Federal Register</li>
+        </ul>
+    </div>
+
+    <!-- AGENCY MODAL -->
+    <div id="pipeline-modal-agency" class="pipeline-modal">
+        <button class="pipeline-modal-close" onclick="closePipelineModal()">×</button>
+        <h2>Agency Statement</h2>
+        <h3>What this shows</h3>
+        <p>This box shows what the agency said publicly about the law.</p>
+        <p>We quote or summarize official statements. This includes plans, explanations, or updates the agency shared.</p>
+        <p>We do not guess or explain meaning. We only show what they said.</p>
+        <h3>Where it comes from</h3>
+        <ul>
+            <li>Press releases</li>
+            <li>Regulatory agendas</li>
+            <li>Official reports</li>
+            <li>Congressional testimony</li>
+        </ul>
+    </div>
+
+    <!-- RECORD MODAL -->
+    <div id="pipeline-modal-record" class="pipeline-modal">
+        <button class="pipeline-modal-close" onclick="closePipelineModal()">×</button>
+        <h2>Public Record</h2>
+        <h3>What this shows</h3>
+        <p>This box shows what actually happened.</p>
+        <p>We check public records to see if the agency did what the law required. Did they meet the deadline? Did they publish the rule or report?</p>
+        <p>The record answers those questions.</p>
+        <h3>Where it comes from</h3>
+        <ul>
+            <li>Federal Register</li>
+            <li>OMB review dashboards</li>
+            <li>Agency websites</li>
+            <li>Public filings</li>
+        </ul>
+    </div>
+
+    <!-- COURT MODAL -->
+    <div id="pipeline-modal-court" class="pipeline-modal">
+        <button class="pipeline-modal-close" onclick="closePipelineModal()">×</button>
+        <h2>Court Limits</h2>
+        <h3>What this shows</h3>
+        <p>This box shows what courts can and cannot force an agency to do.</p>
+        <p>Courts can order agencies to act when the law requires action. Courts cannot write policy or control how agencies decide details.</p>
+        <p>This box explains those limits.</p>
+        <h3>Where it comes from</h3>
+        <ul>
+            <li>Administrative Procedure Act (APA)</li>
+            <li>Court decisions</li>
+            <li>Established legal rules</li>
+        </ul>
+    </div>
+
+    <!-- MIRROR MODAL -->
+    <div id="pipeline-modal-mirror" class="pipeline-modal">
+        <button class="pipeline-modal-close" onclick="closePipelineModal()">×</button>
+        <h2>Mirror Page</h2>
+        <h3>What this is</h3>
+        <p>This is the final output.</p>
+        <p>All four boxes are shown together on one page. Every agency uses the same structure.</p>
+        <p>Because the format is always the same, patterns across agencies become easy to see.</p>
+    </div>
+
     <script>
     function openMirrorModal(agency) {
         document.getElementById('mirrorOverlay').classList.add('active');
@@ -731,8 +971,24 @@
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeMirrorModal();
+            closePipelineModal();
         }
     });
+
+    // Pipeline modal functions
+    function openPipelineModal(step) {
+        document.getElementById('pipeline-modal-overlay').classList.add('active');
+        document.getElementById('pipeline-modal-' + step).classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePipelineModal() {
+        document.getElementById('pipeline-modal-overlay').classList.remove('active');
+        document.querySelectorAll('.pipeline-modal').forEach(function(m) {
+            m.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+    }
     </script>
 </body>
 </html>
