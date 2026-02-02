@@ -713,7 +713,7 @@ section { margin-bottom: 0; }
 .mirror-carousel-section {
   width: 100%;
   max-width: 1200px;
-  margin: 2rem auto 3rem;
+  margin: 2rem auto;
   padding: 0 1.5rem;
 }
 
@@ -1048,8 +1048,8 @@ section { margin-bottom: 0; }
 .scroll-reveal-section {
   width: 100%;
   max-width: 1200px;
-  margin: 4rem auto;
-  padding: 50vh 1.5rem 0;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
 .scroll-reveal-intro {
@@ -1084,6 +1084,7 @@ section { margin-bottom: 0; }
   flex-direction: column;
   gap: 150vh;
   padding-bottom: 80vh;
+  padding-top: 10vh;
 }
 
 .scroll-agency-trigger {
@@ -1167,9 +1168,27 @@ section { margin-bottom: 0; }
 
 .scroll-reveal-sticky {
   position: sticky;
-  top: 100px; /* below the sticky header */
-  max-height: 90vh;
+  top: 80px;
+  max-height: calc(100vh - 100px);
   overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.scroll-reveal-sticky::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-reveal-sticky::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-reveal-sticky::-webkit-scrollbar-thumb {
+  background: rgba(100, 255, 218, 0.15);
+  border-radius: 4px;
+}
+
+.scroll-reveal-sticky::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 255, 218, 0.3);
 }
 
 /* Agency detail panels */
@@ -1321,6 +1340,7 @@ section { margin-bottom: 0; }
     min-width: 100%;
     gap: 2rem;
     padding-bottom: 0;
+    padding-top: 0;
   }
 
   .scroll-reveal-right {
