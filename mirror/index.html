@@ -81,216 +81,6 @@
             text-decoration: underline;
         }
 
-        /* Mirror mini-cards */
-        .mirror-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 16px;
-            margin-top: 1.5rem;
-        }
-        .mirror-card-mini {
-            background: #112240;
-            border: 1px solid #1d3a5c;
-            border-radius: 8px;
-            padding: 16px 18px;
-            cursor: pointer;
-            color: #ccd6f6;
-            transition: border-color 0.2s, background 0.2s;
-        }
-        .mirror-card-mini:hover {
-            border-color: #64ffda;
-            background: #1a3a5c;
-        }
-        .mirror-card-mini strong {
-            display: block;
-            font-size: 1rem;
-            margin-bottom: 8px;
-        }
-        .mirror-said {
-            color: #8892b0;
-            font-size: 0.85rem;
-            display: block;
-            margin-bottom: 4px;
-        }
-        .mirror-record {
-            color: #64ffda;
-            font-size: 0.85rem;
-            display: block;
-        }
-
-        /* Mirror modal styles */
-        .mirror-modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 25, 47, 0.9);
-            z-index: 1000;
-        }
-        .mirror-modal-overlay.active {
-            display: block;
-        }
-        .mirror-modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #0a192f;
-            border: 1px solid #1d3a5c;
-            border-radius: 12px;
-            padding: 24px;
-            max-width: 800px;
-            width: 90%;
-            max-height: 85vh;
-            overflow-y: auto;
-            z-index: 1001;
-            color: #ccd6f6;
-        }
-        .mirror-modal.active {
-            display: block;
-        }
-        .mirror-modal-close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            background: none;
-            border: none;
-            color: #8892b0;
-            font-size: 28px;
-            cursor: pointer;
-            line-height: 1;
-        }
-        .mirror-modal-close:hover {
-            color: #64ffda;
-        }
-        .mirror-modal h2 {
-            margin: 0 0 8px;
-            color: #ccd6f6;
-            font-size: 1.4rem;
-            padding-right: 40px;
-        }
-        .mirror-subject {
-            color: #64ffda;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-        .mirror-modal .modal-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-        @media (max-width: 600px) {
-            .mirror-modal .modal-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        .mirror-modal .modal-box {
-            background: #112240;
-            border: 1px solid #1d3a5c;
-            border-radius: 8px;
-            padding: 16px;
-        }
-        .mirror-modal .modal-box h3 {
-            margin: 0 0 10px;
-            color: #ccd6f6;
-            font-size: 1rem;
-        }
-        .mirror-modal .modal-box p {
-            margin: 0 0 8px;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #a8b2d1;
-        }
-        .mirror-modal .modal-box ul {
-            margin: 8px 0 0 16px;
-            padding: 0;
-            font-size: 0.9rem;
-            color: #a8b2d1;
-        }
-        .mirror-modal .modal-box li {
-            margin: 4px 0;
-        }
-        .mirror-cite {
-            font-size: 0.8rem;
-            color: #8892b0;
-            font-style: italic;
-        }
-        .modal-link {
-            display: block;
-            margin-top: 16px;
-            text-align: center;
-        }
-        .modal-link a {
-            color: #64ffda;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        .modal-link a:hover {
-            text-decoration: underline;
-        }
-
-        /* Mirror Structure 2x2 Grid */
-        .mirror-structure {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 24px;
-        }
-        @media (max-width: 600px) {
-            .mirror-structure {
-                grid-template-columns: 1fr;
-            }
-        }
-        .mirror-structure-tile {
-            background: #112240;
-            border: 1px solid #1d3a5c;
-            border-radius: 8px;
-            padding: 16px 18px;
-            color: #ccd6f6;
-            font-size: 0.95rem;
-        }
-        .mirror-structure-caption {
-            margin-top: 16px;
-            font-size: 0.85rem;
-            color: #8892b0;
-            text-align: center;
-        }
-
-        /* Collapsible details styling */
-        .mirror-details {
-            background: #112240;
-            border: 1px solid #1d3a5c;
-            border-radius: 12px;
-            margin-top: 48px;
-            padding: 0;
-        }
-        .mirror-details summary {
-            padding: 16px 20px;
-            cursor: pointer;
-            color: #ccd6f6;
-            font-size: 1rem;
-            font-weight: 600;
-            list-style: none;
-        }
-        .mirror-details summary::-webkit-details-marker {
-            display: none;
-        }
-        .mirror-details summary::before {
-            content: '▶ ';
-            color: #64ffda;
-            font-size: 0.8rem;
-            margin-right: 8px;
-        }
-        .mirror-details[open] summary::before {
-            content: '▼ ';
-        }
-        .mirror-details-content {
-            padding: 0 20px 20px;
-        }
-
         /* Hero section */
         .mirror-hero {
             text-align: center;
@@ -563,114 +353,427 @@
   </div>
 </section>
 
-        <section class="library-room">
-            <h2 class="room-title">Mirror Pages</h2>
-            <p style="font-size: 0.9rem; color: #8892b0; margin-bottom: 8px;">Click any card to see the full breakdown.</p>
+<!-- ============================================
+     SCROLL-DRIVEN AGENCY REVEAL
+     ============================================ -->
+<section class="scroll-reveal-section">
+  <div class="scroll-reveal-intro">
+    <h2>After the Mirror gathers the information, it is shown like this</h2>
+    <p>Scroll through each agency to see the full breakdown. Same structure. Every time.</p>
+  </div>
 
-            <div class="mirror-cards">
-                <div class="mirror-card-mini" onclick="openMirrorModal('nhtsa')">
-                    <strong>NHTSA — MAP-21 Belt Reminder</strong>
-                    <span class="mirror-said">Said: "Studying technologies"</span>
-                    <span class="mirror-record">Record: Deadline Oct 2015, no final rule</span>
+  <div class="scroll-reveal-container">
+
+    <!-- LEFT: Agency triggers (scrollable) -->
+    <div class="scroll-reveal-left">
+
+      <!-- Agency 1: NHTSA -->
+      <div class="scroll-agency-trigger active" data-agency="nhtsa">
+        <span class="agency-trigger-type">Rulemaking Delay</span>
+        <h3 class="agency-trigger-name">NHTSA — MAP-21 Belt Reminder</h3>
+        <p class="agency-trigger-summary">Said: "Studying technologies"</p>
+        <p class="agency-trigger-record">Record: Deadline Oct 2015, no final rule</p>
+      </div>
+
+      <!-- Agency 2: DOL -->
+      <div class="scroll-agency-trigger" data-agency="dol">
+        <span class="agency-trigger-type">Rulemaking Delay</span>
+        <h3 class="agency-trigger-name">DOL — SECURE 2.0</h3>
+        <p class="agency-trigger-summary">Said: "Evaluating implementation"</p>
+        <p class="agency-trigger-record">Record: Deadline Dec 2024, no rule issued</p>
+      </div>
+
+      <!-- Agency 3: HHS -->
+      <div class="scroll-agency-trigger" data-agency="hhs">
+        <span class="agency-trigger-type">Publication Delay</span>
+        <h3 class="agency-trigger-name">HHS — Publication Duties</h3>
+        <p class="agency-trigger-summary">Said: "Coordinating research"</p>
+        <p class="agency-trigger-record">Record: Biennial reports not maintained</p>
+      </div>
+
+      <!-- Agency 4: Treasury -->
+      <div class="scroll-agency-trigger" data-agency="treasury">
+        <span class="agency-trigger-type">Risk-Input Evaluation</span>
+        <h3 class="agency-trigger-name">Treasury — FSOC Risk</h3>
+        <p class="agency-trigger-summary">Said: "System remains resilient"</p>
+        <p class="agency-trigger-record">Record: Risk inputs not evaluated</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Sticky detail panels -->
+    <div class="scroll-reveal-right">
+      <div class="scroll-reveal-sticky">
+
+        <!-- NHTSA Detail -->
+        <div class="agency-detail active" id="detail-nhtsa">
+          <div class="agency-detail-grid">
+            <div class="detail-box detail-box-statute">
+              <div class="detail-box-header">
+                <span class="detail-box-number">①</span>
+                <h4>What the Statute Required</h4>
+              </div>
+              <div class="detail-box-content">
+                <div class="detail-row">
+                  <span class="detail-label">Law</span>
+                  <span class="detail-value">Moving Ahead for Progress in the 21st Century Act (MAP-21)</span>
                 </div>
-                <div class="mirror-card-mini" onclick="openMirrorModal('dol')">
-                    <strong>DOL — SECURE 2.0</strong>
-                    <span class="mirror-said">Said: "Evaluating implementation"</span>
-                    <span class="mirror-record">Record: Deadline Dec 2024, no rule issued</span>
+                <div class="detail-row">
+                  <span class="detail-label">Subject</span>
+                  <span class="detail-value">Rear-seat belt reminder systems</span>
                 </div>
-                <div class="mirror-card-mini" onclick="openMirrorModal('hhs')">
-                    <strong>HHS — Publication Duties</strong>
-                    <span class="mirror-said">Said: "Coordinating research"</span>
-                    <span class="mirror-record">Record: Biennial reports not maintained</span>
+                <div class="detail-row">
+                  <span class="detail-label">Responsible agency</span>
+                  <span class="detail-value">National Highway Traffic Safety Administration (NHTSA)</span>
                 </div>
-                <div class="mirror-card-mini" onclick="openMirrorModal('treasury')">
-                    <strong>Treasury — FSOC Risk</strong>
-                    <span class="mirror-said">Said: "System remains resilient"</span>
-                    <span class="mirror-record">Record: Risk inputs not evaluated</span>
+                <div class="detail-row">
+                  <span class="detail-label">Statutory duty</span>
+                  <span class="detail-value">Amend FMVSS to require rear-seat belt reminder systems (final rule)</span>
                 </div>
+                <div class="detail-row">
+                  <span class="detail-label">Deadline</span>
+                  <span class="detail-value detail-value-bold">October 2015</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Nature of duty</span>
+                  <span class="detail-value">Discrete · Mandatory · Date-certain</span>
+                </div>
+                <div class="detail-callout">The statute required issuance of a <strong>final rule</strong>, not further study or discretionary consideration.</div>
+              </div>
             </div>
 
-            <p style="margin-top: 24px; font-size: 0.9rem; color: #ccd6f6;">
-                <strong>Method:</strong> Each page uses the same four-part structure: what the statute required, what the agency said, what the record shows, and what courts can and cannot compel.
-            </p>
+            <div class="detail-box detail-box-agency">
+              <div class="detail-box-header">
+                <span class="detail-box-number">②</span>
+                <h4>What the Agency Said</h4>
+              </div>
+              <div class="detail-box-content">
+                <p>Over multiple years following enactment, NHTSA publicly stated it was:</p>
+                <ul>
+                  <li>Studying rear-seat belt reminder technologies</li>
+                  <li>Evaluating safety benefits</li>
+                  <li>Considering implementation as part of broader vehicle safety initiatives</li>
+                </ul>
+                <div class="detail-callout">Public statements conveyed ongoing consideration, not completion.</div>
+              </div>
+            </div>
 
+            <div class="detail-box detail-box-record">
+              <div class="detail-box-header">
+                <span class="detail-box-number">③</span>
+                <h4>What the Administrative Record Shows</h4>
+              </div>
+              <div class="detail-box-content">
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">October 2015:</span>
+                  <span class="detail-value">Statutory deadline passed without a final rule</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">2015–2023:</span>
+                  <span class="detail-value">No final rule issued</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">August 2023:</span>
+                  <span class="detail-value">Notice of Proposed Rulemaking (NPRM) published</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">As of filing:</span>
+                  <span class="detail-value">No final rule issued</span>
+                </div>
+                <div class="detail-callout">The required outcome — a final rule — has not occurred.</div>
+              </div>
+            </div>
 
-<details class="mirror-details">
-<summary>Read: How this works (details)</summary>
-<div class="mirror-details-content">
+            <div class="detail-box detail-box-court">
+              <div class="detail-box-header">
+                <span class="detail-box-number">④</span>
+                <h4>What Courts Can / Cannot Compel</h4>
+              </div>
+              <div class="detail-box-content">
+                <p>Under the Administrative Procedure Act (APA):</p>
+                <p class="detail-sub-heading">Courts can:</p>
+                <ul>
+                  <li>Declare agency action unlawfully withheld or unreasonably delayed</li>
+                  <li>Remand with instructions to act within a court-set timeframe</li>
+                </ul>
+                <p class="detail-sub-heading">Courts cannot:</p>
+                <ul>
+                  <li>Design the safety standard</li>
+                  <li>Dictate technical specifications</li>
+                  <li>Supervise ongoing agency operations beyond ordering action</li>
+                </ul>
+                <div class="detail-callout">Judicial remedies focus on compelling action, not directing policy substance.</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<div style="display: grid; gap: 20px;">
+        <!-- DOL Detail -->
+        <div class="agency-detail" id="detail-dol">
+          <div class="agency-detail-grid">
+            <div class="detail-box detail-box-statute">
+              <div class="detail-box-header">
+                <span class="detail-box-number">①</span>
+                <h4>What the Statute Required</h4>
+              </div>
+              <div class="detail-box-content">
+                <div class="detail-row">
+                  <span class="detail-label">Law</span>
+                  <span class="detail-value">SECURE 2.0 Act §338</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Statutory duty</span>
+                  <span class="detail-value">Update regulations to require at least one annual paper benefit statement for retirement plan participants</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Deadline</span>
+                  <span class="detail-value detail-value-bold">December 31, 2024</span>
+                </div>
+                <div class="detail-callout">The statute required issuance of a <strong>final rule</strong>, not further study or discretionary consideration.</div>
+              </div>
+            </div>
 
-<!-- Section 1 -->
-<div style="background: #112240; border: 1px solid #1d3a5c; border-radius: 12px; padding: 20px;">
-<h3 style="color: #64ffda; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px;">What This Is</h3>
-<p style="color: #a8b2d1; font-size: 0.95rem; line-height: 1.7; margin: 0;">The Mirror shows what laws say agencies must do. Then it shows what agencies said. Then it shows what actually happened. Each page uses the same format so you can compare them.</p>
-</div>
+            <div class="detail-box detail-box-agency">
+              <div class="detail-box-header">
+                <span class="detail-box-number">②</span>
+                <h4>What the Agency Said</h4>
+              </div>
+              <div class="detail-box-content">
+                <p>DOL indicated it was:</p>
+                <ul>
+                  <li>Soliciting public input via RFI (August 2023)</li>
+                  <li>Evaluating implementation approaches</li>
+                  <li>Considering changes to electronic disclosure safe harbors</li>
+                </ul>
+                <div class="detail-callout">Public statements conveyed ongoing evaluation, not completion.</div>
+              </div>
+            </div>
 
-<!-- Section 2 -->
-<div style="background: #112240; border: 1px solid #1d3a5c; border-radius: 12px; padding: 20px;">
-<h3 style="color: #64ffda; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px;">What This Is Not</h3>
-<ul style="color: #a8b2d1; font-size: 0.95rem; line-height: 1.8; margin: 0; padding-left: 20px;">
-<li>Not a campaign or petition</li>
-<li>Not naming any person</li>
-<li>Not guessing why things happened</li>
-<li>Not scoring agencies as good or bad</li>
-<li>Not legal advice</li>
-</ul>
-<p style="color: #a8b2d1; font-size: 0.95rem; line-height: 1.7; margin: 12px 0 0;">We just show the facts. You decide what they mean.</p>
-</div>
+            <div class="detail-box detail-box-record">
+              <div class="detail-box-header">
+                <span class="detail-box-number">③</span>
+                <h4>What the Administrative Record Shows</h4>
+              </div>
+              <div class="detail-box-content">
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">August 2023:</span>
+                  <span class="detail-value">RFI published</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">December 31, 2024:</span>
+                  <span class="detail-value">Deadline passed without final rule</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">September 30, 2025:</span>
+                  <span class="detail-value">Proposed rule submitted to OMB</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">As of filing:</span>
+                  <span class="detail-value">No final rule issued</span>
+                </div>
+                <div class="detail-callout">The required outcome — a final rule — has not occurred.</div>
+              </div>
+            </div>
 
-<!-- Section 3 -->
-<div style="background: #112240; border: 1px solid #1d3a5c; border-radius: 12px; padding: 20px;">
-<h3 style="color: #64ffda; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px;">How Each Page Is Built</h3>
-<p style="color: #a8b2d1; font-size: 0.95rem; line-height: 1.7; margin: 0 0 16px;">Every Mirror page has four boxes:</p>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-<div style="background: #0a192f; border: 1px solid #1d3a5c; border-radius: 8px; padding: 12px;">
-<strong style="color: #64ffda; font-size: 0.85rem;">1. Law Said</strong>
-<p style="color: #8892b0; font-size: 0.85rem; margin: 6px 0 0;">What the law told the agency to do.</p>
-</div>
-<div style="background: #0a192f; border: 1px solid #1d3a5c; border-radius: 8px; padding: 12px;">
-<strong style="color: #64ffda; font-size: 0.85rem;">2. Agency Said</strong>
-<p style="color: #8892b0; font-size: 0.85rem; margin: 6px 0 0;">What the agency said about it.</p>
-</div>
-<div style="background: #0a192f; border: 1px solid #1d3a5c; border-radius: 8px; padding: 12px;">
-<strong style="color: #64ffda; font-size: 0.85rem;">3. Record Shows</strong>
-<p style="color: #8892b0; font-size: 0.85rem; margin: 6px 0 0;">What actually happened.</p>
-</div>
-<div style="background: #0a192f; border: 1px solid #1d3a5c; border-radius: 8px; padding: 12px;">
-<strong style="color: #64ffda; font-size: 0.85rem;">4. Courts Can Do</strong>
-<p style="color: #8892b0; font-size: 0.85rem; margin: 6px 0 0;">What a judge can or cannot order.</p>
-</div>
-</div>
-<p style="color: #a8b2d1; font-size: 0.9rem; line-height: 1.7; margin: 16px 0 0; padding: 12px; background: #0a192f; border-left: 3px solid #64ffda;"><strong>The rule:</strong> If a fact does not fit in one box, it does not go on the page.</p>
-</div>
+            <div class="detail-box detail-box-court">
+              <div class="detail-box-header">
+                <span class="detail-box-number">④</span>
+                <h4>What Courts Can / Cannot Compel</h4>
+              </div>
+              <div class="detail-box-content">
+                <p class="detail-sub-heading">Courts can:</p>
+                <ul>
+                  <li>Declare action unlawfully withheld</li>
+                  <li>Order issuance by court-set deadline</li>
+                </ul>
+                <p class="detail-sub-heading">Courts cannot:</p>
+                <ul>
+                  <li>Design regulation content</li>
+                  <li>Dictate policy choices</li>
+                </ul>
+                <div class="detail-callout">Judicial remedies focus on compelling action, not directing policy substance.</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<!-- Section 4 -->
-<div style="background: #112240; border: 1px solid #1d3a5c; border-radius: 12px; padding: 20px;">
-<h3 style="color: #64ffda; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px;">How Pages Get Updated</h3>
-<ul style="color: #a8b2d1; font-size: 0.95rem; line-height: 1.8; margin: 0; padding-left: 20px;">
-<li>Each page shows when it was last checked</li>
-<li>When an agency acts, we update the page</li>
-<li>Old versions are saved</li>
-</ul>
-<p style="color: #a8b2d1; font-size: 0.95rem; line-height: 1.7; margin: 12px 0 0;">This is built to last, not just to publish once.</p>
-</div>
+        <!-- HHS Detail -->
+        <div class="agency-detail" id="detail-hhs">
+          <div class="agency-detail-grid">
+            <div class="detail-box detail-box-statute">
+              <div class="detail-box-header">
+                <span class="detail-box-number">①</span>
+                <h4>What the Statute Required</h4>
+              </div>
+              <div class="detail-box-content">
+                <div class="detail-row">
+                  <span class="detail-label">Law</span>
+                  <span class="detail-value">FSMA § 110(g); ACA § 3011</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Statutory duty</span>
+                  <span class="detail-value">Publish biennial Food Safety and Food Defense Research Plan; Submit and publish annual National Health Care Quality Strategy updates</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Deadlines</span>
+                  <span class="detail-value detail-value-bold">Biennial (FSMA); Annual (ACA)</span>
+                </div>
+                <div class="detail-callout">The statutes required <strong>recurring publication</strong>, not one-time reports.</div>
+              </div>
+            </div>
 
-<!-- Section 5 -->
-<div style="background: #112240; border: 1px solid #1d3a5c; border-radius: 12px; padding: 20px;">
-<h3 style="color: #64ffda; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px;">Who Uses This</h3>
-<ul style="color: #a8b2d1; font-size: 0.95rem; line-height: 1.8; margin: 0; padding-left: 20px;">
-<li><strong style="color: #ccd6f6;">Researchers</strong> — compare agencies using the same format</li>
-<li><strong style="color: #ccd6f6;">Reporters</strong> — find sources and citations in one place</li>
-<li><strong style="color: #ccd6f6;">Teachers</strong> — show students how government works</li>
-<li><strong style="color: #ccd6f6;">Everyone</strong> — check facts without being a lawyer</li>
-</ul>
-</div>
+            <div class="detail-box detail-box-agency">
+              <div class="detail-box-header">
+                <span class="detail-box-number">②</span>
+                <h4>What the Agency Said</h4>
+              </div>
+              <div class="detail-box-content">
+                <p>HHS agencies stated they are:</p>
+                <ul>
+                  <li>Coordinating food safety research across HHS, USDA, and DHS</li>
+                  <li>Publishing related reports through AHRQ</li>
+                </ul>
+                <div class="detail-callout">Public statements conveyed ongoing coordination, not completion of required publications.</div>
+              </div>
+            </div>
 
-</div>
+            <div class="detail-box detail-box-record">
+              <div class="detail-box-header">
+                <span class="detail-box-number">③</span>
+                <h4>What the Administrative Record Shows</h4>
+              </div>
+              <div class="detail-box-content">
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">May 2015:</span>
+                  <span class="detail-value">FDA/HHS published biennial report citing FSMA § 110(g)</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">2017–2023 cycles:</span>
+                  <span class="detail-value">No subsequent § 110(g) research plans located</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">National Quality Strategy:</span>
+                  <span class="detail-value">Annual updates not consistently published</span>
+                </div>
+                <div class="detail-callout">Required recurring publications have not been maintained.</div>
+              </div>
+            </div>
 
-</div>
-</details>
+            <div class="detail-box detail-box-court">
+              <div class="detail-box-header">
+                <span class="detail-box-number">④</span>
+                <h4>What Courts Can / Cannot Compel</h4>
+              </div>
+              <div class="detail-box-content">
+                <p class="detail-sub-heading">Courts can:</p>
+                <ul>
+                  <li>Declare action unlawfully withheld</li>
+                  <li>Order publication by deadline</li>
+                </ul>
+                <p class="detail-sub-heading">Courts cannot:</p>
+                <ul>
+                  <li>Dictate content of reports</li>
+                  <li>Direct research priorities</li>
+                </ul>
+                <div class="detail-callout">Judicial remedies focus on compelling publication, not directing content.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Treasury Detail -->
+        <div class="agency-detail" id="detail-treasury">
+          <div class="agency-detail-grid">
+            <div class="detail-box detail-box-statute">
+              <div class="detail-box-header">
+                <span class="detail-box-number">①</span>
+                <h4>What the Statute Required</h4>
+              </div>
+              <div class="detail-box-content">
+                <div class="detail-row">
+                  <span class="detail-label">Law</span>
+                  <span class="detail-value">Dodd-Frank Act (12 U.S.C. §§ 5321-5323)</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Statutory duty</span>
+                  <span class="detail-value">Identify, assess, and report on risks to U.S. financial stability, including household financial vulnerability</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Standard</span>
+                  <span class="detail-value detail-value-bold">Reasoned decision-making under APA</span>
+                </div>
+                <div class="detail-callout">The statute required <strong>reasoned assessment</strong> of risk inputs, not selective reliance on existing measures.</div>
+              </div>
+            </div>
+
+            <div class="detail-box detail-box-agency">
+              <div class="detail-box-header">
+                <span class="detail-box-number">②</span>
+                <h4>What the Agency Said</h4>
+              </div>
+              <div class="detail-box-content">
+                <p>2023 FSOC Annual Report stated:</p>
+                <ul>
+                  <li>U.S. financial system "remains resilient"</li>
+                  <li>Identified inflation and household vulnerability as systemic risks</li>
+                  <li>Relied on CPI/PCE measures as inputs</li>
+                </ul>
+                <div class="detail-callout">Public statements asserted resilience without evaluating whether risk inputs were adequate.</div>
+              </div>
+            </div>
+
+            <div class="detail-box detail-box-record">
+              <div class="detail-box-header">
+                <span class="detail-box-number">③</span>
+                <h4>What the Administrative Record Shows</h4>
+              </div>
+              <div class="detail-box-content">
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">December 2023:</span>
+                  <span class="detail-value">FSOC Annual Report published</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">Risk inputs:</span>
+                  <span class="detail-value">Report relied on CPI/PCE measures with substitution assumptions</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label detail-label-bold">Omission:</span>
+                  <span class="detail-value">Report did not evaluate whether inputs adequately capture household financial stress</span>
+                </div>
+                <div class="detail-callout">Risk assessment relied on existing metrics without evaluating their adequacy.</div>
+              </div>
+            </div>
+
+            <div class="detail-box detail-box-court">
+              <div class="detail-box-header">
+                <span class="detail-box-number">④</span>
+                <h4>What Courts Can / Cannot Compel</h4>
+              </div>
+              <div class="detail-box-content">
+                <p class="detail-sub-heading">Courts can:</p>
+                <ul>
+                  <li>Declare action arbitrary/capricious</li>
+                  <li>Vacate and remand for reasoned reconsideration</li>
+                </ul>
+                <p class="detail-sub-heading">Courts cannot:</p>
+                <ul>
+                  <li>Dictate how inflation should be measured</li>
+                  <li>Select economic models</li>
+                </ul>
+                <div class="detail-callout">Judicial remedies focus on requiring reasoned analysis, not choosing methodology.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-reveal-method">
+    <strong>Method:</strong> Each page uses the same four-part structure: what the statute required, what the agency said, what the record shows, and what courts can and cannot compel.
+  </div>
+</section>
 
 <!-- ========== PART B: Tools & Access Section (INSERTED) ========== -->
 <section class="tools-section">
@@ -691,7 +794,6 @@
 </section>
 <!-- ========== END PART B ========== -->
 
-        </section>
     </main>
 
     <footer class="site-footer">
@@ -725,157 +827,6 @@
 
     <script src="../assets/js/main.js"></script>
 
-    <!-- Mirror Modal Overlay -->
-    <div class="mirror-modal-overlay" id="mirrorOverlay" onclick="closeMirrorModal()"></div>
-
-    <!-- NHTSA Modal -->
-    <div class="mirror-modal" id="modal-nhtsa">
-        <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
-        <h2>NHTSA — MAP-21 Rear-Seat Belt Reminder Rule</h2>
-        <p class="mirror-subject">Rulemaking delay</p>
-        <div class="modal-grid">
-            <div class="modal-box">
-                <h3>What the Statute Required</h3>
-                <p>MAP-21 required NHTSA to amend FMVSS to require rear-seat belt reminder systems.</p>
-                <p class="mirror-cite">Deadline: October 2015</p>
-            </div>
-            <div class="modal-box">
-                <h3>What the Agency Said</h3>
-                <p>NHTSA stated it was studying rear-seat belt reminder technologies and evaluating safety benefits.</p>
-            </div>
-            <div class="modal-box">
-                <h3>What the Record Shows</h3>
-                <ul>
-                    <li>October 2015: Deadline passed without final rule</li>
-                    <li>2015-2023: No final rule issued</li>
-                    <li>August 2023: NPRM published</li>
-                    <li>As of filing: No final rule issued</li>
-                </ul>
-            </div>
-            <div class="modal-box">
-                <h3>What Courts Can/Cannot Compel</h3>
-                <p><strong>Can:</strong> Declare action unlawfully withheld; order issuance by court-set deadline.</p>
-                <p><strong>Cannot:</strong> Design safety standard; dictate technical specifications.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- DOL Modal -->
-    <div class="mirror-modal" id="modal-dol">
-        <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
-        <h2>DOL — SECURE 2.0 Paper Statement Rule</h2>
-        <p class="mirror-subject">Rulemaking delay</p>
-        <div class="modal-grid">
-            <div class="modal-box">
-                <h3>What the Statute Required</h3>
-                <p>SECURE 2.0 Act §338 required DOL to update regulations to require at least one annual paper benefit statement for retirement plan participants.</p>
-                <p class="mirror-cite">Deadline: December 31, 2024</p>
-            </div>
-            <div class="modal-box">
-                <h3>What the Agency Said</h3>
-                <p>DOL indicated it was soliciting public input via RFI (August 2023), evaluating implementation approaches, and considering changes to electronic disclosure safe harbors.</p>
-            </div>
-            <div class="modal-box">
-                <h3>What the Record Shows</h3>
-                <ul>
-                    <li>August 2023: RFI published</li>
-                    <li>December 31, 2024: Deadline passed without final rule</li>
-                    <li>September 30, 2025: Proposed rule submitted to OMB</li>
-                    <li>As of filing: No final rule issued</li>
-                </ul>
-            </div>
-            <div class="modal-box">
-                <h3>What Courts Can/Cannot Compel</h3>
-                <p><strong>Can:</strong> Declare action unlawfully withheld; order issuance by court-set deadline.</p>
-                <p><strong>Cannot:</strong> Design regulation content; dictate policy choices.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- HHS Modal -->
-    <div class="mirror-modal" id="modal-hhs">
-        <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
-        <h2>HHS — Statutory Publication Duties</h2>
-        <p class="mirror-subject">Publication delay</p>
-        <div class="modal-grid">
-            <div class="modal-box">
-                <h3>What the Statute Required</h3>
-                <p>FSMA § 110(g): Publish biennial Food Safety and Food Defense Research Plan. ACA § 3011: Submit and publish annual National Health Care Quality Strategy updates.</p>
-                <p class="mirror-cite">Deadlines: Biennial (FSMA); Annual (ACA)</p>
-            </div>
-            <div class="modal-box">
-                <h3>What the Agency Said</h3>
-                <p>HHS agencies stated they are coordinating food safety research across HHS, USDA, and DHS, and publishing related reports through AHRQ.</p>
-            </div>
-            <div class="modal-box">
-                <h3>What the Record Shows</h3>
-                <ul>
-                    <li>May 2015: FDA/HHS published biennial report citing FSMA § 110(g)</li>
-                    <li>2017-2023 cycles: No subsequent § 110(g) research plans located</li>
-                    <li>National Quality Strategy: Annual updates not consistently published</li>
-                </ul>
-            </div>
-            <div class="modal-box">
-                <h3>What Courts Can/Cannot Compel</h3>
-                <p><strong>Can:</strong> Declare action unlawfully withheld; order publication by deadline.</p>
-                <p><strong>Cannot:</strong> Dictate content of reports; direct research priorities.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Treasury Modal -->
-    <div class="mirror-modal" id="modal-treasury">
-        <button class="mirror-modal-close" onclick="closeMirrorModal()">&times;</button>
-        <h2>Treasury — FSOC Risk Assessment</h2>
-        <p class="mirror-subject">Risk-input evaluation</p>
-        <div class="modal-grid">
-            <div class="modal-box">
-                <h3>What the Statute Required</h3>
-                <p>Dodd-Frank Act (12 U.S.C. §§ 5321-5323) requires Treasury/FSOC to identify, assess, and report on risks to U.S. financial stability, including household financial vulnerability.</p>
-                <p class="mirror-cite">Standard: Reasoned decision-making under APA</p>
-            </div>
-            <div class="modal-box">
-                <h3>What the Agency Said</h3>
-                <p>2023 FSOC Annual Report stated U.S. financial system "remains resilient," identified inflation and household vulnerability as systemic risks, and relied on CPI/PCE measures as inputs.</p>
-            </div>
-            <div class="modal-box">
-                <h3>What the Record Shows</h3>
-                <ul>
-                    <li>December 2023: FSOC Annual Report published</li>
-                    <li>Risk inputs: Report relied on CPI/PCE measures with substitution assumptions</li>
-                    <li>Omission: Report did not evaluate whether inputs adequately capture household financial stress</li>
-                </ul>
-            </div>
-            <div class="modal-box">
-                <h3>What Courts Can/Cannot Compel</h3>
-                <p><strong>Can:</strong> Declare action arbitrary/capricious; vacate and remand for reasoned reconsideration.</p>
-                <p><strong>Cannot:</strong> Dictate how inflation should be measured; select economic models.</p>
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-    function openMirrorModal(agency) {
-        document.getElementById('mirrorOverlay').classList.add('active');
-        document.getElementById('modal-' + agency).classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeMirrorModal() {
-        document.getElementById('mirrorOverlay').classList.remove('active');
-        document.querySelectorAll('.mirror-modal').forEach(function(modal) {
-            modal.classList.remove('active');
-        });
-        document.body.style.overflow = '';
-    }
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeMirrorModal();
-        }
-    });
-    </script>
 <script>
   // Mega menu blur backdrop controller
   (function() {
@@ -1009,6 +960,77 @@
 
     // Start
     startAutoplay();
+  })();
+</script>
+<script>
+  // Scroll-driven agency reveal
+  (function() {
+    var triggers = document.querySelectorAll('.scroll-agency-trigger');
+    var details = document.querySelectorAll('.agency-detail');
+
+    if (!triggers.length) return;
+
+    // Use IntersectionObserver to detect which agency is in view
+    var observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -50% 0px', // trigger when card is in the middle 20% of viewport
+      threshold: 0
+    };
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var agencyId = entry.target.getAttribute('data-agency');
+
+          // Update active trigger
+          triggers.forEach(function(t) { t.classList.remove('active'); });
+          entry.target.classList.add('active');
+
+          // Update active detail with animation
+          details.forEach(function(d) {
+            if (d.id === 'detail-' + agencyId) {
+              d.classList.add('active');
+              // Re-trigger animation
+              d.style.transform = 'translateX(20px)';
+              d.style.opacity = '0';
+              requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                  d.style.transform = 'translateX(0)';
+                  d.style.opacity = '1';
+                });
+              });
+            } else {
+              d.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    triggers.forEach(function(trigger) {
+      observer.observe(trigger);
+    });
+
+    // Fallback: also handle on mobile where sticky doesn't apply
+    if (window.innerWidth <= 900) {
+      triggers.forEach(function(trigger) {
+        trigger.addEventListener('click', function() {
+          var agencyId = this.getAttribute('data-agency');
+
+          triggers.forEach(function(t) { t.classList.remove('active'); });
+          this.classList.add('active');
+
+          details.forEach(function(d) {
+            if (d.id === 'detail-' + agencyId) {
+              d.classList.add('active');
+              d.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+              d.classList.remove('active');
+            }
+          }.bind(this));
+        });
+      });
+    }
   })();
 </script>
 </body>
