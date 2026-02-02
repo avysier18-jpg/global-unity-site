@@ -1061,8 +1061,8 @@ section { margin-bottom: 0; }
   min-width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 3rem; /* generous spacing between agencies */
-  padding-bottom: 40vh; /* extra space at bottom so last item can scroll into position */
+  gap: 100vh;
+  padding-bottom: 60vh;
 }
 
 .scroll-agency-trigger {
@@ -1297,7 +1297,7 @@ section { margin-bottom: 0; }
   .scroll-reveal-left {
     width: 100%;
     min-width: 100%;
-    gap: 1.5rem;
+    gap: 2rem;
     padding-bottom: 0;
   }
 
@@ -1332,4 +1332,84 @@ section { margin-bottom: 0; }
     flex-direction: column;
     gap: 0.15rem;
   }
+}
+
+/* ============================================
+   HOW THIS WORKS DETAILS DROPDOWN
+   ============================================ */
+
+.mirror-details-dropdown {
+  border: 1px solid rgba(100, 255, 218, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mirror-details-dropdown summary {
+  background: rgba(100, 255, 218, 0.08);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  color: #64ffda;
+  font-weight: 600;
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.mirror-details-dropdown summary:hover {
+  background: rgba(100, 255, 218, 0.12);
+}
+
+.mirror-details-dropdown summary::before {
+  content: '▶';
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.mirror-details-dropdown[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* Remove default marker */
+.mirror-details-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.mirror-details-card {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(100, 255, 218, 0.06);
+}
+
+.mirror-details-card h3 {
+  color: #64ffda;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+}
+
+.mirror-details-card p {
+  color: #a8b2d1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 0.5rem 0;
+}
+
+.mirror-details-card ul {
+  color: #a8b2d1;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 0 0 0.75rem 1.2rem;
+  padding: 0;
+}
+
+.mirror-details-card ul li {
+  margin-bottom: 0.2rem;
+}
+
+.mirror-details-card strong {
+  color: #ccd6f6;
 }
