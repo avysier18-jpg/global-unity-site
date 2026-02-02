@@ -775,44 +775,65 @@ section { margin-bottom: 0; }
   opacity: 0.6;
 }
 
-/* Slide 1: Law — deep blue with teal accent glow */
+.carousel-bg-law .carousel-bg-icon {
+  color: #3a5a7a;
+}
+
+.carousel-bg-agency .carousel-bg-icon {
+  color: #5a5347;
+}
+
+.carousel-bg-record .carousel-bg-icon {
+  color: #2a6b65;
+}
+
+.carousel-bg-court .carousel-bg-icon {
+  color: #3d4055;
+}
+
+.carousel-bg-mirror .carousel-bg-icon {
+  color: #3a5a65;
+}
+
+/* Slide 1: Law — Cold, dark, foundational */
 .carousel-bg-law {
   background:
-    radial-gradient(ellipse at 80% 50%, rgba(100, 255, 218, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(30, 60, 100, 0.3) 0%, transparent 50%),
-    linear-gradient(135deg, #0a1929 0%, #0d2137 40%, #112a45 100%);
+    radial-gradient(ellipse at 15% 50%, rgba(30, 45, 65, 0.5) 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 80%, rgba(15, 25, 50, 0.4) 0%, transparent 50%),
+    linear-gradient(160deg, #060d18 0%, #0a1525 30%, #0d1a2e 60%, #080f1e 100%);
 }
 
-/* Slide 2: Agency — slate with warm amber glow */
+/* Slide 2: Agency — Warm gray, bureaucratic paper tone */
 .carousel-bg-agency {
   background:
-    radial-gradient(ellipse at 75% 40%, rgba(255, 183, 77, 0.06) 0%, transparent 55%),
-    radial-gradient(ellipse at 15% 70%, rgba(40, 50, 80, 0.3) 0%, transparent 50%),
-    linear-gradient(135deg, #0a1929 0%, #111e33 40%, #162640 100%);
+    radial-gradient(ellipse at 20% 40%, rgba(55, 50, 42, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(40, 35, 30, 0.25) 0%, transparent 50%),
+    linear-gradient(145deg, #0c0f14 0%, #13161d 30%, #171a20 55%, #0e1117 100%);
 }
 
-/* Slide 3: Record — dark with green-teal evidence glow */
+/* Slide 3: Record — Deep teal-green, evidence surfacing */
 .carousel-bg-record {
   background:
-    radial-gradient(ellipse at 70% 45%, rgba(100, 255, 218, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 25% 75%, rgba(20, 60, 60, 0.3) 0%, transparent 50%),
-    linear-gradient(135deg, #0a1929 0%, #0c2434 40%, #0f2b3d 100%);
+    radial-gradient(ellipse at 25% 60%, rgba(20, 70, 65, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 30%, rgba(15, 55, 55, 0.15) 0%, transparent 50%),
+    linear-gradient(155deg, #070f14 0%, #0a1a1e 30%, #0c2025 55%, #081218 100%);
 }
 
-/* Slide 4: Court — deep with cool purple hint */
+/* Slide 4: Court — Darkest, cool slate/charcoal, gravity */
 .carousel-bg-court {
   background:
-    radial-gradient(ellipse at 80% 50%, rgba(140, 130, 255, 0.05) 0%, transparent 55%),
-    radial-gradient(ellipse at 20% 60%, rgba(30, 40, 80, 0.3) 0%, transparent 50%),
-    linear-gradient(135deg, #0a1929 0%, #0f1d35 40%, #131f3a 100%);
+    radial-gradient(ellipse at 30% 50%, rgba(35, 38, 48, 0.4) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 70%, rgba(25, 28, 38, 0.3) 0%, transparent 50%),
+    linear-gradient(170deg, #08090e 0%, #0d0f16 30%, #12141c 55%, #0a0b12 100%);
 }
 
-/* Slide 5: Mirror — teal convergence glow */
+/* Slide 5: Mirror — Convergence, combines undertones from all four */
 .carousel-bg-mirror {
   background:
-    radial-gradient(ellipse at 50% 50%, rgba(100, 255, 218, 0.07) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 30%, rgba(100, 255, 218, 0.04) 0%, transparent 40%),
-    linear-gradient(135deg, #0a1929 0%, #0d2239 40%, #112a42 100%);
+    radial-gradient(ellipse at 20% 40%, rgba(20, 55, 60, 0.15) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 60%, rgba(30, 35, 50, 0.2) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 90%, rgba(50, 45, 40, 0.1) 0%, transparent 40%),
+    linear-gradient(150deg, #080e18 0%, #0b1520 30%, #0e1825 55%, #091019 100%);
 }
 
 /* Slide content */
