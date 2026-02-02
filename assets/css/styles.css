@@ -1434,3 +1434,15 @@ section { margin-bottom: 0; }
 .mirror-details-card strong {
   color: #ccd6f6;
 }
+
+/* Mirror AI Ask - responsive */
+@media (max-width: 768px) {
+  .mirror-ai-ask {
+    margin-top: 1.5rem !important;
+    padding: 1.2rem !important;
+  }
+
+  .mirror-ai-question p {
+    font-size: 0.9rem !important;
+  }
+}
