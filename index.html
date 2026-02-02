@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <div class="mega-menu-backdrop"></div>
   <header class="site-header">
     <div class="container nav-pattern nav-container">
       <a href="index.html" class="logo">MIRROR</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -18,15 +19,48 @@
       <nav class="main-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="/mirror/">Mirror</a></li>
-          <li><a href="truth-library.html">Truth Library</a></li>
-          <li><a href="transparency-evidence.html">Transparency</a></li>
-          <li><a href="our-actions.html">Our Actions</a></li>
+          <li><a href="/mirror/">Mirror</a></li>
+          <li class="has-mega-menu">
+            <a href="truth-library.html">Explore</a>
+            <div class="mega-menu">
+              <div class="mega-menu-group">
+                <span class="mega-menu-group-title">Knowledge</span>
+                <a href="truth-library.html" class="mega-menu-item">
+                  <span class="mega-menu-item-title">Truth Library</span>
+                  <span class="mega-menu-item-desc">Rooms 1–7: how systems behave, explained clearly</span>
+                </a>
+                <a href="transparency-evidence.html" class="mega-menu-item">
+                  <span class="mega-menu-item-title">Transparency &amp; Evidence</span>
+                  <span class="mega-menu-item-desc">Data, charts, documents &amp; public records</span>
+                </a>
+              </div>
+              <div class="mega-menu-group">
+                <span class="mega-menu-group-title">Action</span>
+                <a href="our-actions.html" class="mega-menu-item">
+                  <span class="mega-menu-item-title">Our Actions</span>
+                  <span class="mega-menu-item-desc">Formal oversight work &amp; accountability efforts</span>
+                </a>
+                <a href="officials-media.html" class="mega-menu-item">
+                  <span class="mega-menu-item-title">For Officials &amp; Media</span>
+                  <span class="mega-menu-item-desc">Key links &amp; context for lawful engagement</span>
+                </a>
+              </div>
+              <div class="mega-menu-group">
+                <span class="mega-menu-group-title">People</span>
+                <a href="rising-together.html" class="mega-menu-item">
+                  <span class="mega-menu-item-title">Rising Together</span>
+                  <span class="mega-menu-item-desc">Why stories matter &amp; how they reveal patterns</span>
+                </a>
+                <a href="add-your-voice.html" class="mega-menu-item">
+                  <span class="mega-menu-item-title">Add Your Voice</span>
+                  <span class="mega-menu-item-desc">Share your lived experience securely</span>
+                </a>
+              </div>
+            </div>
+          </li>
           <li><a href="rising-together.html">Rising Together</a></li>
-          <li><a href="add-your-voice.html">Add Your Voice</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="updates.html">Updates</a></li>
-          <li><a href="officials-media.html">Officials &amp; Media</a></li>
         </ul>
       </nav>
     </div>
