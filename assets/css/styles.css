@@ -1488,7 +1488,7 @@ section { margin-bottom: 0; }
   padding: 0.8rem 0.9rem;
   cursor: pointer;
   transition: background 0.2s ease;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.1rem;
 }
 
 .agency-ai-question:hover {
