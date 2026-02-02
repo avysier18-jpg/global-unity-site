@@ -1444,21 +1444,18 @@ section { margin-bottom: 0; }
 .agency-trigger-group {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 0.5rem;
 }
 
 .agency-trigger-group .scroll-agency-trigger {
-  border-radius: 12px 12px 0 0;
-  border-bottom: none;
+  border-radius: 12px;
 }
 
 .agency-ai-card {
   background: rgba(10, 20, 38, 0.7);
   border: 1px solid rgba(100, 255, 218, 0.1);
-  border-top: none;
-  border-radius: 0 0 12px 12px;
-  padding: 1.1rem 1.25rem;
-  margin-top: -1px;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
 }
 
 /* Header: icon + "Mirror AI" */
@@ -1488,7 +1485,7 @@ section { margin-bottom: 0; }
   padding: 0.8rem 0.9rem;
   cursor: pointer;
   transition: background 0.2s ease;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0;
 }
 
 .agency-ai-question:hover {
@@ -1520,21 +1517,26 @@ section { margin-bottom: 0; }
   transform: scale(1.15);
 }
 
-/* Open AI link */
-.agency-ai-link {
-  display: inline-flex;
+/* Open AI link block */
+.agency-ai-link-block {
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(10, 20, 38, 0.7);
+  border: 1px solid rgba(100, 255, 218, 0.15);
+  border-radius: 12px;
+  padding: 0.85rem 1.25rem;
   color: #64ffda;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  opacity: 0.75;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.agency-ai-link:hover {
-  opacity: 1;
+.agency-ai-link-block:hover {
+  background: rgba(100, 255, 218, 0.08);
+  border-color: rgba(100, 255, 218, 0.3);
 }
 
 /* ============================================
