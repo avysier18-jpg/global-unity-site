@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <div class="mega-menu-backdrop"></div>
+  <!-- Mega menu blur backdrop -->
+<div class="mega-menu-backdrop" id="megaBackdrop"></div>
   <header class="site-header">
     <div class="container nav-pattern nav-container">
       <a href="index.html" class="logo">MIRROR</a>
@@ -277,5 +278,28 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // Mega menu blur backdrop controller
+    (function() {
+      const backdrop = document.getElementById('megaBackdrop');
+      const megaItems = document.querySelectorAll('.has-mega-menu');
+
+      megaItems.forEach(function(item) {
+        item.addEventListener('mouseenter', function() {
+          backdrop.classList.add('active');
+        });
+        item.addEventListener('mouseleave', function() {
+          backdrop.classList.remove('active');
+        });
+      });
+
+      // Prevent mega trigger links from navigating
+      document.querySelectorAll('.mega-trigger').forEach(function(trigger) {
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault();
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
