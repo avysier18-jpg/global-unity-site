@@ -1162,5 +1162,31 @@
     }
   })();
 </script>
+<script>
+  // Hide scroll hint when user scrolls the sticky panel
+  (function() {
+    var stickyPanel = document.querySelector('.scroll-reveal-sticky');
+    if (!stickyPanel) return;
+
+    stickyPanel.addEventListener('scroll', function() {
+      // If scrolled near the bottom, hide the hint
+      var scrolledToBottom = stickyPanel.scrollHeight - stickyPanel.scrollTop - stickyPanel.clientHeight < 50;
+      if (stickyPanel.scrollTop > 20 || scrolledToBottom) {
+        stickyPanel.classList.add('scrolled');
+      }
+    });
+
+    // Re-show hint when agency changes (content resets)
+    var observer = new MutationObserver(function() {
+      stickyPanel.scrollTop = 0;
+      stickyPanel.classList.remove('scrolled');
+    });
+
+    var details = stickyPanel.querySelectorAll('.agency-detail');
+    details.forEach(function(detail) {
+      observer.observe(detail, { attributes: true, attributeFilter: ['class'] });
+    });
+  })();
+</script>
 </body>
 </html>
