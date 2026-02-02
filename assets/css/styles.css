@@ -1169,66 +1169,7 @@ section { margin-bottom: 0; }
 .scroll-reveal-sticky {
   position: sticky;
   top: 80px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-  padding-right: 0.5rem;
-}
-
-/* Scrollbar — VISIBLE and obvious */
-.scroll-reveal-sticky::-webkit-scrollbar {
-  width: 10px;
-}
-
-.scroll-reveal-sticky::-webkit-scrollbar-track {
-  background: rgba(100, 255, 218, 0.06);
-  border-radius: 10px;
-  margin: 4px 0;
-}
-
-.scroll-reveal-sticky::-webkit-scrollbar-thumb {
-  background: rgba(100, 255, 218, 0.4);
-  border-radius: 10px;
-  border: 2px solid rgba(10, 25, 41, 0.8);
-}
-
-.scroll-reveal-sticky::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 255, 218, 0.6);
-}
-
-/* Firefox scrollbar */
-.scroll-reveal-sticky {
-  scrollbar-width: auto;
-  scrollbar-color: rgba(100, 255, 218, 0.4) rgba(100, 255, 218, 0.06);
-}
-
-/* Scroll hint — fade gradient at bottom of sticky panel */
-.scroll-reveal-sticky::after {
-  content: '↓ scroll';
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  text-align: center;
-  padding: 1rem 0 0.5rem;
-  background: linear-gradient(to top, rgba(10, 25, 41, 0.95) 0%, rgba(10, 25, 41, 0.7) 50%, transparent 100%);
-  color: #64ffda;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  pointer-events: none;
-  animation: scrollHintPulse 2s ease-in-out infinite;
-}
-
-@keyframes scrollHintPulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-.scroll-reveal-sticky.scrolled::after {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  height: fit-content;
 }
 
 /* Agency detail panels */
@@ -1496,14 +1437,115 @@ section { margin-bottom: 0; }
   color: #ccd6f6;
 }
 
-/* Mirror AI Ask - responsive */
-@media (max-width: 768px) {
-  .mirror-ai-ask {
-    margin-top: 1.5rem !important;
-    padding: 1.2rem !important;
+/* ============================================
+   LEFT-SIDE AI CARDS (under agency triggers)
+   ============================================ */
+
+.agency-trigger-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.agency-trigger-group .scroll-agency-trigger {
+  border-radius: 12px 12px 0 0;
+  border-bottom: none;
+}
+
+.agency-ai-card {
+  background: rgba(10, 20, 38, 0.7);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 0.8rem 1rem;
+  margin-top: -1px;
+}
+
+/* Header: icon + "Mirror AI" */
+.agency-ai-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.agency-ai-header span {
+  font-size: 0.7rem;
+  color: #64ffda;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+/* Question row: text + copy icon */
+.agency-ai-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: rgba(15, 30, 50, 0.5);
+  border-radius: 8px;
+  padding: 0.6rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-bottom: 0.6rem;
+}
+
+.agency-ai-question:hover {
+  background: rgba(20, 40, 65, 0.7);
+}
+
+.agency-ai-question:active {
+  background: rgba(25, 50, 75, 0.8);
+}
+
+.ai-q-text {
+  font-size: 0.72rem;
+  color: #8892b0;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.ai-copy-icon {
+  font-size: 0.85rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  transition: transform 0.15s ease;
+}
+
+.agency-ai-question:hover .ai-copy-icon {
+  transform: scale(1.15);
+}
+
+/* Open AI link */
+.agency-ai-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.agency-ai-link:hover {
+  opacity: 1;
+}
+
+/* ============================================
+   LEFT-SIDE AI CARDS — MOBILE
+   ============================================ */
+@media (max-width: 900px) {
+  .agency-ai-card {
+    padding: 0.7rem 0.9rem;
   }
 
-  .mirror-ai-question p {
-    font-size: 0.9rem !important;
+  .ai-q-text {
+    font-size: 0.75rem;
   }
 }
