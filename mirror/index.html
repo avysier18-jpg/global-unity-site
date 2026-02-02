@@ -1094,72 +1094,78 @@
   })();
 </script>
 <script>
-  // Scroll-driven agency reveal
+  // Scroll-driven agency reveal + Mobile tap handling
   (function() {
     var triggers = document.querySelectorAll('.scroll-agency-trigger');
     var details = document.querySelectorAll('.agency-detail');
 
-    if (!triggers.length) return;
+    if (!triggers.length || !details.length) return;
 
-    // Use IntersectionObserver to detect which agency is in view
-    var observerOptions = {
-      root: null,
-      rootMargin: '-30% 0px -50% 0px', // trigger when card is in the middle 20% of viewport
-      threshold: 0
-    };
-
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var agencyId = entry.target.getAttribute('data-agency');
-
-          // Update active trigger
-          triggers.forEach(function(t) { t.classList.remove('active'); });
-          entry.target.classList.add('active');
-
-          // Update active detail with animation
-          details.forEach(function(d) {
-            if (d.id === 'detail-' + agencyId) {
-              d.classList.add('active');
-              // Re-trigger animation
-              d.style.transform = 'translateX(20px)';
-              d.style.opacity = '0';
-              requestAnimationFrame(function() {
-                requestAnimationFrame(function() {
-                  d.style.transform = 'translateX(0)';
-                  d.style.opacity = '1';
-                });
-              });
-            } else {
-              d.classList.remove('active');
-            }
-          });
+    // Shared function to switch active agency
+    function switchAgency(agencyId) {
+      // Update active trigger
+      triggers.forEach(function(t) {
+        t.classList.remove('active');
+        if (t.getAttribute('data-agency') === agencyId) {
+          t.classList.add('active');
         }
       });
-    }, observerOptions);
 
-    triggers.forEach(function(trigger) {
-      observer.observe(trigger);
-    });
+      // Update active detail panel
+      details.forEach(function(d) {
+        d.classList.remove('active');
+        d.style.display = 'none';
 
-    // Fallback: also handle on mobile where sticky doesn't apply
+        if (d.id === 'detail-' + agencyId) {
+          d.classList.add('active');
+          d.style.display = 'block';
+        }
+      });
+    }
+
+    // MOBILE: Tap to switch agencies
     if (window.innerWidth <= 900) {
       triggers.forEach(function(trigger) {
-        trigger.addEventListener('click', function() {
+        trigger.style.cursor = 'pointer';
+
+        trigger.addEventListener('click', function(e) {
+          e.preventDefault();
           var agencyId = this.getAttribute('data-agency');
 
-          triggers.forEach(function(t) { t.classList.remove('active'); });
-          this.classList.add('active');
+          switchAgency(agencyId);
 
-          details.forEach(function(d) {
-            if (d.id === 'detail-' + agencyId) {
-              d.classList.add('active');
-              d.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            } else {
-              d.classList.remove('active');
-            }
-          }.bind(this));
+          // Scroll to the detail panel
+          var detailPanel = document.getElementById('detail-' + agencyId);
+          if (detailPanel) {
+            setTimeout(function() {
+              detailPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 150);
+          }
         });
+      });
+
+      // Initialize: show first agency
+      switchAgency('nhtsa');
+
+    } else {
+      // DESKTOP: Use IntersectionObserver for scroll-driven reveal
+      var observerOptions = {
+        root: null,
+        rootMargin: '-30% 0px -50% 0px',
+        threshold: 0
+      };
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var agencyId = entry.target.getAttribute('data-agency');
+            switchAgency(agencyId);
+          }
+        });
+      }, observerOptions);
+
+      triggers.forEach(function(trigger) {
+        observer.observe(trigger);
       });
     }
   })();

@@ -1044,35 +1044,45 @@ section { margin-bottom: 0; }
    CAROUSEL — MOBILE
    ============================================ */
 @media (max-width: 768px) {
-  /* Carousel container */
+  /* Center the carousel container */
   .mirror-carousel {
-    margin: 1rem;
+    margin: 1rem auto;
+    width: calc(100% - 2rem);
+    max-width: 100%;
     border-radius: 16px;
   }
 
   /* Carousel slide content */
   .carousel-slide {
+    text-align: center;
     padding: 1.5rem 1.25rem;
   }
 
   .carousel-content {
     padding: 1.5rem 1.25rem;
+    align-items: center;
+    text-align: center;
   }
 
   .carousel-step-label {
     font-size: 0.65rem;
     letter-spacing: 1.5px;
     margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
   }
 
   .carousel-title {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
+    text-align: center;
+    width: 100%;
   }
 
   .carousel-desc {
     font-size: 0.85rem;
     line-height: 1.6;
+    text-align: center;
   }
 
   /* Hide the icon on mobile — takes up too much space */
@@ -1082,6 +1092,7 @@ section { margin-bottom: 0; }
 
   /* Sources tags */
   .carousel-sources {
+    justify-content: center;
     flex-wrap: wrap;
     gap: 0.4rem;
   }
@@ -1093,6 +1104,7 @@ section { margin-bottom: 0; }
 
   /* Dots */
   .carousel-dots {
+    justify-content: center;
     gap: 0.5rem;
     margin-top: 1rem;
   }
@@ -1443,6 +1455,18 @@ section { margin-bottom: 0; }
   .scroll-reveal-sticky {
     position: relative;
     top: 0;
+  }
+
+  /* Agency detail panels — hard show/hide on mobile */
+  .agency-detail {
+    display: none !important;
+    transition: none;
+  }
+
+  .agency-detail.active {
+    display: block !important;
+    opacity: 1;
+    transform: none;
   }
 
   /* Agency trigger cards */
