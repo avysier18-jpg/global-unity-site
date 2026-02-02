@@ -45,15 +45,13 @@
             border-top: 1px solid #1d3a5c;
         }
         .tools-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            display: flex;
+            justify-content: center;
             margin-top: 24px;
         }
-        @media (max-width: 600px) {
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
+        .tools-grid .tool-card {
+            max-width: 400px;
+            width: 100%;
         }
         .tool-card {
             background: #112240;
@@ -917,11 +915,6 @@
     <h2 style="color: #ccd6f6; font-size: 1.4rem; margin-bottom: 0; padding-bottom: 12px; border-bottom: 1px solid #1d3a5c;">Tools &amp; Access</h2>
 
     <div class="tools-grid">
-        <div class="tool-card">
-            <h3>Mirror AI</h3>
-            <p>A tool to help understand the records. Not a source of truth.</p>
-            <a href="https://chatgpt.com/g/g-69210471a4908191ad7bd896ff7de970-global-unity-ai" target="_blank" rel="noopener noreferrer">Access Mirror AI →</a>
-        </div>
         <div class="tool-card">
             <h3>For Officials &amp; Media</h3>
             <p>Guidance for lawful engagement with the records.</p>
