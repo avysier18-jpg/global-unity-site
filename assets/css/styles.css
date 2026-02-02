@@ -1049,7 +1049,7 @@ section { margin-bottom: 0; }
   width: 100%;
   max-width: 1200px;
   margin: 4rem auto;
-  padding: 0 1.5rem;
+  padding: 50vh 1.5rem 0;
 }
 
 .scroll-reveal-intro {
@@ -1082,8 +1082,8 @@ section { margin-bottom: 0; }
   min-width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 100vh;
-  padding-bottom: 60vh;
+  gap: 150vh;
+  padding-bottom: 80vh;
 }
 
 .scroll-agency-trigger {
@@ -1168,7 +1168,8 @@ section { margin-bottom: 0; }
 .scroll-reveal-sticky {
   position: sticky;
   top: 100px; /* below the sticky header */
-  height: fit-content;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 /* Agency detail panels */
