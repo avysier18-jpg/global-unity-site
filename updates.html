@@ -7,27 +7,82 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    
-    <header class="site-header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">MIRROR</a>
-            <button class="mobile-nav-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="/mirror/">Mirror</a></li>
-                    <li><a href="truth-library.html">Truth Library</a></li>
-                    <li><a href="transparency-evidence.html">Transparency</a></li>
-                    <li><a href="our-actions.html">Our Actions</a></li>
-                    <li><a href="rising-together.html">Rising Together</a></li>
-                    <li><a href="add-your-voice.html">Add Your Voice</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="updates.html" class="active">Updates</a></li>
-                    <li><a href="officials-media.html">Officials & Media</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- Mega menu blur backdrop -->
+<div class="mega-menu-backdrop" id="megaBackdrop"></div>
+<header class="site-header">
+    <div class="container nav-pattern nav-container">
+        <a href="index.html" class="logo">MIRROR</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/mirror/">Mirror</a></li>
+                <li class="has-mega-menu">
+                    <a href="#" class="mega-trigger">Explore ▾</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-group">
+                            <span class="mega-menu-group-title">Research</span>
+                            <a href="truth-library.html" class="mega-menu-item">
+                                <span class="mega-menu-item-title">Truth Library</span>
+                                <span class="mega-menu-item-desc">Data and analysis on the systems that shape daily life</span>
+                            </a>
+                            <a href="transparency-evidence.html" class="mega-menu-item">
+                                <span class="mega-menu-item-title">Transparency &amp; Evidence</span>
+                                <span class="mega-menu-item-desc">Public records, documents, and accountability data</span>
+                            </a>
+                        </div>
+                        <div class="mega-menu-group">
+                            <span class="mega-menu-group-title">People</span>
+                            <a href="rising-together.html" class="mega-menu-item">
+                                <span class="mega-menu-item-title">Rising Together</span>
+                                <span class="mega-menu-item-desc">Lived experiences that reveal the human side of systems</span>
+                            </a>
+                            <a href="add-your-voice.html" class="mega-menu-item">
+                                <span class="mega-menu-item-title">Add Your Voice</span>
+                                <span class="mega-menu-item-desc">Share your story to help connect the dots</span>
+                            </a>
+                        </div>
+                        <div class="mega-menu-group">
+                            <span class="mega-menu-group-title">Action</span>
+                            <a href="our-actions.html" class="mega-menu-item">
+                                <span class="mega-menu-item-title">Our Actions</span>
+                                <span class="mega-menu-item-desc">Formal oversight efforts pushing for accountability</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-mega-menu">
+                    <a href="#" class="mega-trigger">About ▾</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-group">
+                            <span class="mega-menu-group-title">The Project</span>
+                            <a href="about.html" class="mega-menu-item">
+                                <span class="mega-menu-item-title">About Mirror</span>
+                                <span class="mega-menu-item-desc">Our mission, methods, and commitment to accuracy</span>
+                            </a>
+                            <a href="updates.html" class="mega-menu-item">
+                                <span class="mega-menu-item-title">Updates</span>
+                                <span class="mega-menu-item-desc">Latest developments and new content</span>
+                            </a>
+                        </div>
+                        <div class="mega-menu-group">
+                            <span class="mega-menu-group-title">Connect</span>
+                            <a href="officials-media.html" class="mega-menu-item">
+                                <span class="mega-menu-item-title">For Officials &amp; Media</span>
+                                <span class="mega-menu-item-desc">Press inquiries, data access, and collaboration</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
     <main class="container">
     
@@ -84,5 +139,28 @@
         <div class="footer-bottom container"><p>&copy; 2023 Mirror.</p></div>
     </footer>
     <script src="assets/js/main.js"></script>
+<script>
+  // Mega menu blur backdrop controller
+  (function() {
+    const backdrop = document.getElementById('megaBackdrop');
+    const megaItems = document.querySelectorAll('.has-mega-menu');
+
+    megaItems.forEach(function(item) {
+      item.addEventListener('mouseenter', function() {
+        backdrop.classList.add('active');
+      });
+      item.addEventListener('mouseleave', function() {
+        backdrop.classList.remove('active');
+      });
+    });
+
+    // Prevent mega trigger links from navigating
+    document.querySelectorAll('.mega-trigger').forEach(function(trigger) {
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+      });
+    });
+  })();
+</script>
 </body>
 </html>
