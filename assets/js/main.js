@@ -25,6 +25,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Mega Menu Backdrop Toggle
+    const megaMenuTriggers = document.querySelectorAll('.has-mega-menu');
+    const backdrop = document.querySelector('.mega-menu-backdrop');
+
+    if (backdrop && megaMenuTriggers.length) {
+        megaMenuTriggers.forEach(trigger => {
+            trigger.addEventListener('mouseenter', () => {
+                backdrop.classList.add('active');
+            });
+            trigger.addEventListener('mouseleave', () => {
+                backdrop.classList.remove('active');
+            });
+            // Keyboard accessibility: also toggle on focus-within
+            trigger.addEventListener('focusin', () => {
+                backdrop.classList.add('active');
+            });
+            trigger.addEventListener('focusout', (e) => {
+                // Only remove if focus moved outside this trigger
+                if (!trigger.contains(e.relatedTarget)) {
+                    backdrop.classList.remove('active');
+                }
+            });
+        });
+    }
+
     // Placeholder Live Counter Animation (Optional Visual)
     const counterElement = document.querySelector('.counter-placeholder');
     if(counterElement) {
