@@ -1395,19 +1395,6 @@ section { margin-bottom: 0; }
   font-style: italic;
 }
 
-/* Method line at bottom */
-.scroll-reveal-method {
-  margin-top: 2.5rem;
-  padding: 1rem 1.5rem;
-  border-top: 1px solid rgba(100, 255, 218, 0.1);
-  font-size: 0.85rem;
-  color: #8892b0;
-}
-
-.scroll-reveal-method strong {
-  color: #64ffda;
-}
-
 /* ============================================
    SCROLL REVEAL — MOBILE
    ============================================ */
@@ -1546,86 +1533,6 @@ section { margin-bottom: 0; }
     flex-direction: column;
     gap: 0.15rem;
   }
-}
-
-/* ============================================
-   HOW THIS WORKS DETAILS DROPDOWN
-   ============================================ */
-
-.mirror-details-dropdown {
-  border: 1px solid rgba(100, 255, 218, 0.15);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.mirror-details-dropdown summary {
-  background: rgba(100, 255, 218, 0.08);
-  padding: 1rem 1.5rem;
-  cursor: pointer;
-  color: #64ffda;
-  font-weight: 600;
-  font-size: 1rem;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: background 0.3s ease;
-}
-
-.mirror-details-dropdown summary:hover {
-  background: rgba(100, 255, 218, 0.12);
-}
-
-.mirror-details-dropdown summary::before {
-  content: '▶';
-  font-size: 0.7rem;
-  transition: transform 0.3s ease;
-}
-
-.mirror-details-dropdown[open] summary::before {
-  transform: rotate(90deg);
-}
-
-/* Remove default marker */
-.mirror-details-dropdown summary::-webkit-details-marker {
-  display: none;
-}
-
-.mirror-details-card {
-  padding: 1.5rem;
-  border-top: 1px solid rgba(100, 255, 218, 0.06);
-}
-
-.mirror-details-card h3 {
-  color: #64ffda;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 700;
-  margin: 0 0 0.75rem 0;
-}
-
-.mirror-details-card p {
-  color: #a8b2d1;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 0 0 0.5rem 0;
-}
-
-.mirror-details-card ul {
-  color: #a8b2d1;
-  font-size: 0.9rem;
-  line-height: 1.8;
-  margin: 0 0 0.75rem 1.2rem;
-  padding: 0;
-}
-
-.mirror-details-card ul li {
-  margin-bottom: 0.2rem;
-}
-
-.mirror-details-card strong {
-  color: #ccd6f6;
 }
 
 /* ============================================
@@ -1822,30 +1729,249 @@ section { margin-bottom: 0; }
 }
 
 /* ============================================
-   HOW THIS WORKS — MOBILE
+   FOOTER ZONE — Two Cards
    ============================================ */
+
+.footer-zone {
+  max-width: 1280px;
+  margin: 3rem auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.footer-zone-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Shared card style */
+.footer-zone-card {
+  background: rgba(10, 20, 38, 0.6);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.footer-zone-card:hover {
+  border-color: rgba(100, 255, 218, 0.2);
+}
+
+/* ---- Card 1: How This Works (collapsible) ---- */
+
+.footer-details {
+  width: 100%;
+}
+
+.footer-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.2s ease;
+}
+
+.footer-details summary:hover {
+  background: rgba(100, 255, 218, 0.04);
+}
+
+.footer-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.footer-chevron {
+  transition: transform 0.3s ease;
+  opacity: 0.6;
+}
+
+.footer-details[open] .footer-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Details content area */
+.footer-details-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.footer-detail-block {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(100, 255, 218, 0.06);
+}
+
+.footer-detail-block:first-child {
+  border-top: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.footer-detail-block h4 {
+  color: #64ffda;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+}
+
+.footer-detail-block p {
+  color: #a8b2d1;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  margin: 0 0 0.4rem 0;
+}
+
+.footer-detail-block ul {
+  color: #a8b2d1;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin: 0 0 0.5rem 1.1rem;
+  padding: 0;
+}
+
+.footer-detail-block ul li {
+  margin-bottom: 0.15rem;
+}
+
+.footer-detail-block strong {
+  color: #ccd6f6;
+}
+
+.footer-method-line {
+  color: #8892b0;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.footer-method-line strong {
+  color: #64ffda;
+}
+
+/* 4-box mini grid */
+.footer-four-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.footer-mini-box {
+  background: rgba(15, 25, 45, 0.6);
+  border: 1px solid rgba(100, 255, 218, 0.08);
+  border-radius: 8px;
+  padding: 0.85rem;
+}
+
+.footer-mini-box strong {
+  color: #64ffda;
+  font-size: 0.82rem;
+}
+
+.footer-mini-box p {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: #8892b0;
+}
+
+.footer-callout {
+  border-left: 3px solid rgba(100, 255, 218, 0.3);
+  padding: 0.6rem 0.9rem;
+  background: rgba(100, 255, 218, 0.03);
+  border-radius: 0 6px 6px 0;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: #8892b0;
+}
+
+.footer-callout strong {
+  color: #ccd6f6;
+}
+
+/* ---- Card 2: For Officials & Media (static) ---- */
+
+.footer-zone-card-static {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-card-title {
+  color: #e6f1ff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.footer-card-desc {
+  color: #8892b0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0.6rem 0 0;
+}
+
+.footer-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: gap 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.footer-card-link:hover {
+  opacity: 1;
+  gap: 0.6rem;
+}
+
+/* ============================================
+   FOOTER ZONE — Mobile
+   ============================================ */
+
 @media (max-width: 768px) {
-  .mirror-details-dropdown summary {
-    padding: 0.85rem 1rem;
-    font-size: 0.9rem;
+  .footer-zone {
+    margin: 2rem auto 1.5rem;
+    padding: 0 1rem;
   }
 
-  .mirror-details-card {
-    padding: 1.25rem;
+  .footer-zone-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .mirror-details-card h3 {
-    font-size: 0.8rem;
+  .footer-details summary {
+    padding: 1.1rem 1.25rem;
   }
 
-  .mirror-details-card p,
-  .mirror-details-card ul {
-    font-size: 0.85rem;
+  .footer-details-content {
+    padding: 0 1.25rem 1.25rem;
   }
 
-  /* Stack the 4-box mini grid in the details */
-  .mirror-details-card > div[style*="grid-template-columns: 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
+  .footer-four-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-zone-card-static {
+    padding: 1.1rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-details summary {
+    padding: 1rem;
+  }
+
+  .footer-details-content {
+    padding: 0 1rem 1rem;
+  }
+
+  .footer-zone-card-static {
+    padding: 1rem;
   }
 }
 

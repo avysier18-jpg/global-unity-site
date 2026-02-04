@@ -32,54 +32,6 @@
         .mirror-table a:hover {
             text-decoration: underline;
         }
-        @media (max-width: 600px) {
-          .method-section div[style*="grid-template-columns: 1fr 1fr"] {
-            grid-template-columns: 1fr !important;
-          }
-        }
-
-        /* PART B: Tools & Access Styles */
-        .tools-section {
-            margin-top: 48px;
-            padding-top: 32px;
-            border-top: 1px solid #1d3a5c;
-        }
-        .tools-grid {
-            display: flex;
-            justify-content: center;
-            margin-top: 24px;
-        }
-        .tools-grid .tool-card {
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-        }
-        .tool-card {
-            background: #112240;
-            border: 1px solid #1d3a5c;
-            border-radius: 12px;
-            padding: 20px;
-        }
-        .tool-card h3 {
-            color: #ccd6f6;
-            font-size: 1rem;
-            margin: 0 0 12px;
-        }
-        .tool-card p {
-            color: #a8b2d1;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin: 0 0 16px;
-        }
-        .tool-card a {
-            color: #64ffda;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        .tool-card a:hover {
-            text-decoration: underline;
-        }
-
         /* Hero section */
         .mirror-hero {
             text-align: center;
@@ -833,97 +785,107 @@
     </div>
   </div>
 
-  <div class="scroll-reveal-method">
-    <strong>Method:</strong> Each page uses the same four-part structure: what the statute required, what the agency said, what the record shows, and what courts can and cannot compel.
-  </div>
 </section>
 
 <!-- ============================================
-     HOW THIS WORKS (DETAILS)
+     FOOTER ZONE — Two Cards
      ============================================ -->
-<section class="mirror-details-section" style="max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem;">
-  <details class="mirror-details-dropdown">
-    <summary>Read: How this works (details)</summary>
+<section class="footer-zone">
+  <div class="footer-zone-grid">
 
-    <div class="mirror-details-card">
-      <h3>What This Is</h3>
-      <p>The Mirror shows what laws say agencies must do. Then it shows what agencies said. Then it shows what actually happened. Each page uses the same format so you can compare them.</p>
-    </div>
+    <!-- Card 1: How This Works (collapsible) -->
+    <div class="footer-zone-card">
+      <details class="footer-details">
+        <summary>
+          <span class="footer-card-title">How this works</span>
+          <svg class="footer-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64ffda" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </summary>
 
-    <div class="mirror-details-card">
-      <h3>What This Is Not</h3>
-      <ul>
-        <li>Not a campaign or petition</li>
-        <li>Not naming any person</li>
-        <li>Not guessing why things happened</li>
-        <li>Not scoring agencies as good or bad</li>
-        <li>Not legal advice</li>
-      </ul>
-      <p>We just show the facts. You decide what they mean.</p>
-    </div>
+        <div class="footer-details-content">
 
-    <div class="mirror-details-card">
-      <h3>How Each Page Is Built</h3>
-      <p>Every Mirror page has four boxes:</p>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
-        <div style="background: rgba(15,25,45,0.6); border: 1px solid rgba(100,255,218,0.1); border-radius: 8px; padding: 1rem;">
-          <strong style="color: #64ffda;">1. Law Said</strong>
-          <p style="margin: 0.5rem 0 0; font-size: 0.85rem;">What the law told the agency to do.</p>
+          <div class="footer-detail-block">
+            <p class="footer-method-line"><strong>Method:</strong> Each page uses the same four-part structure: what the statute required, what the agency said, what the record shows, and what courts can and cannot compel.</p>
+          </div>
+
+          <div class="footer-detail-block">
+            <h4>What This Is</h4>
+            <p>The Mirror shows what laws say agencies must do. Then it shows what agencies said. Then it shows what actually happened. Each page uses the same format so you can compare them.</p>
+          </div>
+
+          <div class="footer-detail-block">
+            <h4>What This Is Not</h4>
+            <ul>
+              <li>Not a campaign or petition</li>
+              <li>Not naming any person</li>
+              <li>Not guessing why things happened</li>
+              <li>Not scoring agencies as good or bad</li>
+              <li>Not legal advice</li>
+            </ul>
+            <p>We just show the facts. You decide what they mean.</p>
+          </div>
+
+          <div class="footer-detail-block">
+            <h4>How Each Page Is Built</h4>
+            <p>Every Mirror page has four boxes:</p>
+            <div class="footer-four-boxes">
+              <div class="footer-mini-box">
+                <strong>1. Law Said</strong>
+                <p>What the law told the agency to do.</p>
+              </div>
+              <div class="footer-mini-box">
+                <strong>2. Agency Said</strong>
+                <p>What the agency said about it.</p>
+              </div>
+              <div class="footer-mini-box">
+                <strong>3. Record Shows</strong>
+                <p>What actually happened.</p>
+              </div>
+              <div class="footer-mini-box">
+                <strong>4. Courts Can Do</strong>
+                <p>What a judge can or cannot order.</p>
+              </div>
+            </div>
+            <div class="footer-callout">
+              <strong>The rule:</strong> If a fact does not fit in one box, it does not go on the page.
+            </div>
+          </div>
+
+          <div class="footer-detail-block">
+            <h4>How Pages Get Updated</h4>
+            <ul>
+              <li>Each page shows when it was last checked</li>
+              <li>When an agency acts, we update the page</li>
+              <li>Old versions are saved</li>
+            </ul>
+            <p>This is built to last, not just to publish once.</p>
+          </div>
+
+          <div class="footer-detail-block">
+            <h4>Who Uses This</h4>
+            <ul>
+              <li><strong>Researchers</strong> — compare agencies using the same format</li>
+              <li><strong>Reporters</strong> — find sources and citations in one place</li>
+              <li><strong>Teachers</strong> — show students how government works</li>
+              <li><strong>Everyone</strong> — check facts without being a lawyer</li>
+            </ul>
+          </div>
+
         </div>
-        <div style="background: rgba(15,25,45,0.6); border: 1px solid rgba(100,255,218,0.1); border-radius: 8px; padding: 1rem;">
-          <strong style="color: #64ffda;">2. Agency Said</strong>
-          <p style="margin: 0.5rem 0 0; font-size: 0.85rem;">What the agency said about it.</p>
-        </div>
-        <div style="background: rgba(15,25,45,0.6); border: 1px solid rgba(100,255,218,0.1); border-radius: 8px; padding: 1rem;">
-          <strong style="color: #64ffda;">3. Record Shows</strong>
-          <p style="margin: 0.5rem 0 0; font-size: 0.85rem;">What actually happened.</p>
-        </div>
-        <div style="background: rgba(15,25,45,0.6); border: 1px solid rgba(100,255,218,0.1); border-radius: 8px; padding: 1rem;">
-          <strong style="color: #64ffda;">4. Courts Can Do</strong>
-          <p style="margin: 0.5rem 0 0; font-size: 0.85rem;">What a judge can or cannot order.</p>
-        </div>
-      </div>
-      <div style="border-left: 3px solid #64ffda; padding: 0.6rem 1rem; background: rgba(100,255,218,0.03); border-radius: 0 6px 6px 0; margin-top: 0.75rem;">
-        <strong>The rule:</strong> If a fact does not fit in one box, it does not go on the page.
-      </div>
+      </details>
     </div>
 
-    <div class="mirror-details-card">
-      <h3>How Pages Get Updated</h3>
-      <ul>
-        <li>Each page shows when it was last checked</li>
-        <li>When an agency acts, we update the page</li>
-        <li>Old versions are saved</li>
-      </ul>
-      <p>This is built to last, not just to publish once.</p>
+    <!-- Card 2: For Officials & Media -->
+    <div class="footer-zone-card footer-zone-card-static">
+      <h3 class="footer-card-title">For Officials &amp; Media</h3>
+      <p class="footer-card-desc">Guidance for lawful engagement with the records.</p>
+      <a class="footer-card-link" href="../officials-media.html">
+        View guidance
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
     </div>
 
-    <div class="mirror-details-card">
-      <h3>Who Uses This</h3>
-      <ul>
-        <li><strong>Researchers</strong> — compare agencies using the same format</li>
-        <li><strong>Reporters</strong> — find sources and citations in one place</li>
-        <li><strong>Teachers</strong> — show students how government works</li>
-        <li><strong>Everyone</strong> — check facts without being a lawyer</li>
-      </ul>
-    </div>
-
-  </details>
+  </div>
 </section>
-
-<!-- ========== PART B: Tools & Access Section (INSERTED) ========== -->
-<section class="tools-section">
-    <h2 style="color: #ccd6f6; font-size: 1.4rem; margin-bottom: 0; padding-bottom: 12px; border-bottom: 1px solid #1d3a5c;">Tools &amp; Access</h2>
-
-    <div class="tools-grid">
-        <div class="tool-card">
-            <h3>For Officials &amp; Media</h3>
-            <p>Guidance for lawful engagement with the records.</p>
-            <a href="../officials-media.html">View guidance →</a>
-        </div>
-    </div>
-</section>
-<!-- ========== END PART B ========== -->
 
     </main>
 
