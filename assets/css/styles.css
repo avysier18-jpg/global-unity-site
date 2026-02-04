@@ -1729,7 +1729,7 @@ section { margin-bottom: 0; }
 }
 
 /* ============================================
-   FOOTER ZONE — Two Cards
+   FOOTER ZONE — Two Cards (Officials left, How It Works right)
    ============================================ */
 
 .footer-zone {
@@ -1740,8 +1740,8 @@ section { margin-bottom: 0; }
 
 .footer-zone-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  grid-template-columns: 340px 1fr;
+  gap: 2rem;
   align-items: start;
 }
 
@@ -1758,7 +1758,48 @@ section { margin-bottom: 0; }
   border-color: rgba(100, 255, 218, 0.2);
 }
 
-/* ---- Card 1: How This Works (collapsible) ---- */
+/* ---- LEFT CARD: For Officials (small, compact) ---- */
+
+.footer-zone-card-static {
+  padding: 1.15rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-card-title {
+  color: #e6f1ff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.footer-card-desc {
+  color: #8892b0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin: 0.5rem 0 0;
+}
+
+.footer-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  transition: gap 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.footer-card-link:hover {
+  opacity: 1;
+  gap: 0.6rem;
+}
+
+/* ---- RIGHT CARD: How This Works (collapsible, wider) ---- */
 
 .footer-details {
   width: 100%;
@@ -1768,7 +1809,7 @@ section { margin-bottom: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 1.5rem;
+  padding: 1.15rem 1.5rem;
   cursor: pointer;
   list-style: none;
   transition: background 0.2s ease;
@@ -1780,6 +1821,10 @@ section { margin-bottom: 0; }
 
 .footer-details summary::-webkit-details-marker {
   display: none;
+}
+
+.footer-details summary .footer-card-title {
+  font-size: 0.95rem;
 }
 
 .footer-chevron {
@@ -1808,30 +1853,30 @@ section { margin-bottom: 0; }
 
 .footer-detail-block h4 {
   color: #64ffda;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 700;
-  margin: 0 0 0.6rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .footer-detail-block p {
   color: #a8b2d1;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   line-height: 1.65;
-  margin: 0 0 0.4rem 0;
+  margin: 0 0 0.3rem 0;
 }
 
 .footer-detail-block ul {
   color: #a8b2d1;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   line-height: 1.8;
-  margin: 0 0 0.5rem 1.1rem;
+  margin: 0 0 0.4rem 1.1rem;
   padding: 0;
 }
 
 .footer-detail-block ul li {
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.1rem;
 }
 
 .footer-detail-block strong {
@@ -1840,7 +1885,7 @@ section { margin-bottom: 0; }
 
 .footer-method-line {
   color: #8892b0;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   line-height: 1.65;
 }
 
@@ -1852,35 +1897,35 @@ section { margin-bottom: 0; }
 .footer-four-boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  margin: 0.75rem 0;
+  gap: 0.65rem;
+  margin: 0.6rem 0;
 }
 
 .footer-mini-box {
   background: rgba(15, 25, 45, 0.6);
   border: 1px solid rgba(100, 255, 218, 0.08);
   border-radius: 8px;
-  padding: 0.85rem;
+  padding: 0.75rem;
 }
 
 .footer-mini-box strong {
   color: #64ffda;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
 }
 
 .footer-mini-box p {
-  margin: 0.35rem 0 0;
-  font-size: 0.8rem;
+  margin: 0.3rem 0 0;
+  font-size: 0.75rem;
   color: #8892b0;
 }
 
 .footer-callout {
   border-left: 3px solid rgba(100, 255, 218, 0.3);
-  padding: 0.6rem 0.9rem;
+  padding: 0.5rem 0.8rem;
   background: rgba(100, 255, 218, 0.03);
   border-radius: 0 6px 6px 0;
   margin-top: 0.5rem;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: #8892b0;
 }
 
@@ -1888,52 +1933,11 @@ section { margin-bottom: 0; }
   color: #ccd6f6;
 }
 
-/* ---- Card 2: For Officials & Media (static) ---- */
-
-.footer-zone-card-static {
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footer-card-title {
-  color: #e6f1ff;
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.footer-card-desc {
-  color: #8892b0;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  margin: 0.6rem 0 0;
-}
-
-.footer-card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #64ffda;
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 500;
-  margin-top: 1rem;
-  transition: gap 0.2s ease, opacity 0.2s ease;
-  opacity: 0.8;
-}
-
-.footer-card-link:hover {
-  opacity: 1;
-  gap: 0.6rem;
-}
-
 /* ============================================
    FOOTER ZONE — Mobile
    ============================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .footer-zone {
     margin: 2rem auto 1.5rem;
     padding: 0 1rem;
@@ -1944,12 +1948,17 @@ section { margin-bottom: 0; }
     gap: 1rem;
   }
 
+  /* On mobile, reorder so How This Works comes first */
+  .footer-zone-card:last-child {
+    order: -1;
+  }
+
   .footer-details summary {
-    padding: 1.1rem 1.25rem;
+    padding: 1rem 1.15rem;
   }
 
   .footer-details-content {
-    padding: 0 1.25rem 1.25rem;
+    padding: 0 1.15rem 1.15rem;
   }
 
   .footer-four-boxes {
@@ -1957,13 +1966,13 @@ section { margin-bottom: 0; }
   }
 
   .footer-zone-card-static {
-    padding: 1.1rem 1.25rem;
+    padding: 1rem 1.15rem;
   }
 }
 
 @media (max-width: 480px) {
   .footer-details summary {
-    padding: 1rem;
+    padding: 0.9rem 1rem;
   }
 
   .footer-details-content {
@@ -1971,7 +1980,7 @@ section { margin-bottom: 0; }
   }
 
   .footer-zone-card-static {
-    padding: 1rem;
+    padding: 0.9rem 1rem;
   }
 }
 
