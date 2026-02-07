@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Truth Library | Mirror</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .library-hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+        .library-hero h1 {
+            font-size: 3.5rem;
+            color: #ccd6f6;
+            margin: 0 0 16px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-decoration: none;
+            text-transform: none;
+        }
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: #8892b0;
+            margin: 0;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 600px) {
+            .library-hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero-tagline {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 <!-- Mega menu blur backdrop -->
@@ -85,24 +117,21 @@
 
 
     <main class="container">
-        <div class="page-header">
-            <h1 class="page-title">THE TRUTH LIBRARY</h1>
-            <p class="page-subtitle">
-                Explore the seven rooms of systemic reality. Each tile can link to a future evidence file in the
-                <code>/docs</code> folders so anyone can verify the patterns for themselves.
-            </p>
+        <section class="library-hero">
+            <h1>Truth Library</h1>
+            <p class="hero-tagline">Seven rooms of evidence. Exposed patterns. Exposed systems.</p>
+        </section>
 
-            <!-- Internal Navigation Bar -->
-            <nav class="room-nav">
-                <a href="#room1">Room 1</a>
-                <a href="#room2">Room 2</a>
-                <a href="#room3">Room 3</a>
-                <a href="#room4">Room 4</a>
-                <a href="#room5">Room 5</a>
-                <a href="#room6">Room 6</a>
-                <a href="#room7">Room 7</a>
-            </nav>
-        </div>
+        <!-- Internal Navigation Bar -->
+        <nav class="room-nav">
+            <a href="#room1">Room 1</a>
+            <a href="#room2">Room 2</a>
+            <a href="#room3">Room 3</a>
+            <a href="#room4">Room 4</a>
+            <a href="#room5">Room 5</a>
+            <a href="#room6">Room 6</a>
+            <a href="#room7">Room 7</a>
+        </nav>
 
         <!-- ROOM 1 – The System Itself -->
         <section id="room1" class="library-room">
