@@ -395,15 +395,15 @@
               <span class="tile-link">View evidence gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('stories-that-steer-us')" style="cursor: pointer;">
               <h3>Stories That Steer Us</h3>
               <p>
-                Every system runs on stories—about “hard work,” “merit,” “security,” 
-                “scarcity,” and “deservingness.” When a story is repeated often enough,
+                Every system runs on stories—about "hard work," "merit," "security,"
+                "scarcity," and "deservingness." When a story is repeated often enough,
                 it becomes invisible and starts to justify outcomes that would otherwise
                 look unacceptable.
               </p>
-              <a class="tile-link" href="/docs/room1/stories-that-steer-us.html">View related evidence →</a>
+              <span class="tile-link">View evidence gallery →</span>
             </article>
 
             <article class="tile">
@@ -1040,6 +1040,72 @@
       <img src="/docs/room1/incentive-machine/E2_Caseworker_Caseload_Chart.png" onclick="openLightbox(this.src)" alt="">
       <img src="/docs/room1/incentive-machine/E3_Doctor_Time_Limits_Chart.png" onclick="openLightbox(this.src)" alt="">
     </div>
+  </div>
+
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- STORIES THAT STEER US GALLERY MODAL -->
+<div id="gallery-modal-stories-that-steer-us" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Stories That Steer Us</h2>
+  <p class="gallery-intro">These charts show how repeated narratives shape what we accept as normal — and what we overlook.</p>
+
+  <!-- SECTION 1: Mobility & Inequality -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Mobility & Inequality</h3>
+    <p class="gallery-section-desc">Who moves up, who stays stuck, and how wealth concentrates.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/stories-that-steer-us/ST1_Mobility_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST1_Wealth_Inequality_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST1_International_Stickiness_Chart.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 2: Scarcity vs Reality -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Scarcity vs Reality</h3>
+    <p class="gallery-section-desc">Gaps between what exists and what people can access.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/stories-that-steer-us/ST2_FoodWaste_vs_FoodInsecurity.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST2_Productivity_vs_Wages.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST2_VacantHomes_vs_Homeless.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 3: Deservingness & Burden -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Deservingness & Burden</h3>
+    <p class="gallery-section-desc">How systems test, deny, and document need.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/stories-that-steer-us/ST3_Disability_Denial_Funnel.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST3_Documentation_Burden.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST3_Fraud_vs_LegalUse.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 4: Work & Compensation -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Work & Compensation</h3>
+    <p class="gallery-section-desc">Hours worked, wages earned, and who captures the gains.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/stories-that-steer-us/ST4_CEO_Worker_Pay_Ratio.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST4_Hours_Worked_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST4_Productivity_vs_Wages.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 5: Crime & Punishment -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Crime & Punishment</h3>
+    <p class="gallery-section-desc">Incarceration trends, spending, and enforcement revenue.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/stories-that-steer-us/ST5_Crime_Rates_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST5_Incarceration_Population_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST5_Justice_Spending_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST5_Ticket_Revenue_Response_Chart.png" onclick="openLightbox(this.src)" alt="" class="gallery-hidden">
+    </div>
+    <button class="gallery-show-more" onclick="toggleSection(this)">Show all 4</button>
   </div>
 
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
