@@ -384,15 +384,15 @@
               <span class="tile-link">View evidence gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('power-loops')" style="cursor: pointer;">
               <h3>Power Loops</h3>
               <p>
-                Power doesn’t just flow top-down. It moves in loops: voters influence politicians,
+                Power doesn't just flow top-down. It moves in loops: voters influence politicians,
                 who shape laws, which shape markets, which shape jobs, which then shape how
                 people vote. This loop structure means small changes in one place can cause
                 big effects somewhere else.
               </p>
-              <a class="tile-link" href="/docs/room1/power-loops.html">View related evidence →</a>
+              <span class="tile-link">View evidence gallery →</span>
             </article>
 
             <article class="tile">
@@ -976,6 +976,73 @@
   </div>
 
   <p class="gallery-disclaimer">Click any image to view full size. Use arrow keys to navigate.</p>
+</div>
+
+<!-- POWER LOOPS GALLERY MODAL -->
+<div id="gallery-modal-power-loops" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Power Loops</h2>
+  <p class="gallery-intro">These charts show how power circulates through funding, policy, media, and institutions.</p>
+
+  <!-- SECTION 1: Politics & Funding -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Politics & Funding</h3>
+    <p class="gallery-section-desc">Donors, policy alignment, and reelection patterns.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/power-loops/PL1_Donor_Concentration.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/power-loops/PL1_Policy_Alignment.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C1_Reelection_Trend_BarChart_COLORS 1.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 2: Lobbying & Influence -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Lobbying & Influence</h3>
+    <p class="gallery-section-desc">Spending, returns, and top clients.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/incentive-machine/C3_Lobbying_Spending 1.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C3_Pharma_ROI_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C3_Top_Lobbying_Clients_2024 2.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 3: Bureaucracy & Delays -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Bureaucracy & Delays</h3>
+    <p class="gallery-section-desc">FOIA backlogs, approvals, and revenue flows.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/power-loops/PL3_Government_Wide_FOIA_Backlog.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/D1_FOIA_Backlog_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/D2_Mortgage_Servicer_Revenue.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/D3_PDUFA_Revenue_Chart.png" onclick="openLightbox(this.src)" alt="" class="gallery-hidden">
+      <img src="/docs/room1/incentive-machine/D3_Approval_Efficiency_Chart.png" onclick="openLightbox(this.src)" alt="" class="gallery-hidden">
+    </div>
+    <button class="gallery-show-more" onclick="toggleSection(this)">Show all 5</button>
+  </div>
+
+  <!-- SECTION 4: Media & Amplification -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Media & Amplification</h3>
+    <p class="gallery-section-desc">Ad revenue, misinformation, and content dynamics.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/power-loops/PL4_Meta_Ad_Revenue.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/power-loops/PL4_Misinformation_Speed.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/power-loops/PL4_Negative_Content_Amplification.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 5: Workers & Systems -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Workers & Systems</h3>
+    <p class="gallery-section-desc">Retaliation, caseloads, and time pressure.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/incentive-machine/E1_Retaliation_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/E2_Caseworker_Caseload_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/E3_Doctor_Time_Limits_Chart.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
 
 <!-- LIGHTBOX -->
