@@ -406,15 +406,15 @@
               <span class="tile-link">View evidence gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('systems-vs-individuals')" style="cursor: pointer;">
               <h3>Systems vs Individuals</h3>
               <p>
                 Good people can work inside harmful systems without seeing the full picture.
                 A loan officer, a police officer, or a caseworker might follow the rules
                 perfectly—and still produce outcomes that are unfair. This is why reform
-                has to focus on rules and structures, not just “bad apples.”
+                has to focus on rules and structures, not just "bad apples."
               </p>
-              <a class="tile-link" href="/docs/room1/systems-vs-individuals.html">View related evidence →</a>
+              <span class="tile-link">View evidence gallery →</span>
             </article>
 
             <article class="tile">
@@ -1106,6 +1106,74 @@
       <img src="/docs/room1/stories-that-steer-us/ST5_Ticket_Revenue_Response_Chart.png" onclick="openLightbox(this.src)" alt="" class="gallery-hidden">
     </div>
     <button class="gallery-show-more" onclick="toggleSection(this)">Show all 4</button>
+  </div>
+
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- SYSTEMS VS INDIVIDUALS GALLERY MODAL -->
+<div id="gallery-modal-systems-vs-individuals" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Systems vs Individuals</h2>
+  <p class="gallery-intro">These charts show how system design — not individual failure — produces harmful outcomes.</p>
+
+  <!-- SECTION 1: Time & Paperwork -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Time & Paperwork</h3>
+    <p class="gallery-section-desc">How much time goes to care vs. documentation.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_Care_vs_Paperwork.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_2_Time_Ratio.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_3_Implied_Workday.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 2: Caseloads & Capacity -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Caseloads & Capacity</h3>
+    <p class="gallery-section-desc">How many people one worker is expected to serve.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_2_1_Caseload_Comparison.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_2_2_Daily_Visit_Requirement.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/systems-vs-individuals/SVI2_0_1_HUD_Documentation_Burden.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 3: Denials & Delays -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Denials & Delays</h3>
+    <p class="gallery-section-desc">What happens when people wait for decisions.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_3_Disability_Denial_Funnel.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_3_2_Backlog_WaitTime.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_3_3_Deaths_While_Waiting.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 4: Fees & Extraction -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Fees & Extraction</h3>
+    <p class="gallery-section-desc">How systems generate revenue from friction.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_4_Ticket_Revenue_Blue.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_5_1_Base_vs_Late_Fee.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/systems-vs-individuals/SVI1_5_2_Cost_to_Service.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 5: Structural Patterns -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Structural Patterns</h3>
+    <p class="gallery-section-desc">Broader trends that shape individual outcomes.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/power-loops/PL3_Government_Wide_FOIA_Backlog.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C3_Pharma_ROI_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C2_Small_vs_Large_Donors.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C1_Reelection_Trend_BarChart_COLORS 1.png" onclick="openLightbox(this.src)" alt="" class="gallery-hidden">
+      <img src="/docs/room1/stories-that-steer-us/ST2_Productivity_vs_Wages.png" onclick="openLightbox(this.src)" alt="" class="gallery-hidden">
+      <img src="/docs/room1/stories-that-steer-us/ST4_Productivity_vs_Wages.png" onclick="openLightbox(this.src)" alt="" class="gallery-hidden">
+    </div>
+    <button class="gallery-show-more" onclick="toggleSection(this)">Show all 6</button>
   </div>
 
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
