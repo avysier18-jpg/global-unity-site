@@ -108,6 +108,51 @@
             transform: scale(1.03);
         }
 
+        /* Gallery Sections */
+        .gallery-intro {
+            color: #8892b0;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .gallery-section {
+            margin-bottom: 24px;
+        }
+        .gallery-section-title {
+            color: #64ffda;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #1d3a5c;
+        }
+        .gallery-hidden {
+            display: none;
+        }
+        .gallery-show-more {
+            display: block;
+            margin: 12px auto 0;
+            background: transparent;
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .gallery-show-more:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+        .gallery-disclaimer {
+            color: #5a6a8a;
+            font-size: 0.8rem;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #1d3a5c;
+            text-align: center;
+        }
+
         /* Lightbox */
         .lightbox {
             display: none;
@@ -792,42 +837,82 @@
 <div id="gallery-modal-incentive-machine" class="gallery-modal">
   <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
   <h2>The Incentive Machine</h2>
-  <div class="gallery-grid">
-    <img src="/docs/room1/incentive-machine/A1_HAG_Budget_Chart.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/A1_Homeless_PIT_Chart.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/A2_FinesOnly.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/A2_PercentSlice.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/A3_Pentagon_Budget_GoldOrange.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B1_Investor_Market_Share_AllResidential_Line.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B1_Median_Home_Price_Line 3.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B1_Median_Household_Income_Line 2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B1_Rent_Index_Line 4.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B2_Chronic_Illness_Trends 2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B2_Heart_Disease_Deaths 2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B2_Pharma_Industry_Revenue 1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B3_Insurance_Denial_Rates 1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B3_Insurance_Profit_Chart 2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B3_Insurer_Margin_Per_Enrollee 3.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B4_Food_Industry_Revenue_Bar 3.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B4_UPF_Youth_Consumption 2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/B4_UPF_vs_Obesity 1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C1_Reelection_Rates 1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C1_Reelection_Trend_BarChart_COLORS 1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C2_Donor_Concentration_BarChart 1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C2_PAC_vs_Individuals.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C2_Small_vs_Large_Donors.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C2_Top10_Donors.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C3_Lobbying_Spending 1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C3_Pharma_ROI_Chart.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/C3_Top_Lobbying_Clients_2024 2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/D1_FOIA_Backlog_Chart.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/D2_Mortgage_Servicer_Revenue.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/D3_Approval_Efficiency_Chart.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/D3_PDUFA_Revenue_Chart.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/E1_Retaliation_Chart.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/E2_Caseworker_Caseload_Chart.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room1/incentive-machine/E3_Doctor_Time_Limits_Chart.png" onclick="openLightbox(this.src)" alt="">
+  <p class="gallery-intro">Visual evidence showing how financial incentives shape outcomes across housing, healthcare, food, politics, and labor systems.</p>
+
+  <!-- Housing & Assets -->
+  <div class="gallery-section" data-section="housing">
+    <h3 class="gallery-section-title">Housing & Assets</h3>
+    <div class="gallery-grid">
+      <img src="/docs/room1/incentive-machine/A1_HAG_Budget_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/A1_Homeless_PIT_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/A2_FinesOnly.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/A2_PercentSlice.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/A3_Pentagon_Budget_GoldOrange.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B1_Investor_Market_Share_AllResidential_Line.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B1_Median_Home_Price_Line 3.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B1_Median_Household_Income_Line 2.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B1_Rent_Index_Line 4.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+    </div>
+    <button class="gallery-show-more" onclick="toggleSection(this)">Show all 9</button>
   </div>
+
+  <!-- Healthcare & Insurance -->
+  <div class="gallery-section" data-section="healthcare">
+    <h3 class="gallery-section-title">Healthcare & Insurance</h3>
+    <div class="gallery-grid">
+      <img src="/docs/room1/incentive-machine/B2_Chronic_Illness_Trends 2.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B2_Heart_Disease_Deaths 2.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B2_Pharma_Industry_Revenue 1.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B3_Insurance_Denial_Rates 1.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B3_Insurance_Profit_Chart 2.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B3_Insurer_Margin_Per_Enrollee 3.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+    </div>
+    <button class="gallery-show-more" onclick="toggleSection(this)">Show all 6</button>
+  </div>
+
+  <!-- Food & Consumption -->
+  <div class="gallery-section" data-section="food">
+    <h3 class="gallery-section-title">Food & Consumption</h3>
+    <div class="gallery-grid">
+      <img src="/docs/room1/incentive-machine/B4_Food_Industry_Revenue_Bar 3.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B4_UPF_Youth_Consumption 2.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B4_UPF_vs_Obesity 1.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- Politics & Lobbying -->
+  <div class="gallery-section" data-section="politics">
+    <h3 class="gallery-section-title">Politics & Lobbying</h3>
+    <div class="gallery-grid">
+      <img src="/docs/room1/incentive-machine/C1_Reelection_Rates 1.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C1_Reelection_Trend_BarChart_COLORS 1.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C2_Donor_Concentration_BarChart 1.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C2_PAC_vs_Individuals.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C2_Small_vs_Large_Donors.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C2_Top10_Donors.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C3_Lobbying_Spending 1.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C3_Pharma_ROI_Chart.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C3_Top_Lobbying_Clients_2024 2.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+    </div>
+    <button class="gallery-show-more" onclick="toggleSection(this)">Show all 9</button>
+  </div>
+
+  <!-- Bureaucracy & Labor -->
+  <div class="gallery-section" data-section="bureaucracy">
+    <h3 class="gallery-section-title">Bureaucracy & Labor</h3>
+    <div class="gallery-grid">
+      <img src="/docs/room1/incentive-machine/D1_FOIA_Backlog_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/D2_Mortgage_Servicer_Revenue.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/D3_Approval_Efficiency_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/D3_PDUFA_Revenue_Chart.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/E1_Retaliation_Chart.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/E2_Caseworker_Caseload_Chart.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/E3_Doctor_Time_Limits_Chart.png" class="gallery-hidden" onclick="openLightbox(this.src)" alt="">
+    </div>
+    <button class="gallery-show-more" onclick="toggleSection(this)">Show all 7</button>
+  </div>
+
+  <p class="gallery-disclaimer">Click any image to view full size. Use arrow keys to navigate.</p>
 </div>
 
 <!-- LIGHTBOX -->
@@ -848,10 +933,27 @@ function openGalleryModal(id) {
     document.getElementById('gallery-modal-' + id).classList.add('active');
     document.body.style.overflow = 'hidden';
 
-    // Build array of images from this gallery
+    // Build array of ALL images from this gallery (including hidden ones)
     const modal = document.getElementById('gallery-modal-' + id);
     const imgs = modal.querySelectorAll('.gallery-grid img');
     galleryImages = Array.from(imgs).map(img => img.src);
+}
+
+function toggleSection(btn) {
+    const section = btn.parentElement;
+    const hiddenImages = section.querySelectorAll('.gallery-hidden');
+    const isExpanded = btn.textContent.startsWith('Show fewer');
+
+    hiddenImages.forEach(img => {
+        img.style.display = isExpanded ? 'none' : 'block';
+    });
+
+    if (isExpanded) {
+        const total = section.querySelectorAll('.gallery-grid img').length;
+        btn.textContent = 'Show all ' + total;
+    } else {
+        btn.textContent = 'Show fewer';
+    }
 }
 
 function closeGalleryModal() {
