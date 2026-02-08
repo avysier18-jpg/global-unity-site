@@ -417,15 +417,15 @@
               <span class="tile-link">View evidence gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('your-place-in-the-loop')" style="cursor: pointer;">
               <h3>Your Place in the Loop</h3>
               <p>
                 You are not outside the system. You are part of it: as a worker, a voter,
                 a parent, a neighbor, a customer. Understanding your own leverage points—
                 where your choices ripple outward—is the first step toward real change
-                that doesn’t burn you out.
+                that doesn't burn you out.
               </p>
-              <a class="tile-link" href="/docs/room1/your-place-in-the-loop.html">View related evidence →</a>
+              <span class="tile-link">View evidence gallery →</span>
             </article>
           </div>
         </section>
@@ -1174,6 +1174,70 @@
       <img src="/docs/room1/stories-that-steer-us/ST4_Productivity_vs_Wages.png" onclick="openLightbox(this.src)" alt="" class="gallery-hidden">
     </div>
     <button class="gallery-show-more" onclick="toggleSection(this)">Show all 6</button>
+  </div>
+
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- YOUR PLACE IN THE LOOP GALLERY MODAL -->
+<div id="gallery-modal-your-place-in-the-loop" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Your Place in the Loop</h2>
+  <p class="gallery-intro">These charts show where individuals connect to larger systems — and where leverage exists.</p>
+
+  <!-- SECTION 1: Work & Wages -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Work & Wages</h3>
+    <p class="gallery-section-desc">What workers produce vs. what they receive.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/stories-that-steer-us/ST1_Mobility_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST2_Productivity_vs_Wages.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST4_CEO_Worker_Pay_Ratio.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 2: Voting & Participation -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Voting & Participation</h3>
+    <p class="gallery-section-desc">Who votes, who donates, and how influence flows.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/your-place-in-the-loop/YPL2_US_Voter_Turnout.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/your-place-in-the-loop/YPL2_Donor_Breakdown.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/your-place-in-the-loop/YPL2_Small_Donor_Trend.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 3: Consumption & Health -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Consumption & Health</h3>
+    <p class="gallery-section-desc">How products and systems shape health outcomes.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/incentive-machine/B4_UPF_vs_Obesity 1.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/B2_Pharma_Industry_Revenue 1.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST3_Fraud_vs_LegalUse.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 4: Politics & Money -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Politics & Money</h3>
+    <p class="gallery-section-desc">Reelection patterns and donor influence.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/incentive-machine/C1_Reelection_Rates 1.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/C2_Small_vs_Large_Donors.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/stories-that-steer-us/ST5_Crime_Rates_Chart.png" onclick="openLightbox(this.src)" alt="">
+    </div>
+  </div>
+
+  <!-- SECTION 5: Workers Under Pressure -->
+  <div class="gallery-section">
+    <h3 class="gallery-section-title">Workers Under Pressure</h3>
+    <p class="gallery-section-desc">Retaliation, caseloads, and time constraints on the job.</p>
+    <div class="gallery-grid" data-collapsed="true">
+      <img src="/docs/room1/incentive-machine/E1_Retaliation_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/E2_Caseworker_Caseload_Chart.png" onclick="openLightbox(this.src)" alt="">
+      <img src="/docs/room1/incentive-machine/E3_Doctor_Time_Limits_Chart.png" onclick="openLightbox(this.src)" alt="">
+    </div>
   </div>
 
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
