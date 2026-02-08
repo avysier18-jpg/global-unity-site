@@ -475,29 +475,29 @@
           </div>
 
           <div class="grid-3">
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('who-actually-creates-money')" style="cursor: pointer;">
               <h3>Who Actually Creates Money?</h3>
               <p>
-                When a bank approves a loan, it doesn’t move existing money from a vault into
+                When a bank approves a loan, it doesn't move existing money from a vault into
                 your account. It creates a new deposit—new money—by typing it into a ledger.
                 Central banks like the Federal Reserve create reserves; commercial banks
                 create most of the money we use day to day.
               </p>
-              <a class="tile-link" href="/docs/room2/who-actually-creates-money.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('inflation-vs-wages')" style="cursor: pointer;">
               <h3>Inflation vs Wages</h3>
               <p>
                 Prices for housing, healthcare, and basics have climbed much faster than
-                most paychecks. This isn’t just “things getting more expensive.” It reflects
+                most paychecks. This isn't just "things getting more expensive." It reflects
                 decades of policy choices that made labor cheaper, credit easier, and asset
                 prices more important than living stability.
               </p>
-              <a class="tile-link" href="/docs/room2/inflation-vs-wages.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('why-housing-eats-everything')" style="cursor: pointer;">
               <h3>Why Housing Eats Everything</h3>
               <p>
                 For many people, housing is now the largest line in the budget. When rent or
@@ -505,29 +505,29 @@
                 time with your kids—gets squeezed. Understanding why housing costs exploded
                 is key to understanding modern financial stress.
               </p>
-              <a class="tile-link" href="/docs/room2/why-housing-eats-everything.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
-              <h3>The Fed’s Real Job</h3>
+            <article class="tile" onclick="openGalleryModal('the-feds-real-job')" style="cursor: pointer;">
+              <h3>The Fed's Real Job</h3>
               <p>
-                The Federal Reserve doesn’t control every price, but it does control the
+                The Federal Reserve doesn't control every price, but it does control the
                 short-term interest rate that banks pay to borrow. By raising or lowering that
                 rate, it tries to cool things down or speed them up. Those moves ripple out
                 into car loans, credit cards, mortgages, and business investment.
               </p>
-              <a class="tile-link" href="/docs/room2/feds-real-job.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
-              <h3>Winners, Losers, and “Neutral” Rules</h3>
+            <article class="tile" onclick="openGalleryModal('winners-losers-neutral-rules')" style="cursor: pointer;">
+              <h3>Winners, Losers, and "Neutral" Rules</h3>
               <p>
                 Monetary rules may be written in neutral language, but their effects are not
                 neutral. Low interest rates help borrowers and asset owners more than people
                 who live paycheck to paycheck. High rates can crush small businesses and
                 workers before they ever touch wealthy investors.
               </p>
-              <a class="tile-link" href="/docs/room2/winners-losers-and-neutral-rules.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
           </div>
         </section>
@@ -1274,6 +1274,94 @@
     </div>
   </div>
 
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WHO ACTUALLY CREATES MONEY GALLERY MODAL -->
+<div id="gallery-modal-who-actually-creates-money" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Who Actually Creates Money?</h2>
+  <p class="gallery-intro">How banks and the Federal Reserve create the money we use every day.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room2/who-actually-created-money/chart1m.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/who-actually-created-money/chart2m.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/who-actually-created-money/chart3m.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/who-actually-created-money/chart4m.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/who-actually-created-money/chart5m.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/who-actually-created-money/chart6m.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- INFLATION VS WAGES GALLERY MODAL -->
+<div id="gallery-modal-inflation-vs-wages" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Inflation vs Wages</h2>
+  <p class="gallery-intro">How prices for essentials have climbed faster than paychecks.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room2/inflation-vs-wages/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/inflation-vs-wages/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/inflation-vs-wages/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/inflation-vs-wages/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/inflation-vs-wages/chart5.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/inflation-vs-wages/chart6.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/inflation-vs-wages/chart7.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/inflation-vs-wages/chart8.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WHY HOUSING EATS EVERYTHING GALLERY MODAL -->
+<div id="gallery-modal-why-housing-eats-everything" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Why Housing Eats Everything</h2>
+  <p class="gallery-intro">Why housing costs have exploded and what it means for household budgets.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room2/why-housing-eats-everything/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/why-housing-eats-everything/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/why-housing-eats-everything/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/why-housing-eats-everything/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/why-housing-eats-everything/chart5.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/why-housing-eats-everything/chart6.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/why-housing-eats-everything/chart7.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/why-housing-eats-everything/chart8.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- THE FEDS REAL JOB GALLERY MODAL -->
+<div id="gallery-modal-the-feds-real-job" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>The Fed's Real Job</h2>
+  <p class="gallery-intro">How the Federal Reserve controls interest rates and what that means for you.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room2/the-feds-real-job/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/the-feds-real-job/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/the-feds-real-job/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/the-feds-real-job/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/the-feds-real-job/chart5.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/the-feds-real-job/chart6.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/the-feds-real-job/chart7.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/the-feds-real-job/chart8.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WINNERS LOSERS NEUTRAL RULES GALLERY MODAL -->
+<div id="gallery-modal-winners-losers-neutral-rules" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Winners, Losers, and "Neutral" Rules</h2>
+  <p class="gallery-intro">How monetary rules written in neutral language produce unequal effects.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room2/winners-losers-neutral-rules/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/winners-losers-neutral-rules/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/winners-losers-neutral-rules/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/winners-losers-neutral-rules/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/winners-losers-neutral-rules/chart5.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/winners-losers-neutral-rules/chart6.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/winners-losers-neutral-rules/chart7.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room2/winners-losers-neutral-rules/chart8.png" onclick="openLightbox(this.src)" alt="">
+  </div>
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
 
