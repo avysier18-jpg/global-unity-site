@@ -159,6 +159,40 @@
             font-style: italic;
         }
 
+        /* Room tiles - floating cards */
+        .tile {
+            background: #112240;
+            border: 1px solid rgba(29, 58, 92, 0.3);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(100, 255, 218, 0.03);
+        }
+
+        .tile:hover {
+            transform: translateY(-8px);
+            border-color: rgba(100, 255, 218, 0.3);
+            box-shadow:
+                0 12px 40px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(100, 255, 218, 0.08);
+        }
+
+        .tile-link {
+            color: #64ffda;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 16px;
+            display: inline-block;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .tile-link:hover {
+            color: #9efff0;
+        }
+
         /* Lightbox */
         .lightbox {
             display: none;
@@ -381,7 +415,7 @@
                 people in certain directions. If we don't understand those pushes, their
                 outcomes feel like "mystery" or "fate" instead of design.
               </p>
-              <span class="tile-link">View evidence gallery →</span>
+              <span class="tile-link">Gallery →</span>
             </article>
 
             <article class="tile" onclick="openGalleryModal('power-loops')" style="cursor: pointer;">
@@ -392,7 +426,7 @@
                 people vote. This loop structure means small changes in one place can cause
                 big effects somewhere else.
               </p>
-              <span class="tile-link">View evidence gallery →</span>
+              <span class="tile-link">Gallery →</span>
             </article>
 
             <article class="tile" onclick="openGalleryModal('stories-that-steer-us')" style="cursor: pointer;">
@@ -403,7 +437,7 @@
                 it becomes invisible and starts to justify outcomes that would otherwise
                 look unacceptable.
               </p>
-              <span class="tile-link">View evidence gallery →</span>
+              <span class="tile-link">Gallery →</span>
             </article>
 
             <article class="tile" onclick="openGalleryModal('systems-vs-individuals')" style="cursor: pointer;">
@@ -414,7 +448,7 @@
                 perfectly—and still produce outcomes that are unfair. This is why reform
                 has to focus on rules and structures, not just "bad apples."
               </p>
-              <span class="tile-link">View evidence gallery →</span>
+              <span class="tile-link">Gallery →</span>
             </article>
 
             <article class="tile" onclick="openGalleryModal('your-place-in-the-loop')" style="cursor: pointer;">
@@ -425,7 +459,7 @@
                 where your choices ripple outward—is the first step toward real change
                 that doesn't burn you out.
               </p>
-              <span class="tile-link">View evidence gallery →</span>
+              <span class="tile-link">Gallery →</span>
             </article>
           </div>
         </section>
