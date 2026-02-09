@@ -677,7 +677,7 @@
           </div>
 
           <div class="grid-3">
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('inflation-breakdown')" style="cursor: pointer;">
               <h3>Inflation Breakdown</h3>
               <p>
                 Not all prices are rising for the same reason. Some spikes come from
@@ -685,47 +685,47 @@
                 strategy. Breaking inflation into categories shows who is hurting, and
                 who is profiting.
               </p>
-              <a class="tile-link" href="/docs/room5/inflation-breakdown.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('wages-vs-profits')" style="cursor: pointer;">
               <h3>Wages vs Profits Over Time</h3>
               <p>
                 When you chart how much income goes to workers versus owners over
                 decades, patterns emerge. Periods of shared growth look different from
                 periods where gains flow almost entirely to the top.
               </p>
-              <a class="tile-link" href="/docs/room5/wages-vs-profits-over-time.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('debt-and-household')" style="cursor: pointer;">
               <h3>Debt and the Household</h3>
                 <p>
-                Credit cards, student loans, car loans, medical debt, “buy now pay later.”
+                Credit cards, student loans, car loans, medical debt, "buy now pay later."
                 A data map of how debt has replaced wages as the main way people keep up
                 with rising costs.
               </p>
-              <a class="tile-link" href="/docs/room5/debt-and-the-household.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('public-money-private-benefit')" style="cursor: pointer;">
               <h3>Public Money, Private Benefit</h3>
               <p>
-                Government spending doesn’t vanish. It flows somewhere—to contractors,
+                Government spending doesn't vanish. It flows somewhere—to contractors,
                 hospitals, landlords, defense firms, schools, and more. Visualizing those
-                flows helps answer “who is really being served?”
+                flows helps answer "who is really being served?"
               </p>
-              <a class="tile-link" href="/docs/room5/public-money-private-benefit.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('who-are-you')" style="cursor: pointer;">
               <h3>Where You Are in the Data</h3>
               <p>
                 National averages can hide huge differences between neighborhoods,
                 races, and regions. This tile explains how to read charts in a way that
                 lets you see your own reality instead of just the national headline.
               </p>
-              <a class="tile-link" href="/docs/room5/where-you-are-in-the-data.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
           </div>
         </section>
@@ -1511,6 +1511,76 @@
     <img src="/docs/room4/rules-to-change-rules/chart2.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room4/rules-to-change-rules/chart3.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room4/rules-to-change-rules/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- INFLATION BREAKDOWN GALLERY MODAL -->
+<div id="gallery-modal-inflation-breakdown" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Inflation Breakdown</h2>
+  <p class="gallery-intro">Breaking inflation into categories to show who is hurting and who is profiting.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room5/inflation-breakdown/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/inflation-breakdown/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/inflation-breakdown/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/inflation-breakdown/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WAGES VS PROFITS OVER TIME GALLERY MODAL -->
+<div id="gallery-modal-wages-vs-profits" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Wages vs Profits Over Time</h2>
+  <p class="gallery-intro">How income flows to workers versus owners over decades.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room5/wages-vs-profits/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/wages-vs-profits/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/wages-vs-profits/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/wages-vs-profits/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- DEBT AND THE HOUSEHOLD GALLERY MODAL -->
+<div id="gallery-modal-debt-and-household" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Debt and the Household</h2>
+  <p class="gallery-intro">How debt has replaced wages as the main way people keep up with rising costs.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room5/debt-and-household/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/debt-and-household/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/debt-and-household/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/debt-and-household/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- PUBLIC MONEY PRIVATE BENEFIT GALLERY MODAL -->
+<div id="gallery-modal-public-money-private-benefit" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Public Money, Private Benefit</h2>
+  <p class="gallery-intro">Where government spending flows and who is really being served.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room5/public-money-private-benefit/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/public-money-private-benefit/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/public-money-private-benefit/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/public-money-private-benefit/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WHERE YOU ARE IN THE DATA GALLERY MODAL -->
+<div id="gallery-modal-who-are-you" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Where You Are in the Data</h2>
+  <p class="gallery-intro">How to read charts to see your own reality instead of just the national headline.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room5/who-are-you/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/who-are-you/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/who-are-you/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room5/who-are-you/chart4.png" onclick="openLightbox(this.src)" alt="">
   </div>
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
