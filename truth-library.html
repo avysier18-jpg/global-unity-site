@@ -543,7 +543,7 @@
           </div>
 
           <div class="grid-3">
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('flip-script')" style="cursor: pointer;">
               <h3>The Flip Script</h3>
               <p>
                 When one party is in the White House, the other suddenly rediscovers the
@@ -551,50 +551,50 @@
                 reverse, so do the talking points. The script flips, but the structure
                 behind it stays the same.
               </p>
-              <a class="tile-link" href="/docs/room3/flip-script.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('oversight')" style="cursor: pointer;">
               <h3>When Oversight is Theater</h3>
               <p>
                 Oversight hearings can be about real accountability—or about camera time.
                 Questions are often written for social media clips, not for actually
-                solving problems. That doesn’t mean nothing good ever happens, but it
+                solving problems. That doesn't mean nothing good ever happens, but it
                 explains why so many hearings end with more heat than light.
               </p>
-              <a class="tile-link" href="/docs/room3/when-oversight-is-theater.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('safe-targets')" style="cursor: pointer;">
               <h3>The Safe Targets</h3>
               <p>
-                Congress tends to focus its anger on targets that can’t fight back:
+                Congress tends to focus its anger on targets that can't fight back:
                 agencies, contractors, and everyday individuals. Meanwhile, the people
                 and institutions with real lobbying power often stay offstage, or appear
-                as “trusted partners.”
+                as "trusted partners."
               </p>
-              <a class="tile-link" href="/docs/room3/safe-targets.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('majority-vs-minority')" style="cursor: pointer;">
               <h3>Majority vs Minority Roles</h3>
               <p>
-                When a party is in the majority, it often protects the administration’s
-                image and slows down investigations. When it’s in the minority, it calls
-                for more hearings, subpoenas, and transparency. This isn’t about one
-                side being good or bad; it’s about how the job is structured.
+                When a party is in the majority, it often protects the administration's
+                image and slows down investigations. When it's in the minority, it calls
+                for more hearings, subpoenas, and transparency. This isn't about one
+                side being good or bad; it's about how the job is structured.
               </p>
-              <a class="tile-link" href="/docs/room3/majority-vs-minority-roles.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('reading-between')" style="cursor: pointer;">
               <h3>Reading Between the Lines</h3>
               <p>
-                You can learn as much from what Congress doesn’t ask as from what it does.
+                You can learn as much from what Congress doesn't ask as from what it does.
                 If a topic never comes up, it may be because both parties see it as too
                 risky, too profitable, or too deeply embedded in the system to touch.
               </p>
-              <a class="tile-link" href="/docs/room3/reading-between-the-lines.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
           </div>
         </section>
@@ -1361,6 +1361,86 @@
     <img src="/docs/room2/winners-losers-neutral-rules/chart6.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room2/winners-losers-neutral-rules/chart7.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room2/winners-losers-neutral-rules/chart8.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- THE FLIP SCRIPT GALLERY MODAL -->
+<div id="gallery-modal-flip-script" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>The Flip Script</h2>
+  <p class="gallery-intro">How talking points reverse when party roles change.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room3/flip-script/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/flip-script/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/flip-script/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/flip-script/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/flip-script/chart5.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/flip-script/chart6.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/flip-script/chart7.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/flip-script/chart8.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WHEN OVERSIGHT IS THEATER GALLERY MODAL -->
+<div id="gallery-modal-oversight" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>When Oversight is Theater</h2>
+  <p class="gallery-intro">When hearings prioritize camera time over accountability.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room3/oversight/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/oversight/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/oversight/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/oversight/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/oversight/chart5.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/oversight/chart6.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/oversight/chart7.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- THE SAFE TARGETS GALLERY MODAL -->
+<div id="gallery-modal-safe-targets" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>The Safe Targets</h2>
+  <p class="gallery-intro">Who Congress focuses on — and who stays offstage.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room3/safe-targets/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/safe-targets/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/safe-targets/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/safe-targets/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/safe-targets/chart5.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- MAJORITY VS MINORITY ROLES GALLERY MODAL -->
+<div id="gallery-modal-majority-vs-minority" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Majority vs Minority Roles</h2>
+  <p class="gallery-intro">How behavior shifts based on who holds power.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room3/majority-vs-minority/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/majority-vs-minority/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/majority-vs-minority/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/majority-vs-minority/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/majority-vs-minority/chart5.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- READING BETWEEN THE LINES GALLERY MODAL -->
+<div id="gallery-modal-reading-between" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Reading Between the Lines</h2>
+  <p class="gallery-intro">What Congress doesn't ask can be as revealing as what it does.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room3/reading-between/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/reading-between/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/reading-between/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/reading-between/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room3/reading-between/chart5.png" onclick="openLightbox(this.src)" alt="">
   </div>
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
