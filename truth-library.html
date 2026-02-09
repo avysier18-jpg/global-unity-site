@@ -610,7 +610,7 @@
           </div>
 
           <div class="grid-3">
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('agencies-do-what')" style="cursor: pointer;">
               <h3>What Agencies Actually Do</h3>
               <p>
                 HUD, FHFA, Treasury, the Fed, state agencies, school districts—each has
@@ -618,31 +618,31 @@
                 gets audited, and who gets a pass. Understanding their lanes is crucial
                 to understanding where decisions really get made.
               </p>
-              <a class="tile-link" href="/docs/room4/what-agencies-actually-do.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('red-tape')" style="cursor: pointer;">
               <h3>The Logic of Red Tape</h3>
               <p>
                 Rules, forms, and procedures are often created to prevent abuse. Over
                 time, they stack up into a maze. Agencies then spend more energy proving
                 they followed process than checking whether outcomes are humane or fair.
               </p>
-              <a class="tile-link" href="/docs/room4/logic-of-red-tape.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('bureaucracies-protect-themselves')" style="cursor: pointer;">
               <h3>How Bureaucracies Protect Themselves</h3>
               <p>
                 Institutions are built to survive criticism. They use jargon, internal
                 reviews, and slow timelines to manage public anger. This self-protection
-                isn’t always malicious, but it can block real repair and keep harmful
+                isn't always malicious, but it can block real repair and keep harmful
                 patterns running for years.
               </p>
-              <a class="tile-link" href="/docs/room4/how-bureaucracies-protect-themselves.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('good-people')" style="cursor: pointer;">
               <h3>Why Good People Burn Out Inside</h3>
               <p>
                 Many staff enter public service to help. Then they run into budget
@@ -650,18 +650,18 @@
                 more afraid of headlines than of harm. Over time, people either leave,
                 go numb, or learn to navigate the system quietly.
               </p>
-              <a class="tile-link" href="/docs/room4/why-good-people-burn-out-inside.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('rules-to-change-rules')" style="cursor: pointer;">
               <h3>Using the Rules to Change the Rules</h3>
               <p>
                 Laws like the Administrative Procedure Act give the public a way to
-                challenge harmful policies using the agencies’ own rulebook. It’s slow
+                challenge harmful policies using the agencies' own rulebook. It's slow
                 and technical, but it creates a paper trail and forces officials to
                 justify their decisions on the record.
               </p>
-              <a class="tile-link" href="/docs/room4/using-the-rules-to-change-the-rules.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
           </div>
         </section>
@@ -1441,6 +1441,76 @@
     <img src="/docs/room3/reading-between/chart3.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room3/reading-between/chart4.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room3/reading-between/chart5.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WHAT AGENCIES ACTUALLY DO GALLERY MODAL -->
+<div id="gallery-modal-agencies-do-what" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>What Agencies Actually Do</h2>
+  <p class="gallery-intro">The specific powers agencies have and where decisions really get made.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room4/agencies-do-what/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/agencies-do-what/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/agencies-do-what/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/agencies-do-what/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- THE LOGIC OF RED TAPE GALLERY MODAL -->
+<div id="gallery-modal-red-tape" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>The Logic of Red Tape</h2>
+  <p class="gallery-intro">How rules stack into mazes and process replaces outcomes.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room4/red-tape/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/red-tape/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/red-tape/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/red-tape/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- HOW BUREAUCRACIES PROTECT THEMSELVES GALLERY MODAL -->
+<div id="gallery-modal-bureaucracies-protect-themselves" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>How Bureaucracies Protect Themselves</h2>
+  <p class="gallery-intro">How institutions use jargon, reviews, and slow timelines to manage criticism.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room4/bureaucracies-protect-themselves/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/bureaucracies-protect-themselves/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/bureaucracies-protect-themselves/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/bureaucracies-protect-themselves/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WHY GOOD PEOPLE BURN OUT INSIDE GALLERY MODAL -->
+<div id="gallery-modal-good-people" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Why Good People Burn Out Inside</h2>
+  <p class="gallery-intro">Budget constraints, outdated tools, and leadership that fears headlines more than harm.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room4/good-people/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/good-people/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/good-people/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/good-people/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- USING THE RULES TO CHANGE THE RULES GALLERY MODAL -->
+<div id="gallery-modal-rules-to-change-rules" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Using the Rules to Change the Rules</h2>
+  <p class="gallery-intro">How the APA and public records create leverage for accountability.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room4/rules-to-change-rules/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/rules-to-change-rules/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/rules-to-change-rules/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room4/rules-to-change-rules/chart4.png" onclick="openLightbox(this.src)" alt="">
   </div>
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
