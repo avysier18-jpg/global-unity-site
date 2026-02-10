@@ -741,55 +741,55 @@
           </div>
 
           <div class="grid-3">
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('working-and-behind')" style="cursor: pointer;">
               <h3>Working and Still Behind</h3>
               <p>
-                Millions of people are doing “everything right” and still can’t get
+                Millions of people are doing "everything right" and still can't get
                 ahead. They work full time (or more), but the math of rent, food,
-                childcare, and debt never adds up. This isn’t a personal failure story;
-                it’s a structural one.
+                childcare, and debt never adds up. This isn't a personal failure story;
+                it's a structural one.
               </p>
-              <a class="tile-link" href="/docs/room6/working-and-still-behind.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('mental-load')" style="cursor: pointer;">
               <h3>The Mental Load</h3>
               <p>
                 Constant financial pressure shows up as anxiety, insomnia, burnout, and
                 health problems. When survival takes all your attention, it becomes
                 harder to plan, study, rest, or dream.
               </p>
-              <a class="tile-link" href="/docs/room6/mental-load.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('families-under-strain')" style="cursor: pointer;">
               <h3>Families Under Strain</h3>
               <p>
                 Parents juggle jobs, school schedules, elder care, and their own
                 health—often with little margin for error. A missed paycheck, a broken
                 car, or a medical bill can unravel years of effort.
               </p>
-              <a class="tile-link" href="/docs/room6/families-under-strain.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('communities-in-middle')" style="cursor: pointer;">
               <h3>Communities in the Middle</h3>
               <p>
                 When enough individuals are stressed at once, neighborhoods change.
                 Small businesses close, schools lose stability, social trust erodes.
-                The “economy” is really a web of human relationships under pressure.
+                The "economy" is really a web of human relationships under pressure.
               </p>
-              <a class="tile-link" href="/docs/room6/communities-in-the-middle.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('turning-pain-into-power')" style="cursor: pointer;">
               <h3>Turning Pain into Power</h3>
               <p>
-                Telling the truth about what you’ve lived through is not weakness.
-                It’s data. When enough people describe similar experiences, the story
-                can’t be dismissed as “just you” anymore—it becomes evidence.
+                Telling the truth about what you've lived through is not weakness.
+                It's data. When enough people describe similar experiences, the story
+                can't be dismissed as "just you" anymore—it becomes evidence.
               </p>
-              <a class="tile-link" href="/docs/room6/turning-pain-into-power.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
           </div>
         </section>
@@ -1581,6 +1581,77 @@
     <img src="/docs/room5/who-are-you/chart2.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room5/who-are-you/chart3.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room5/who-are-you/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- WORKING AND STILL BEHIND GALLERY MODAL -->
+<div id="gallery-modal-working-and-behind" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Working and Still Behind</h2>
+  <p class="gallery-intro">Millions doing everything right but still unable to get ahead.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room6/working-and-behind/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/working-and-behind/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/working-and-behind/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/working-and-behind/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- THE MENTAL LOAD GALLERY MODAL -->
+<div id="gallery-modal-mental-load" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>The Mental Load</h2>
+  <p class="gallery-intro">How financial pressure shows up as anxiety, burnout, and health problems.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room6/mental-load/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/mental-load/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/mental-load/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/mental-load/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- FAMILIES UNDER STRAIN GALLERY MODAL -->
+<div id="gallery-modal-families-under-strain" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Families Under Strain</h2>
+  <p class="gallery-intro">How little margin for error can unravel years of effort.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room6/families-under-strain/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/families-under-strain/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/families-under-strain/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/families-under-strain/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- COMMUNITIES IN THE MIDDLE GALLERY MODAL -->
+<div id="gallery-modal-communities-in-middle" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Communities in the Middle</h2>
+  <p class="gallery-intro">When enough individuals are stressed, neighborhoods change.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room6/communities-in-middle/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/communities-in-middle/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/communities-in-middle/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/communities-in-middle/chart4.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/communities-in-middle/chart5.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- TURNING PAIN INTO POWER GALLERY MODAL -->
+<div id="gallery-modal-turning-pain-into-power" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Turning Pain into Power</h2>
+  <p class="gallery-intro">When enough people describe similar experiences, it becomes evidence.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room6/turning-pain-into-power/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/turning-pain-into-power/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/turning-pain-into-power/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room6/turning-pain-into-power/chart4.png" onclick="openLightbox(this.src)" alt="">
   </div>
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
