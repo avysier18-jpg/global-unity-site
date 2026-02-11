@@ -814,54 +814,54 @@
           </div>
 
           <div class="grid-3">
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('before-and-after')" style="cursor: pointer;">
               <h3>Before and After</h3>
               <p>
                 Compare how the same leaders talked about debt, war, policing, and
                 poverty under different administrations. When the stakes change, many
-                “firm principles” suddenly bend.
+                "firm principles" suddenly bend.
               </p>
-              <a class="tile-link" href="/docs/room7/before-and-after.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('between-words')" style="cursor: pointer;">
               <h3>The Gap Between Words and Outcomes</h3>
               <p>
                 Campaign promises talk about families, dignity, and fairness. Budget
                 votes, enforcement priorities, and contracts tell a different story.
                 This tile helps you track the gap.
               </p>
-              <a class="tile-link" href="/docs/room7/gap-between-words-and-outcomes.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('recognizing')" style="cursor: pointer;">
               <h3>Recognizing Scripts</h3>
               <p>
-                “Now is not the time.” “We have no choice.” “This is too complex.”
-                These phrases show up over and over when someone in power doesn’t want
+                "Now is not the time." "We have no choice." "This is too complex."
+                These phrases show up over and over when someone in power doesn't want
                 to change a profitable or comfortable arrangement.
               </p>
-              <a class="tile-link" href="/docs/room7/recognizing-scripts.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('from-blame-to-diagnosis')" style="cursor: pointer;">
               <h3>From Blame to Diagnosis</h3>
               <p>
-                It’s easy to get stuck blaming one politician, one company, or one
+                It's easy to get stuck blaming one politician, one company, or one
                 agency. The Mirror invites a deeper question: what would have to be
                 different in the system for this same problem to stop repeating?
               </p>
-              <a class="tile-link" href="/docs/room7/from-blame-to-diagnosis.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
 
-            <article class="tile">
+            <article class="tile" onclick="openGalleryModal('choosing-next-move')" style="cursor: pointer;">
               <h3>Choosing Your Next Move</h3>
               <p>
                 Once you see the patterns, you have options. You might organize, vote,
                 file complaints, educate others, build alternatives, or simply refuse
                 to play a rigged game in small but meaningful ways.
               </p>
-              <a class="tile-link" href="/docs/room7/choosing-your-next-move.pdf">View related evidence →</a>
+              <span class="tile-link">Gallery →</span>
             </article>
           </div>
         </section>
@@ -1651,6 +1651,76 @@
     <img src="/docs/room6/turning-pain-into-power/chart2.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room6/turning-pain-into-power/chart3.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room6/turning-pain-into-power/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- BEFORE AND AFTER GALLERY MODAL -->
+<div id="gallery-modal-before-and-after" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Before and After</h2>
+  <p class="gallery-intro">When the stakes change, many "firm principles" suddenly bend.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room7/before-and-after/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/before-and-after/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/before-and-after/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/before-and-after/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- BETWEEN WORDS AND OUTCOMES GALLERY MODAL -->
+<div id="gallery-modal-between-words" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>The Gap Between Words and Outcomes</h2>
+  <p class="gallery-intro">Budget votes, enforcement priorities, and contracts tell a different story.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room7/between-words/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/between-words/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/between-words/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/between-words/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- RECOGNIZING SCRIPTS GALLERY MODAL -->
+<div id="gallery-modal-recognizing" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Recognizing Scripts</h2>
+  <p class="gallery-intro">These phrases show up over and over when someone in power doesn't want to change.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room7/recognizing/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/recognizing/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/recognizing/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/recognizing/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- FROM BLAME TO DIAGNOSIS GALLERY MODAL -->
+<div id="gallery-modal-from-blame-to-diagnosis" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>From Blame to Diagnosis</h2>
+  <p class="gallery-intro">What would have to be different in the system for this same problem to stop repeating?</p>
+  <div class="gallery-grid">
+    <img src="/docs/room7/from-blame-to-diagnosis/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/from-blame-to-diagnosis/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/from-blame-to-diagnosis/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/from-blame-to-diagnosis/chart4.png" onclick="openLightbox(this.src)" alt="">
+  </div>
+  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+</div>
+
+<!-- CHOOSING YOUR NEXT MOVE GALLERY MODAL -->
+<div id="gallery-modal-choosing-next-move" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
+  <h2>Choosing Your Next Move</h2>
+  <p class="gallery-intro">Once you see the patterns, you have options.</p>
+  <div class="gallery-grid">
+    <img src="/docs/room7/choosing-next-move/chart1.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/choosing-next-move/chart2.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/choosing-next-move/chart3.png" onclick="openLightbox(this.src)" alt="">
+    <img src="/docs/room7/choosing-next-move/chart4.png" onclick="openLightbox(this.src)" alt="">
   </div>
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
