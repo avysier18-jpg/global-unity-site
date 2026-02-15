@@ -6,136 +6,220 @@
     <title>Truth Library | Mirror</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        /* ============================================
-           TRUTH LIBRARY - EDITORIAL LAYOUT
-           ============================================ */
-
-        /* Hero Section */
+        /* ==========================================
+           TRUTH LIBRARY - EDITORIAL + EVIDENCE RAIL
+           ========================================== */
+        /* HERO */
         .tl-hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: #0a192f;
-            text-align: center;
-            padding: 60px 24px;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: #0a192f;
+          text-align: center;
+          padding: 60px 24px;
         }
         .tl-hero-title {
-            font-size: clamp(5rem, 18vw, 14rem);
-            font-weight: 900;
-            color: #ccd6f6;
-            line-height: 0.85;
-            letter-spacing: -0.04em;
-            margin: 0 0 32px 0;
-            text-transform: uppercase;
+          font-size: clamp(5rem, 18vw, 14rem);
+          font-weight: 900;
+          color: #ccd6f6;
+          line-height: 0.85;
+          letter-spacing: -0.04em;
+          margin: 0 0 32px 0;
+          text-transform: uppercase;
         }
         .tl-hero-sub {
-            font-size: clamp(1rem, 2.5vw, 1.4rem);
-            color: #8892b0;
-            margin: 0 0 48px 0;
-            font-weight: 400;
-            letter-spacing: 0.02em;
+          font-size: clamp(1rem, 2.5vw, 1.4rem);
+          color: #8892b0;
+          margin: 0 0 48px 0;
+          font-weight: 400;
         }
         .tl-hero-btn {
-            display: inline-block;
-            padding: 18px 56px;
-            background: transparent;
-            border: 1px solid #64ffda;
-            color: #64ffda;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-            border-radius: 4px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
+          display: inline-block;
+          padding: 18px 56px;
+          background: transparent;
+          border: 1px solid #64ffda;
+          color: #64ffda;
+          font-size: 0.95rem;
+          font-weight: 500;
+          text-decoration: none;
+          border-radius: 4px;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          transition: all 0.3s ease;
         }
         .tl-hero-btn:hover {
-            background: rgba(100, 255, 218, 0.1);
+          background: rgba(100, 255, 218, 0.1);
         }
-
-        /* Room Sections */
+        /* TWO-COLUMN CONTAINER */
+        .tl-container {
+          display: grid;
+          grid-template-columns: 1fr 420px;
+          gap: 0;
+          background: #0a192f;
+        }
+        /* LEFT: ROOMS */
+        .tl-rooms {
+          padding: 0;
+        }
         .tl-room {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 100px 48px;
-            position: relative;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 100px 60px;
+          border-bottom: 1px solid rgba(100, 255, 218, 0.08);
         }
         .tl-room:nth-child(odd) {
-            background: #0a192f;
+          background: #0a192f;
         }
         .tl-room:nth-child(even) {
-            background: #112240;
+          background: #112240;
         }
         .tl-room-number {
-            font-size: clamp(6rem, 20vw, 16rem);
-            font-weight: 900;
-            color: rgba(100, 255, 218, 0.08);
-            line-height: 1;
-            margin-bottom: -40px;
-            letter-spacing: -0.05em;
+          font-size: clamp(5rem, 15vw, 10rem);
+          font-weight: 900;
+          color: rgba(100, 255, 218, 0.07);
+          line-height: 1;
+          margin-bottom: -30px;
+          letter-spacing: -0.05em;
         }
         .tl-room-title {
-            font-size: clamp(3rem, 10vw, 7rem);
-            font-weight: 900;
-            color: #ccd6f6;
-            line-height: 0.9;
-            letter-spacing: -0.03em;
-            margin: 0 0 24px 0;
-            text-transform: uppercase;
+          font-size: clamp(2.5rem, 8vw, 5rem);
+          font-weight: 900;
+          color: #ccd6f6;
+          line-height: 0.9;
+          letter-spacing: -0.03em;
+          margin: 0 0 24px 0;
+          text-transform: uppercase;
         }
         .tl-room-desc {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: #8892b0;
-            max-width: 500px;
-            line-height: 1.6;
-            margin: 0 0 16px 0;
+          font-size: clamp(1rem, 1.8vw, 1.15rem);
+          color: #8892b0;
+          max-width: 450px;
+          line-height: 1.6;
+          margin: 0 0 16px 0;
         }
         .tl-room-tag {
-            display: inline-block;
-            font-size: 0.7rem;
-            color: #64ffda;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 40px;
-            opacity: 0.8;
+          display: inline-block;
+          font-size: 0.7rem;
+          color: #64ffda;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          opacity: 0.8;
+          margin-bottom: 32px;
         }
         .tl-room-btn {
-            display: inline-block;
-            padding: 16px 40px;
-            background: #64ffda;
-            color: #0a192f;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            transition: all 0.25s ease;
+          display: inline-block;
+          padding: 14px 36px;
+          background: #64ffda;
+          color: #0a192f;
+          font-size: 0.85rem;
+          font-weight: 600;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
+          transition: all 0.25s ease;
+          width: fit-content;
         }
         .tl-room-btn:hover {
-            background: #9efff0;
-            transform: translateY(-2px);
+          background: #9efff0;
+          transform: translateY(-2px);
         }
+        /* RIGHT: STICKY EVIDENCE RAIL */
+        .tl-rail {
+          position: relative;
+          background: #0d1f3c;
+          border-left: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        .tl-rail-inner {
+          position: sticky;
+          top: 100px;
+          padding: 40px 30px;
+          height: calc(100vh - 200px);
+          display: flex;
+          flex-direction: column;
+        }
+        .tl-rail-label {
+          font-size: 0.75rem;
+          color: #64ffda;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 24px;
+          opacity: 0.9;
+          font-weight: 500;
+        }
+        .tl-rail-slideshow {
+          flex: 1;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background: rgba(0, 0, 0, 0.2);
+          border-radius: 8px;
+        }
+        .tl-rail-img {
+          position: absolute;
+          max-width: 95%;
+          max-height: 95%;
+          object-fit: contain;
+          opacity: 0;
+          transition: opacity 0.6s ease;
+        }
+        .tl-rail-img.active {
+          opacity: 1;
+        }
+        .tl-rail-dots {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 24px;
+        }
+        .tl-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: rgba(100, 255, 218, 0.25);
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+        .tl-dot.active {
+          background: #64ffda;
+          transform: scale(1.2);
+        }
+        /* MOBILE: Hide rail, stack rooms */
+        @media (max-width: 960px) {
+          .tl-container {
+            grid-template-columns: 1fr;
+          }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .tl-hero {
-                padding: 40px 20px;
-            }
-            .tl-room {
-                padding: 80px 24px;
-            }
-            .tl-room-number {
-                margin-bottom: -20px;
-            }
-            .tl-room-title br {
-                display: none;
-            }
+          .tl-rail {
+            display: none;
+          }
+
+          .tl-room {
+            padding: 80px 24px;
+            min-height: auto;
+            padding-top: 100px;
+            padding-bottom: 100px;
+          }
+
+          .tl-room-number {
+            font-size: clamp(4rem, 20vw, 8rem);
+            margin-bottom: -20px;
+          }
+
+          .tl-room-title {
+            font-size: clamp(2rem, 10vw, 3.5rem);
+          }
+
+          .tl-room-title br {
+            display: none;
+          }
         }
 
         /* Gallery Modal */
@@ -653,68 +737,87 @@
   <a href="#room-01" class="tl-hero-btn">Begin</a>
 </section>
 
-<!-- ROOM 01 -->
-<section class="tl-room" id="room-01">
-  <span class="tl-room-number">01</span>
-  <h2 class="tl-room-title">HOW IT<br>WORKS</h2>
-  <p class="tl-room-desc">Rules and incentives that shape what governments and companies do.</p>
-  <span class="tl-room-tag">Structure</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('incentive-machine')">Enter Room</button>
-</section>
+<!-- MAIN CONTENT: Two-column layout -->
+<div class="tl-container">
+  <!-- LEFT COLUMN: Room sections -->
+  <div class="tl-rooms">
 
-<!-- ROOM 02 -->
-<section class="tl-room" id="room-02">
-  <span class="tl-room-number">02</span>
-  <h2 class="tl-room-title">MONEY<br>&amp; DEBT</h2>
-  <p class="tl-room-desc">How debt, prices, and the banking system function.</p>
-  <span class="tl-room-tag">Structure</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('who-actually-creates-money')">Enter Room</button>
-</section>
+    <section class="tl-room" id="room-01" data-room="1">
+      <span class="tl-room-number">01</span>
+      <h2 class="tl-room-title">HOW IT<br>WORKS</h2>
+      <p class="tl-room-desc">Rules and incentives that shape what governments and companies do.</p>
+      <span class="tl-room-tag">Structure</span>
+      <button class="tl-room-btn" onclick="openGalleryModal('incentive-machine')">Explore Gallery</button>
+    </section>
 
-<!-- ROOM 03 -->
-<section class="tl-room" id="room-03">
-  <span class="tl-room-number">03</span>
-  <h2 class="tl-room-title">CONGRESS<br>OVER TIME</h2>
-  <p class="tl-room-desc">Patterns in congressional behavior across administrations.</p>
-  <span class="tl-room-tag">Patterns</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('flip-script')">Enter Room</button>
-</section>
+    <section class="tl-room" id="room-02" data-room="2">
+      <span class="tl-room-number">02</span>
+      <h2 class="tl-room-title">MONEY<br>&amp; DEBT</h2>
+      <p class="tl-room-desc">How debt, prices, and the banking system function.</p>
+      <span class="tl-room-tag">Structure</span>
+      <button class="tl-room-btn" onclick="openGalleryModal('who-actually-creates-money')">Explore Gallery</button>
+    </section>
 
-<!-- ROOM 04 -->
-<section class="tl-room" id="room-04">
-  <span class="tl-room-number">04</span>
-  <h2 class="tl-room-title">AGENCIES &amp;<br>ENFORCEMENT</h2>
-  <p class="tl-room-desc">How agencies write rules, enforce laws, and where delays occur.</p>
-  <span class="tl-room-tag">Process</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('agencies-do-what')">Enter Room</button>
-</section>
+    <section class="tl-room" id="room-03" data-room="3">
+      <span class="tl-room-number">03</span>
+      <h2 class="tl-room-title">CONGRESS<br>OVER TIME</h2>
+      <p class="tl-room-desc">Patterns in congressional behavior across administrations.</p>
+      <span class="tl-room-tag">Patterns</span>
+      <button class="tl-room-btn" onclick="openGalleryModal('flip-script')">Explore Gallery</button>
+    </section>
 
-<!-- ROOM 05 -->
-<section class="tl-room" id="room-05">
-  <span class="tl-room-number">05</span>
-  <h2 class="tl-room-title">THE<br>DATA</h2>
-  <p class="tl-room-desc">Numbers behind wages, debt, housing, and government spending.</p>
-  <span class="tl-room-tag">Data</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('inflation-breakdown')">Enter Room</button>
-</section>
+    <section class="tl-room" id="room-04" data-room="4">
+      <span class="tl-room-number">04</span>
+      <h2 class="tl-room-title">AGENCIES &amp;<br>ENFORCEMENT</h2>
+      <p class="tl-room-desc">How agencies write rules, enforce laws, and where delays occur.</p>
+      <span class="tl-room-tag">Process</span>
+      <button class="tl-room-btn" onclick="openGalleryModal('agencies-do-what')">Explore Gallery</button>
+    </section>
 
-<!-- ROOM 06 -->
-<section class="tl-room" id="room-06">
-  <span class="tl-room-number">06</span>
-  <h2 class="tl-room-title">THE HUMAN<br>COST</h2>
-  <p class="tl-room-desc">How these pressures affect daily life and stability.</p>
-  <span class="tl-room-tag">Impact</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('working-and-behind')">Enter Room</button>
-</section>
+    <section class="tl-room" id="room-05" data-room="5">
+      <span class="tl-room-number">05</span>
+      <h2 class="tl-room-title">THE<br>DATA</h2>
+      <p class="tl-room-desc">Numbers behind wages, debt, housing, and government spending.</p>
+      <span class="tl-room-tag">Data</span>
+      <button class="tl-room-btn" onclick="openGalleryModal('inflation-breakdown')">Explore Gallery</button>
+    </section>
 
-<!-- ROOM 07 -->
-<section class="tl-room" id="room-07">
-  <span class="tl-room-number">07</span>
-  <h2 class="tl-room-title">THE<br>MIRROR</h2>
-  <p class="tl-room-desc">What agencies said compared to what the record shows.</p>
-  <span class="tl-room-tag">Records</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('before-and-after')">Enter Room</button>
-</section>
+    <section class="tl-room" id="room-06" data-room="6">
+      <span class="tl-room-number">06</span>
+      <h2 class="tl-room-title">THE HUMAN<br>COST</h2>
+      <p class="tl-room-desc">How these pressures affect daily life and stability.</p>
+      <span class="tl-room-tag">Impact</span>
+      <button class="tl-room-btn" onclick="openGalleryModal('working-and-behind')">Explore Gallery</button>
+    </section>
+
+    <section class="tl-room" id="room-07" data-room="7">
+      <span class="tl-room-number">07</span>
+      <h2 class="tl-room-title">THE<br>MIRROR</h2>
+      <p class="tl-room-desc">What agencies said compared to what the record shows.</p>
+      <span class="tl-room-tag">Records</span>
+      <button class="tl-room-btn" onclick="openGalleryModal('before-and-after')">Explore Gallery</button>
+    </section>
+
+  </div>
+
+  <!-- RIGHT COLUMN: Sticky Evidence Rail -->
+  <aside class="tl-rail">
+    <div class="tl-rail-inner">
+      <span class="tl-rail-label">01 — How It Works</span>
+      <div class="tl-rail-slideshow">
+        <img class="tl-rail-img active" src="/docs/room1/incentive-machine/A1_HAG_Budget_Chart.png" alt="Evidence chart">
+        <img class="tl-rail-img" src="/docs/room1/power-loops/PL1_Policy_Alignment.png" alt="Evidence chart">
+        <img class="tl-rail-img" src="/docs/room1/stories-that-steer-us/ST1_Wealth_Inequality_Chart.png" alt="Evidence chart">
+      </div>
+      <div class="tl-rail-dots">
+        <span class="tl-dot active"></span>
+        <span class="tl-dot"></span>
+        <span class="tl-dot"></span>
+      </div>
+    </div>
+  </aside>
+
+</div>
 
     <footer class="site-footer">
         <div class="container footer-layout">
@@ -1771,6 +1874,205 @@ document.addEventListener('keydown', function(e) {
     } else if (document.querySelector('.gallery-modal.active')) {
         if (e.key === 'Escape') closeGalleryModal();
     }
+});
+</script>
+
+<script>
+// Room-specific evidence data
+const ROOM_EVIDENCE = {
+  1: {
+    label: "01 — How It Works",
+    images: [
+      "/docs/room1/incentive-machine/A1_HAG_Budget_Chart.png",
+      "/docs/room1/power-loops/PL1_Policy_Alignment.png",
+      "/docs/room1/stories-that-steer-us/ST1_Wealth_Inequality_Chart.png"
+    ]
+  },
+  2: {
+    label: "02 — Money & Debt",
+    images: [
+      "/docs/room2/who-actually-created-money/chart1m.png",
+      "/docs/room2/inflation-vs-wages/chart1.png",
+      "/docs/room2/why-housing-eats-everything/chart1.png"
+    ]
+  },
+  3: {
+    label: "03 — Congress Over Time",
+    images: [
+      "/docs/room3/flip-script/chart1.png",
+      "/docs/room3/oversight/chart1.png",
+      "/docs/room3/safe-targets/chart1.png"
+    ]
+  },
+  4: {
+    label: "04 — Agencies & Enforcement",
+    images: [
+      "/docs/room4/agencies-do-what/chart1.png",
+      "/docs/room4/red-tape/chart1.png",
+      "/docs/room4/bureaucracies-protect-themselves/chart1.png"
+    ]
+  },
+  5: {
+    label: "05 — The Data",
+    images: [
+      "/docs/room5/inflation-breakdown/chart1.png",
+      "/docs/room5/wages-vs-profits/chart1.png",
+      "/docs/room5/debt-and-household/chart1.png"
+    ]
+  },
+  6: {
+    label: "06 — The Human Cost",
+    images: [
+      "/docs/room6/working-and-behind/chart1.png",
+      "/docs/room6/mental-load/chart1.png",
+      "/docs/room6/families-under-strain/chart1.png"
+    ]
+  },
+  7: {
+    label: "07 — The Mirror",
+    images: [
+      "/docs/room7/before-and-after/chart1.png",
+      "/docs/room7/between-words/chart1.png",
+      "/docs/room7/recognizing/chart1.png"
+    ]
+  }
+};
+
+let currentRoom = 1;
+let currentSlide = 0;
+let slideshowInterval = null;
+
+// Update the evidence rail when room changes
+function updateEvidenceRail(roomNum) {
+  if (roomNum === currentRoom && slideshowInterval) return;
+
+  currentRoom = roomNum;
+  currentSlide = 0;
+
+  const evidence = ROOM_EVIDENCE[roomNum];
+  if (!evidence) return;
+
+  // Update label
+  const labelEl = document.querySelector('.tl-rail-label');
+  if (labelEl) labelEl.textContent = evidence.label;
+
+  // Update images
+  const imgElements = document.querySelectorAll('.tl-rail-img');
+  const dots = document.querySelectorAll('.tl-dot');
+
+  imgElements.forEach((img, i) => {
+    if (evidence.images[i]) {
+      img.src = evidence.images[i];
+      img.style.display = 'block';
+    } else {
+      img.style.display = 'none';
+    }
+    img.classList.toggle('active', i === 0);
+  });
+
+  dots.forEach((dot, i) => {
+    if (evidence.images[i]) {
+      dot.style.display = 'block';
+    } else {
+      dot.style.display = 'none';
+    }
+    dot.classList.toggle('active', i === 0);
+  });
+
+  // Restart slideshow for this room
+  if (slideshowInterval) clearInterval(slideshowInterval);
+  startSlideshow();
+}
+
+// Auto-advance slideshow within current room
+function startSlideshow() {
+  const evidence = ROOM_EVIDENCE[currentRoom];
+  if (!evidence) return;
+
+  slideshowInterval = setInterval(() => {
+    const imgElements = document.querySelectorAll('.tl-rail-img');
+    const dots = document.querySelectorAll('.tl-dot');
+    const totalSlides = evidence.images.length;
+
+    // Remove active from current
+    imgElements[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+
+    // Advance to next
+    currentSlide = (currentSlide + 1) % totalSlides;
+
+    // Add active to new
+    imgElements[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+
+  }, 8000); // 8 seconds per slide
+}
+
+// Allow clicking dots to jump to specific slide
+function initDotClicks() {
+  const dots = document.querySelectorAll('.tl-dot');
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      const imgElements = document.querySelectorAll('.tl-rail-img');
+
+      // Remove active from all
+      imgElements.forEach(img => img.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+
+      // Set new active
+      currentSlide = i;
+      imgElements[i].classList.add('active');
+      dots[i].classList.add('active');
+
+      // Restart timer
+      if (slideshowInterval) clearInterval(slideshowInterval);
+      startSlideshow();
+    });
+  });
+}
+
+// Observe which room is in view
+function initRoomObserver() {
+  const options = {
+    root: null,
+    rootMargin: '-40% 0px -40% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const roomNum = parseInt(entry.target.dataset.room);
+        if (roomNum) updateEvidenceRail(roomNum);
+      }
+    });
+  }, options);
+
+  document.querySelectorAll('.tl-room').forEach(room => {
+    observer.observe(room);
+  });
+}
+
+// Smooth scroll for Begin button
+function initSmoothScroll() {
+  const beginBtn = document.querySelector('.tl-hero-btn');
+  if (beginBtn) {
+    beginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector('#room-01');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+}
+
+// Initialize everything
+document.addEventListener('DOMContentLoaded', () => {
+  initRoomObserver();
+  initDotClicks();
+  initSmoothScroll();
+  updateEvidenceRail(1);
 });
 </script>
 </body>
