@@ -22,7 +22,7 @@
             padding: 60px 24px;
         }
         .tl-hero-title {
-            font-size: clamp(5rem, 18vw, 14rem);
+            font-size: clamp(3.5rem, 12vw, 8rem);
             font-weight: 900;
             color: #ccd6f6;
             line-height: 0.85;
@@ -33,14 +33,17 @@
         .tl-hero-sub {
             font-size: clamp(1rem, 2.5vw, 1.4rem);
             color: #8892b0;
-            margin: 0 0 48px 0;
+            margin: 0 0 32px 0;
             font-weight: 400;
             letter-spacing: 0.02em;
+        }
+        .tl-hero-sub + .tl-hero-sub {
+            margin-top: 8px;
         }
         .tl-hero-instruction {
             font-size: 0.9rem;
             color: #64ffda;
-            margin: 0 0 32px 0;
+            margin: 0 0 24px 0;
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
@@ -64,11 +67,11 @@
 
         /* Room Sections */
         .tl-room {
-            min-height: 100vh;
+            min-height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 100px 48px;
+            padding: 80px 48px;
             position: relative;
         }
         .tl-room:nth-child(odd) {
@@ -78,15 +81,15 @@
             background: #112240;
         }
         .tl-room-number {
-            font-size: clamp(6rem, 20vw, 16rem);
+            font-size: clamp(4rem, 10vw, 7rem);
             font-weight: 900;
             color: rgba(100, 255, 218, 0.08);
             line-height: 1;
-            margin-bottom: -40px;
+            margin-bottom: -30px;
             letter-spacing: -0.05em;
         }
         .tl-room-title {
-            font-size: clamp(3rem, 10vw, 7rem);
+            font-size: clamp(2rem, 6vw, 3.5rem);
             font-weight: 900;
             color: #ccd6f6;
             line-height: 0.9;
@@ -112,7 +115,9 @@
         }
         .tl-room-btn {
             display: inline-block;
-            padding: 16px 40px;
+            width: fit-content;
+            max-width: 280px;
+            padding: 14px 40px;
             background: #64ffda;
             color: #0a192f;
             font-size: 0.85rem;
@@ -130,15 +135,20 @@
         }
 
         /* Mobile Adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 960px) {
             .tl-hero {
                 padding: 40px 20px;
             }
             .tl-room {
-                padding: 80px 24px;
+                padding: 60px 24px;
+                min-height: auto;
             }
             .tl-room-number {
+                font-size: clamp(3rem, 15vw, 5rem);
                 margin-bottom: -20px;
+            }
+            .tl-room-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem);
             }
             .tl-room-title br {
                 display: none;
@@ -656,8 +666,9 @@
 <!-- HERO SECTION -->
 <section class="tl-hero">
   <h1 class="tl-hero-title">TRUTH<br>LIBRARY</h1>
-  <p class="tl-hero-sub">How the systems around you work.<br>Rules. Money. Agencies. Outcomes.</p>
-  <p class="tl-hero-instruction">Start with 01.</p>
+  <p class="tl-hero-sub">You don't need a law degree to understand how the system works.</p>
+  <p class="tl-hero-sub">This library breaks it down — rules, money, agencies, outcomes — in plain language, with evidence.</p>
+  <p class="tl-hero-instruction">Seven short sections. Start with 01.</p>
   <a href="#room-01" class="tl-hero-btn">Begin</a>
 </section>
 
