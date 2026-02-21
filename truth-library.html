@@ -162,6 +162,197 @@
             }
         }
 
+        /* Room 01 Dropdown */
+        .room-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .room-dropdown-btn {
+            display: inline-block;
+            width: fit-content;
+            max-width: 280px;
+            padding: 14px 40px;
+            background: #64ffda;
+            color: #0a192f;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+        }
+        .room-dropdown-btn:hover {
+            background: #9efff0;
+            transform: translateY(-2px);
+        }
+        .room-dropdown-btn::after {
+            content: ' ▾';
+            font-size: 0.75em;
+        }
+        .room-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 8px;
+            background: #112240;
+            border: 1px solid #1d3a5f;
+            border-radius: 8px;
+            min-width: 280px;
+            z-index: 100;
+            overflow: hidden;
+        }
+        .room-dropdown.active .room-dropdown-menu {
+            display: block;
+        }
+        .room-dropdown-item {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            background: none;
+            border: none;
+            text-align: left;
+            color: #ccd6f6;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .room-dropdown-item:hover:not(.disabled) {
+            background: rgba(100, 255, 218, 0.1);
+        }
+        .room-dropdown-item.disabled {
+            color: #5a6a8a;
+            cursor: not-allowed;
+        }
+        .room-dropdown-item .coming-soon {
+            font-size: 0.75rem;
+            color: #64ffda;
+            margin-left: 8px;
+            opacity: 0.7;
+        }
+
+        /* Scroll-Reveal Modal */
+        .scroll-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a192f;
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        .scroll-modal-overlay.active {
+            display: block;
+        }
+        .scroll-modal-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2001;
+            border-bottom: 1px solid #1d3a5f;
+        }
+        .scroll-modal-title {
+            font-size: 1rem;
+            color: #64ffda;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+        .scroll-modal-close {
+            background: none;
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+        }
+        .scroll-modal-close:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+        .scroll-modal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+        }
+        .chart-block {
+            padding: 80px 0;
+            border-bottom: 1px solid #1d3a5f;
+            opacity: 0.3;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .chart-block:last-child {
+            border-bottom: none;
+        }
+        .chart-block.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .chart-hook {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: #ccd6f6;
+            line-height: 1.3;
+            margin-bottom: 40px;
+        }
+        .chart-image {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 48px;
+            border: 1px solid #1d3a5f;
+        }
+        .chart-subheading {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #64ffda;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .chart-explanation {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ccd6f6;
+            margin-bottom: 40px;
+        }
+        .chart-connection {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #8892b0;
+        }
+
+        /* Scroll Modal Mobile */
+        @media (max-width: 768px) {
+            .scroll-modal-content {
+                padding: 100px 20px 60px;
+            }
+            .scroll-modal-header {
+                padding: 16px 20px;
+            }
+            .chart-block {
+                padding: 60px 0;
+            }
+            .chart-hook {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+        }
+
         /* Gallery Modal */
         .gallery-modal-overlay {
             display: none;
@@ -688,7 +879,16 @@
   <h2 class="tl-room-title">HOW IT<br>WORKS</h2>
   <p class="tl-room-desc">Rules and incentives that shape what governments and companies do.</p>
   <span class="tl-room-tag">Structure</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('incentive-machine')">Enter Room</button>
+  <div class="room-dropdown" id="room01-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleRoom01Dropdown()">Enter Room</button>
+    <div class="room-dropdown-menu">
+      <button class="room-dropdown-item" onclick="openScrollModal('incentive-machine-scroll')">The Incentive Machine</button>
+      <button class="room-dropdown-item disabled">Power Loops <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Stories That Steer Us <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Systems vs Individuals <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Your Place in the Loop <span class="coming-soon">(Coming Soon)</span></button>
+    </div>
+  </div>
 </section>
 
 <!-- ROOM 02 -->
@@ -1726,6 +1926,107 @@
   <p class="gallery-disclaimer">These diagrams show how civic processes function as of early 2026. Enforcement capacity and response times vary by agency. This is procedural reference, not legal advice.</p>
 </div>
 
+<!-- SCROLL-REVEAL MODAL: Housing & Assets -->
+<div id="scroll-modal-incentive-machine-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">01 — Housing & Assets</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: HUD Homeless Assistance Grants Budget -->
+    <div class="chart-block">
+      <h3 class="chart-hook">HUD's homeless budget grew 50% in 10 years.</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/A1_HAG_Budget_Chart.png" alt="HUD Homeless Assistance Grants Budget">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The federal government increased spending on homeless assistance from $2.4 billion to $3.6 billion between 2014 and 2023.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">More money went in. But did homelessness go down?</p>
+    </div>
+
+    <!-- Chart 2: People Experiencing Homelessness (PIT Count) -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Homelessness just hit a record high. After a decade of increased funding.</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/A1_Homeless_PIT_Chart.png" alt="People Experiencing Homelessness PIT Count">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Despite 10 years of budget increases, the number of people experiencing homelessness reached 650,000+ in 2023 — the highest on record.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is the gap between what agencies say they're doing and what's actually happening. HUD received more money. The problem got worse. That's what the Mirror tracks.</p>
+    </div>
+
+    <!-- Chart 3: Fines as Percent of Government Revenue -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Fines feel satisfying. To the government, they're a rounding error.</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/A2_PercentSlice.png" alt="Fines as Percent of Government Revenue">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">For every $100 the government collects, only 30 cents comes from fines. The rest comes from taxes and other sources.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Fines aren't about revenue — they're about compliance and punishment. But who gets fined, and who doesn't? That's where incentives show up.</p>
+    </div>
+
+    <!-- Chart 4: How Much Money Comes From Fines Each Year -->
+    <div class="chart-block">
+      <h3 class="chart-hook">$14 billion in fines last year. Who paid them?</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/A2_FinesOnly.png" alt="How Much Money Comes From Fines Each Year">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Total fines collected by the federal government have grown from $11 billion to over $14 billion annually since 2014.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Fines are increasing — but are they hitting the right targets? The next section shows who actually pays.</p>
+    </div>
+
+    <!-- Chart 5: Pentagon Budget Growth -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The Pentagon budget almost doubled in a decade. No audit has ever passed.</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/A3_Pentagon_Budget_GoldOrange.png" alt="Pentagon Budget Growth">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Defense spending dropped briefly after 2010 budget cuts, then climbed from $560 billion to nearly $1 trillion by 2026.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The Department of Defense has failed every single audit since they began in 2018. Nearly a trillion dollars a year — and no one can account for where it goes.</p>
+    </div>
+
+    <!-- Chart 6: Median Home Price in the U.S. -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In 2000, a home cost $165,000. Today, it's $420,000.</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/B1_Median_Home_Price_Line 3.png" alt="Median Home Price in the U.S.">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The median home price in the U.S. has more than doubled since 2000 — from $165,000 to over $420,000. The sharpest increase happened after 2020.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Housing is the largest expense for most families. When prices grow faster than income, people fall behind — even when they do everything right. HUD and FHFA are supposed to monitor housing affordability. This is what happened on their watch.</p>
+    </div>
+
+    <!-- Chart 7: Investor Market Share (All Residential) -->
+    <div class="chart-block">
+      <h3 class="chart-hook">1 in 5 homes is now bought by an investor, not a family.</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/B1_Investor_Market_Share_AllResidential_Line.png" alt="Investor Market Share All Residential">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In 2000, investors bought about 6% of homes. By 2024, that number hit nearly 20%. That's triple the share — and it spiked hardest after 2020.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When investors buy homes, they're not living in them — they're renting them out or flipping them. This drives up prices for everyone else. Regulators allowed this to happen. Some even encouraged it.</p>
+    </div>
+
+    <!-- Chart 8: Median Household Income -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Income doubled in 24 years. Housing nearly tripled.</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/B1_Median_Household_Income_Line 2.png" alt="Median Household Income">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Median household income rose from about $42,000 in 2000 to roughly $84,000 in 2024. It stalled during the 2008 recession and dipped in 2020, but the overall trend is upward.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This chart looks like progress — until you compare it to housing. Home prices went from $165,000 to $420,000. Rent never stopped climbing. Income grew about 2x. Costs grew 2.5x or more. The gap is where families lose ground.</p>
+    </div>
+
+    <!-- Chart 9: Rent Index (CPI) -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Rent hasn't stopped climbing in 24 years. Not once.</h3>
+      <img class="chart-image" src="/docs/room1/incentive-machine/B1_Rent_Index_Line 4.png" alt="Rent Index CPI">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The CPI rent index — which tracks how much renters pay over time — went from about 180 in 2000 to over 420 in 2024. That means rent more than doubled relative to the 1982-84 baseline.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Unlike home prices, which dipped during the 2008 crash, rent never went down. It just kept climbing. If you can't afford to buy, you're locked into a cost that only goes up. There is no relief valve.</p>
+    </div>
+
+  </div>
+</div>
+
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">×</button>
@@ -1799,8 +2100,65 @@ document.addEventListener('keydown', function(e) {
         if (e.key === 'ArrowRight') navigateLightbox(1);
     } else if (document.querySelector('.gallery-modal.active')) {
         if (e.key === 'Escape') closeGalleryModal();
+    } else if (document.querySelector('.scroll-modal-overlay.active')) {
+        if (e.key === 'Escape') closeScrollModal();
     }
 });
+
+// Room 01 Dropdown
+function toggleRoom01Dropdown() {
+    const dropdown = document.getElementById('room01-dropdown');
+    dropdown.classList.toggle('active');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    const dropdown = document.getElementById('room01-dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+    }
+});
+
+// Scroll Modal Functions
+function openScrollModal(modalId) {
+    const modal = document.getElementById('scroll-modal-' + modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        // Close dropdown
+        document.getElementById('room01-dropdown').classList.remove('active');
+        // Initialize scroll observer
+        initChartObserver();
+    }
+}
+
+function closeScrollModal() {
+    document.querySelectorAll('.scroll-modal-overlay').forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+}
+
+// Scroll Animation - Fade in chart blocks as they enter viewport
+function initChartObserver() {
+    const options = {
+        root: null,
+        rootMargin: '-10% 0px -10% 0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, options);
+
+    document.querySelectorAll('.chart-block').forEach(block => {
+        observer.observe(block);
+    });
+}
 </script>
 </body>
 </html>
