@@ -930,7 +930,7 @@
     <button class="room-dropdown-btn" onclick="toggleRoom01Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('incentive-machine-scroll')">Who benefits — and how</button>
-      <button class="room-dropdown-item disabled">How influence circulates <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('power-loops-scroll')">How influence circulates</button>
       <button class="room-dropdown-item disabled">How narratives shape decisions <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Structure vs. intent <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Where you connect to the system <span class="coming-soon">(Coming Soon)</span></button>
@@ -2121,6 +2121,129 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Most big landlords use the same software to set rent prices. The government said this might be illegal price-fixing — but the settlement had no penalties and no one admitted they did anything wrong.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Power Loops - How Influence Circulates -->
+<div id="scroll-modal-power-loops-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">02 — How Influence Circulates</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Donor Concentration -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The top 1% of donors fund 60% of all political contributions.</h3>
+      <img class="chart-image" src="/docs/room1/power-loops/PL1_Donor_Concentration.png" alt="Donor Concentration">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In 2024, the top 0.01% of donors contributed about 35% of all political money. The top 1% contributed roughly 60%. Small donors — everyone else — accounted for about 20%.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Most people who donate to campaigns are a footnote in the total. The system runs on concentrated money from a very small group. That concentration shapes who runs, who wins, and what they prioritize once in office.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The FEC is supposed to enforce contribution limits and transparency. These numbers show how much influence flows through legal channels that most voters never see.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Policy Alignment -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When elites want a policy, it has a 45% chance of passing. When they don't, it drops to 18%.</h3>
+      <img class="chart-image" src="/docs/room1/power-loops/PL1_Policy_Alignment.png" alt="Policy Alignment">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">When economic elites support a policy, it has about a 45% chance of being adopted. When they oppose it, that drops to 18%. Meanwhile, whether average voters support or oppose a policy barely changes the odds — it stays around 30% either way.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Your support or opposition doesn't move the needle. Theirs does. This isn't opinion — it's from a study of nearly 1,800 policy proposals. The system responds to organized money, not public preference.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Congress writes the laws. Voters elect Congress. But the data shows policy tracks with elite preferences, not voter preferences. The feedback loop runs through funding, not ballots.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Reelection Rates -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Congress has a 20% approval rating. It has a 95% reelection rate.</h3>
+      <img class="chart-image" src="/docs/room1/power-loops/PL1_Reelection_Rates.png" alt="Reelection Rates">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">From 2000 to 2024, House incumbents won reelection at rates between 85% and 98%. Senate rates fluctuated more but still stayed overwhelmingly high — never dipping below 79%.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The people who write the rules almost never lose their seats. Gerrymandering, name recognition, and fundraising advantages make incumbents nearly impossible to unseat. This is the lock on the loop — money flows in, policy follows donors, and the same people stay in power.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Incumbents raised more money than challengers in every single cycle shown. The fundraising gap is the reelection gap.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: FOIA Backlog -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The government has 267,000 unanswered public records requests.</h3>
+      <img class="chart-image" src="/docs/room1/power-loops/PL3_Government_Wide_FOIA_Backlog.png" alt="Government Wide FOIA Backlog">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Across all federal agencies, the FOIA backlog grew from about 72,000 in 2012 to over 267,000 by 2024. It more than tripled in a little over a decade.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">FOIA is how the public finds out what the government is actually doing. When a quarter-million requests go unanswered, transparency exists as a right on paper but not in practice. The less the public sees, the less accountability there is.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Agencies receive FOIA funding from Congress. The backlog isn't a mystery — it's a budget choice. Underfunding transparency is a way to keep the loop closed.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: Misinformation Speed -->
+    <div class="chart-block">
+      <h3 class="chart-hook">A lie reaches 1,500 people 6 times faster than the truth.</h3>
+      <img class="chart-image" src="/docs/room1/power-loops/PL4_Misinformation_Speed.png" alt="Misinformation Speed">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">False news stories spread at 6 times the speed of true ones on social media. The truth doesn't catch up.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When misinformation moves faster than corrections, the public makes decisions based on things that aren't real. This isn't about individual gullibility — it's about how the platforms are built. The algorithm rewards engagement, and outrage engages.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Social media companies profit from engagement. Misinformation drives engagement. The incentive to fix it competes with the incentive to profit from it.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 6: Negative Content Amplification -->
+    <div class="chart-block">
+      <h3 class="chart-hook">71% of what platforms show you is designed to make you angry.</h3>
+      <img class="chart-image" src="/docs/room1/power-loops/PL4_Negative_Content_Amplification.png" alt="Negative Content Amplification">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">About 71% of content surfaced by social media algorithms contains anger-triggering material. 58% is dramatic or exaggerated. And content attacking an opposing group gets a 67% boost in shares.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">You're not imagining it — your feed is tilted toward outrage on purpose. Platforms amplify content that keeps you scrolling, not content that keeps you informed. Anger is the most engaging emotion online, so that's what gets served.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          More time on platform = more ads seen = more revenue. The amplification isn't a bug. It's the product.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 7: Meta Ad Revenue -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Meta made $160 billion last year. Almost all of it from ads.</h3>
+      <img class="chart-image" src="/docs/room1/power-loops/PL4_Meta_Ad_Revenue.png" alt="Meta Ad Revenue">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Meta's ad revenue grew from about $2 billion in 2010 to roughly $160 billion by 2024. That's an 80x increase in 14 years.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is the business model behind the amplification. Every angry post you engage with, every outrage cycle you scroll through — it generates ad revenue. Meta isn't a communication tool. It's an attention-harvesting machine that sells what it captures to advertisers. The more divided you feel, the more profitable you are.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Meta spent ~$30 million lobbying in 2024. It earned $160 billion. The lobbying protects the business model. The business model profits from division. The loop closes.
         </div>
       </div>
     </div>
