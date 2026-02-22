@@ -932,7 +932,7 @@
       <button class="room-dropdown-item" onclick="openScrollModal('incentive-machine-scroll')">Who benefits — and how</button>
       <button class="room-dropdown-item" onclick="openScrollModal('power-loops-scroll')">How influence circulates</button>
       <button class="room-dropdown-item" onclick="openScrollModal('stories-steer-scroll')">How narratives shape decisions</button>
-      <button class="room-dropdown-item disabled">Structure vs. intent <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('systems-individuals-scroll')">Structure vs. intent</button>
       <button class="room-dropdown-item disabled">Where you connect to the system <span class="coming-soon">(Coming Soon)</span></button>
     </div>
   </div>
@@ -2495,6 +2495,225 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Municipal courts and local police departments often share fine revenue. The DOJ's investigation of Ferguson, Missouri exposed this model nationally — but it wasn't unique to Ferguson. It's how many local governments balance their books.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Systems vs Individuals - Structure vs Intent -->
+<div id="scroll-modal-systems-individuals-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">04 — Structure vs. Intent</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Care vs Paperwork -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Your doctor spends 7 minutes with you. And 36 minutes on paperwork.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_Care_vs_Paperwork.png" alt="Care vs Paperwork">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In a typical patient visit, a doctor spends about 7 minutes of face-time with the patient and roughly 36 minutes on EHR and administrative tasks.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Doctors didn't design this system. Insurance billing codes, compliance requirements, and electronic health record mandates did. The person who went to medical school to help you is spending 5x more time helping the system track you.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          CMS and private insurers require documentation for every reimbursement. The more complex the paperwork, the more the system can audit, deny, or delay payments. Admin protects revenue — not patients.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Time Ratio -->
+    <div class="chart-block">
+      <h3 class="chart-hook">For every 1 unit of care, the system demands 4 units of admin.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_2_Time_Ratio.png" alt="Time Ratio">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Across healthcare, the structural ratio of care-to-admin time is roughly 1:4. For every unit of time spent on actual patient care, four units go to administrative tasks.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This isn't a staffing problem — it's an architecture problem. The system was built to prioritize documentation over treatment. Workers inside the system can't fix this by working harder. The ratio is baked into the structure.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Administrative overhead is where insurance companies, billing services, and compliance firms make their money. Simplifying the system would eliminate entire industries. The complexity is profitable.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Implied Workday -->
+    <div class="chart-block">
+      <h3 class="chart-hook">To see 30 patients a day, a doctor would need to work 21 hours.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_3_Implied_Workday.png" alt="Implied Workday">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">At 20 patients per day, the implied workday — including all required documentation — is about 14.3 hours. At 30 patients per day, it's roughly 21.5 hours. Neither is physically possible on a sustained basis.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The system sets expectations that are mathematically impossible to meet. When doctors inevitably cut corners — shorter visits, less documentation, or less sleep — patients suffer. But the doctor isn't the problem. The math is.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Productivity quotas are set by hospital administrators and insurance reimbursement rates. More patients per doctor = more revenue per day. The quota serves the balance sheet, not the patient.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Caseload Comparison -->
+    <div class="chart-block">
+      <h3 class="chart-hook">A caseworker should handle 15 cases. Many carry 80.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_2_1_Caseload_Comparison.png" alt="Caseload Comparison">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The recommended caseload for child welfare workers is about 15 cases. The actual average is roughly 40. In crisis-level departments, workers carry 80 or more cases each.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">These are children. When one worker is responsible for 80 kids, no child gets adequate attention. Missed visits, delayed reports, overlooked abuse — these aren't worker failures. They're system failures. The worker is set up to fail before they start.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Child welfare funding comes from federal Title IV-E and state budgets. Staffing levels are a budget decision. Agencies that underfund caseworker positions save money — and children pay the price.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: Daily Visit Requirement -->
+    <div class="chart-block">
+      <h3 class="chart-hook">At 100 cases, a caseworker needs to make 3.3 home visits every single day.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_2_2_Daily_Visit_Requirement.png" alt="Daily Visit Requirement">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">At a recommended caseload of 15, a caseworker needs about 0.5 visits per day. At 60 cases, that jumps to 2 per day. At 100 cases, it's 3.3 visits per day — every working day, with no sick days, no court appearances, no paperwork time.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is the math behind the headlines. When a child falls through the cracks, the public blames the caseworker. But the caseload made it mathematically inevitable. No human being can do 3.3 visits a day while also doing documentation, court prep, and case reviews.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Agencies know the caseload numbers. They publish them. And they continue to operate at levels they know are impossible to sustain. The funding gap is a known quantity — not a surprise.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 6: Disability Denial Funnel -->
+    <div class="chart-block">
+      <h3 class="chart-hook">65% denied. Appeal? 85% denied again. Keep going? Still 46% denied.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_3_Disability_Denial_Funnel.png" alt="Disability Denial Funnel">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The Social Security Administration denies about 65% of initial disability claims. At reconsideration, roughly 85% are denied. Even at the hearing level, about 46% are still denied.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The system isn't evaluating claims — it's filtering people out. Each stage of denial is a gate designed to reduce the number of people who make it through. People who lack time, legal help, or the physical ability to keep fighting simply drop out.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Every denied claim is money the SSA trust fund doesn't pay out. SSA staffing has been cut repeatedly while applications grow. Fewer staff + more applications = more automatic denials. The funnel isn't accidental — it's underfunded by design.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 7: Backlog Wait Time -->
+    <div class="chart-block">
+      <h3 class="chart-hook">1.2 million people are waiting. Average wait: 7 months.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_3_2_Backlog_WaitTime.png" alt="Backlog Wait Time">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The SSA disability backlog sits at roughly 1.2 million pending cases. The average wait time for an initial decision is about 7 months.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Seven months without income. Without healthcare. Without stability. For people who are already disabled. The backlog doesn't just delay a decision — it forces people deeper into crisis while they wait.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Congress funds SSA's administrative budget. That budget has been effectively frozen or cut for years. The backlog is a direct result of staffing decisions made in Washington — not inefficiency at the field office level.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 8: Deaths While Waiting -->
+    <div class="chart-block">
+      <h3 class="chart-hook">30,000 people die every year waiting for a disability decision.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_3_3_Deaths_While_Waiting.png" alt="Deaths While Waiting">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Approximately 30,000 disability applicants die annually while their claim is still pending — before they ever receive a decision.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is what the backlog costs in human terms. Not delayed paperwork. Not inconvenience. Death. People who applied for help, were told to wait, and didn't survive the wait. The system that was supposed to catch them was too slow.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Every person who dies waiting is a claim that never gets paid. The system saves money when applicants don't survive the process. That's not the intent — but it is the outcome of chronic underfunding.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 9: Ticket Revenue -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When a city's budget is short, traffic tickets go up 40%.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_4_Ticket_Revenue_Blue.png" alt="Ticket Revenue">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">After a 10% decline in local tax revenue, traffic fine revenue increases by approximately 40% compared to normal years.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The officer writing the ticket isn't the problem. The budget shortfall is. When cities need revenue, enforcement becomes a collection tool. The individual cop follows orders — but the orders come from a spreadsheet, not a safety analysis.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Municipal courts and police departments share fine revenue in many jurisdictions. The DOJ's Ferguson investigation revealed this was standard practice, not an anomaly. Fines flow from the poorest neighborhoods to city coffers.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 10: Base vs Late Fee -->
+    <div class="chart-block">
+      <h3 class="chart-hook">A mortgage servicer earns $41/month on your payment. And $40/month when you're late.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_5_1_Base_vs_Late_Fee.png" alt="Base vs Late Fee">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The base monthly servicing fee on a performing mortgage is about $41. The late fee revenue on a delinquent loan is roughly $40 per month. Nearly identical.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When the servicer makes the same money whether you pay on time or fall behind, there's no financial incentive to help you stay current. In fact, late fees are often pure profit — no additional service required. The individual loan officer isn't to blame. The revenue model is.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The CFPB regulates mortgage servicers. But the fee structure is set by contracts between servicers and investors. The regulator watches the system — but the incentive to profit from delinquency is built into the contract itself.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 11: Cost to Service -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Servicing a good loan costs $175/year. A bad loan costs $1,575. Guess who pays.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI1_5_2_Cost_to_Service.png" alt="Cost to Service">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The annual cost to service a performing loan is about $175. A non-performing (delinquent) loan costs roughly $1,575 to service — nearly 9x more.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is the flip side of Chart 10. Servicers earn similar revenue on both types of loans, but delinquent loans cost 9x more to manage. That cost gets passed through — to investors, to borrowers in fees, or to taxpayers when loans are government-backed. The system doesn't punish bad lending. It socializes the cost.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          When loans are federally backed (FHA, VA, Fannie, Freddie), the cost of servicing defaults falls on the government — meaning taxpayers. The private servicer profits either way. The risk sits with the public.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 12: HUD Documentation Burden -->
+    <div class="chart-block">
+      <h3 class="chart-hook">To prove you're homeless enough for help, you need 12 documents a month.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI2_0_1_HUD_Documentation_Burden.png" alt="HUD Documentation Burden">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">HUD's chronic homelessness documentation requirements include: 1 disability verification, 12 monthly documentation items, 3 self-certification forms, and 1 break-rule proof. That's a minimum of 17 documentation touchpoints.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The person applying for help is homeless. They may have no address, no ID, no consistent access to offices or mail. The system requires a level of documentation that assumes stability — the exact thing the applicant doesn't have. The individual outreach worker trying to help isn't the barrier. The documentation requirement is.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          HUD sets these requirements. Every documentation barrier that disqualifies an applicant reduces the number of people the system has to serve — and reduces the cost. Paperwork is a budget tool disguised as a verification process.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 13: SNAP Fraud Admin Legal -->
+    <div class="chart-block">
+      <h3 class="chart-hook">SNAP fraud is 1.5%. Government errors are 11%. But recipients get blamed.</h3>
+      <img class="chart-image" src="/docs/room1/systems-vs-individuals/SVI2_0_2_SNAP_Fraud_Admin_Legal_Chart.png" alt="SNAP Fraud Admin Legal Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Of total SNAP benefits, about 1.5% is fraud (trafficking). About 11% is administrative errors made by the government. The remaining ~87% is legal, proper use.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When a SNAP recipient makes a mistake, they face penalties, disqualification, and public shame. When the government makes an error — which happens 7x more often — nobody faces consequences. The system blames individuals for failures that are overwhelmingly institutional.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Congress funds SNAP fraud enforcement heavily. It does not proportionally fund fixing the administrative systems that cause errors 7x larger than fraud. The enforcement investment follows the narrative, not the data.
         </div>
       </div>
     </div>
