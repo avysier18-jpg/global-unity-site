@@ -931,7 +931,7 @@
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('incentive-machine-scroll')">Who benefits — and how</button>
       <button class="room-dropdown-item" onclick="openScrollModal('power-loops-scroll')">How influence circulates</button>
-      <button class="room-dropdown-item disabled">How narratives shape decisions <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('stories-steer-scroll')">How narratives shape decisions</button>
       <button class="room-dropdown-item disabled">Structure vs. intent <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Where you connect to the system <span class="coming-soon">(Coming Soon)</span></button>
     </div>
@@ -2244,6 +2244,257 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Meta spent ~$30 million lobbying in 2024. It earned $160 billion. The lobbying protects the business model. The business model profits from division. The loop closes.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Stories That Steer Us - How Narratives Shape Decisions -->
+<div id="scroll-modal-stories-steer-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">03 — How Narratives Shape Decisions</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Wealth Inequality -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The top 1% owns 31% of all wealth. The bottom half owns 2.5%.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST1_Wealth_Inequality_Chart.png" alt="Wealth Inequality Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The top 1% of Americans hold about 31% of total U.S. wealth. The bottom 50% — roughly 165 million people — hold about 2.5% combined.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This isn't about who works hard. It's about where wealth is concentrated before anyone starts working. When half the country splits 2.5% of the wealth, the playing field isn't uneven — it barely exists.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Tax policy, inheritance rules, capital gains rates — all set by Congress. The rules that determine how wealth accumulates are written by the people funded by those who benefit most from them.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Mobility -->
+    <div class="chart-block">
+      <h3 class="chart-hook">If you're born poor in America, there's a 7.5% chance you'll reach the top. A 33% chance you'll stay at the bottom.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST1_Mobility_Chart.png" alt="Mobility Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">A child born into the bottom 20% of income has only about a 7.5% chance of reaching the top 20%. But there's a 33% chance they stay in the bottom 20%. Meanwhile, a child born into the top 20% has a 39% chance of staying there.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The story says "anyone can make it if they try." The data says where you start is where you'll probably end up. Mobility isn't impossible — but the odds are stacked before you're old enough to make a choice.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Education funding, housing policy, healthcare access — the systems that shape mobility are all government-run. The agencies responsible for leveling the field aren't producing equal odds.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: International Stickiness -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In the U.S., you're 42% likely to stay poor. In Denmark, it's 25%.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST1_International_Stickiness_Chart.png" alt="International Stickiness Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Among developed nations, the U.S. has the highest probability — about 42% — that someone born into the bottom 20% stays there. The UK is 30%. Canada 26%. Finland and Norway around 24%. Denmark 25%.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Other countries figured out how to build systems where being born poor doesn't define your life. The U.S. hasn't. This isn't a cultural difference — it's a policy difference. Other nations invest differently in education, healthcare, and social mobility. The American system produces stickier poverty than almost any peer nation.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The U.S. spends more per capita on healthcare and education than most of these countries — and gets worse outcomes. The issue isn't spending. It's where the money goes.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Vacant Homes vs Homeless -->
+    <div class="chart-block">
+      <h3 class="chart-hook">15 million homes are vacant. 650,000 people are homeless.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST2_VacantHomes_vs_Homeless.png" alt="Vacant Homes vs Homeless">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In 2024, there are roughly 15 million vacant homes in the U.S. and about 650,000 people experiencing homelessness. That's roughly 23 empty homes for every homeless person.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The narrative says there isn't enough housing. The data says there's plenty — it's just not available to the people who need it. Vacancy isn't a supply problem. It's an allocation problem. Homes are held as investments, second properties, or speculative assets while people sleep outside.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          HUD tracks homelessness. The Census Bureau tracks vacancy. Both report to Congress. The data has been available for years. The gap persists because closing it would disrupt the investment model.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: Food Waste vs Food Insecurity -->
+    <div class="chart-block">
+      <h3 class="chart-hook">America wastes 120 billion pounds of food a year. 18 million households can't afford enough.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST2_FoodWaste_vs_FoodInsecurity.png" alt="Food Waste vs Food Insecurity">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The U.S. wastes about 120 billion pounds of food annually. At the same time, roughly 18 million households are classified as food insecure — meaning they don't consistently have enough to eat.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Same pattern as housing. The narrative says there's not enough. The data says there's more than enough — it's just being thrown away. Food insecurity isn't a production problem. It's a distribution problem.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The USDA oversees both food production standards and SNAP benefits. The agency that manages surplus is the same one that manages hunger. The waste continues while the need grows.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 6: Productivity vs Wages -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Workers produce 65% more. They're paid 15% more.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST2_Productivity_vs_Wages.png" alt="Productivity vs Wages">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Since 1979, American worker productivity has grown about 65%. Over the same period, wages grew only about 15%. The gap between what workers produce and what they're paid has widened for over 40 years.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The story says "work hard and you'll get ahead." The data says workers have been working harder and producing more — and the gains went somewhere else. This chart is the foundation of the wage-price squeeze that shows up in housing, healthcare, and food costs.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The surplus between productivity and wages doesn't disappear — it flows to corporate profits and executive compensation. The Department of Labor tracks these numbers. The trend has been visible for decades.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 7: Fraud vs Legal Use -->
+    <div class="chart-block">
+      <h3 class="chart-hook">SNAP fraud is 1%. Legal use is 98%. But fraud dominates the narrative.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST3_Fraud_vs_LegalUse.png" alt="Fraud vs Legal Use">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Of all SNAP (food stamps) spending, about 1% is actual fraud. Around 10% is administrative errors — mistakes made by the government, not recipients. The remaining ~98% is legal, proper use.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The story about "welfare fraud" drives policy debates, eligibility restrictions, and public anger. The actual data shows fraud is a rounding error. The far bigger problem is government administrative errors — 10x larger than fraud. But that story doesn't get told because it doesn't blame the right people.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Congress funds enforcement programs to catch the 1%. It underfunds the administrative systems that cause the 10%. The investment in catching fraud is disproportionate to its actual size — because the narrative is more useful than the math.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 8: Disability Denial Funnel -->
+    <div class="chart-block">
+      <h3 class="chart-hook">65% of disability claims are denied on the first try. If you appeal, 84% are denied again.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST3_Disability_Denial_Funnel.png" alt="Disability Denial Funnel">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The Social Security Administration denies about 65% of initial disability claims. If you request reconsideration, 84% are denied again. Even at the hearing stage, about 50% are still denied.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The system is designed as a funnel that pushes people out. Most people who are denied don't have the resources, time, or legal help to keep appealing. The process itself becomes the filter — not medical evidence.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          SSA's processing backlog has been growing for years while staffing has been cut. Fewer workers processing more claims means more denials by default. The denial rate isn't a medical judgment — it's a capacity problem.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 9: Documentation Burden -->
+    <div class="chart-block">
+      <h3 class="chart-hook">To get homeless assistance, you need to prove you're disabled, document how long you've been homeless, and show you've broken specific rules.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST3_Documentation_Burden.png" alt="Documentation Burden">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">To qualify for federal homeless assistance, applicants need at minimum: 1 document proving disability status, 3 documents proving duration of homelessness, and 1 document related to rule violations. These are minimums — actual requirements are often higher.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">You're homeless. You may not have an ID. You may not have medical records. You may not have a stable address to receive mail. And the system requires paperwork that assumes you have all of those things. The documentation burden is a barrier disguised as a process.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          HUD sets these documentation requirements. The more barriers to entry, the fewer people qualify, and the less the system has to spend. Complexity reduces cost — at the expense of the people the program is supposed to serve.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 10: CEO Worker Pay Ratio -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In 1965, CEOs made 20x what workers made. Today, it's 280x.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST4_CEO_Worker_Pay_Ratio.png" alt="CEO Worker Pay Ratio">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The CEO-to-worker pay ratio was about 20:1 in 1965. It rose to 30:1 by 1978, then 60:1 by 1989. It peaked around 380:1 in 2000, and sits at roughly 280:1 in 2024.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is where the productivity-wage gap went. Workers produced more. CEOs captured the gains. The ratio didn't drift — it exploded. And it happened alongside policy changes in tax rates, stock option rules, and executive compensation structures.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The SEC requires public companies to disclose CEO-to-worker pay ratios (since 2018). Congress set that rule. But disclosure without consequence is just transparency theater.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 11: Hours Worked -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Americans work 1,800 hours a year. Germans work 1,340. Who's lazy?</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST4_Hours_Worked_Chart.png" alt="Hours Worked Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In 2023, the average American worked about 1,800 hours per year. The UK averaged about 1,530, France about 1,500, and Germany about 1,340. The U.S. works more hours than every major European economy.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The narrative says Americans need to work harder. The data says Americans already work more hours than comparable nations — and still fall behind on housing, healthcare, and savings. The problem isn't hours. It's what those hours buy.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The U.S. has no federal law mandating paid vacation, paid sick leave, or maximum work hours. The Department of Labor sets minimum wage but not maximum workload. European countries legislate both. The difference is policy, not effort.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 12: Crime Rates -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Crime is down over 60% since 1991. Spending on policing tripled.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST5_Crime_Rates_Chart.png" alt="Crime Rates Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Violent crime dropped from about 750 per 100,000 in 1991 to roughly 350 in 2023. Property crime fell from about 5,100 to roughly 1,900. Murder rates dropped proportionally as well.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The narrative says crime is out of control. The data says crime has been dropping for 30 years. The perception of danger has increased while actual danger has decreased. That perception gap drives policy and spending.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The next two charts show where the money went despite falling crime.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 13: Justice Spending -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Crime dropped. Justice spending went from $66 billion to $220 billion.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST5_Justice_Spending_Chart.png" alt="Justice Spending Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Police spending grew from about $47 billion in 1977 to roughly $135 billion in 2021. Corrections spending grew from about $19 billion to roughly $87 billion. Total justice system spending more than tripled — while crime fell.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">If the system were responding to actual crime levels, spending should have leveled off or declined. Instead, it grew. The justice system expanded not because of rising danger, but because spending became self-sustaining — driven by budgets, contracts, and institutional growth.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          State and local governments fund most policing and corrections. Federal grants incentivize expansion. The DOJ distributes billions in law enforcement grants annually. More spending justifies more spending.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 14: Incarceration Population -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The U.S. went from 500,000 prisoners to 1.8 million. Crime went down the whole time.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST5_Incarceration_Population_Chart.png" alt="Incarceration Population Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The U.S. incarcerated population grew from about 500,000 in 1980 to a peak of roughly 2.3 million in 2008. By 2022, it had declined to about 1.8 million — but that's still more than triple the 1980 level.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Crime peaked in 1991 and has fallen steadily since. But incarceration kept climbing until 2008 and remains massively elevated. Locking more people up didn't cause the crime decline — the decline happened anyway. The growth was driven by mandatory minimums, three-strikes laws, and the war on drugs.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Incarceration costs roughly $40,000 per person per year. At 1.8 million people, that's $72 billion annually. Private prisons, commissary contracts, phone service monopolies — entire industries depend on incarceration continuing. The incentive isn't safety. It's revenue.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 15: Ticket Revenue Response -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When tax revenue drops, traffic tickets go up 40%.</h3>
+      <img class="chart-image" src="/docs/room1/stories-that-steer-us/ST5_Ticket_Revenue_Response_Chart.png" alt="Ticket Revenue Response Chart">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In years following a decline in local tax revenue, traffic fine revenue increases by roughly 40% compared to normal years.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Traffic enforcement isn't just about safety — it's about budgets. When cities lose tax revenue, they make up the difference by writing more tickets. The people paying those fines are disproportionately lower-income drivers who can least afford them.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Municipal courts and local police departments often share fine revenue. The DOJ's investigation of Ferguson, Missouri exposed this model nationally — but it wasn't unique to Ferguson. It's how many local governments balance their books.
         </div>
       </div>
     </div>
