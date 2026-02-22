@@ -111,6 +111,21 @@
             line-height: 1.6;
             margin: 0 0 16px 0;
         }
+        .tl-room-hook {
+            font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+            color: #ccd6f6;
+            max-width: 500px;
+            line-height: 1.4;
+            margin: 0 0 12px 0;
+        }
+        .tl-room-ground {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: #8892b0;
+            max-width: 500px;
+            line-height: 1.5;
+            margin: 0 0 16px 0;
+        }
         .tl-room-tag {
             display: inline-block;
             font-size: 0.7rem;
@@ -215,7 +230,7 @@
             border: none;
             text-align: left;
             color: #ccd6f6;
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             cursor: pointer;
             transition: background 0.2s;
         }
@@ -877,16 +892,17 @@
 <section class="tl-room" id="room-01">
   <span class="tl-room-number">01</span>
   <h2 class="tl-room-title">HOW IT<br>WORKS</h2>
-  <p class="tl-room-desc">Rules and incentives that shape what governments and companies do.</p>
-  <span class="tl-room-tag">Structure</span>
+  <p class="tl-room-hook">Why does everything cost more — but your pay doesn't rise the same way?</p>
+  <p class="tl-room-ground">It's not random. There's a system behind it.</p>
+  <span class="tl-room-tag">Start Here</span>
   <div class="room-dropdown" id="room01-dropdown">
     <button class="room-dropdown-btn" onclick="toggleRoom01Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
-      <button class="room-dropdown-item" onclick="openScrollModal('incentive-machine-scroll')">The Incentive Machine</button>
-      <button class="room-dropdown-item disabled">Power Loops <span class="coming-soon">(Coming Soon)</span></button>
-      <button class="room-dropdown-item disabled">Stories That Steer Us <span class="coming-soon">(Coming Soon)</span></button>
-      <button class="room-dropdown-item disabled">Systems vs Individuals <span class="coming-soon">(Coming Soon)</span></button>
-      <button class="room-dropdown-item disabled">Your Place in the Loop <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('incentive-machine-scroll')">Who benefits — and how</button>
+      <button class="room-dropdown-item disabled">How influence circulates <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">How narratives shape decisions <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Structure vs. intent <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Where you connect to the system <span class="coming-soon">(Coming Soon)</span></button>
     </div>
   </div>
 </section>
