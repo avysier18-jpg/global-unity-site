@@ -933,7 +933,7 @@
       <button class="room-dropdown-item" onclick="openScrollModal('power-loops-scroll')">How influence circulates</button>
       <button class="room-dropdown-item" onclick="openScrollModal('stories-steer-scroll')">How narratives shape decisions</button>
       <button class="room-dropdown-item" onclick="openScrollModal('systems-individuals-scroll')">Structure vs. intent</button>
-      <button class="room-dropdown-item disabled">Where you connect to the system <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('your-place-loop-scroll')">Where you connect to the system</button>
     </div>
   </div>
 </section>
@@ -2714,6 +2714,65 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Congress funds SNAP fraud enforcement heavily. It does not proportionally fund fixing the administrative systems that cause errors 7x larger than fraud. The enforcement investment follows the narrative, not the data.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Your Place in the Loop - Where You Connect to the System -->
+<div id="scroll-modal-your-place-loop-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">05 — Where You Connect to the System</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Donor Breakdown -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Your $25 donation is 16% of the pie. Large donors and PACs own the other 84%.</h3>
+      <img class="chart-image" src="/docs/room1/your-place-in-the-loop/YPL2_Donor_Breakdown.png" alt="Donor Breakdown">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In the 2024 election cycle, small donors (under $200) made up about 16% of total political contributions. Large donors (over $200) accounted for roughly 62%. PACs contributed about 22%.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is where you sit in the system. You can donate. You can participate. But your money is a fraction of what flows in. The system isn't designed to run on small contributions — it's designed to run on large ones. Your participation is welcome. Your influence is marginal.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The FEC tracks these numbers. They're public. The ratio hasn't meaningfully shifted toward small donors in 24 years. The structure of campaign finance ensures that the people writing the biggest checks get the most access.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Small Donor Trend -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Small donors went from 14% to 23% in 24 years. Large donors still dominate at 62%.</h3>
+      <img class="chart-image" src="/docs/room1/your-place-in-the-loop/YPL2_Small_Donor_Trend.png" alt="Small Donor Trend">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">From 2000 to 2024, small donor contributions grew from about 14% to 23% of total candidate funding. Large donors dropped slightly from ~70% to ~62%. PAC funding stayed flat around 15%. The gap narrowed — but large donors still control 3x more than small donors.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is the good news and the bad news. Small donors are growing. Grassroots fundraising has made a real dent — especially since 2008. But even after 24 years of growth, small donors are still outweighed 3-to-1 by large donors. Progress is real. Parity is not.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The rise of online fundraising platforms (ActBlue, WinRed) made small donations easier. But large donors adapted too — Super PACs (post-Citizens United, 2010) created unlimited channels for big money. Every time small donors gain ground, the system creates new channels for concentrated wealth.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: US Voter Turnout -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In midterm elections, more than half of Americans don't vote. That's the other half of the loop.</h3>
+      <img class="chart-image" src="/docs/room1/your-place-in-the-loop/YPL2_US_Voter_Turnout.png" alt="US Voter Turnout">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Presidential election turnout has ranged from about 58% to 67% since 1980. Midterm turnout is far lower — dipping to 42% in 2014 and only recently climbing above 50% in 2018 and 2022. In most cycles, nearly half of eligible voters sit out.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Every chart in this library shows systems that aren't working for most people. But the people those systems are failing show up at half strength — or less — in the elections that determine who runs those systems. Midterms elect the Congress that writes the laws, funds the agencies, and sets the budgets. Half the country doesn't participate in that decision.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Low turnout isn't random — it correlates with income. Lower-income voters participate at lower rates. The people most affected by broken systems are the least represented in elections. Voter registration barriers, polling access, and work schedules all play a role. The system doesn't make it easy for the people it hurts most to change it.
         </div>
       </div>
     </div>
