@@ -942,9 +942,19 @@
 <section class="tl-room" id="room-02">
   <span class="tl-room-number">02</span>
   <h2 class="tl-room-title">MONEY<br>&amp; DEBT</h2>
-  <p class="tl-room-desc">How debt, prices, and the banking system function.</p>
-  <span class="tl-room-tag">Structure</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('who-actually-creates-money')">Enter Room</button>
+  <p class="tl-room-hook">Prices keep going up. Your paycheck doesn't. That's not inflation — that's design.</p>
+  <p class="tl-room-ground">This room shows how.</p>
+  <span class="tl-room-tag">Start Here</span>
+  <div class="room-dropdown" id="room02-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleRoom02Dropdown()">Enter Room</button>
+    <div class="room-dropdown-menu">
+      <button class="room-dropdown-item" onclick="openScrollModal('inflation-wages-scroll')">Why prices outrun paychecks</button>
+      <button class="room-dropdown-item disabled">What the Fed actually does <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Where money comes from <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Why housing swallows your income <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Who the rules actually protect <span class="coming-soon">(Coming Soon)</span></button>
+    </div>
+  </div>
 </section>
 
 <!-- ROOM 03 -->
@@ -2862,13 +2872,27 @@ document.addEventListener('keydown', function(e) {
 function toggleRoom01Dropdown() {
     const dropdown = document.getElementById('room01-dropdown');
     dropdown.classList.toggle('active');
+    // Close other dropdowns
+    document.getElementById('room02-dropdown')?.classList.remove('active');
+}
+
+// Room 02 Dropdown
+function toggleRoom02Dropdown() {
+    const dropdown = document.getElementById('room02-dropdown');
+    dropdown.classList.toggle('active');
+    // Close other dropdowns
+    document.getElementById('room01-dropdown')?.classList.remove('active');
 }
 
 // Close dropdown when clicking outside
 document.addEventListener('click', function(e) {
-    const dropdown = document.getElementById('room01-dropdown');
-    if (dropdown && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('active');
+    const dropdown1 = document.getElementById('room01-dropdown');
+    const dropdown2 = document.getElementById('room02-dropdown');
+    if (dropdown1 && !dropdown1.contains(e.target)) {
+        dropdown1.classList.remove('active');
+    }
+    if (dropdown2 && !dropdown2.contains(e.target)) {
+        dropdown2.classList.remove('active');
     }
 });
 
@@ -2878,8 +2902,9 @@ function openScrollModal(modalId) {
     if (modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        // Close dropdown
-        document.getElementById('room01-dropdown').classList.remove('active');
+        // Close all dropdowns
+        document.getElementById('room01-dropdown')?.classList.remove('active');
+        document.getElementById('room02-dropdown')?.classList.remove('active');
         // Initialize scroll observer
         initChartObserver();
     }
