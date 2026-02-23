@@ -949,7 +949,7 @@
     <button class="room-dropdown-btn" onclick="toggleRoom02Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('inflation-wages-scroll')">Why prices outrun paychecks</button>
-      <button class="room-dropdown-item disabled">What the Fed actually does <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('feds-real-job-scroll')">What the Fed actually does</button>
       <button class="room-dropdown-item disabled">Where money comes from <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Why housing swallows your income <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Who the rules actually protect <span class="coming-soon">(Coming Soon)</span></button>
@@ -2922,6 +2922,145 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           The Federal Reserve publishes an annual survey on household financial wellbeing. Congress receives this data. The agencies that set interest rates, regulate prices, and oversee lending all have access to these numbers. The outcome is documented. The pattern continues.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 02 - What the Fed Actually Does -->
+<div id="scroll-modal-feds-real-job-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">02 — What the Fed Actually Does</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Fed Funds Rate History -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The Fed controls one number. It changes the price of everything you borrow.</h3>
+      <img class="chart-image" src="/docs/room2/the-feds-real-job/chart1.png" alt="Fed Funds Rate History">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Three rates tracked from 1970 to 2024: the Fed Funds Rate (what banks charge each other), the Discount Rate (what the Fed charges banks), and the Prime Rate (what banks charge you). All three peaked around 14–15% in 1980, dropped steadily to near zero by 2010, stayed there for a decade, then shot back up after 2022.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The Fed doesn't set your mortgage rate or credit card rate directly. It sets the base rate — and everything else stacks on top. When the Fed moves, every loan in America moves with it. One institution, twelve voting members, zero elections — and they control the cost of money for 330 million people.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Fed is not a government agency — it's a quasi-independent institution. Its board members are appointed, not elected. The banks it regulates are also its member institutions. The people who set the cost of borrowing are not accountable to the people who pay it.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Rate Markup -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The Fed's rate is 5.3%. Your credit card rate is 23%. That's the markup.</h3>
+      <img class="chart-image" src="/docs/room2/the-feds-real-job/chart2.png" alt="Rate Markup">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In 2024: the Fed Funds Rate sits at about 5.3%. The Prime Rate (what banks charge best borrowers) is roughly 8.5%. Mortgage rates are about 7%. But credit card APRs hit approximately 23% — more than 4x the Fed's base rate.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The Fed sets the floor. Banks set the ceiling. The spread between what the Fed charges banks and what banks charge you is where profit lives. Credit card holders — disproportionately lower-income — pay the widest markup. The people who can least afford to borrow pay the most to do it.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The CFPB has attempted to cap certain fees but not the APR itself. The Fed could influence consumer rates through regulation but focuses on the base rate. The transmission from 5.3% to 23% happens in the private banking system — with no cap, no ceiling, and minimal oversight on the spread.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Mortgage Rate Asymmetry -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The Fed dropped rates to zero for a decade. Mortgage rates only fell to 3%. Then both exploded.</h3>
+      <img class="chart-image" src="/docs/room2/the-feds-real-job/chart3.png" alt="Mortgage Rate Asymmetry">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">From 2000 to 2020, the Fed Funds Rate dropped from about 6.2% to essentially 0%. Over that same period, 30-year mortgage rates fell from ~8% to about 3%. After 2022, the Fed hiked rates aggressively — and mortgages jumped from 3% to nearly 7% within two years.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When the Fed dropped rates, mortgage relief was slow and partial — rates fell from 8% to 3% over 20 years. When the Fed raised rates, the pain was immediate — mortgages nearly doubled in under two years. The benefits trickle down slowly. The costs hit fast. That asymmetry is baked into the system.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Fannie Mae and Freddie Mac set conforming loan standards. Banks set the actual mortgage rate. The Fed influences both — but the speed of the pass-through only works fast in one direction. Rate hikes reach consumers immediately. Rate cuts take years to fully arrive.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Credit Card Rate Asymmetry -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The Fed went to 0% for a decade. Credit card rates never dropped below 12%.</h3>
+      <img class="chart-image" src="/docs/room2/the-feds-real-job/chart4.png" alt="Credit Card Rate Asymmetry">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">From 2008 to 2020, the Fed Funds Rate was near 0%. During that same period, the average credit card APR stayed between 12% and 15% — never even approaching the low-rate environment the Fed created. After 2022, when the Fed raised rates, credit card APRs jumped immediately to ~23%.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is the clearest evidence of the asymmetry. Banks got to borrow for free for over a decade. They did not pass that savings to credit card holders. But the moment the Fed raised rates, banks passed the increase to consumers within months. Down slow, up fast. That's not monetary policy — that's a margin strategy.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Credit card issuers are regulated by the OCC, the FDIC, and the CFPB. None of these agencies require that rate decreases be passed to consumers at the same speed as rate increases. The one-way transmission is legal. It's just not fair.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: Corporate vs Small Business -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When the Fed dropped rates to zero, corporations got cheap money. Small businesses still paid 6%.</h3>
+      <img class="chart-image" src="/docs/room2/the-feds-real-job/chart5.png" alt="Corporate vs Small Business Rates">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">Three borrowing rates tracked against the Fed Funds Rate: the Prime Rate (small business benchmark), and Corporate Bond Yields (BAA, large company benchmark). When the Fed went to 0%, large corporations saw bond yields drop to ~4%. The Prime Rate — what small businesses pay — stayed around 3.25% but still represented a much larger spread above the Fed rate. After 2022, all three spiked — but the Prime Rate hit 8.5%, making small business borrowing significantly more expensive.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Cheap money flowed to big corporations through bond markets. Small businesses borrowing through bank loans paid more — always. The Fed's low-rate era was a gift to large companies that could access capital markets directly. Small businesses, who depend on bank loans, got less relief and faster pain.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The SBA is supposed to support small business lending. The Fed's quantitative easing programs bought corporate bonds — directly reducing big company borrowing costs. No equivalent program existed to directly reduce small business loan rates. The plumbing of the system favors scale.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 6: The 3% Spread -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Banks always add 3% on top of whatever the Fed charges. No matter what.</h3>
+      <img class="chart-image" src="/docs/room2/the-feds-real-job/chart6.png" alt="The 3% Spread">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The spread between the Prime Rate and the Fed Funds Rate has stayed almost perfectly flat at ~3 percentage points from 2000 to 2024. It barely moved — from about 2.97% to 3.18% over 24 years.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is the banking industry's guaranteed markup. Whatever the Fed sets, banks add ~3% on top for their best customers — and much more for everyone else. The spread is so consistent it might as well be a law of physics. It means banks never absorb the cost of rate changes. They always pass it through, plus their fixed margin.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Prime Rate is technically not regulated — it's an industry convention. But it functions like a tax on borrowing that never varies, never gets debated in Congress, and never appears on a ballot. Three percent of every dollar borrowed, every time, automatically.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 7: Rate-Sensitive vs Insensitive Inflation -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The Fed crushed used car prices. Auto insurance went up 20%. Rate hikes can't fix both.</h3>
+      <img class="chart-image" src="/docs/room2/the-feds-real-job/chart7.png" alt="Rate-Sensitive vs Insensitive Inflation">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">From 2022 to 2024, items sensitive to interest rates (used cars, gasoline) saw prices drop — used cars fell ~10%, gasoline dropped ~5%. But items insensitive to rates kept climbing — auto insurance up ~20%, hospital services up ~6%, rent still up ~3%.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The Fed's only tool is interest rates. Raising rates works on things people finance — cars, houses. It does not work on services — insurance, healthcare, rent. The Fed can cool one half of the economy while the other half keeps burning. People still face rising costs in the categories that matter most to daily life.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Fed targets overall inflation using a single tool. But inflation isn't uniform — it hits differently depending on what you spend money on. Service-sector inflation is driven by market concentration, labor shortages, and regulatory structures that interest rates can't touch. The tool doesn't match the problem.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 8: Service Inflation -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Car insurance is up 16% in one year. The Fed can't fix that with interest rates.</h3>
+      <img class="chart-image" src="/docs/room2/the-feds-real-job/chart8.png" alt="Service Inflation">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">In 2024, year-over-year price increases for key services: motor vehicle insurance ~16%, maintenance and repair ~7%, hospital services ~6%, veterinary services ~5%. All well above the Fed's 2% inflation target.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">These are costs you can't avoid. You're required by law to have car insurance. You can't negotiate hospital bills in an emergency. Vet care, home repair — these aren't luxury purchases. And none of them respond to the Fed's interest rate tool. The prices that hurt the most are the ones the Fed can't control.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          State insurance commissioners regulate insurance rates. CMS oversees hospital pricing. These agencies — not the Fed — have jurisdiction over the prices still climbing fastest. But the public conversation focuses on the Fed as if it controls all inflation. It doesn't. And the agencies that do have jurisdiction aren't moving the needle.
         </div>
       </div>
     </div>
