@@ -950,7 +950,7 @@
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('inflation-wages-scroll')">Why prices outrun paychecks</button>
       <button class="room-dropdown-item" onclick="openScrollModal('feds-real-job-scroll')">What the Fed actually does</button>
-      <button class="room-dropdown-item disabled">Where money comes from <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('money-creation-scroll')">Where money comes from</button>
       <button class="room-dropdown-item disabled">Why housing swallows your income <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Who the rules actually protect <span class="coming-soon">(Coming Soon)</span></button>
     </div>
@@ -3061,6 +3061,113 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           State insurance commissioners regulate insurance rates. CMS oversees hospital pricing. These agencies — not the Fed — have jurisdiction over the prices still climbing fastest. But the public conversation focuses on the Fed as if it controls all inflation. It doesn't. And the agencies that do have jurisdiction aren't moving the needle.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 02 - Where Money Comes From -->
+<div id="scroll-modal-money-creation-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">03 — Where Money Comes From</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Bank Deposits vs Cash -->
+    <div class="chart-block">
+      <h3 class="chart-hook">90% of all money in America exists only as numbers in a bank's computer — not as cash you can hold.</h3>
+      <img class="chart-image" src="/docs/room2/who-actually-created-money/chart1mN.png" alt="Bank Deposits vs Cash">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart compares two types of money in the U.S. economy. Bank deposits — the numbers in your checking and savings accounts — make up about 90% of all money. Physical cash, the bills and coins you can actually hold, makes up only about 10%. Most money was never printed.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When you get paid, no physical money moves. When you pay rent, no bills change hands. Almost every financial transaction in your life happens inside a computer system run by private banks. The cash in your wallet is a tiny slice of what "money" actually is.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Federal Reserve (Fed) oversees this system, but private commercial banks — like JPMorgan Chase, Bank of America, and Wells Fargo — are the ones who actually create and hold the deposits that make up 90% of the money supply. The FDIC insures those deposits up to $250,000 per account, meaning taxpayers backstop the system if a bank fails.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: M0 vs M2 -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The government created $5 trillion. Banks turned it into $22 trillion.</h3>
+      <img class="chart-image" src="/docs/room2/who-actually-created-money/chart2m.png" alt="M0 vs M2">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart compares two measures of money. M0 — the monetary base — is the money the Federal Reserve actually created: about $5,000 billion (that's $5 trillion). M2 — broad money — is what the total money supply looks like after banks get involved: about $22,000 billion ($22 trillion). The difference between those two bars is money that banks created, not the government.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Most people assume the government prints all the money. This chart shows that's not how it works. For every dollar the Fed creates, the banking system expands it into roughly four dollars in circulation. That expansion happens through lending — and it happens without a vote, without an election, and mostly out of public view.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Federal Reserve controls M0 — the base. But the expansion from $5T to $22T happens through commercial banks, regulated by the Fed, the OCC (Office of the Comptroller of the Currency), and the FDIC. Updated FRED data (Dec 2025) puts M0 at $5,362B and M2 at $22,411B — the gap has only grown.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Bank-Created vs Printed Money -->
+    <div class="chart-block">
+      <h3 class="chart-hook">There is $18,000 billion in bank accounts. Only $2,000 billion of it was ever printed.</h3>
+      <img class="chart-image" src="/docs/room2/who-actually-created-money/chart3m.png" alt="Bank-Created vs Printed Money">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart breaks down the U.S. money supply into two categories. Bank-created money — the deposits sitting in checking and savings accounts — totals roughly $18,500 billion. Physical cash in circulation totals roughly $2,200 billion. The tall bar on the left was created by banks making loans. The short bar on the right was printed by the government.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The money in your bank account is not stored cash in a vault. It is a number on a ledger — a record of what the bank owes you. Banks create that number when they issue loans. This means the majority of the money supply is created by private institutions as a byproduct of lending, and it can shrink just as fast if banks pull back.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The FDIC reports total domestic deposits at insured institutions at approximately $18.2–$18.7 trillion as of Q3 2025. The Federal Reserve's currency-in-circulation figure stood at $2,432B as of December 2025 — slightly above what the chart shows. The OCC, FDIC, and Fed all share oversight of how banks grow and shrink that deposit number.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Reserves vs Loans -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In 2008, banks held almost zero in reserve. By 2014, they held $3 trillion — and kept lending anyway.</h3>
+      <img class="chart-image" src="/docs/room2/who-actually-created-money/chart4m.png" alt="Reserves vs Loans">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This line chart tracks two things from 2008 to 2025. The dark line shows bank reserves — money banks keep at the Federal Reserve. It started near zero in 2008 and climbed to about $3 trillion by 2014, then leveled off. The light blue line shows total bank loans, which grew steadily from about $7 trillion in 2008 to over $12 trillion by 2025. Both lines went up at the same time — banks didn't need to choose between holding reserves and making loans.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This chart breaks a common assumption: that banks can only lend what they have saved. The data shows that banks expanded their loans even as reserves piled up. The reserves didn't fund the loans — they sat separately at the Fed, earning interest. Loans grew because demand existed, not because reserves were released.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Federal Reserve paid interest on those reserves — meaning banks earned money just for parking funds at the Fed, funded indirectly by taxpayers. FRED data shows the 2025 total loan figure is closer to $13.3 trillion — about $800 billion higher than charted — reflecting continued loan growth through late 2025.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: How Banks Create Money -->
+    <div class="chart-block">
+      <h3 class="chart-hook">A bank creates a $100 loan by typing $100 into two columns at the same time.</h3>
+      <img class="chart-image" src="/docs/room2/who-actually-created-money/chart5mN.png" alt="How Banks Create Money">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows a simplified bank balance sheet before and after a $100 loan is made. Before the loan: both Assets and Liabilities are at zero. After the loan: both jump to $100. The loan itself becomes an asset (what the bank is owed). The deposit created for the borrower becomes a liability (what the bank owes). Both sides grow equally — the bank didn't move existing money. It created new money on both sides of its ledger simultaneously.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This is how money is actually born in the modern banking system. A bank doesn't take someone else's savings and hand them to a borrower. It creates a new deposit — new money — at the moment the loan is approved. This is confirmed by the Bank of England and the Federal Reserve. Understanding this changes how you think about debt, interest, and who benefits from the lending process.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Commercial banks — not the Federal Reserve, not the U.S. Treasury — create money this way every time they approve a loan. The Fed sets the rules around how much capital banks must hold, regulated by the OCC and Federal Reserve under Basel III standards. Banks earn interest on the loans they create, while the depositor earns a fraction of that back — if anything.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 6: Capital Ratios -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Before the 2008 crash, banks held about 9 cents of real capital for every dollar they owed. Today it's closer to 14 cents.</h3>
+      <img class="chart-image" src="/docs/room2/who-actually-created-money/chart6m.png" alt="Capital Ratios">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart compares average Tier 1 capital ratios for U.S. banks in 2008 versus 2025. In 2008, the ratio was approximately 9% — meaning for every $100 a bank owed, it had about $9 in actual capital as a cushion. By 2025, that ratio climbed to roughly 13.5%. Tier 1 capital is the financial cushion a bank must hold to absorb losses before it collapses.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The 2008 financial crisis happened partly because banks had too little cushion when loans went bad. The higher ratios today mean banks are required to hold more real capital — which makes the system more stable. But "more stable" doesn't mean fully protected. Even at 14%, a bank is still leveraged roughly 7-to-1 against its capital base.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          These ratios are set and enforced under the Basel III international framework, implemented in the U.S. by the Federal Reserve, the OCC, and the FDIC. Updated FDIC data shows the actual 2025 industry average Tier 1 ratio is approximately 14.07% — slightly above the chart — and has been stable between 14.0% and 14.2% throughout 2024–2025. Banks lobbied extensively against higher capital requirements during the Basel III endgame negotiations in 2023–2024.
         </div>
       </div>
     </div>
