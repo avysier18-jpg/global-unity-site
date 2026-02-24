@@ -969,7 +969,7 @@
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('agenda-scroll')">Who Sets the Agenda</button>
       <button class="room-dropdown-item" onclick="openScrollModal('majority-minority-scroll')">Majority and Minority</button>
-      <button class="room-dropdown-item disabled">Oversight <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('oversight-scroll')">Oversight</button>
       <button class="room-dropdown-item disabled">What the Bills Do <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Patterns Over Time <span class="coming-soon">(Coming Soon)</span></button>
     </div>
@@ -3686,6 +3686,129 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Subpoena power is the most valuable tool in this chart — it compels the production of documents and testimony that companies and executives would otherwise withhold. When the majority controls subpoenas, they decide which corporate records get examined and which stay private. This power is worth enormous amounts to regulated industries. Defense contractors, pharmaceutical companies, financial institutions, and technology firms all have millions or billions of dollars in regulatory outcomes that can hinge on whether a committee chair issues a subpoena or declines to. The majority's exclusive control of this tool gives their members exceptional leverage over industries in their jurisdiction — leverage that translates directly into campaign contributions from those industries seeking to influence or prevent committee action.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 03 - Oversight -->
+<div id="scroll-modal-oversight-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">03 — Oversight</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Hearing Time Allocation -->
+    <div class="chart-block">
+      <h3 class="chart-hook">At most congressional hearings, members spend more time making statements than asking questions. The witness is there — but barely gets to speak.</h3>
+      <img class="chart-image" src="/docs/room3/oversight/chart1.png" alt="Hearing Time Allocation">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows how hearing time is allocated between member statements, member questions, and witness responses. Member statements and grandstanding consume the majority of hearing time — often 60% or more. Actual witness testimony and responses occupy a fraction of the time, even though the stated purpose of a hearing is to gather information from the witness. The five-minute rule gives each member a window, but most use it to make speeches rather than inquire.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Congressional hearings are supposed to be fact-finding exercises. When members spend most of their time making statements instead of asking questions, the hearing becomes a performance rather than an investigation. Witnesses with important information never get to share it fully. Complex issues get reduced to soundbites. The public learns less about what's actually happening in government. The format rewards members who generate clips for cable news and social media — not members who conduct serious oversight.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Viral hearing clips drive campaign donations. When a member's five-minute confrontation gets millions of views, the fundraising emails go out within hours. ActBlue and WinRed have documented donation spikes that correlate directly with trending hearing moments. Members who generate clips raise more money than members who ask substantive questions that lead nowhere viral. The hearing format has evolved to serve the fundraising model — not the oversight function.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Viral vs Policy Outcomes -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The hearings that get the most views almost never produce policy changes. The ones that change policy almost never go viral.</h3>
+      <img class="chart-image" src="/docs/room3/oversight/chart2.png" alt="Viral vs Policy Outcomes">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart compares hearing virality — measured by social media engagement and news coverage — against policy outcomes like legislation passed, regulations changed, or agency reforms implemented. High-virality hearings cluster near zero on policy impact. High-impact hearings cluster near zero on virality. The two metrics are essentially uncorrelated, and the most successful hearings by one measure tend to fail by the other.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When the public watches a hearing that generates outrage and assumes something will change, they're usually wrong. The hearings designed to create viral moments are structurally different from hearings designed to build legislative records. Viral hearings feature confrontation and gotcha questions. Policy hearings feature technical witnesses, detailed questioning, and bipartisan participation. The incentives have diverged so completely that a hearing can be a massive political success and a complete oversight failure simultaneously.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Media companies profit from viral hearings — they drive traffic, engagement, and advertising revenue. Members profit from viral hearings — they drive donations, name recognition, and primary election success. The only entities that don't profit from viral-over-substance are the public and the agencies that should be held accountable. When a hearing goes viral but produces no policy change, the outrage industry wins and governance loses. The financial incentives are aligned against actual oversight.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Oversight Success Rates -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Congress holds hundreds of oversight hearings every year. Fewer than 5% result in any documented change to agency behavior.</h3>
+      <img class="chart-image" src="/docs/room3/oversight/chart3.png" alt="Oversight Success Rates">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows oversight hearing outcomes across several categories: hearings that led to legislation, hearings that led to regulatory changes, hearings that produced agency reforms, and hearings with no documented impact. The overwhelming majority — over 95% — fall into the "no documented impact" category. The hearings that produce change are the rare exceptions, not the norm.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Oversight hearings consume enormous resources — staff time, member time, witness preparation, agency document production, and public attention. When fewer than 5% produce any measurable result, the question becomes: what is the other 95% actually for? The answer is often political theater, base mobilization, and fundraising content. Hearings have become ends in themselves rather than means to accountability. The public watches thinking oversight is happening. Mostly, it isn't.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Agencies being "overseen" often prefer the theater to actual accountability. A hearing that generates headlines but no follow-up is better for them than quiet, sustained pressure that forces change. Lobbyists advise clients that most hearings can be weathered with good preparation and no policy concessions. The legal and consulting industry that prepares witnesses and agencies for hearings profits regardless of outcome. A failed hearing from an accountability perspective is still a successful hearing from a billing perspective.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Post-Hearing Fundraising -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Within 48 hours of a high-profile hearing, members who generated viral clips see donation spikes of 300% or more. The hearing is the product — accountability is the packaging.</h3>
+      <img class="chart-image" src="/docs/room3/oversight/chart4.png" alt="Post-Hearing Fundraising">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart tracks small-dollar donations to members in the 48 hours following major hearings, compared to their baseline fundraising rate. Members who generated widely-shared clips see donations spike dramatically — often 200-400% above baseline. Members who asked substantive questions but didn't generate clips see no significant change. The fundraising benefit goes entirely to the performers, not the investigators.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When hearings directly fund campaigns, the incentive is to optimize for fundraising, not oversight. A member preparing for a hearing faces a choice: ask the question most likely to uncover truth, or ask the question most likely to go viral and raise money. These are often different questions. The fundraising feedback loop has turned hearings into content-generation events. The witnesses are props. The questions are scripts. The donations are the point.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          ActBlue and WinRed process billions in donations and have infrastructure specifically designed to capitalize on viral moments. Fundraising emails are drafted before hearings begin, with blanks ready to fill in with whatever clip performs best. Campaign consultants advise members on how to create "fundraisable moments." The entire ecosystem — platforms, consultants, fundraising processors — profits from hearings that generate outrage. No one in that ecosystem profits from hearings that quietly improve government.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: Social Media Follower Gains -->
+    <div class="chart-block">
+      <h3 class="chart-hook">A single viral hearing clip can add 100,000 followers to a member's social media accounts. That's not oversight — that's brand-building.</h3>
+      <img class="chart-image" src="/docs/room3/oversight/chart5.png" alt="Social Media Follower Gains">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows social media follower growth for members following high-profile hearing appearances. Members who generate viral clips see follower counts spike by tens or hundreds of thousands. The gains are concentrated among a small number of members who have mastered the performance format. Most members who participate in hearings see no significant social media benefit — because they're doing oversight instead of content creation.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Social media following translates directly into political power. A member with millions of followers can bypass traditional media, dominate news cycles, and build a national brand. That brand is the foundation for higher office, book deals, media contracts, and post-congressional careers. Hearings have become audition tapes for these opportunities. When a member asks a question, they're often thinking about how it will play on Twitter, not what it will reveal about government.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Social media platforms profit from viral political content — it drives engagement, keeps users on the platform, and generates advertising revenue. Members with large followings become valuable to the platforms. The platforms' algorithms reward confrontation and outrage, which means members who perform at hearings get amplified while members who do serious work get ignored. The incentive structure is built by and for the platforms, not for democratic accountability.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 6: Heat vs Light Scores -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Researchers scored hearings on "heat" — emotional intensity — versus "light" — factual information produced. High-heat hearings generate 10x the coverage but 1/10th the substance.</h3>
+      <img class="chart-image" src="/docs/room3/oversight/chart6.png" alt="Heat vs Light Scores">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart plots hearings on two dimensions: heat (emotional intensity, confrontation, drama) and light (factual findings, documented evidence, substantive revelations). Most hearings cluster in one of two zones: high-heat/low-light in the upper left, or low-heat/high-light in the lower right. Very few hearings achieve both. The hearings that dominate public attention are almost always in the high-heat/low-light zone.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Heat and light serve different purposes. Heat mobilizes the base, generates donations, and creates media moments. Light informs the public, builds legislative records, and enables accountability. When hearings optimize for heat at the expense of light, the public gets angrier but not smarter. They feel like something important is happening, but the information they need to hold anyone accountable never gets produced. The hearing has succeeded as entertainment and failed as oversight.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Cable news networks need content that keeps viewers watching. High-heat hearings deliver that. A calm, detailed examination of regulatory compliance doesn't. Producers select clips based on emotional intensity, not informational value. The members who understand this create hearings designed for cable news — and cable news rewards them with coverage. The financial model of 24-hour news requires heat. Light doesn't pay the bills. The coverage incentives and the oversight incentives are fundamentally misaligned.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 7: Heat vs Light Scatter Plot -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When you map every major hearing from the last decade, the pattern is unmistakable: we've built an oversight system optimized for performance, not accountability.</h3>
+      <img class="chart-image" src="/docs/room3/oversight/chart7.png" alt="Heat vs Light Scatter Plot">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This scatter plot shows individual hearings plotted by their heat and light scores, with size indicating media coverage received. The largest dots — the most-covered hearings — are almost all in the high-heat/low-light quadrant. A few small dots appear in the high-light zone, representing substantive hearings that received little attention. The visual pattern reveals how media coverage rewards heat over light, and how hearings have adapted to chase that coverage.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">This isn't a few bad hearings. It's a system. The incentives — fundraising, media coverage, social media growth, political advancement — all point toward heat. The institutions that should reward light — journalism, voters, party leadership — have instead adapted to reward heat. The result is an oversight system that performs accountability without delivering it. The public sees investigations. They see confrontations. They see outrage. What they don't see is change.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Every actor in this system is following their financial incentives rationally. Members raise more money from heat. Media companies get more viewers from heat. Platforms get more engagement from heat. Consultants get more clients from members who generate heat. The only people who would benefit from light are citizens who want accountable government — and they don't write checks, buy ads, or generate clicks. Until the financial incentives change, the system won't. Heat pays. Light doesn't.
         </div>
       </div>
     </div>
