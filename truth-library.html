@@ -967,7 +967,7 @@
   <div class="room-dropdown" id="room03-dropdown">
     <button class="room-dropdown-btn" onclick="toggleRoom03Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
-      <button class="room-dropdown-item disabled">Who Sets the Agenda <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('agenda-scroll')">Who Sets the Agenda</button>
       <button class="room-dropdown-item disabled">Majority and Minority <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Oversight <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">What the Bills Do <span class="coming-soon">(Coming Soon)</span></button>
@@ -3456,6 +3456,145 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Banks collect the spread between both transactions — paying depositors less than they charge borrowers. That gap is profit. The OCC regulates national banks. The CFPB was supposed to limit predatory interest rates — in 2024 it capped credit card late fees at $8, a rule immediately challenged in court by JPMorgan Chase, Citibank, and Capital One. Courts blocked the rule. The banks that lobbied against consumer protections continued collecting fees. The agency created to protect borrowers was outspent and overruled.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 03 - Who Sets the Agenda -->
+<div id="scroll-modal-agenda-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">01 — Who Sets the Agenda</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Deficit by President -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Every president promises fiscal responsibility. The data shows what actually happened on their watch.</h3>
+      <img class="chart-image" src="/docs/room3/flip-script/chart1.png" alt="Deficit by President">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This grouped bar chart compares the federal deficit as a percentage of GDP at the start and end of each presidency from Reagan to Biden. Clinton is the only president who ended with a surplus — shown as a negative bar. W. Bush inherited a surplus and left with a nearly 10% deficit. Obama inherited that 10% deficit and cut it to about 3%. Trump started at 3.4% and ended at nearly 15% — driven largely by COVID spending. Biden started at that elevated level and brought it back down to about 6%.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Deficits are the gap between what the government spends and what it collects in taxes. When the gap grows, the debt grows — and future generations pay interest on it. The chart shows that the deficit doesn't follow a simple partisan story. Both parties have grown it. The pattern worth watching is: which party inherits a crisis, and which one creates one?</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Office of Management and Budget (OMB) tracks these figures — and OMB directors are political appointees who serve the White House. Congress controls spending and taxation through the budget process, but the president's proposed budget sets the agenda. The Congressional Budget Office (CBO) scores these budgets independently, but Congress is not required to follow CBO projections. When deficits grow, the Treasury borrows more — issuing bonds that pay interest to bondholders, overwhelmingly banks and wealthy investors. Every dollar of deficit spending generates interest revenue for someone holding government debt.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Debt Ceiling Votes -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The debt ceiling vote tells you who's in power, not who's being responsible. Both parties flip their position the moment the White House changes hands.</h3>
+      <img class="chart-image" src="/docs/room3/flip-script/chart2.png" alt="Debt Ceiling Votes">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart tracks the percentage of Republicans and Democrats voting YES on raising the debt ceiling across five key votes from 1995 to 2023. In most Obama-era votes, Republicans largely voted NO while Democrats voted YES. In 2021 under Biden, Republicans voted nearly 0% YES. In 2023 under a divided deal, the parties split more evenly. The colors literally swap depending on who's in the White House.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The debt ceiling is the legal limit on how much the U.S. government can borrow to pay bills it already committed to. Voting against raising it is voting to default on existing obligations — not to stop new spending. Both parties use this vote as a political weapon when they're in the minority, then flip to supporting it when they control the White House. The debt itself keeps growing regardless of who wins the showdown.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Treasury Department manages debt ceiling crises operationally — using "extraordinary measures" to delay default and buy Congress negotiating time. Wall Street banks and bond markets apply enormous pressure during standoffs because a U.S. default would destabilize global financial markets. That pressure — not principle — is why a deal always gets done. Credit rating agencies like Moody's and S&P profit from the volatility: uncertainty drives demand for their ratings services, and downgrades generate news cycles that increase their visibility and influence.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: PATRIOT Act / FISA Votes -->
+    <div class="chart-block">
+      <h3 class="chart-hook">After 9/11, Republicans voted almost unanimously to expand surveillance. By 2024, Democrats were the ones keeping it alive.</h3>
+      <img class="chart-image" src="/docs/room3/flip-script/chart3.png" alt="PATRIOT Act / FISA Votes">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This grouped bar chart tracks how Democrats and Republicans voted YES on the PATRIOT Act and FISA reauthorizations from 2001 to 2024. In 2001, Republicans voted 99% YES and Democrats 70% YES. By 2008 and 2012, Democratic support dropped to 40–45% while Republicans held near 100%. In 2018 the gap narrowed. By 2024 the positions had nearly reversed: Democrats at 72% YES, Republicans at only 59%. These figures closely match official House clerk records.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">These votes authorized the government to collect phone records, monitor communications, and conduct surveillance with limited court oversight. The question of who supports giving the government that power has almost entirely tracked with who controls the White House. When your party's president holds the surveillance keys, you tend to support keeping those keys. This is one of the most precisely documented flip scripts in modern congressional history.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The NSA and FBI use FISA surveillance authority — and their budgets, partly classified, flow through the intelligence community's annual appropriation that Congress approves but the public cannot fully audit. Defense and intelligence contractors — Palantir, Booz Allen Hamilton, SAIC, and Leidos — receive billions annually building and maintaining surveillance infrastructure. Booz Allen Hamilton alone earned over $9 billion in government contracts in 2023, the vast majority from intelligence agencies. When FISA expands, their contracts expand with it. These companies lobby Congress on surveillance reauthorization and employ former intelligence officials as executives and advisors.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: 1033 Program Transfers -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The federal government has transferred billions in military equipment to local police — and the party in the White House didn't stop it, they just changed the speed.</h3>
+      <img class="chart-image" src="/docs/room3/flip-script/chart4.png" alt="1033 Program Transfers">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows total military gear transferred to local police departments through the Pentagon's 1033 Program under each administration. Obama's administration shows the largest total at about $4.6 billion — the era when surplus Iraq and Afghanistan equipment flooded the program. Bush transferred about $1.2 billion. Trump reduced it to about $1 billion. Biden's total is shown as very small, reflecting executive order restrictions he signed in 2022. Note: Biden's figure likely understates actual transfers — DLA data suggests annual volumes remained higher than depicted even after his order.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The 1033 Program lets the Pentagon give surplus military equipment — armored vehicles, rifles, grenade launchers, aircraft — to local police departments for free. There is no requirement that departments train on the equipment or track its use. Research shows departments with more military equipment use force more aggressively. The largest transfers happened under a Democratic president — showing this is a structural issue baked into defense budgeting, not a partisan one.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Defense Logistics Agency (DLA) runs the 1033 Program through its Law Enforcement Support Office. The Pentagon benefits because transferring equipment is cheaper than disposing of it — so the program is partly a cost-reduction tool dressed up as public safety policy. Defense contractors benefit because militarized police departments create downstream demand for maintenance contracts, training, upgrades, and new equipment purchases. Local police departments apply for equipment through their state coordinators — there is no competitive process and no cost to the department, which means there is no market mechanism to limit acquisition.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: State Preemption Laws -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In the 1990s, states rarely blocked their cities from making local rules. By the 2020s, it happens hundreds of times a year.</h3>
+      <img class="chart-image" src="/docs/room3/flip-script/chart5.png" alt="State Preemption Laws">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart uses a relative index to show how state preemption laws — laws that prevent cities and counties from passing their own rules — have grown across three eras. The index starts at 1 in the 1990s, triples to 3 in the 2010s, and doubles again to 6 in the 2020s. The acceleration is exponential. The Economic Policy Institute documented that worker rights preemption laws alone quadrupled between 2012 and 2017. By 2025 more than 800 preemption bills were introduced across 48 states in a single year.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When a city votes to raise its minimum wage, ban plastic bags, require paid sick leave, or restrict evictions — a state preemption law can wipe that decision away overnight. Cities are typically more diverse and progressive than their state legislatures, so preemption disproportionately cancels policies that low-income and working-class residents voted for locally. In 2017, Missouri's state legislature passed a preemption law that literally forced St. Louis to roll back a minimum wage increase workers had already won.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The American Legislative Exchange Council (ALEC) — a nonprofit funded by major corporations — writes model preemption legislation and distributes it to state legislators as ready-to-introduce bills. ALEC's corporate members include Walmart, Amazon, and McDonald's — all of whom benefit directly when cities cannot raise local minimum wages or mandate worker protections. State legislators who adopt ALEC model bills receive access to conferences, networking, and political support funded by those same corporations. ALEC's annual budget exceeds $10 million, funded almost entirely by corporate membership fees and foundation grants from donors who benefit from preemption.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 6: Local Control by Issue -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Republicans say they believe in local control — except when cities want stricter gun laws, sanctuary policies, or higher wages. Then they want federal override.</h3>
+      <img class="chart-image" src="/docs/room3/flip-script/chart6.png" alt="Local Control by Issue">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows where each party stands on local control across four issues using a +1 (pro-local) to -1 (anti-local) index. On guns, sanctuary cities, and minimum wage, Republicans score -1 — opposing local decisions — while Democrats score +1 — supporting them. On marijuana, both parties score +1, making it the one issue where both sides broadly support letting states and localities decide. The chart makes a clear pattern visible: the party that most loudly champions local control opposes it on three of four issues shown here.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Local control is a principle, not just a policy preference. When a party invokes it selectively — supporting city decisions only when cities make conservative choices — it reveals that local control is a tool, not a value. This pattern is documented in legislation: 25 states preempt local minimum wage laws, the vast majority passed by Republican legislatures. The Concealed Carry Reciprocity Act had 189 Republican co-sponsors and would override every local gun restriction in the country.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Gun manufacturers benefit when federal law overrides local restrictions — it expands their market to every jurisdiction regardless of local preferences. The NRA and gun industry have spent over $200 million in political donations and lobbying since 1998, almost entirely to Republican candidates and committees. Fast food and retail corporations fund ALEC's minimum wage preemption efforts because blocking local wage floors directly increases their profit margins. On marijuana, the emerging cannabis industry has become a significant donor to both parties — bipartisan money producing bipartisan policy alignment on state-level control.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 7: Media Outrage Index -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Fox News treats the border as a five-alarm fire. MSNBC treats executive overreach the same way. Each network is loudest about the threat their side doesn't create.</h3>
+      <img class="chart-image" src="/docs/room3/flip-script/chart7.png" alt="Media Outrage Index">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This grouped bar chart shows a media outrage intensity index for Fox News and MSNBC across three topics: debt, border crisis, and executive overreach. On debt, Fox scores 2 and MSNBC scores 1. On border crisis, Fox scores 3 — maximum — while MSNBC scores near 0. On executive overreach the positions flip: MSNBC scores 3 and Fox scores 2. Each network is most intense on the issue that threatens the other side's coalition. The specific numbers are a stylized index — the underlying asymmetry in coverage is well-documented by media researchers.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">During peak immigration coverage periods, Fox News has devoted five times more airtime to the border than CNN and MSNBC combined. MSNBC's executive overreach coverage peaked during Republican administrations. Neither network turns its outrage toward the policies its preferred party enacts. The outrage isn't informational — it's identity reinforcement. And it works: research shows partisan media consumption increases political anxiety, reduces cross-party trust, and makes compromise harder.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Fox News generated over $2.7 billion in revenue in 2023. Both networks' business models depend on sustained viewer engagement — and outrage keeps people watching longer than facts alone. Higher ratings mean higher advertising rates charged to pharmaceutical companies, financial firms, and consumer brands. The more anxious the audience, the more valuable the eyeballs. Rupert Murdoch's News Corp and Comcast (MSNBC's parent) are billion-dollar publicly traded corporations — their executives are accountable to shareholders, not to viewers' civic health. Outrage is not a bug. It is the product.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 8: Partisan Issue Priority Shifts -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Republicans became obsessed with the deficit the moment Obama took office. Democrats discovered inequality the moment Trump did. The issue didn't change — the president did.</h3>
+      <img class="chart-image" src="/docs/room3/flip-script/chart8.png" alt="Partisan Issue Priority Shifts">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This grouped bar chart shows how partisan issue priorities shift when power changes hands across two presidential transitions. During Obama→Trump, about 70% of Republicans said the deficit was their most important issue — but only 30% of Democrats prioritized inequality. During Trump→Biden, those numbers flipped: Republican deficit concern dropped to about 30%, while Democratic concern about inequality and civil rights rose to about 70%. Each party's urgency tracks with who they're opposing, not with underlying conditions.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Pew Research documented this pattern precisely: Republican deficit priority rose from 42% under Bush to 84% under Obama, then fell back significantly under Trump — even as the deficit grew. If deficit concern were about fiscal responsibility, it wouldn't drop the moment a Republican won the White House. Political scientists call this "thermostatic opinion" — the public's preferences swing in reaction to who holds power, not to what the data shows. The result is that voters are often most concerned about problems their preferred party is least likely to address.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Think tanks and advocacy organizations raise more money when their issue is in the spotlight — which means they have a financial incentive to keep their base activated. The Heritage Foundation, Club for Growth, and Committee for a Responsible Federal Budget saw donation surges during the Obama years when deficit rhetoric peaked. Progressive think tanks like the Economic Policy Institute and Center on Budget and Policy Priorities saw surges under Trump. Both sides of the advocacy industry profit from the thermostatic pattern — perpetual opposition keeps the donations flowing. Media companies profit from the same cycle: partisan outrage is most intense in opposition, which is when ratings and subscriptions peak.
         </div>
       </div>
     </div>
