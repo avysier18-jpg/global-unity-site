@@ -964,8 +964,15 @@
   <p class="tl-room-hook">The same people keep writing the rules. The data shows exactly who benefits.</p>
   <p class="tl-room-ground">Patterns in congressional behavior across administrations.</p>
   <span class="tl-room-tag">Patterns</span>
-  <div class="room-dropdown">
-    <button class="room-dropdown-btn" onclick="openGalleryModal('flip-script')">Enter Room</button>
+  <div class="room-dropdown" id="room03-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleRoom03Dropdown()">Enter Room</button>
+    <div class="room-dropdown-menu">
+      <button class="room-dropdown-item disabled">Who Sets the Agenda <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Majority and Minority <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Oversight <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">What the Bills Do <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Patterns Over Time <span class="coming-soon">(Coming Soon)</span></button>
+    </div>
   </div>
 </section>
 
@@ -3540,6 +3547,7 @@ function toggleRoom01Dropdown() {
     dropdown.classList.toggle('active');
     // Close other dropdowns
     document.getElementById('room02-dropdown')?.classList.remove('active');
+    document.getElementById('room03-dropdown')?.classList.remove('active');
 }
 
 // Room 02 Dropdown
@@ -3548,17 +3556,31 @@ function toggleRoom02Dropdown() {
     dropdown.classList.toggle('active');
     // Close other dropdowns
     document.getElementById('room01-dropdown')?.classList.remove('active');
+    document.getElementById('room03-dropdown')?.classList.remove('active');
+}
+
+// Room 03 Dropdown
+function toggleRoom03Dropdown() {
+    const dropdown = document.getElementById('room03-dropdown');
+    dropdown.classList.toggle('active');
+    // Close other dropdowns
+    document.getElementById('room01-dropdown')?.classList.remove('active');
+    document.getElementById('room02-dropdown')?.classList.remove('active');
 }
 
 // Close dropdown when clicking outside
 document.addEventListener('click', function(e) {
     const dropdown1 = document.getElementById('room01-dropdown');
     const dropdown2 = document.getElementById('room02-dropdown');
+    const dropdown3 = document.getElementById('room03-dropdown');
     if (dropdown1 && !dropdown1.contains(e.target)) {
         dropdown1.classList.remove('active');
     }
     if (dropdown2 && !dropdown2.contains(e.target)) {
         dropdown2.classList.remove('active');
+    }
+    if (dropdown3 && !dropdown3.contains(e.target)) {
+        dropdown3.classList.remove('active');
     }
 });
 
@@ -3571,6 +3593,7 @@ function openScrollModal(modalId) {
         // Close all dropdowns
         document.getElementById('room01-dropdown')?.classList.remove('active');
         document.getElementById('room02-dropdown')?.classList.remove('active');
+        document.getElementById('room03-dropdown')?.classList.remove('active');
         // Initialize scroll observer
         initChartObserver();
     }
