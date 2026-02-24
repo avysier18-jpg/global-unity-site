@@ -988,7 +988,7 @@
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('who-does-what-scroll')">Who Does What</button>
       <button class="room-dropdown-item" onclick="openScrollModal('agencies-protect-scroll')">How Agencies Protect Themselves</button>
-      <button class="room-dropdown-item disabled">Good People, Same Results <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('good-people-scroll')">Good People, Same Results</button>
       <button class="room-dropdown-item disabled">Why Things Move Slow <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Changing the Rules <span class="coming-soon">(Coming Soon)</span></button>
     </div>
@@ -4151,6 +4151,81 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Medicare Advantage — private insurance plans that run Medicare — received an estimated $84 billion more in 2025 than the government would have paid for the same patients in regular Medicare. HHS investigators found that $7.5 billion in payments came from diagnoses added only through health assessments, not actual treatment. Kaiser Permanente settled for $556 million — the largest Medicare Advantage fraud settlement ever — for submitting approximately 500,000 unsupported diagnoses. When plans deny care, patients appeal only 1% of the time. When they do appeal, plans reverse their own decisions 75% of the time. The structure spreads the money out. It spreads the blame out too.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 04 - Good People, Same Results -->
+<div id="scroll-modal-good-people-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">03 — Good People, Same Results</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Structural Barriers -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The IRS runs on a computer from 1962. Social Security lost 7,000 workers in one year. You can hire the best people in the world — they still can't fix a 60-year-old machine.</h3>
+      <img class="chart-image" src="/docs/room4/good-people/chart1.png" alt="Structural Barriers">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows 4 agencies rated by how severe their structural barriers are — the broken tools, missing staff, and outdated systems that block employees before they can even help. The IRS scores the highest at 60 — its main computer system is older than the moon landing and still processes 150 million tax returns every year. The Social Security Administration scores 21, reflecting a staffing level at its lowest point in 25 years. The VA scores 5 for an IT replacement project that has cost $13.8 billion and reached only 6 of its 170 hospitals. The State Department scores 3 for a hiring freeze that left embassies dangerously understaffed.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The IRS's main database — the Individual Master File — was built in 1962 and runs on a programming language from the 1950s. Congress gave the IRS $4.8 billion to modernize it in 2022. Then Congress took back $41.8 billion of the broader funding package, and in March 2025 the IRS paused all modernization work. The IRS has been trying to replace this system since the year 2000. Social Security now serves 10 million more people than it did a decade ago — with 6,300 fewer full-time employees. In May 2024, over 1.26 million people were waiting for a disability decision. The average wait hit 7.7 months. These are not failures of individual workers. These are failures of the systems workers are given to operate.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The VA hired Oracle to replace its 30-year-old health records system. The contract started at $10 billion and has grown to a projected $49.8 billion over its lifetime. After six years and $13.8 billion spent, the VA confirmed 4 veteran deaths linked to the new system, and 826 major technical failures that took the system offline for a combined 80 days. When the State Department froze hiring in 2017, it couldn't fill security positions at its 24-hour command center that monitors threats to American diplomats. It couldn't oversee a $39 million counterterrorism contract in Africa. The OIG called the effects "broadly negative" — but couldn't calculate the full financial cost because the Department never tracked the losses.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Policy Conflicts -->
+    <div class="chart-block">
+      <h3 class="chart-hook">CMS has 72,000 diagnosis codes. FEMA's rules change so often that its own call center staff can't explain them. When the rules don't agree with each other, workers get stuck — and people don't get help.</h3>
+      <img class="chart-image" src="/docs/room4/good-people/chart2.png" alt="Policy Conflicts">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows 4 agencies rated by how much their conflicting or unclear policies create problems — scored 1 to 5. CMS (the agency that runs Medicare and Medicaid) scores the highest at 5. FEMA and CISA both score 4. HUD scores 3 for housing programs so fragmented that 20 different agencies run 160 separate programs toward overlapping goals. These aren't scores for how bad the agencies are — they're scores for how much their own rules get in the way of their own workers.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Doctors spend 785 hours a year — about 15 hours every single week — just on reporting requirements for CMS quality measures. That costs the healthcare system $15.4 billion annually just in paperwork. None of it is patient care. When HHS investigated Medicare Advantage plan denials, it found that 13% of denied claims actually met Medicare's own coverage rules and should have been approved. Patients appealed only 10% of the time. When they did, 82% of denials were reversed. That means millions of people gave up on care they were entitled to because the system was too complicated to fight. After major disasters, FEMA's guidance changes so frequently and is so large in volume that GAO found its own call center staff could not maintain awareness of it.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          FEMA paid out over $8 billion in assistance after Hurricanes Katrina and Rita — some of it improper or duplicative, because conflicting rules made it impossible to verify claims efficiently. After Hurricane Sandy, approximately $250 million went to applicants who may have had duplicate insurance claims. In 2025, GAO added disaster assistance to its High-Risk list for the first time. On cybersecurity, at least 14 federal agencies share responsibility for 16 critical infrastructure sectors — and when GAO reviewed shared requirements, it found 49% to 79% of rules had conflicting parameters across agencies. After the SolarWinds hack compromised 9 federal agencies, a CISA official said sharing data with other agencies "was challenging" due to classification conflicts. No single agency was in charge.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Fear-Based Leadership -->
+    <div class="chart-block">
+      <h3 class="chart-hook">One in three federal whistleblowers faced retaliation. Half of government workers who saw wrongdoing said nothing. The Boeing 737 MAX killed 346 people after the FAA let Boeing certify 96% of its own work.</h3>
+      <img class="chart-image" src="/docs/room4/good-people/chart3.png" alt="Fear-Based Leadership">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows 4 examples of fear-based leadership in federal agencies — rated 1 to 5 by severity. The VA's data fraud scandal and the federal whistleblower system both score 5 — the highest. The FAA's delegation of safety oversight to Boeing scores 4. CDC political interference with scientific reports scores 4. All four cases involve situations where employees knew something was wrong — and either stayed silent, were pressured to change their findings, or faced punishment for speaking up.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">At the VA, a 14-day appointment target tied to performance bonuses created pressure to falsify scheduling data. Staff across two-thirds of 216 VA facilities were instructed to manipulate wait times. One whistleblower — a Marine veteran and VA therapist — was placed on 461 days of paid administrative leave and had his medical records illegally accessed after reporting that suicidal veterans were being neglected. A 1992 federal survey found 70% of employees who witnessed wrongdoing chose not to report it. By 2010, that improved — but half still stayed silent. At the FAA, safety experts who disagreed with granting Boeing a key exemption were overruled. A post-crash FAA employee survey found nearly half reported "strong external pressure from industry." The House investigation called the 346 deaths "preventable."</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Boeing paid $2.5 billion in a DOJ settlement for its role in the 737 MAX crashes. Political appointees at HHS successfully altered or delayed at least 5 CDC scientific reports during the COVID pandemic. When CDC Director Messonnier warned on February 25, 2020, that COVID spread in the U.S. was "inevitable," the CDC was effectively banned from public briefings for the next six months. Congress stripped $2.6 million from CDC's gun violence research budget in 1996 — and the CDC effectively stopped that research for nearly 25 years. The first new funding didn't come until 2020. The Office of Special Counsel received more than 6,570 complaints of prohibited personnel practices in FY2025 — up from 4,017 the year before. Complaints are rising, not falling.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Burnout and Moral Injury -->
+    <div class="chart-block">
+      <h3 class="chart-hook">SSA ranked last among all large federal agencies as a place to work. The Bureau of Prisons scored 38 out of 100. TSA raised pay by 31% — and attrition dropped 61% in one year. The system shapes the outcome.</h3>
+      <img class="chart-image" src="/docs/room4/good-people/chart4.png" alt="Burnout and Moral Injury">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows 4 federal agencies rated by how severely their workers experience emotional exhaustion and moral injury — scored 1 to 5. SSA scores 5 — the highest — after ranking last among all large agencies as a place to work. The Bureau of Prisons (BOP) and TSA both score 4. The broader Federal Workforce scores 3, reflecting a government average where only 52% of employees say senior leaders generate motivation and commitment. These scores measure how much the job itself — not the people — is breaking workers down.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">SSA employees handle cases involving some of the most vulnerable people in the country — elderly, disabled, and low-income Americans waiting for benefits they've already earned. When those workers are buried under a million-case backlog with no staff to help, four in ten consider leaving within the year. One in four are eligible to retire right now. At the Bureau of Prisons, nearly 5,000 correctional officer positions sit vacant. At one facility, staff worked over 88,000 hours of overtime in a single year — the equivalent of 43 full-time jobs — just to cover basic posts. The DOJ Inspector General has issued over 100 reports on BOP problems in 20 years. GAO added the federal prison system to its High-Risk List in 2023, saying staffing challenges were "a serious threat to inmate and staff safety."</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The TSA case shows what changes when resources follow workers. In 2022, TSA's attrition rate was 19.1% and its workplace satisfaction score was 45 out of 100. Congress invested $870.9 million in pay equity for TSA screeners in 2023 — giving some workers raises of up to 31%. Average pay rose from $42,310 in 2019 to $61,840 in 2024. The result: attrition dropped to 7.8% — a 61% decline. Satisfaction scores saw the largest single-year increase in TSA history. The federal employee turnover cost is estimated at 33% to 200% of annual salary per employee lost, depending on the role. When agencies lose experienced workers to burnout, they don't just lose the person — they lose the institutional knowledge it took years to build. The TSA example is the clearest test in recent federal history that when you fix the system, the numbers change.
         </div>
       </div>
     </div>
