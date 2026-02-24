@@ -971,7 +971,7 @@
       <button class="room-dropdown-item" onclick="openScrollModal('majority-minority-scroll')">Majority and Minority</button>
       <button class="room-dropdown-item" onclick="openScrollModal('oversight-scroll')">Oversight</button>
       <button class="room-dropdown-item" onclick="openScrollModal('bills-scroll')">What the Bills Do</button>
-      <button class="room-dropdown-item disabled">Patterns Over Time <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('patterns-scroll')">Patterns Over Time</button>
     </div>
   </div>
 </section>
@@ -3900,6 +3900,97 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           A news investigation found more than 4,000 stock trades by members or their family members worth at least $315 million in just nine months. The law that's supposed to prevent this — the STOCK Act — allows all of it. It just requires disclosure, and even that only charges a $200 penalty for filing late. Financial firms and investment managers whose business is directly affected by what Congress votes on have donated millions to the committee members who decide whether trading reform ever gets a vote. Defense cost-plus contracts let companies pass every cost to the government and collect a guaranteed profit on top. There is zero financial reason for them to save money. Every dollar saved comes out of their profit. And those same companies are among the largest political donors in Washington. The system rewards them for spending more — not less.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 03 - Patterns Over Time -->
+<div id="scroll-modal-patterns-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">05 — Patterns Over Time</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Who Gets Called to Testify -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Government workers get called before Congress hundreds of times a year. The CEOs of the biggest companies in America? Almost never.</h3>
+      <img class="chart-image" src="/docs/room3/safe-targets/chart1.png" alt="Who Gets Called to Testify">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart uses a special scale — called a log scale — where each step up is 10 times bigger than the last. That's the only way to show these groups on the same chart, because the difference is so large. Federal agencies (like the IRS, the VA, and the Department of Defense) show up to testify roughly 1,000 times per year total. Government watchdogs — called Inspectors General, whose job is to find waste and problems inside agencies — appear about 150 times. Government contractors appear about 20 times. And the CEOs of the 100 biggest companies in America? About 10 times a year — total, across all of them. Amazon's Jeff Bezos ran the world's largest online store for 26 years before testifying before Congress for the very first time in 2020. These are estimates — no single official list tracks all testimony by category — but the pattern is well-documented.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Who gets called to testify says a lot about who Congress is willing to hold accountable. Government workers are called constantly because they have no lobbyists, no campaign donations to offer, and no way to fight back. The biggest companies in America — which touch millions of lives, set prices, control jobs, and shape entire industries — can go decades without ever being asked hard questions under oath. A Fortune 100 CEO who testifies for the first time after 26 years in business isn't being held accountable. They're being introduced.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          When a government agency official testifies, the agency picks up the cost of preparation — paid by taxpayers. When a Fortune 100 CEO testifies, their company brings an army of lawyers, coaches, and communications staff to manage the appearance. Those lawyers charge hundreds of dollars per hour. Preparing for a single congressional hearing can cost a major company over a million dollars — which they write off as a business expense. The entire preparation system is designed to help powerful witnesses survive the show, not face real consequences from it. The agencies that get questioned most have the least money to defend themselves. The companies that get questioned least have the most.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: CEO Testimony by Industry -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The industries that spend the most money lobbying Congress call their CEOs to testify the least. The one exception — drug companies — proves the rule: public anger, not lobbying money, is what actually forces someone into that chair.</h3>
+      <img class="chart-image" src="/docs/room3/safe-targets/chart2.png" alt="CEO Testimony by Industry">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows estimated CEO testimony counts from 2020 to 2024 for four major industries. Drug and health companies: approximately 2 times shown on the chart, but the real verified count is closer to 5 separate hostile hearings with 8 or more individual CEO appearances. Business associations like the U.S. Chamber of Commerce: 0 times — their CEO has never been called to a hostile hearing. Defense and aerospace companies: about 1 time (Boeing's CEO in 2024 after a door blew off a plane mid-flight). Commercial banks: about 1 time shown, but the actual count is closer to 6 major hearing events where Wall Street bank CEOs testified together. The pharma and bank numbers on this chart are understated — the real pattern is more dramatic, not less.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Drug companies spend more money lobbying Congress than any other industry — over $390 million per year — and yet their CEOs still get called in. Why? Because nearly every American family pays drug prices directly. People see the cost of insulin on their bill. They call their representatives. Public anger overrides lobbying money when enough people feel it personally. Business associations and defense contractors never face that same public pressure — so their lobbying money works perfectly. The Chamber of Commerce has spent over $1.6 billion lobbying Congress over 20 years and has never once sent its CEO to a hostile hearing. That's not an accident. That's the system working exactly as designed.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The U.S. Chamber of Commerce doesn't mainly represent small businesses — it mainly represents the biggest corporations in America, including Big Oil, Big Pharma, and Big Tech. It spends its lobbying money blocking rules on climate, labor, consumer protection, and financial regulation. Because it is a trade association — a group that speaks for an industry rather than one company — no single CEO has to sit in the hot seat. The heat gets distributed across the whole industry and nobody takes direct responsibility. That structure is part of why it has been so effective at avoiding scrutiny for so long.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: The Avoidance Index -->
+    <div class="chart-block">
+      <h3 class="chart-hook">This chart puts a number on something everyone suspects but rarely sees measured: how much lobbying money it takes to stay out of Congress's crosshairs. The U.S. Chamber of Commerce has the formula almost perfectly figured out.</h3>
+      <img class="chart-image" src="/docs/room3/safe-targets/chart3.png" alt="The Avoidance Index">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">The Avoidance Index on this chart is calculated by dividing lobbying dollars (in millions) by the number of hostile CEO hearings plus one. A higher score means an organization spends a lot on lobbying and faces almost no hostile hearings. A lower score means either they don't lobby much, or their lobbying doesn't protect them from being called in. U.S. Chamber of Commerce: spent about $81 million lobbying in 2022, zero hostile CEO hearings — avoidance score of ~80. PhRMA (the drug industry's main lobbying group): spent about $28 million, zero of its own CEO hearings — score of ~28. Lockheed Martin: spent about $14 million, zero hostile CEO hearings — score of ~14. Meta (Facebook's parent company): spent about $24 million but Mark Zuckerberg faced roughly 3 hostile hearings, which lowers the score to ~6. USPS: spends zero on lobbying because it's a government agency that can't lobby, gets investigated constantly — score of ~0. These figures come from OpenSecrets lobbying records and are among the most precisely verified numbers in this entire project.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The USPS situation tells the whole story. The Postal Service has $0 in lobbying. It delivers mail to every address in America — rural, urban, rich, poor. It gets investigated by Congress constantly. The Postmaster General has testified so many times he publicly complained about being "burdened with excessive oversight." Meanwhile, Amazon — which uses USPS to deliver packages and profits enormously from that relationship — spent over $20 million lobbying Congress in recent years and almost never sends its CEO to testify. Same supply chain. Completely different treatment. The difference is the lobbying check.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The U.S. Chamber of Commerce is the single biggest lobbying spender in American history — over $1.6 billion across two decades. Its members include pharmaceutical companies, oil companies, banks, and tech firms that pay membership fees in exchange for the Chamber lobbying on their behalf. Because no single CEO speaks for the Chamber, no single CEO has to answer for it. The money gets spent. The regulations get blocked. And nobody sits in the hot seat.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Power vs Safe Target Status -->
+    <div class="chart-block">
+      <h3 class="chart-hook">You might think the most powerful companies would be the hardest to investigate. But Congress can call them in for a hearing, get great TV footage, and then let them walk out with no real consequences. That's what makes them a different kind of "safe target."</h3>
+      <img class="chart-image" src="/docs/room3/safe-targets/chart4.png" alt="Power vs Safe Target Status">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four groups on two measures: how much real power they have (teal bars, scale of 1 to 5) and whether they're treated as a safe target — meaning Congress investigates them without real consequences (dark bars, where 1 = yes and 0 = no). Civil servants (regular government workers): low power (1), not a safe target — they face real pressure and can lose their jobs. Agency heads (cabinet secretaries, department directors): medium power (2), not a safe target. Government contractors: high power (4), safe target (1). Mega-banks: highest power (5), safe target (1). The pattern seems backwards until you understand what safe target really means here — powerful enough to absorb the heat, not powerful enough to stop Congress from using them as props for the cameras.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Political scientists call this "theatrical oversight." When Congress calls in a big bank CEO or defense contractor, the CEO arrives with 20 lawyers, a fully rehearsed answer for every possible question, and a PR team ready to handle the headlines. The hearing produces dramatic clips. Members raise money off them. Then nothing happens. After Wells Fargo created 3.5 million fake accounts without customers' permission, Congress held dramatic hearings and the CEO resigned — with a $134 million pay package. Over 5,300 low-level employees were fired, but no senior executive went to prison. A member of Congress said it directly during those hearings: "If this bank was much smaller, someone would be prosecuted." That's the safe target dynamic in plain language.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Defense contractors are the clearest example. The government watchdog group POGO found that the Pentagon gave contracts worth $334 billion to companies previously caught committing fraud. Seven out of ten lobbyists working for the largest defense contractors used to work for the government they are now lobbying. When a former Pentagon official becomes a Lockheed Martin lobbyist, they know exactly which members to call and which favors to offer. The result: defense waste gets discussed in hearings aimed at government officials. The contractors collect their money and leave.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: Scrutiny Ratio by Sector -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In every sector Congress oversees, it goes after the weaker players much harder than the powerful ones. The veterans sector has the most extreme gap — Congress investigates VA officials 10 times more aggressively than it investigates the defense companies those same veterans depend on.</h3>
+      <img class="chart-image" src="/docs/room3/safe-targets/chart5.png" alt="Scrutiny Ratio by Sector">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows a ratio — how many times more often Congress targets weaker players versus stronger ones — across three sectors. Veterans sector: ratio of ~10. Congress has two entire committees dedicated to scrutinizing the VA (Department of Veterans Affairs), and VA officials are called to testify dozens of times a year about wait times, benefits backlogs, and hospital conditions. Defense contractors serving the same veterans and military — who control $445 billion in annual government contracts — face almost no hostile congressional hearings. Logistics sector: ratio of ~4. USPS gets called before Congress constantly, while Amazon, UPS, and FedEx rarely face hostile scrutiny despite documented worker safety problems. Finance sector: ratio of ~2. Even here, smaller and regional banks face tougher consequences than the biggest Wall Street banks. These ratios are estimates — the directional pattern is well-documented, but no single published study uses this exact formula.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The veterans sector gap is the most striking because it involves people Congress publicly says it cares about most. "Support the troops" is one of the safest things a politician can say. Yet the companies that provide the weapons, vehicles, and equipment those troops depend on almost never face accountability hearings. After the wars in Iraq and Afghanistan, a congressionally commissioned study found between $31 billion and $60 billion wasted in contracts — much of it to defense companies. Congress's response was more hearings about VA wait times. The weaker actor absorbed the criticism. The stronger actors kept the contracts.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Defense contractors spent over $159 million lobbying Congress in 2024 and gave tens of millions more in campaign donations. POGO documented that the five largest contractors employed more than 700 former government officials as lobbyists. VA officials have none of these protections — no lobby, no PAC, no revolving door. That's not a coincidence. It's the exact mechanism that determines who gets called in and who doesn't. USPS has the same problem in logistics: $0 in lobbying, maximum congressional scrutiny. Amazon has $20 million in lobbying and almost zero hostile hearings. The formula is simple. It just isn't talked about.
         </div>
       </div>
     </div>
