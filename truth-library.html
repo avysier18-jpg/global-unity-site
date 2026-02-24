@@ -968,7 +968,7 @@
     <button class="room-dropdown-btn" onclick="toggleRoom03Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('agenda-scroll')">Who Sets the Agenda</button>
-      <button class="room-dropdown-item disabled">Majority and Minority <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('majority-minority-scroll')">Majority and Minority</button>
       <button class="room-dropdown-item disabled">Oversight <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">What the Bills Do <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Patterns Over Time <span class="coming-soon">(Coming Soon)</span></button>
@@ -3595,6 +3595,97 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Think tanks and advocacy organizations raise more money when their issue is in the spotlight — which means they have a financial incentive to keep their base activated. The Heritage Foundation, Club for Growth, and Committee for a Responsible Federal Budget saw donation surges during the Obama years when deficit rhetoric peaked. Progressive think tanks like the Economic Policy Institute and Center on Budget and Policy Priorities saw surges under Trump. Both sides of the advocacy industry profit from the thermostatic pattern — perpetual opposition keeps the donations flowing. Media companies profit from the same cycle: partisan outrage is most intense in opposition, which is when ratings and subscriptions peak.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 03 - Majority and Minority -->
+<div id="scroll-modal-majority-minority-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">02 — Majority and Minority</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Committee Meetings Decline -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Congress held over 2,000 committee meetings in 2009. By 2019, that number had dropped nearly in half. Fewer hearings means less scrutiny — of everything.</h3>
+      <img class="chart-image" src="/docs/room3/majority-vs-minority/chart1.png" alt="Committee Meetings Decline">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows total committee meetings across seven Congresses from the 111th (2009–2010) through the 117th (2021–2022). The 111th Congress peaks at about 2,150 meetings. From there the trend is mostly downward — dropping to about 1,725 in the 112th, 1,475 in the 113th, bottoming near 1,200 in the 116th, then a slight uptick to 1,300 in the 117th. The overall direction over 14 years is a significant decline in how often Congress formally convenes to examine policy, agencies, and legislation.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Committee hearings are how Congress learns what the executive branch is actually doing. They are where agencies are questioned, budgets are examined, and laws get scrutinized before passage. When the number of hearings drops, less of that scrutiny happens. The Bipartisan Policy Center called this decline one of the most underreported failures in modern governance — Congress is spending less time doing the core work of oversight and more time on messaging, fundraising, and floor votes. The public sees less. Agencies face less accountability. The figures shown are estimates drawn from multiple tracking datasets and reflect the documented downward trend — specific counts vary by source and methodology.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Government Accountability Office (GAO) — Congress's investigative arm — produces thousands of reports annually, but its recommendations only get implemented when committees hold hearings and apply pressure. When hearing volume drops, GAO reports pile up unactioned. Lobbyists and industry groups benefit from fewer hearings because less scrutiny means less chance their clients' regulatory relationships get examined publicly. Congress's own budget for committee staff has also shrunk in inflation-adjusted terms since the 1970s — meaning committees have fewer expert staff to research, prepare, and follow up on hearings. Less capacity produces fewer hearings, which produces less accountability, which benefits whoever prefers less scrutiny.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Minority Oversight Requests -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When the minority party asks to investigate something, they get told no about 95% of the time. Not because the request is wrong — because the majority controls the vote.</h3>
+      <img class="chart-image" src="/docs/room3/majority-vs-minority/chart2.png" alt="Minority Oversight Requests">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows what happens to minority party oversight requests in three categories. About 5% are granted. About 60% are simply ignored — no vote, no response, no hearing scheduled. About 35% are formally blocked — brought to a vote and rejected on party lines. Taken together, about 95% of minority oversight requests go nowhere, regardless of their merit.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The minority party represents roughly half the country. When their requests to investigate are systematically ignored or blocked, that half of the public gets no representation in the oversight process. A 2017 Office of Legal Counsel opinion formalized this further — ruling that the executive branch has no legal duty to respond to oversight requests from ranking members or individual members, only from committee chairs. That means a minority member can write a letter demanding documents and the agency can legally ignore it. The numbers shown here are estimates reflecting documented patterns — in the 115th Congress alone, House Oversight Committee Democrats documented 64 consecutive subpoena motions blocked by the Republican majority on party-line votes.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Majority committee chairs control which industries and agencies get examined. When the minority is blocked from requesting investigations, the majority effectively decides which donors, which sectors, and which agencies face scrutiny — and which ones don't. Lobbying firms advise clients on which party controls which committees and tailor their strategy accordingly. A company facing a potential investigation has a strong financial incentive to donate to majority members — because the chair's decision to schedule or kill a hearing can be worth billions in regulatory outcomes. The minority's inability to compel hearings is not a procedural nuance. It is a structural advantage that majority members and their donors benefit from directly.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Oversight Intensity Index -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Congressional oversight intensity almost perfectly tracks who controls Congress versus who controls the White House. When they're the same party, oversight nearly disappears.</h3>
+      <img class="chart-image" src="/docs/room3/majority-vs-minority/chart3.png" alt="Oversight Intensity Index">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This line chart tracks an oversight intensity index from 2009 to 2023 across six key political moments. In 2009, with Democrats controlling both Congress and the White House, intensity is low at about 2. By 2011, after Republicans take the House while Obama remains president, it spikes to about 9. In 2017, with Republicans controlling everything under Trump, it crashes to near 1 — the lowest point shown. By 2019, after Democrats take the House with Trump still president, it peaks at 10. In 2021, with Democrats controlling all three under Biden, it drops to 4. By 2023, after Republicans take the House with Biden still president, it climbs back to 9. The pattern repeats in near-perfect symmetry.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">If oversight were about accountability, it would be consistent regardless of who's in power. The data shows it isn't. Oversight is used as a political weapon by the party out of power and abandoned as a burden by the party in power. Political scientists Kriner and Schickler documented this pattern across more than a century of congressional data — divided government produces, on average, dramatically more investigative hearing activity than unified government. The Brookings Institution confirmed this in modern data: during the 116th Congress under divided government, 37% of House committee activity was oversight-focused. Under unified government in the 117th, that dropped to 25%.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Congressional investigations generate significant legal and consulting fees — law firms, opposition research firms, and communications consultants all profit when oversight intensity is high. Think tanks aligned with the opposition party receive more donations during high-oversight periods because donors want to fund the fight. When oversight drops under unified government, those same firms pivot to legislative work — lobbying for bills rather than defending against investigations. The oversight industry has financial incentives that track almost perfectly with the political cycle shown in this chart.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Hearing Tone by Administration -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When Congress and the White House are controlled by opposite parties, about 90% of hearings are designed to expose or damage the administration. When the same party controls both, that flips to mostly protection.</h3>
+      <img class="chart-image" src="/docs/room3/majority-vs-minority/chart4.png" alt="Hearing Tone by Administration">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This grouped bar chart shows what share of hearings during each administration were "friendly" — designed to support or protect the White House — versus "hostile" — designed to expose or challenge it. During Obama's presidency under a Republican House, about 30% of hearings were friendly and 70% were hostile. Under Trump, after Democrats took the House in 2019, hostile hearings reached about 90% with only 10% friendly. Under Biden, after Republicans took the House in 2023, about 75% of hearings were hostile and 25% friendly. The figures shown are illustrative estimates based on documented research patterns — no single study uses these exact classifications, but political scientists Marvel & McGrath and Eldes et al. have documented equivalent adversarial-supportive dimensions in hearing behavior.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">A hearing that protects an administration looks very different from one that exposes it. Friendly hearings tend to feature agency officials explaining their successes, invite friendly witnesses, and generate positive coverage. Hostile hearings invite critics, demand documents, and are designed to produce embarrassing moments. Both serve political purposes. Neither is purely about policy improvement. The result is that congressional oversight doesn't function as a neutral accountability tool — it functions as an extension of electoral politics, and its intensity and direction are determined more by who's in power than by what actually needs scrutiny.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Federal agencies facing hostile hearings spend significant resources on congressional relations staff, legal preparation, and document production — costs that come out of agency operating budgets. The Department of Justice allocated tens of millions of dollars to oversight response during the Trump impeachment period. Agencies facing friendly hearings often use hearing time to request additional funding and expand their budgets with majority support. The difference between a hostile and a friendly hearing can determine whether an agency loses funding, faces new restrictions, or gets a budget increase — making the majority's power to set hearing tone one of the most financially consequential decisions in Washington.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: Majority vs Minority Powers -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The majority party can subpoena anyone, schedule any hearing, choose every witness, and adjourn any meeting. The minority party can do none of those things without permission.</h3>
+      <img class="chart-image" src="/docs/room3/majority-vs-minority/chart5.png" alt="Majority vs Minority Powers">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart compares majority versus minority formal powers across four committee tools: subpoena authority, scheduling, witness choice, and adjournment. The majority scores 1.0 — full power — on all four. The minority scores 0 — no power — on all four. Every bar shows the same absolute asymmetry: the majority controls the entire procedural machinery of committee work.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">In practice the asymmetry is real and significant, though the minority does hold some formal protections worth knowing. House Rule XI gives the minority the right to call witnesses for at least one hearing day — this is enforceable, not optional. Any member can also move to adjourn, which requires a majority vote to pass. The chart's zero score for the minority captures the functional reality: on subpoenas, scheduling, and most witness decisions, the minority must ask permission from the majority and is routinely denied. The 115th Congress saw 64 consecutive minority subpoena requests blocked. The 2025 Harvard Journal on Legislation documented an accelerating erosion of minority procedural rights with each new Congress.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Subpoena power is the most valuable tool in this chart — it compels the production of documents and testimony that companies and executives would otherwise withhold. When the majority controls subpoenas, they decide which corporate records get examined and which stay private. This power is worth enormous amounts to regulated industries. Defense contractors, pharmaceutical companies, financial institutions, and technology firms all have millions or billions of dollars in regulatory outcomes that can hinge on whether a committee chair issues a subpoena or declines to. The majority's exclusive control of this tool gives their members exceptional leverage over industries in their jurisdiction — leverage that translates directly into campaign contributions from those industries seeking to influence or prevent committee action.
         </div>
       </div>
     </div>
