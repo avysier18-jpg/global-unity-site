@@ -951,7 +951,7 @@
       <button class="room-dropdown-item" onclick="openScrollModal('inflation-wages-scroll')">Why prices outrun paychecks</button>
       <button class="room-dropdown-item" onclick="openScrollModal('feds-real-job-scroll')">What the Fed actually does</button>
       <button class="room-dropdown-item" onclick="openScrollModal('money-creation-scroll')">Where money comes from</button>
-      <button class="room-dropdown-item disabled">Why housing swallows your income <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('housing-eats-scroll')">Why housing swallows your income</button>
       <button class="room-dropdown-item disabled">Who the rules actually protect <span class="coming-soon">(Coming Soon)</span></button>
     </div>
   </div>
@@ -3168,6 +3168,145 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           These ratios are set and enforced under the Basel III international framework, implemented in the U.S. by the Federal Reserve, the OCC, and the FDIC. Updated FDIC data shows the actual 2025 industry average Tier 1 ratio is approximately 14.07% — slightly above the chart — and has been stable between 14.0% and 14.2% throughout 2024–2025. Banks lobbied extensively against higher capital requirements during the Basel III endgame negotiations in 2023–2024.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 02 - Why Housing Swallows Your Income -->
+<div id="scroll-modal-housing-eats-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">04 — Why Housing Swallows Your Income</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Housing vs Other Expenses -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Housing is the one bill that never got cheaper. Every other major expense shrank — housing just kept growing.</h3>
+      <img class="chart-image" src="/docs/room2/why-housing-eats-everything/chart1.png" alt="Housing vs Other Expenses">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This grouped bar chart compares how American households split their spending across five categories in 1980, 2000, and 2023/24. Housing grew from about 30% of the household budget in 1980 to about 34% today. Food dropped from 15% to 13%. Transportation fell from 21% to 17%. Healthcare nearly doubled from 4.5% to 8%. Apparel shrank from 6% to just 2.5%. Housing is the only major category that kept taking a bigger slice.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When one bill takes more of your paycheck every decade, every other part of your life gets squeezed. Families aren't spending less on food because they eat less — they're spending less because housing left them no choice. The chart shows a slow, steady budget takeover that most people feel but rarely see laid out this clearly.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          These figures come from the Bureau of Labor Statistics Consumer Expenditure Survey, which has tracked household spending since 1984. HUD (Department of Housing and Urban Development) is the federal agency responsible for housing affordability policy — yet housing's share of the American budget has grown every decade on their watch. No federal agency has a mandate to keep housing costs below a specific share of income.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Housing Share by Income Quintile -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The less you earn, the more of it goes to housing. The poorest families spend 37 cents of every dollar just on a roof.</h3>
+      <img class="chart-image" src="/docs/room2/why-housing-eats-everything/chart2.png" alt="Housing Share by Income Quintile">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows what share of their total spending each income group puts toward housing in 2024. The bottom 20% of earners spend about 37% of their budget on housing. The middle 20% spend about 34%. The top 20% spend about 30.5%. The gap between the richest and poorest is about 7 percentage points — and it shows up in every paycheck.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Housing costs are the same whether you make $25,000 a year or $250,000. But a $1,200 rent payment destroys a low-income budget in a way it never touches a high-income one. This chart shows that housing doesn't squeeze everyone equally — it squeezes hardest at the bottom. BLS data suggests the real bottom-quintile figure may be closer to 41%, making the gap even wider than shown.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The BLS Consumer Expenditure Survey is the source for these figures. HUD administers housing assistance programs like Section 8 vouchers, but only about 1 in 4 eligible low-income households receives any federal housing help — the rest are left to the private market. Congress sets the funding levels for those programs annually.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Rent-to-Income Ratio Over Time -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In 1960, rent took 20% of your paycheck. Today it takes 31% — and incomes didn't keep up.</h3>
+      <img class="chart-image" src="/docs/room2/why-housing-eats-everything/chart3.png" alt="Rent-to-Income Ratio Over Time">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This line chart tracks the median rent-to-income ratio from 1960 to 2024. In 1960 renters spent about 20% of their income on rent. By 2000 it had climbed to 25%. By 2024 it reached 31%. The line moves in only one direction — up — across more than six decades.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Financial experts say you shouldn't spend more than 30% of income on housing. This chart shows that the median American renter has now crossed that line. That means half of all renters in the country are spending more than what's considered affordable — not because they're bad with money, but because rents rose faster than wages for 60 straight years.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Census Bureau and Harvard Joint Center for Housing Studies track these figures. The Fair Housing Act (1968) and HUD were created partly to address housing affordability — yet the rent-to-income ratio has risen 55% since that law passed. Local zoning boards, state legislatures, and federal housing policy all play a role in how much rental supply exists and at what price.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Mortgage Payment as Share of Income -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Buying a home in 2024 costs nearly 40% of a typical paycheck — the same crushing level as 1980.</h3>
+      <img class="chart-image" src="/docs/room2/why-housing-eats-everything/chart4.png" alt="Mortgage Payment as Share of Income">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This line chart tracks what share of median household income goes toward a median mortgage payment from 1980 to 2024. It started high at about 37% in 1980, dropped to a low of about 25% in 2000, briefly rose to about 28% in 2010, then shot back up to about 39% by 2024. The current level matches the worst affordability in modern history.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">For a decade between 2010 and 2020, buying a home was relatively affordable — prices were moderate and interest rates were near zero. That window is now closed. Today's buyers face both high home prices and high mortgage rates at the same time, creating a double squeeze that pushes homeownership out of reach for millions of working families.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Federal Reserve sets interest rates that directly determine mortgage costs. The Federal Housing Finance Agency (FHFA) oversees Fannie Mae and Freddie Mac, which back most U.S. mortgages. When the Fed raised rates aggressively starting in 2022, monthly mortgage payments jumped — sometimes by $800–$1,000 on the same home — without any change in the home's value.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 5: Investor Share of Home Purchases -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Investors bought 1 in 13 homes in 2000. By 2022, they were buying 1 in 8 — competing directly with regular families.</h3>
+      <img class="chart-image" src="/docs/room2/why-housing-eats-everything/chart5.png" alt="Investor Share of Home Purchases">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This line chart shows the share of home purchases made by investors — not people buying a home to live in — from 2000 to 2024. The investor share started at about 6% in 2000, rose to about 9% by 2010, climbed to a peak of about 13.5% around 2022, then settled slightly to about 13% in 2024. The trend has moved steadily upward over 24 years.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Every home an investor buys is one fewer home available for a family to purchase. When investors compete in the same market as first-time buyers, they often win — they pay cash, close faster, and don't need financing. The result is fewer homes for sale, higher prices, and more families pushed into renting instead of owning.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Note: investor purchase share figures vary significantly by data source and methodology. CoreLogic and Redfin report investor shares of 20–28% in recent years using broader definitions. The figures shown here use a narrower definition. The IRS, SEC, and Treasury all have oversight roles over real estate investment vehicles — but no federal agency specifically tracks or limits investor purchasing activity in the residential market.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 6: Corporate Landlord Premiums -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When a corporation owns your building, rent runs about 4% higher — and eviction is nearly 4 times more likely.</h3>
+      <img class="chart-image" src="/docs/room2/why-housing-eats-everything/chart6.png" alt="Corporate Landlord Premiums">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows two metrics for corporate-owned rental properties compared to individual landlords. The left bar shows a rent premium of about 4.1% — meaning corporate landlords charge roughly 4 cents more per dollar of rent than individual owners of similar properties. The right bar shows an eviction risk multiplier of about 3.7 — meaning tenants of corporate landlords face eviction filings at about 3.7 times the rate of tenants renting from individual owners.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Corporate landlords operate at scale — they own hundreds or thousands of units, use algorithmic pricing software, and are accountable to investors rather than neighbors. A 4% rent premium may sound small, but on a $1,500 rent that's $60 more per month, $720 per year, on top of already-stretched budgets. The higher eviction rate means less security and more displacement for families in corporate-owned housing.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Research on corporate landlord eviction rates originates from a landmark Federal Reserve Bank of Atlanta study (Raymond et al.) covering Fulton County, Georgia. The Consumer Financial Protection Bureau (CFPB) and FTC have both raised concerns about algorithmic rent-setting tools used by corporate landlords. HUD and local housing courts process eviction filings — but no federal law limits how many evictions a corporate landlord can file.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 7: Land Zoned Single-Family Only -->
+    <div class="chart-block">
+      <h3 class="chart-hook">In San Jose, 94% of residential land is legally off-limits to apartments. The housing shortage is built into the law.</h3>
+      <img class="chart-image" src="/docs/room2/why-housing-eats-everything/chart7.png" alt="Land Zoned Single-Family Only">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows what percentage of residential land in six major U.S. metro areas is zoned exclusively for single-family homes — meaning apartments, duplexes, and most multi-family buildings cannot legally be built there. San Jose/Bay Area leads at about 94%, followed by Seattle at 81%, Los Angeles and Boston both near 75%, Austin at 41%, and New York City at about 17%.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">You cannot build your way out of a housing shortage if the law forbids it on most of the land. Single-family-only zoning means that in cities where housing demand is highest, the most efficient use of land — apartment buildings — is illegal on the vast majority of residential lots. This is a policy choice, not a natural limitation. It directly limits supply and drives up prices for everyone.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Zoning laws are set by local city councils and county governments — not the federal government. Homeowners in high-value neighborhoods benefit financially when zoning keeps supply tight, because scarcity raises their property values. HUD and the Biden administration's 2021 housing plan both called for zoning reform, but the federal government cannot force local governments to change their zoning codes. Property tax revenue also gives local governments an incentive to keep home values — and restrictions — in place.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 8: Housing Units Permitted by State -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Texas permitted more than twice as many homes as California in 2024 — showing that housing shortages are a policy choice, not an inevitability.</h3>
+      <img class="chart-image" src="/docs/room2/why-housing-eats-everything/chart8.png" alt="Housing Units Permitted by State">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart compares housing units permitted in 2024 across four states. Texas leads with about 550,000 units, followed by Florida at about 450,000, California at about 210,000, and New York at about 110,000. Texas permitted roughly five times more homes than New York despite not being five times larger in population.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Housing permits show where states are actually allowing new homes to be built. States with looser zoning and faster approval processes permit more homes, which keeps prices more stable. States with heavy restrictions permit fewer — and prices reflect it. California and New York have two of the most expensive housing markets in the country, and two of the lowest permit totals relative to population.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Important note: Census Bureau 2024 building permit data shows actual state figures are significantly lower than depicted — Texas permitted approximately 226,000 units, Florida 173,000, California 102,000, and New York 47,000. The chart's figures may reflect a different metric or time period. Regardless of the exact numbers, the relative pattern holds: Texas and Florida permit far more homes per capita than California and New York. State legislatures, not federal agencies, control the permitting and zoning rules that determine these totals.
         </div>
       </div>
     </div>
