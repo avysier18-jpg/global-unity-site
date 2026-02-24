@@ -987,7 +987,7 @@
     <button class="room-dropdown-btn" onclick="toggleRoom04Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('who-does-what-scroll')">Who Does What</button>
-      <button class="room-dropdown-item disabled">How Agencies Protect Themselves <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('agencies-protect-scroll')">How Agencies Protect Themselves</button>
       <button class="room-dropdown-item disabled">Good People, Same Results <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Why Things Move Slow <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Changing the Rules <span class="coming-soon">(Coming Soon)</span></button>
@@ -4076,6 +4076,81 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           The Department of Health and Human Services (HHS) oversees 81 active Section 1115 Medicaid demonstration waivers. States employ entire teams of lawyers and policy staff just to negotiate these waivers with CMS (Centers for Medicare & Medicaid Services). GAO found that in several approved waivers, HHS set spending limits $32 billion higher than the data justified — with no accountability. Individuals benefit from waiver services, but they have no seat at the table when the rules are written. The waiver system is designed for institutions. Regular people just live under whatever gets approved.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 04 - How Agencies Protect Themselves -->
+<div id="scroll-modal-agencies-protect-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">02 — How Agencies Protect Themselves</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Jargon Confusion Scores -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Agencies write reports full of big words that mean nothing. "Risk-based." "Operational irregularity." It sounds like an answer — but it isn't one.</h3>
+      <img class="chart-image" src="/docs/room4/bureaucracies-protect-themselves/chart1.png" alt="Jargon Confusion Scores">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart rates 5 government phrases by how confusing they are to regular people — on a scale of 1 to 5. "Risk-based" scores the highest at 5. "Development letters" and "Operational irregularity" score 4. "Capabilities-based" and "Stakeholder misalignment" score 3. All five are real terms used in official government reports. None of them have a plain-English definition in the documents where they appear.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When something goes wrong, agencies write reports. But those reports are often written in a way that makes it very hard to know what actually happened, who made the decision, or what the consequences were. The VA used a term called "interest lists" instead of "secret wait lists" — hiding the fact that over 57,000 veterans had their appointment dates manipulated. The Pentagon described $2.3 trillion in untracked accounting changes as normal adjustments. Congress passed a Plain Writing Law in 2010 requiring clear language. It has no penalties. Nothing changed.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Department of Defense spends $178 million per year on its own financial audit — and has failed it 8 times in a row. When auditors can't find the paperwork, they issue a "disclaimer of opinion." That's official language for: we couldn't check. Meanwhile, the F-35 fighter jet program grew from a projected cost to a $400 billion program. The official reason given was "cost growth" — not overrun, not failure, not mismanagement. Just growth. The words protect the agencies. The public pays the bill.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Unresolved Reviews -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The government reviewed itself — and found problems. Then it wrote a report. Then it did it again. 5,480 recommendations are still sitting there, unfinished.</h3>
+      <img class="chart-image" src="/docs/room4/bureaucracies-protect-themselves/chart2.png" alt="Unresolved Reviews">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This horizontal bar chart shows 4 cases where internal government reviews found serious problems — but nothing happened. The numbers show how many years the issues went unresolved, or how many recommendations were ignored. GIPSA (farm market oversight) tops the chart at 20 — over 20 years of proposals, delays, and withdrawals. State Department security reviews score 15. OMB paperwork reform scores 10. TRANSCOM (military transport) scores 5.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">After the 1998 U.S. Embassy bombings killed 224 people, a review board told the Secretary of State to personally fix diplomatic security. Fourteen years later, after the 2012 Benghazi attack, another review board said almost the exact same things — because the first set of recommendations was never fully carried out. The government issued the report. Held the hearings. Named the problems. Then largely moved on. Across the entire federal government right now, there are 5,480 unfulfilled GAO recommendations representing up to $208 billion in savings that no one has acted on.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Congress told USDA to protect farmers from big meatpacking companies in 2008. USDA proposed rules in 2010. Congress blocked them. A few rules passed in 2016. They were frozen in 2017 and withdrawn. New rules were ordered in 2021. The cycle continues — 17+ years later, farmers still aren't protected. The companies being regulated spent that time lobbying. The review process created the appearance of action. Enforcement penalties for meatpacking violations typically range from $500 to $56,000 per case — on a $90 billion industry.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Rule Delay Timeline -->
+    <div class="chart-block">
+      <h3 class="chart-hook">A rule to protect workers from deadly dust took 19 years to pass. A rule capping banker bonuses was due in 9 months — it's been 15 years. People died waiting.</h3>
+      <img class="chart-image" src="/docs/room4/bureaucracies-protect-themselves/chart3.png" alt="Rule Delay Timeline">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart shows how many years it took — or is taking — for four major federal rules to be finalized. NRC nuclear waste certification tops the chart at 40 years. REAL ID (national driver's license standard) sits at 20 years. The Banker Pay Rule stands at 12+ years and counting. OSHA's silica dust safety rule took 10 years. All four rules were required by law. All four were delayed far beyond their deadlines.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The OSHA silica rule was delayed 19 years from proposal to final rule in 2016. Silica dust — breathed in from construction and mining — causes an incurable lung disease. The rule, once passed, was estimated to save over 600 lives every year. During the 19-year delay, the industries being regulated had the time to lobby, litigate, and slow the process at every step. The Dodd-Frank banker pay rule was ordered in 2010 with a 9-month deadline. Silicon Valley Bank collapsed in 2023. The Fed's own report cited the bank's bonus structure as a key problem. The rule still isn't done.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          REAL ID was passed in 2005. Its airport enforcement deadline was moved at least 6 times — to 2009, 2011, 2016, 2020, 2021, 2023, and finally began phased enforcement in May 2025 — 20 years late. The U.S. government's nuclear waste repository has cost $15 billion and collected $52.4 billion in fees from ratepayers — with no working facility. The federal government has already paid $956 million in lawsuit penalties to utilities for missing its 1998 waste-acceptance deadline, with $500 million more added every year. The delay itself has a price tag — it just doesn't come out of the agency's budget.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Blame Diffusion -->
+    <div class="chart-block">
+      <h3 class="chart-hook">$305 million for a website that never worked. $300 million to a company with 2 employees. When everyone is responsible — no one is.</h3>
+      <img class="chart-image" src="/docs/room4/bureaucracies-protect-themselves/chart4.png" alt="Blame Diffusion">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart rates 4 programs on how spread out the blame is when things go wrong — scored 1 to 3. Oregon ACA and DOD/FEMA both score 3 — maximum blame diffusion, where responsibility was spread so far across agencies, contractors, and subcontractors that no one was held fully accountable. HUD Contractors and Medicare Insurers score 2 — significant diffusion, with some accountability but major gaps. All four involve billions of dollars in public money.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Oregon spent $305 million in federal money to build a health insurance website that never enrolled a single person online. Oracle got $240 million. The state blamed Oracle. Oracle said it was just helping. The federal government said Oregon's management was "abysmally amateurish." A settlement returned about $100 million — but $60 million of that came as free Oracle software, keeping Oregon tied to the same company. No criminal charges. No single person or company took full responsibility. After Hurricane Katrina, FEMA bought 145,000 trailers with formaldehyde levels five times the normal limit. An internal email told staff not to test them. The final settlement was $42.6 million — FEMA wasn't even a party to it.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Medicare Advantage — private insurance plans that run Medicare — received an estimated $84 billion more in 2025 than the government would have paid for the same patients in regular Medicare. HHS investigators found that $7.5 billion in payments came from diagnoses added only through health assessments, not actual treatment. Kaiser Permanente settled for $556 million — the largest Medicare Advantage fraud settlement ever — for submitting approximately 500,000 unsupported diagnoses. When plans deny care, patients appeal only 1% of the time. When they do appeal, plans reverse their own decisions 75% of the time. The structure spreads the money out. It spreads the blame out too.
         </div>
       </div>
     </div>
