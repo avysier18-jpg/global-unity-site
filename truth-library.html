@@ -986,7 +986,7 @@
   <div class="room-dropdown" id="room04-dropdown">
     <button class="room-dropdown-btn" onclick="toggleRoom04Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
-      <button class="room-dropdown-item disabled">Who Does What <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('who-does-what-scroll')">Who Does What</button>
       <button class="room-dropdown-item disabled">How Agencies Protect Themselves <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Good People, Same Results <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Why Things Move Slow <span class="coming-soon">(Coming Soon)</span></button>
@@ -4001,6 +4001,81 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           Defense contractors spent over $159 million lobbying Congress in 2024 and gave tens of millions more in campaign donations. POGO documented that the five largest contractors employed more than 700 former government officials as lobbyists. VA officials have none of these protections — no lobby, no PAC, no revolving door. That's not a coincidence. It's the exact mechanism that determines who gets called in and who doesn't. USPS has the same problem in logistics: $0 in lobbying, maximum congressional scrutiny. Amazon has $20 million in lobbying and almost zero hostile hearings. The formula is simple. It just isn't talked about.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 04 - Who Does What -->
+<div id="scroll-modal-who-does-what-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">01 — Who Does What</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Budget Flexibility -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The Federal Reserve can create unlimited money in an emergency. HUD gets $73 billion — and has to beg Congress for every dollar.</h3>
+      <img class="chart-image" src="/docs/room4/agencies-do-what/chart1.png" alt="Budget Flexibility">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart compares how much freedom four institutions have to move money. The Federal Reserve bar hits the top of the chart — labeled "infinite" during emergencies. HUD, which handles housing for millions of Americans, works with a $73.3 billion budget set by Congress each year. New York City's budget has about 25% real flexibility. Title I school funding — money meant for low-income kids — can only be spent in certain ways, offering between 35–75% flexibility depending on the school.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When a financial crisis hit in 2020, the Federal Reserve created over $2 trillion in emergency loans within weeks — no vote needed. Meanwhile, families waiting on housing vouchers and schools waiting on education funding still had to wait for Congress to act. The system moves fast for the financial sector. Everyone else stands in line.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Federal Reserve funds itself through the banks it regulates — it doesn't need Congress to act. Under Section 13(3) of the Federal Reserve Act, it can lend to corporations, investment firms, and entire markets in an emergency with almost no limit. HUD, by contrast, must go through the full Congressional appropriations process every single year. In 2020, the Fed deployed more emergency power in 3 weeks than HUD's entire annual budget — times 25.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Discretion Scores -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Your cash triggers an automatic report at $10,000. A bank examiner's opinion can block a billion-dollar merger — and there's no rulebook.</h3>
+      <img class="chart-image" src="/docs/room4/agencies-do-what/chart2.png" alt="Discretion Scores">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart scores four institutions on how subjective their power is — from 1 (rule-based) to 4 (judgment-based). FinCEN scores a 1: it uses hard dollar thresholds like the $10,000 cash reporting rule that applies the same way to everyone. The OCC (bank regulator), Medical Licensing Boards, and NYCHA (New York City public housing) all score a 4 — meaning their decisions depend heavily on the judgment of the person or board reviewing your case.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">If you deposit $10,001 in cash, a report is automatically filed — no human decides. But if a bank examiner doesn't like how a bank is being run, they can issue a "Matter Requiring Attention" — a private warning with no legal definition, no standard, and no public record — that can block expansions and mergers worth billions. The rules are rigid for regular people. They're flexible for institutions.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The OCC supervises over 1,000 national banks and federal savings associations. Its "Matters Requiring Attention" system has no basis in law — it's an examiner convention that carries enormous power. There is no published playbook for what triggers an MRA. Banks employ former OCC examiners and specialized lawyers specifically to navigate this system. Regular people have no equivalent access. FinCEN, by contrast, filed 20.5 million automatic reports in 2024 — rules with no exceptions, applied to everyone equally.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Federal Audit Coverage -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The Pentagon has failed 8 audits in a row and still controls $4 trillion. You'd lose your loan if you couldn't show your bank statements.</h3>
+      <img class="chart-image" src="/docs/room4/agencies-do-what/chart3.png" alt="Federal Audit Coverage">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This pie chart shows how federal audits are split. Only 10% are mandatory — meaning required by law for specific agencies or programs. The other 90% are "risk-based" or discretionary, meaning auditors choose what to look at based on their own priorities. Most of what the government spends money on is never fully audited at all.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The federal government has reported over $2.8 trillion in improper payments since 2003 — money sent to the wrong people, for the wrong reasons, or with no documentation at all. The Department of Defense manages $4.1 trillion in assets and has failed every audit since they started trying in 2018. In 2023, the Pentagon couldn't account for 63% of its assets. Meanwhile, a small business owner who can't produce receipts for a $500 deduction can face an IRS audit.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The 72 federal Inspectors General choose most of what they investigate — they are not required to audit everything. The GAO sets its own agenda based on Congressional requests and risk. The result is that the biggest spenders — DOD, HHS, and HUD — carry the most unresolved problems. GAO has over 5,500 unfulfilled recommendations representing up to $208 billion in unrealized savings. The oversight system protects the budget from scrutiny at the top while applying strict rules to individuals at the bottom.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Normal Rules vs Waiver Lane -->
+    <div class="chart-block">
+      <h3 class="chart-hook">There are two sets of rules: the ones everyone follows, and the waiver lane — where 75% of Medicaid money flows.</h3>
+      <img class="chart-image" src="/docs/room4/agencies-do-what/chart4.png" alt="Normal Rules vs Waiver Lane">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart compares flexibility under normal rules versus the "waiver lane." Normal rules score a 10 — rigid, apply to everyone. The waiver lane scores a 90 — nearly unlimited flexibility for those who qualify. Federal waivers let states, hospitals, banks, and large institutions officially opt out of standard rules with government approval.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">More than 75% of all Medicaid spending now flows through waiver programs — mostly negotiated by state governments, not individual patients. States can use waivers to restructure entire programs, change who qualifies, and redirect billions in ways the original law never intended. Regular people receive Medicaid services under waiver rules they never agreed to and can't negotiate. A single state Medicaid waiver can cover more money than most countries' annual health budgets.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Department of Health and Human Services (HHS) oversees 81 active Section 1115 Medicaid demonstration waivers. States employ entire teams of lawyers and policy staff just to negotiate these waivers with CMS (Centers for Medicare & Medicaid Services). GAO found that in several approved waivers, HHS set spending limits $32 billion higher than the data justified — with no accountability. Individuals benefit from waiver services, but they have no seat at the table when the rules are written. The waiver system is designed for institutions. Regular people just live under whatever gets approved.
         </div>
       </div>
     </div>
