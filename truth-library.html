@@ -145,12 +145,12 @@
             }
         }
 
-        /* Gallery Modal */
-        .gallery-modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
+	        /* Gallery Modal */
+	        .gallery-modal-overlay {
+	            display: none;
+	            position: fixed;
+	            top: 0;
+	            left: 0;
             width: 100%;
             height: 100%;
             background: rgba(10, 25, 47, 0.95);
@@ -176,27 +176,142 @@
             z-index: 1001;
             color: #ccd6f6;
         }
-        .gallery-modal.active {
-            display: block;
-        }
-        .gallery-modal-close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            background: none;
-            border: none;
-            color: #8892b0;
-            font-size: 28px;
-            cursor: pointer;
-        }
-        .gallery-modal-close:hover {
-            color: #64ffda;
-        }
-        .gallery-modal h2 {
-            margin: 0 0 20px;
-            color: #ccd6f6;
-            font-size: 1.5rem;
-        }
+	        .gallery-modal.active {
+	            display: block;
+	        }
+	        .gallery-modal-close {
+	            position: absolute;
+	            top: 12px;
+	            right: 16px;
+	            background: none;
+	            border: none;
+	            color: #8892b0;
+	            font-size: 28px;
+	            cursor: pointer;
+	        }
+	        .gallery-modal-close-text {
+	            font-size: 0.8rem;
+	            letter-spacing: 0.12em;
+	            text-transform: uppercase;
+	            padding: 6px 10px;
+	            border-radius: 8px;
+	            border: 1px solid rgba(29, 58, 92, 0.6);
+	            background: rgba(17, 34, 64, 0.35);
+	        }
+	        .gallery-modal-close:hover {
+	            color: #64ffda;
+	        }
+	        .gallery-modal h2 {
+	            margin: 0 0 20px;
+	            color: #ccd6f6;
+	            font-size: 1.5rem;
+	        }
+	        .gallery-modal.section-modal {
+	            top: 0;
+	            left: 0;
+	            transform: none;
+	            width: 100%;
+	            height: 100%;
+	            max-width: none;
+	            max-height: none;
+	            border-radius: 0;
+	            padding: 28px 28px 60px;
+	        }
+
+	        /* Room 6: section dropdown */
+	        .room6-sections {
+	            margin: 0 0 20px;
+	        }
+	        .room6-sections summary {
+	            list-style: none;
+	            cursor: pointer;
+	            color: #64ffda;
+	            font-weight: 600;
+	            letter-spacing: 0.04em;
+	            text-transform: uppercase;
+	            font-size: 0.8rem;
+	            padding: 10px 12px;
+	            border: 1px solid rgba(29, 58, 92, 0.6);
+	            border-radius: 10px;
+	            background: rgba(17, 34, 64, 0.35);
+	            user-select: none;
+	        }
+	        .room6-sections summary::-webkit-details-marker { display: none; }
+	        .room6-menu {
+	            margin-top: 10px;
+	            display: grid;
+	            gap: 10px;
+	        }
+	        .room6-menu button {
+	            width: 100%;
+	            text-align: left;
+	            background: #112240;
+	            border: 1px solid rgba(29, 58, 92, 0.6);
+	            border-radius: 10px;
+	            padding: 10px 12px;
+	            color: #ccd6f6;
+	            cursor: pointer;
+	            transition: transform 0.2s ease, border-color 0.2s ease;
+	        }
+	        .room6-menu button:hover {
+	            border-color: rgba(100, 255, 218, 0.35);
+	            transform: translateY(-1px);
+	        }
+
+	        /* Room 6: Mental Stress section modal */
+	        .ms-chart-block {
+	            padding-bottom: 32px;
+	            margin-bottom: 36px;
+	            border-bottom: 1px solid #1d3a5c;
+	        }
+	        .ms-chart-block:last-of-type {
+	            border-bottom: none;
+	            margin-bottom: 0;
+	            padding-bottom: 0;
+	        }
+	        .ms-headline {
+	            font-weight: 700;
+	            color: #ccd6f6;
+	            font-size: 1.05rem;
+	            line-height: 1.55;
+	            margin: 0 0 16px;
+	        }
+	        .ms-chart-card {
+	            background: #ffffff;
+	            border-radius: 12px;
+	            padding: 16px;
+	            border: 1px solid rgba(29, 58, 92, 0.35);
+	            display: flex;
+	            justify-content: center;
+	            align-items: center;
+	        }
+	        .ms-chart-img {
+	            max-width: 100%;
+	            height: auto;
+	            display: block;
+	            cursor: pointer;
+	        }
+	        .ms-label {
+	            margin: 18px 0 8px;
+	            color: #64ffda;
+	            font-weight: 700;
+	            letter-spacing: 0.08em;
+	            text-transform: uppercase;
+	            font-size: 0.8rem;
+	        }
+	        .ms-text {
+	            margin: 0;
+	            color: #ccd6f6;
+	            font-size: 0.95rem;
+	            line-height: 1.65;
+	        }
+	        .ms-follow-money {
+	            margin-top: 18px;
+	            background: #0a192f;
+	            border: 1px solid rgba(100, 255, 218, 0.2);
+	            border-radius: 12px;
+	            padding: 18px;
+	        }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -322,10 +437,10 @@
             right: 20px;
         }
 
-        @media (max-width: 600px) {
-            .gallery-modal {
-                width: 100%;
-                height: 100%;
+	        @media (max-width: 600px) {
+	            .gallery-modal {
+	                width: 100%;
+	                height: 100%;
                 max-height: 100%;
                 border-radius: 0;
                 padding: 16px;
@@ -333,13 +448,19 @@
                 left: 0;
                 transform: none;
             }
-            .gallery-modal h2 {
-                font-size: 1.25rem;
-                padding-right: 30px;
-            }
-            .gallery-intro {
-                font-size: 0.9rem;
-            }
+	            .gallery-modal h2 {
+	                font-size: 1.25rem;
+	                padding-right: 30px;
+	            }
+	            .gallery-modal.section-modal {
+	                padding: 18px 16px 54px;
+	            }
+	            .gallery-modal-close-text {
+	                font-size: 0.75rem;
+	            }
+	            .gallery-intro {
+	                font-size: 0.9rem;
+	            }
             .gallery-section-title {
                 font-size: 0.9rem;
             }
@@ -350,13 +471,19 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 8px;
             }
-            .gallery-grid img {
-                height: 90px;
-            }
-            .gallery-show-more {
-                font-size: 0.8rem;
-                padding: 6px 12px;
-            }
+	            .gallery-grid img {
+	                height: 90px;
+	            }
+	            .ms-headline {
+	                font-size: 1rem;
+	            }
+	            .ms-text {
+	                font-size: 0.92rem;
+	            }
+	            .gallery-show-more {
+	                font-size: 0.8rem;
+	                padding: 6px 12px;
+	            }
             .lightbox-prev,
             .lightbox-next {
                 font-size: 32px;
@@ -1446,6 +1573,16 @@
   <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
   <h2>Working and Still Behind</h2>
   <p class="gallery-intro">Millions doing everything right but still unable to get ahead.</p>
+  <details class="room6-sections">
+    <summary>Room 6 Sections</summary>
+    <div class="room6-menu">
+      <button type="button" onclick="switchGalleryModal('working-and-behind')">Working and Still Behind</button>
+      <button type="button" onclick="switchGalleryModal('families-under-strain')">Families Under Strain</button>
+      <button type="button" onclick="switchGalleryModal('mental-load')">Mental Stress</button>
+      <button type="button" onclick="switchGalleryModal('communities-in-middle')">Communities in the Middle</button>
+      <button type="button" onclick="switchGalleryModal('turning-pain-into-power')">Turning Pain into Power</button>
+    </div>
+  </details>
   <div class="gallery-grid">
     <img src="/docs/room6/working-and-behind/chart1.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room6/working-and-behind/chart2.png" onclick="openLightbox(this.src)" alt="">
@@ -1455,18 +1592,85 @@
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
 
-<!-- THE MENTAL LOAD GALLERY MODAL -->
-<div id="gallery-modal-mental-load" class="gallery-modal">
-  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
-  <h2>The Mental Load</h2>
-  <p class="gallery-intro">How financial pressure shows up as anxiety, burnout, and health problems.</p>
-  <div class="gallery-grid">
-    <img src="/docs/room6/mental-load/chart1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room6/mental-load/chart2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room6/mental-load/chart3.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room6/mental-load/chart4.png" onclick="openLightbox(this.src)" alt="">
+<!-- MENTAL STRESS SECTION MODAL -->
+<div id="gallery-modal-mental-load" class="gallery-modal section-modal">
+  <button class="gallery-modal-close gallery-modal-close-text" onclick="closeGalleryModal()">CLOSE</button>
+  <h2>MENTAL STRESS</h2>
+
+  <details class="room6-sections">
+    <summary>Room 6 Sections</summary>
+    <div class="room6-menu">
+      <button type="button" onclick="switchGalleryModal('working-and-behind')">Working and Still Behind</button>
+      <button type="button" onclick="switchGalleryModal('families-under-strain')">Families Under Strain</button>
+      <button type="button" onclick="switchGalleryModal('mental-load')">Mental Stress</button>
+      <button type="button" onclick="switchGalleryModal('communities-in-middle')">Communities in the Middle</button>
+      <button type="button" onclick="switchGalleryModal('turning-pain-into-power')">Turning Pain into Power</button>
+    </div>
+  </details>
+
+  <!-- CHART BLOCK 1 -->
+  <div class="ms-chart-block">
+    <p class="ms-headline">Worrying about money does not just feel bad. It causes depression, anxiety, and real illness — and most people suffer alone because they are too ashamed to talk about it.</p>
+    <div class="ms-chart-card">
+      <img class="ms-chart-img" src="/docs/room6/mental-load/chart1.png" onclick="openLightbox(this.src)" alt="ML1 — Financial Stress &amp; Mental Health">
+    </div>
+    <div class="ms-label">WHAT YOU'RE SEEING</div>
+    <p class="ms-text">This chart shows four ways that financial stress damages mental health. First, people who are struggling with money are up to 3.55 times more likely to be diagnosed with depression. This comes from research reviewed in PLOS ONE and the Financial Health Network, which have looked at dozens of studies linking financial hardship directly to depression and anxiety. Second, 80% of adults ages 18 to 34 say money is a significant source of stress — the highest rate of any age group. This comes from the American Psychological Association's Stress in America 2023 survey of thousands of adults across the country. Third, 62% of Americans say they worry about being able to pay for healthcare. This comes from the APA's annual Stress in America survey tracking ongoing financial and health-related stressors. Fourth, 40% of Americans say money stress affects them every single day. This comes from Bankrate's 2024 financial wellness survey of U.S. adults, which found that the biggest driver of daily money stress is simply not being able to pay for regular expenses.</p>
+    <div class="ms-label">WHY IT MATTERS</div>
+    <p class="ms-text">Money stress is not just in your head. Researchers have measured it in your brain and your body. When you worry about money all the time, your body stays in a state of emergency — the same physical response your body has when you are being chased by something dangerous. Over time that wears down your heart, your immune system, your sleep, and your ability to think clearly. The APA found that three in five adults do not talk about financial stress because they do not want to burden others. Most people suffer silently. And when they finally do reach out for help, they often find out that mental health care costs too much to afford — which makes the stress worse. One in three Americans says the cost of mental healthcare is the biggest thing stopping them from getting it.</p>
+    <div class="ms-follow-money">
+      <div class="ms-label">FOLLOW THE MONEY</div>
+      <p class="ms-text">The Substance Abuse and Mental Health Services Administration (SAMHSA) is the federal agency responsible for mental health services. It runs a grant program called Community Mental Health Services Block Grant. Total annual funding: about $750 million for the entire country. That works out to roughly $2 per American per year. The National Institute of Mental Health (NIMH) spends about $2.2 billion a year studying mental illness. It has documented the link between financial stress and depression in hundreds of studies. Research is not the same as care. Knowing the problem and paying to fix it are two different things, and the federal government has chosen the first one. The Centers for Medicare and Medicaid Services (CMS) oversees mental health parity — the federal rule that says insurance companies must cover mental health the same way they cover physical health. The Mental Health Parity and Addiction Equity Act has been law since 2008. CMS enforcement has been described by congressional investigators as "largely toothless." Insurance companies routinely deny mental health claims at higher rates than physical health claims with no consequence. The people who benefit most from weak enforcement are the insurance companies that are allowed to keep denying claims. The people who suffer are the ones sitting at home, worried about money, unable to afford the help they need.</p>
+    </div>
   </div>
-  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+
+  <!-- CHART BLOCK 2 -->
+  <div class="ms-chart-block">
+    <p class="ms-headline">When you are worried about money, your brain loses power. Scientists have measured it. And when the whole workforce burns out, the economy loses hundreds of billions of dollars.</p>
+    <div class="ms-chart-card">
+      <img class="ms-chart-img" src="/docs/room6/mental-load/chart2.png" onclick="openLightbox(this.src)" alt="ML2 — Burnout &amp; Cognitive Overload">
+    </div>
+    <div class="ms-label">WHAT YOU'RE SEEING</div>
+    <p class="ms-text">This chart shows four ways that financial stress and burnout drain human thinking and productivity. First, worrying about money causes a 13-point drop in cognitive function — roughly the same as losing a full night of sleep. This was measured in a landmark 2013 study published in the journal Science by researchers at Harvard, Princeton, and the University of Warwick. They tested people's thinking before and after presenting them with financial worries and found that the preoccupation with money problems literally takes up mental space that would otherwise be used for thinking, planning, and making good decisions. Second, 74% of Gen Z workers say they have needed to take time off work because of stress — but fewer than half actually took that time, most because they did not feel they could afford to or would be judged for it. This comes from Deloitte's 2025 Global Gen Z and Millennial Survey of over 23,000 workers in 44 countries. Third, global workplace disengagement — driven heavily by burnout, stress, and overwork — cost the world economy $438 billion in lost productivity in 2024. This comes from Gallup's State of the Global Workplace 2025 report. Fourth, cognitive tunneling — where a mind so focused on one urgent problem cannot think about anything else — is a documented psychological effect of financial scarcity, described in the same Harvard and Princeton research.</p>
+    <div class="ms-label">WHY IT MATTERS</div>
+    <p class="ms-text">The 13-point IQ drop is not a metaphor. It is a measurement. A 13-point drop in cognitive function is the difference between performing at your best and performing like you have not slept in 24 hours. It affects your job performance, your parenting, your health decisions, your driving. And it happens automatically, just by worrying about money — not because you did anything wrong, but because your brain has a limited amount of attention and financial stress takes up a large share of it. This is why the same people who are struggling the most financially are also making decisions that look from the outside like bad choices. Their thinking is literally being taxed by their circumstances. The $438 billion in global lost productivity is the economy paying the price for that same dynamic, at scale.</p>
+    <div class="ms-follow-money">
+      <div class="ms-label">FOLLOW THE MONEY</div>
+      <p class="ms-text">The Occupational Safety and Health Administration (OSHA) is the federal agency that is supposed to protect workers from workplace hazards. OSHA has no rule against excessive mental workload, no standard for cognitive overload, and no requirement for employers to address burnout. It is one of the few wealthy countries in the world where there is no legal "right to disconnect" — no law protecting workers from being contacted by their employer outside of working hours. The Department of Labor oversees workplace rules. It enforces minimum wage, overtime, and child labor laws. It does not regulate the mental load placed on workers. It does not require employers to provide mental health days. It does not require paid sick leave at all — the United States has no federal paid sick leave mandate. SAMHSA funds some workplace mental health programs. They are small, voluntary, and have no enforcement teeth. The result is a system where employers get the productivity of a workforce that is burning out, and workers absorb the full cost in their own health and shortened careers. No federal agency is currently required to stop this.</p>
+    </div>
+  </div>
+
+  <!-- CHART BLOCK 3 -->
+  <div class="ms-chart-block">
+    <p class="ms-headline">Stress does not just hurt how you feel. It cuts years off your life. The richest Americans live 15 years longer than the poorest — and that gap is getting wider every decade.</p>
+    <div class="ms-chart-card">
+      <img class="ms-chart-img" src="/docs/room6/mental-load/chart3.png" onclick="openLightbox(this.src)" alt="ML3 — Physical Health Breakdown">
+    </div>
+    <div class="ms-label">WHAT YOU'RE SEEING</div>
+    <p class="ms-text">This chart shows four ways that financial stress causes real, physical health damage. First, when financial pressure is relieved, hypertension rates drop by 16%. This comes from research tracking how blood pressure responds when people's financial stress decreases — showing that the body's elevated stress state directly drives high blood pressure. Second, people under chronic stress have up to 3 times the risk of heart disease compared to people who are not. This comes from cardiovascular research cited by the American Institute of Stress and reviewed in the Journal of Clinical Medicine, showing that the body's long-term stress hormones directly damage the heart. Third, 79% of Americans say financial stress has caused them sleep problems. This comes from a 2025 survey by the American Academy of Sleep Medicine, which found that money worries are the leading non-health reason for lost sleep in America. Fourth, there is a 15-year gap in life expectancy between the richest 1% and poorest 1% of American men. This was measured in a landmark study by Stanford economist Raj Chetty and colleagues, published in the Journal of the American Medical Association in 2016, using 1.4 billion tax and death records. For women, the gap is 10 years.</p>
+    <div class="ms-label">WHY IT MATTERS</div>
+    <p class="ms-text">A 15-year difference in life expectancy is enormous. It is the difference between dying at 72 and dying at 87. It means that in America, your zip code and your income determine not just what kind of life you have but how long you get to live it. And this gap is growing. Between 2001 and 2014, the richest Americans gained about 3 years of life expectancy. The poorest Americans gained almost none. The researchers who found this — economists and public health scientists at Stanford, MIT, and Harvard — said it was the equivalent of the richest Americans curing cancer while the poorest Americans stayed exactly where they were. The physical damage from financial stress is not theoretical. It shows up in hospital records, in death certificates, and in the communities left behind.</p>
+    <div class="ms-follow-money">
+      <div class="ms-label">FOLLOW THE MONEY</div>
+      <p class="ms-text">The Centers for Disease Control (CDC) tracks mortality rates, disease rates, and life expectancy data by income, race, and geography. The CDC has published reports documenting exactly how poverty and stress shorten lives. Data collection is not the same as action. The National Institutes of Health (NIH) funds billions of dollars of research every year on the diseases that chronic stress causes — heart disease, hypertension, diabetes, immune disorders. NIH-funded researchers have documented the stress-disease connection in hundreds of peer-reviewed studies. The NIH budget for research on the social determinants of health — poverty, housing, income — is a small fraction of its overall $48 billion annual budget. The Centers for Medicare and Medicaid Services (CMS) pays for the treatment of diseases caused by poverty and stress. It pays for heart surgeries, dialysis, emergency room visits, and hospital stays. It generally does not pay to address the poverty and stress that caused those conditions. Treating the result costs far more than preventing the cause. That math is well known. The agencies keep paying for treatment and not for prevention. The people who benefit most from this arrangement are the hospitals, pharmaceutical companies, and insurance companies that get paid for the treatments. The people who pay the price with their lives are the ones who could not afford to avoid getting sick in the first place.</p>
+    </div>
+  </div>
+
+  <!-- CHART BLOCK 4 -->
+  <div class="ms-chart-block">
+    <p class="ms-headline">When families are in survival mode, children pay the price. Financial stress reaches into classrooms, into child development, and into the parts of the brain that are supposed to be planning for the future.</p>
+    <div class="ms-chart-card">
+      <img class="ms-chart-img" src="/docs/room6/mental-load/chart4.png" onclick="openLightbox(this.src)" alt="ML4 — Attention Tax of Survival Mode">
+    </div>
+    <div class="ms-label">WHAT YOU'RE SEEING</div>
+    <p class="ms-text">This chart shows four documented ways that financial stress affects thinking, learning, and child development. First, 61% of students say financial stress has directly affected their academic performance. This comes from surveys tracking how students' money worries translate into lower grades, missed deadlines, and trouble concentrating. Second, decision fatigue — where a mind overwhelmed by too many hard choices becomes worse at making all choices — is a documented and measured effect of poverty. The same 2013 Harvard and Princeton research (Mani, Mullainathan, Shafir, and Zhao in the journal Science) showed that poor people make more decision errors when their financial concerns are triggered, because the mental bandwidth for good decision-making is being used up by survival thinking. Third, child development is directly harmed when families experience financial stress. Harvard's Center on the Developing Child and the CDC's Adverse Childhood Experiences (ACEs) research both document that children in financially stressed households show higher rates of developmental delays, mental health problems, and physical illness — effects that follow them into adulthood. Fourth, intrusive thoughts — where worries about bills, debt, and money force their way into a person's mind even when they are trying to focus on something else — are a measured symptom of financial stress, documented in the same scarcity research and in clinical mental health studies.</p>
+    <div class="ms-label">WHY IT MATTERS</div>
+    <p class="ms-text">When a parent cannot stop thinking about how to pay rent, they are less present with their children. When a child grows up in a household where money is a constant crisis, their developing brain learns that the world is unsafe. When a student cannot stop worrying about their family's debt, they cannot concentrate on learning. This is not a character flaw. This is how brains work. The same research that showed a 13-point cognitive drop for adults applies to children too — except for children, the effects show up during the years when their brains are being built. The CDC has documented that childhood financial stress is one of the strongest predictors of worse health, lower education, and higher poverty in adulthood. Poverty is not just a problem for one generation. It is a tax that gets collected from the next generation too.</p>
+    <div class="ms-follow-money">
+      <div class="ms-label">FOLLOW THE MONEY</div>
+      <p class="ms-text">The Department of Education distributes federal education funding, including Title I grants for schools in low-income areas. Title I has been funded at roughly $18 billion per year. Research shows that mental health support in schools is one of the highest-impact investments possible for students in financial stress — but Title I can be used for many things, and mental health services are often cut first when budgets are tight. The Department of Education does not require schools to provide mental health services. SAMHSA runs a School-Based Mental Health Services grant program. Total funding: about $100 million per year, shared across thousands of school districts nationwide. That is not enough to hire a counselor for most schools. The CDC's ACEs research has been cited thousands of times and has directly influenced how researchers understand poverty and child development. The CDC does not have the authority to change income levels, housing policy, or health insurance access — the root causes of the ACEs it documents. The result is a system where the federal government funds the research that proves financial stress harms children, funds the data collection that tracks the damage, and does not fund the policies that would reduce the financial stress causing the harm. The agencies that could break this cycle — Treasury, HUD, HHS, the Department of Labor — each control one piece of the puzzle and none of them are required to put it together.</p>
+    </div>
+  </div>
 </div>
 
 <!-- FAMILIES UNDER STRAIN GALLERY MODAL -->
@@ -1474,6 +1678,16 @@
   <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
   <h2>Families Under Strain</h2>
   <p class="gallery-intro">How little margin for error can unravel years of effort.</p>
+  <details class="room6-sections">
+    <summary>Room 6 Sections</summary>
+    <div class="room6-menu">
+      <button type="button" onclick="switchGalleryModal('working-and-behind')">Working and Still Behind</button>
+      <button type="button" onclick="switchGalleryModal('families-under-strain')">Families Under Strain</button>
+      <button type="button" onclick="switchGalleryModal('mental-load')">Mental Stress</button>
+      <button type="button" onclick="switchGalleryModal('communities-in-middle')">Communities in the Middle</button>
+      <button type="button" onclick="switchGalleryModal('turning-pain-into-power')">Turning Pain into Power</button>
+    </div>
+  </details>
   <div class="gallery-grid">
     <img src="/docs/room6/families-under-strain/chart1.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room6/families-under-strain/chart2.png" onclick="openLightbox(this.src)" alt="">
@@ -1488,6 +1702,16 @@
   <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
   <h2>Communities in the Middle</h2>
   <p class="gallery-intro">When enough individuals are stressed, neighborhoods change.</p>
+  <details class="room6-sections">
+    <summary>Room 6 Sections</summary>
+    <div class="room6-menu">
+      <button type="button" onclick="switchGalleryModal('working-and-behind')">Working and Still Behind</button>
+      <button type="button" onclick="switchGalleryModal('families-under-strain')">Families Under Strain</button>
+      <button type="button" onclick="switchGalleryModal('mental-load')">Mental Stress</button>
+      <button type="button" onclick="switchGalleryModal('communities-in-middle')">Communities in the Middle</button>
+      <button type="button" onclick="switchGalleryModal('turning-pain-into-power')">Turning Pain into Power</button>
+    </div>
+  </details>
   <div class="gallery-grid">
     <img src="/docs/room6/communities-in-middle/chart1.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room6/communities-in-middle/chart2.png" onclick="openLightbox(this.src)" alt="">
@@ -1502,6 +1726,16 @@
   <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
   <h2>Turning Pain into Power</h2>
   <p class="gallery-intro">When enough people describe similar experiences, it becomes evidence.</p>
+  <details class="room6-sections">
+    <summary>Room 6 Sections</summary>
+    <div class="room6-menu">
+      <button type="button" onclick="switchGalleryModal('working-and-behind')">Working and Still Behind</button>
+      <button type="button" onclick="switchGalleryModal('families-under-strain')">Families Under Strain</button>
+      <button type="button" onclick="switchGalleryModal('mental-load')">Mental Stress</button>
+      <button type="button" onclick="switchGalleryModal('communities-in-middle')">Communities in the Middle</button>
+      <button type="button" onclick="switchGalleryModal('turning-pain-into-power')">Turning Pain into Power</button>
+    </div>
+  </details>
   <div class="gallery-grid">
     <img src="/docs/room6/turning-pain-into-power/chart1.png" onclick="openLightbox(this.src)" alt="">
     <img src="/docs/room6/turning-pain-into-power/chart2.png" onclick="openLightbox(this.src)" alt="">
@@ -1713,21 +1947,26 @@
   <button class="lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">›</button>
 </div>
 
-<script>
-// Gallery images array for navigation
-let galleryImages = [];
-let currentImageIndex = 0;
+	<script>
+	// Gallery images array for navigation
+	let galleryImages = [];
+	let currentImageIndex = 0;
 
-function openGalleryModal(id) {
-    document.getElementById('gallery-modal-overlay').classList.add('active');
-    document.getElementById('gallery-modal-' + id).classList.add('active');
-    document.body.style.overflow = 'hidden';
+	function switchGalleryModal(id) {
+	    document.querySelectorAll('.gallery-modal').forEach(m => m.classList.remove('active'));
+	    openGalleryModal(id);
+	}
 
-    // Build array of ALL images from this gallery (including hidden ones)
-    const modal = document.getElementById('gallery-modal-' + id);
-    const imgs = modal.querySelectorAll('.gallery-grid img');
-    galleryImages = Array.from(imgs).map(img => img.src);
-}
+	function openGalleryModal(id) {
+	    document.getElementById('gallery-modal-overlay').classList.add('active');
+	    document.getElementById('gallery-modal-' + id).classList.add('active');
+	    document.body.style.overflow = 'hidden';
+
+	    // Build array of ALL images from this gallery (including hidden ones)
+	    const modal = document.getElementById('gallery-modal-' + id);
+	    const imgs = modal.querySelectorAll('.gallery-grid img, .ms-chart-img');
+	    galleryImages = Array.from(imgs).map(img => img.src);
+	}
 
 function toggleSection(btn) {
     const section = btn.parentElement;
