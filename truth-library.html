@@ -1018,9 +1018,18 @@
 <section class="tl-room" id="room-06">
   <span class="tl-room-number">06</span>
   <h2 class="tl-room-title">THE HUMAN<br>COST</h2>
-  <p class="tl-room-desc">How these pressures affect daily life and stability.</p>
+  <p class="tl-room-desc">What this system feels like in real life.</p>
   <span class="tl-room-tag">Impact</span>
-  <button class="tl-room-btn" onclick="openGalleryModal('working-and-behind')">Enter Room</button>
+  <div class="room-dropdown" id="room06-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleRoom06Dropdown()">Enter Room</button>
+    <div class="room-dropdown-menu">
+      <button class="room-dropdown-item disabled">Middle Class Squeeze <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Family Pressure <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Mental Stress <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">Working but Behind <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item disabled">What Can Change <span class="coming-soon">(Coming Soon)</span></button>
+    </div>
+  </div>
 </section>
 
 <!-- ROOM 07 -->
@@ -4855,6 +4864,7 @@ function toggleRoom01Dropdown() {
     document.getElementById('room03-dropdown')?.classList.remove('active');
     document.getElementById('room04-dropdown')?.classList.remove('active');
     document.getElementById('room05-dropdown')?.classList.remove('active');
+    document.getElementById('room06-dropdown')?.classList.remove('active');
 }
 
 // Room 02 Dropdown
@@ -4866,6 +4876,7 @@ function toggleRoom02Dropdown() {
     document.getElementById('room03-dropdown')?.classList.remove('active');
     document.getElementById('room04-dropdown')?.classList.remove('active');
     document.getElementById('room05-dropdown')?.classList.remove('active');
+    document.getElementById('room06-dropdown')?.classList.remove('active');
 }
 
 // Room 03 Dropdown
@@ -4877,6 +4888,7 @@ function toggleRoom03Dropdown() {
     document.getElementById('room02-dropdown')?.classList.remove('active');
     document.getElementById('room04-dropdown')?.classList.remove('active');
     document.getElementById('room05-dropdown')?.classList.remove('active');
+    document.getElementById('room06-dropdown')?.classList.remove('active');
 }
 
 // Room 04 Dropdown
@@ -4888,6 +4900,7 @@ function toggleRoom04Dropdown() {
     document.getElementById('room02-dropdown')?.classList.remove('active');
     document.getElementById('room03-dropdown')?.classList.remove('active');
     document.getElementById('room05-dropdown')?.classList.remove('active');
+    document.getElementById('room06-dropdown')?.classList.remove('active');
 }
 
 // Room 05 Dropdown
@@ -4899,6 +4912,19 @@ function toggleRoom05Dropdown() {
     document.getElementById('room02-dropdown')?.classList.remove('active');
     document.getElementById('room03-dropdown')?.classList.remove('active');
     document.getElementById('room04-dropdown')?.classList.remove('active');
+    document.getElementById('room06-dropdown')?.classList.remove('active');
+}
+
+// Room 06 Dropdown
+function toggleRoom06Dropdown() {
+    const dropdown = document.getElementById('room06-dropdown');
+    dropdown.classList.toggle('active');
+    // Close other dropdowns
+    document.getElementById('room01-dropdown')?.classList.remove('active');
+    document.getElementById('room02-dropdown')?.classList.remove('active');
+    document.getElementById('room03-dropdown')?.classList.remove('active');
+    document.getElementById('room04-dropdown')?.classList.remove('active');
+    document.getElementById('room05-dropdown')?.classList.remove('active');
 }
 
 // Close dropdown when clicking outside
@@ -4908,6 +4934,7 @@ document.addEventListener('click', function(e) {
     const dropdown3 = document.getElementById('room03-dropdown');
     const dropdown4 = document.getElementById('room04-dropdown');
     const dropdown5 = document.getElementById('room05-dropdown');
+    const dropdown6 = document.getElementById('room06-dropdown');
     if (dropdown1 && !dropdown1.contains(e.target)) {
         dropdown1.classList.remove('active');
     }
@@ -4923,6 +4950,9 @@ document.addEventListener('click', function(e) {
     if (dropdown5 && !dropdown5.contains(e.target)) {
         dropdown5.classList.remove('active');
     }
+    if (dropdown6 && !dropdown6.contains(e.target)) {
+        dropdown6.classList.remove('active');
+    }
 });
 
 // Scroll Modal Functions
@@ -4937,6 +4967,7 @@ function openScrollModal(modalId) {
         document.getElementById('room03-dropdown')?.classList.remove('active');
         document.getElementById('room04-dropdown')?.classList.remove('active');
         document.getElementById('room05-dropdown')?.classList.remove('active');
+        document.getElementById('room06-dropdown')?.classList.remove('active');
         // Initialize scroll observer
         initChartObserver();
     }
