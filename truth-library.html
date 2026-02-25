@@ -1005,7 +1005,7 @@
   <div class="room-dropdown" id="room05-dropdown">
     <button class="room-dropdown-btn" onclick="toggleRoom05Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
-      <button class="room-dropdown-item disabled">Household Debt <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('debt-household-scroll')">Household Debt</button>
       <button class="room-dropdown-item disabled">Where Prices Rise <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Public Money <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Wages vs Profits <span class="coming-soon">(Coming Soon)</span></button>
@@ -4386,6 +4386,81 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           After Loper Bright overturned Chevron deference in 2024 — cutting agency win rates nearly in half — and Corner Post removed the six-year time limit on challenging old regulations, Justice Jackson warned of "well-heeled litigants" gaming the system. She was right. Within days, Skadden, K&L Gates, Holland & Knight, and DLA Piper all published advisories telling corporate clients how to use the new rulings. Under the Equal Access to Justice Act, winning parties can recover attorney fees from the government — but fees are capped at $125 per hour, far below the $600 to $1,500 per hour charged by major DC regulatory firms. Pro se litigants — people without lawyers — win federal civil cases at a rate of roughly 3 to 5%. The median federal civil case with trial lasts 35.6 months. Full APA litigation from district court to the Supreme Court costs between $1 million and $10 million. The door is open. The cost of walking through it is not.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 05 - Household Debt -->
+<div id="scroll-modal-debt-household-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">HOUSEHOLD DEBT</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Total Household Debt -->
+    <div class="chart-block">
+      <h3 class="chart-hook">American households owe more than $18 trillion. In 2003, that number was $7 trillion.</h3>
+      <img class="chart-image" src="/docs/room5/debt-and-household/chart1.png" alt="DB1 — Total Household Debt (Trillions)">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This bar chart compares total U.S. household debt in 2003 versus 2024, tracked by the Federal Reserve Bank of New York. The 2003 bar shows roughly $7 trillion. The 2024 bar shows $18.04 trillion — confirmed in the NY Fed's Household Debt and Credit Report, released February 13, 2025. That $18 trillion breaks down as follows: mortgages make up $12.61 trillion (about 70%), auto loans $1.66 trillion, student loans $1.62 trillion, credit cards $1.21 trillion, and home equity lines and other debt making up the rest.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Several laws made this growth possible. In 1978, the Supreme Court ruled in Marquette National Bank v. First of Omaha (439 U.S. 299) that nationally chartered banks could charge whatever interest rate their home state allowed — even to customers in other states. Citibank moved to South Dakota in 1981 to take advantage of this. In 1980, the Depository Institutions Deregulation and Monetary Control Act extended the same rule to state-chartered banks. In 1999, the Gramm-Leach-Bliley Act removed the wall between commercial banks and investment banks, letting lenders originate debt and sell it to Wall Street. In 2004, the Office of the Comptroller of the Currency issued rules preempting more than 30 categories of state consumer-protection laws for national banks. In 2005, the Bankruptcy Abuse Prevention and Consumer Protection Act made it harder to discharge debt in bankruptcy, keeping people in debt longer.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The three major credit bureaus — Equifax ($5.68B in 2024 revenue), Experian ($7.10B), and TransUnion ($4.18B) — earn more revenue every time a new loan is issued or a debt goes to collections. Their combined annual revenue is roughly $17 billion. Fair Isaac Corporation (FICO), which sells the credit scores used to price almost every loan in America, reported $1.72 billion in revenue in 2024 — up 13.5%. The debt collection industry generates about $13.4 billion per year. JPMorgan Chase reported $58.5 billion in net income in 2024, with credit card balances growing 12% year-over-year. The five largest credit card issuers control approximately 83% of all outstanding balances. There is no federal cap on credit card interest rates. The Office of the Comptroller of the Currency — a federal bank regulator — preempted state laws that would have set such caps.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Survival Debt Indicators -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The average credit card charges 23% interest. One in ten accounts is seriously past due. People are using installment loans to buy groceries.</h3>
+      <img class="chart-image" src="/docs/room5/debt-and-household/chart2.png" alt="DB2 — Survival Debt Indicators">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four indicators of what economists call "survival debt" — borrowing to cover basic needs, not luxuries. The first bar shows the average APR on credit card accounts that carry a balance: 23.37% as of Q3 2024, a record high (Federal Reserve G.19 release). The second bar shows the credit card delinquency rate: approximately 8.8–9.1% of accounts were seriously past due in 2024 (NY Fed). The third bar shows Buy Now, Pay Later (BNPL) adoption: 15% of U.S. adults used a BNPL service in 2024 (Federal Reserve SHED survey). The fourth bar shows that 25% of BNPL users are using installment loans to pay for groceries — up from 14% just two years earlier (LendingTree survey, 2025).</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The Federal Reserve's 2024 survey found that only 63% of adults could cover a $400 emergency with cash. Forty-six percent of credit card holders carried a balance at least once during the year. Thirteen percent were in "persistent debt" — paying more in interest and fees than they were paying toward what they actually owed. Total credit card interest and fees charged in 2024 reached $160 billion — up 52% in just two years (CFPB, 2025 Credit Card Market Report). The Credit CARD Act of 2009 (Pub.L. 111-24) was the last major federal credit card law. It required advance notice of rate increases and restricted certain fees — but it does not cap interest rates. In March 2024, the CFPB proposed a rule to cap late fees at $8, estimated to save families $10 billion per year. A federal judge vacated the rule on April 15, 2025, after the CFPB joined the plaintiffs asking for it to be thrown out. The $8 cap is no longer in effect.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Buy Now, Pay Later companies have built billion-dollar businesses on survival borrowing. Affirm reported $3.22 billion in revenue in 2025, up 39% year-over-year. Klarna reported $2.81 billion in 2024 revenue — its first profitable year since 2019 — with 93 million active users globally. The CFPB found that six major BNPL providers originated 335.8 million loans totaling $45.2 billion in 2023. In May 2024, the CFPB issued a rule classifying BNPL accounts as credit cards under federal law, requiring dispute protections and billing statements. BNPL companies sued. Under the Trump administration, the CFPB withdrew the rule in June 2025. BNPL currently has no federal licensing requirement, no standardized disclosure requirement, and most BNPL loans are not reported to credit bureaus — making the debt invisible to other lenders. Credit card issuers, meanwhile, earn an estimated $14.5 billion per year in late fees alone. The CFPB found that the largest bank issuers charge APRs 8–10 percentage points higher than small banks and credit unions for identical products.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Structural Debt Loads -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Student loans, car loans, and medical bills together exceed $3.5 trillion. These are debts people take on to participate in basic American life.</h3>
+      <img class="chart-image" src="/docs/room5/debt-and-household/chart3.png" alt="DB3 — Structural Debt Loads (Trillions)">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows three categories of debt tied to necessities — not discretionary spending. Student loan balances total approximately $1.6 trillion in federal loans alone (Department of Education; 42.7 million borrowers). Auto loan balances total $1.66 trillion (NY Fed, Q4 2024). Medical debt totals at least $220 billion — based on 2021 Census data analyzed by the Peterson-KFF Health System Tracker — affecting roughly 20 million people who owe more than $250. Under broader definitions that include credit card debt used to pay medical bills, approximately 100 million Americans carry some form of healthcare-related debt (KFF Health Care Debt Survey, 2022).</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">In student lending, the Department of Education paid servicers to manage these loans — and those servicers have faced major enforcement actions. Navient was fined $120 million by the CFPB in September 2024 and permanently banned from servicing federal student loans after years of steering borrowers into forbearance instead of affordable repayment plans. In 2022, Navient settled with 39 state attorneys general for $1.85 billion. MOHELA, now the largest federal servicer, was fined $7.2 million in 2024 for billing errors that caused mass delinquencies during the post-pandemic payment restart. In auto lending, subprime delinquencies (60+ days past due) hit 6.6% in January 2025 — the highest level since Fitch Ratings began tracking subprime auto ABS. In medical debt, the CFPB finalized a rule in January 2025 to remove medical bills from credit reports, which would have benefited 15 million Americans and raised credit scores by an average of 20 points. A federal court vacated the rule on July 11, 2025, in Cornerstone Credit Union League v. CFPB (E.D. Tex.). The rule is not in effect.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The federal government collects interest on student loans. In FY2019, interest payments on the federal portfolio totaled approximately $22.4 billion. Student loan servicers are paid per borrower per month — earning roughly $342 total per borrower over a standard 10-year repayment. In auto lending, dealers mark up the interest rate on financing without disclosing it to buyers. A study using data from MIT and the CFPB found the average dealer markup is 1.13 percentage points, costing the typical borrower $647 — and up to $1,655 at the high end. More than 80% of auto loans originate at dealerships. In medical debt, major revenue-cycle management companies — including Optum (a UnitedHealth subsidiary), R1 RCM (acquired for $8.9 billion in 2024), and Conifer Health Solutions — process billions in patient billings annually and collect a percentage of what they recover. The Consumer Data Industry Association, the credit-bureau trade group, sued to block the CFPB's medical debt rule — because removing medical debt from credit reports would reduce the volume of billable data for Equifax, Experian, and TransUnion.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Debt as Wage Substitute -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Wages barely grew. Spending kept rising. Debt filled the gap.</h3>
+      <img class="chart-image" src="/docs/room5/debt-and-household/chart4.png" alt="DB4 — Debt as Wage Substitute (Indexed)">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This indexed chart shows three related facts measured on the same scale. The first bar — Real Wage Growth — is near zero, showing that median wages grew less than 0.6% per year from 1979 to 2024 (Economic Policy Institute analysis of BLS data). The second bar — Consumption Greater Than Income — is at 1.0, showing that personal spending continued rising even as wages stagnated. The personal savings rate collapsed from a historical average of 8.42% to a low of 1.4% in 2005, and sits at 3.6% today (Bureau of Economic Analysis). The third bar — Debt as Wage Substitute — is also at 1.0, showing that household debt doubled to fill the gap between what people earn and what life costs.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The federal minimum wage has not increased since July 24, 2009 — set at $7.25 per hour by the Fair Minimum Wage Act of 2007 (Pub.L. 110-28). As of 2026, this is the longest the federal minimum wage has gone without an increase since it was first established in 1938 — 17 years. Adjusted for inflation, that $7.25 is worth about $10.50 in today's dollars, meaning low-wage workers have lost 27–30% of their purchasing power since the last raise (Economic Policy Institute). Compared to the 1968 peak value, today's minimum wage has lost approximately 40% of its real value. Two economists who documented this pattern in named books: Raghuram Rajan, in Fault Lines (Princeton University Press, 2010), argued that politicians responded to inequality by expanding credit instead of raising wages — writing that "the political system's answer to rising inequality was to lend to consumers." Atif Mian and Amir Sufi, in House of Debt (University of Chicago Press, 2014), documented how household debt expansion — not banking dysfunction alone — caused the Great Recession.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          When wages stay flat and people borrow instead, the financial sector collects the difference. Finance, insurance, and real estate combined account for 21.2% of U.S. GDP (Bureau of Economic Analysis, 2024). The financial sector's share of total U.S. corporate profits grew from 10% in 1947 to roughly 30% today. In 2024, the finance, insurance, and real estate sector spent $636.4 million on federal lobbying — the largest of any sector (OpenSecrets). The American Bankers Association alone spent $7.4 million. Financial-sector PACs contributed $82.6 million to federal candidates. New consumer debt securitization — where banks package loans and sell them to investors — reached $488.2 billion in 2024, a 69% increase over 2023 (Asset Securitization Report). The top five underwriters of these securities — JPMorgan, Bank of America, Citigroup, Barclays, and Goldman Sachs — earn underwriting fees on every deal. The Federal Reserve's dual mandate, established by the Full Employment and Balanced Growth Act of 1978 (Pub.L. 95-523), requires the Fed to pursue maximum employment and stable prices — not wage growth. No federal agency has a mandate to raise wages.
         </div>
       </div>
     </div>
