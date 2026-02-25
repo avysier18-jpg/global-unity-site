@@ -1006,7 +1006,7 @@
     <button class="room-dropdown-btn" onclick="toggleRoom05Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('debt-household-scroll')">Household Debt</button>
-      <button class="room-dropdown-item disabled">Where Prices Rise <span class="coming-soon">(Coming Soon)</span></button>
+      <button class="room-dropdown-item" onclick="openScrollModal('inflation-breakdown-scroll')">Where Prices Rise</button>
       <button class="room-dropdown-item disabled">Public Money <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Wages vs Profits <span class="coming-soon">(Coming Soon)</span></button>
       <button class="room-dropdown-item disabled">Where You Fit <span class="coming-soon">(Coming Soon)</span></button>
@@ -4461,6 +4461,81 @@
         <div class="chart-follow-money-label">Follow the money</div>
         <div class="chart-follow-money-content">
           When wages stay flat and people borrow instead, the financial sector collects the difference. Finance, insurance, and real estate combined account for 21.2% of U.S. GDP (Bureau of Economic Analysis, 2024). The financial sector's share of total U.S. corporate profits grew from 10% in 1947 to roughly 30% today. In 2024, the finance, insurance, and real estate sector spent $636.4 million on federal lobbying — the largest of any sector (OpenSecrets). The American Bankers Association alone spent $7.4 million. Financial-sector PACs contributed $82.6 million to federal candidates. New consumer debt securitization — where banks package loans and sell them to investors — reached $488.2 billion in 2024, a 69% increase over 2023 (Asset Securitization Report). The top five underwriters of these securities — JPMorgan, Bank of America, Citigroup, Barclays, and Goldman Sachs — earn underwriting fees on every deal. The Federal Reserve's dual mandate, established by the Full Employment and Balanced Growth Act of 1978 (Pub.L. 95-523), requires the Fed to pursue maximum employment and stable prices — not wage growth. No federal agency has a mandate to raise wages.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SCROLL-REVEAL MODAL: Room 05 - Where Prices Rise -->
+<div id="scroll-modal-inflation-breakdown-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">WHERE PRICES RISE</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">Close</button>
+  </div>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: Global Supply Shocks -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When the world stopped moving, everything got more expensive. Four outside forces hit American families at the same time.</h3>
+      <img class="chart-image" src="/docs/room5/inflation-breakdown/chart1.png" alt="IB1 — Global Supply Shocks">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four things that hit the U.S. economy from outside the country between 2020 and 2022. All four bars are indexed — that means they show how hard each thing hit compared to normal times. Supply chains (the path from factories to store shelves) caused the most damage. When COVID shut down factories in Asia, American stores ran out of everything from cars to baby formula. Oil prices came second — Russia's invasion of Ukraine in February 2022 caused energy prices to spike across the world. Shipping costs came third — the price to move a single shipping container from China to the U.S. jumped from around $2,000 before COVID to over $20,000 at the peak in 2021. Commodity prices (food, grain, metals) came last — the Russia-Ukraine war knocked out two countries that together supply about 30% of the world's wheat.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The Federal Reserve Bank of San Francisco studied exactly how much of the inflation from 2021 to 2023 was caused by these outside supply shocks. Their finding: global supply chain problems caused about 60% of the rise in U.S. inflation during that period. The Bureau of Labor Statistics (BLS) confirmed that supply-chain disruptions were "the main source of inflation" in the second quarter of 2021. A separate study published in the Federal Reserve Bank of St. Louis Review found that if supply-chain bottlenecks had followed their normal 2019 path, manufacturing price inflation in November 2021 would have been 20 percentage points lower. In other words, the price surge was not mainly caused by Americans spending too much money. It was caused by the world running out of things to sell.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          When supply is short, whoever controls what's left gets to charge more. The agencies and companies that benefited most from these shocks were not the ones who felt the pain. The five biggest oil companies — ExxonMobil, Chevron, Shell, BP, and TotalEnergies — together earned over $200 billion in combined profits in 2022, the highest in their history, directly because of the oil price spike after Russia's invasion of Ukraine. The U.S. Energy Information Administration (EIA), which tracks and reports energy prices, sets no price caps and has no authority to limit what energy companies charge. The Federal Energy Regulatory Commission (FERC) oversees electricity and natural gas pipelines but does not regulate retail gas prices. Container shipping companies including Maersk, MSC, and Evergreen were accused by the Federal Maritime Commission of overcharging during the shipping crisis. The FMC's Ocean Shipping Reform Act of 2022 (Pub.L. 117-146) gave it new enforcement tools — but by the time the law passed, shipping costs had already fallen on their own. No company was required to return the profits.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: Domestic Policy Shocks -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Local rules you've never heard of are a hidden reason your rent costs so much.</h3>
+      <img class="chart-image" src="/docs/room5/inflation-breakdown/chart2.png" alt="IB2 — Domestic Policy Shocks">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four domestic policy factors — rules made inside the U.S. — that push housing and utility prices up. All four bars are indexed, showing relative price pressure. Zoning and density rules have the biggest impact. These are local laws that say what can be built and where. Utility regulation comes second — state rules that control how electric and gas companies charge customers. Impact fees come third — these are charges cities put on new home construction that get added to the price of the home. Regional policy mix comes last — this captures how the combination of all local rules in a given area affects how expensive it is to live there. Shelter — rent and housing costs — makes up about 36% of the entire Consumer Price Index. That means when housing gets expensive, inflation stays high even when everything else calms down.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The research is clear: local zoning laws that ban apartments and multi-family housing are one of the biggest reasons housing is expensive. About 75% of land in American cities is restricted to single-family homes only — meaning no apartments or duplexes are allowed to be built. The Cato Institute, Wharton School of Business, and the National Bureau of Economic Research (NBER) have all published studies finding that this restriction on supply directly inflates prices. When Minneapolis eliminated single-family-only zoning, rent growth was just 1% from 2017 to 2023. During the same period, the rest of the U.S. saw rent grow 31%, according to the Pew Charitable Trusts. Moody's Analytics chief economist Mark Zandi stated that expanding housing supply is "the most effective way to rein in inflation." The Supreme Court first allowed single-family-only zoning in 1926 in Euclid v. Ambler Realty (272 U.S. 365). That ruling has never been overturned.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          When fewer homes are allowed to be built, the homes that exist become more valuable. That benefits people who already own property — and the agencies and industries built around high property values. Local governments collect more property tax revenue when home values rise, which gives them little financial reason to allow more housing. Real estate agents earn higher commissions when prices are high — the National Association of Realtors (NAR) spent $84 million on lobbying in 2023, making it one of the top-spending lobbying groups in the country. Utility companies — regulated monopolies — are allowed by state public utility commissions to earn a guaranteed rate of return on their infrastructure investments. When they build more infrastructure, they make more money. State public utility commissions set those rates and decide what utilities are allowed to charge, but those commissions are often staffed by former utility industry employees. The Federal Housing Finance Agency (FHFA) oversees Fannie Mae and Freddie Mac, which back most mortgages in America. A housing shortage means higher home prices, which means larger loans, which means more fees for lenders and more business for the agencies that guarantee those loans.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: Corporate Strategy and Profit-Led Inflation -->
+    <div class="chart-block">
+      <h3 class="chart-hook">During the pandemic, company profits contributed more to inflation than their actual costs did. The Federal Reserve Bank of Kansas City measured it.</h3>
+      <img class="chart-image" src="/docs/room5/inflation-breakdown/chart3.png" alt="IB3 — Corporate Strategy and Profit-Led Inflation">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four data points from real economic research. The first bar shows what normally happens: in regular times, corporate profit growth accounts for about 11–12% of inflation. The second bar shows what happened during the pandemic: corporate profits' share of inflation jumped to about 45%. The third bar is the most striking — the Federal Reserve Bank of Kansas City found that, looking at the first year of economic recovery from any recession on average, profits contributed 126% of inflation. That number seems impossible, but here's what it means: companies raised prices even more than their actual costs went up. Because costs fell at the same time (shown in the fourth bar, at -26%), the only thing driving prices up was bigger profit margins. Economists call this "profit-led inflation" or, in media coverage, "greedflation."</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The 126% number comes from a peer-reviewed study by economists at the Federal Reserve Bank of Kansas City, published in their Economic Review (Glover, Mustre-del-Río, and von Ende-Becker, 2023). Here is what they found: in the first year after a recession ends, corporate profits typically drive more than 100% of inflation — costs are actually falling during this period, so profits are the only reason prices go up at all. During the COVID recovery, the Kansas City Fed found that profits contributed about 41% of total inflation across the first two years, and nearly 60% in 2021 alone (reported by NPR). A separate analysis from the Groundwork Collaborative found that corporate profits drove 53% of inflation during the second and third quarters of 2023. The Federal Trade Commission (FTC) investigated grocery price gouging during this period. Their report, released in March 2024, found that large grocery chains including Kroger, Walmart, and Amazon had widened their profit margins during the pandemic and kept them wide even after their costs fell.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          There is no U.S. federal law that limits how much profit a company can make during an emergency. The agencies that track prices — the Bureau of Labor Statistics (BLS) and the Bureau of Economic Analysis (BEA) — measure what is happening but have no power to stop it. The Federal Trade Commission (FTC) can investigate price gouging but only under specific antitrust laws, and most pricing decisions during the pandemic were not technically illegal. Named companies whose profits hit records in 2021–2022 while customers paid more: ExxonMobil ($55.7B profit in 2022), Chevron ($35.5B), Shell ($39.9B), JPMorgan Chase ($37.7B), and major grocery chains including Kroger (gross margins widened through 2022–2023). The S&P 500 — an index of America's 500 largest public companies — hit all-time highs while inflation was at a 40-year high. Shareholders benefited from corporate profit growth; workers and shoppers paid for it through higher prices. The BLS and BEA collect the data. The FTC has limited tools to act on it. Congress has not passed an anti-price-gouging law at the federal level.
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: Essential Price Spikes -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The things that went up the most were the things people can't stop buying: food, rent, car insurance, and childcare.</h3>
+      <img class="chart-image" src="/docs/room5/inflation-breakdown/chart4.png" alt="IB4 — Essential Price Spikes">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows the peak inflation rate for four things people need to survive. All data comes from the Bureau of Labor Statistics Consumer Price Index (CPI). Food at home — groceries — peaked at about 11.8% in August 2022. That is the largest 12-month increase in grocery prices since March 1979, confirmed by BLS. Rent and shelter peaked at about 8.6%. Shelter alone makes up 36% of the entire CPI basket, so when rent goes up, it pulls up overall inflation for a long time even after other prices fall. Auto insurance peaked at about 18% — specifically, 20.6% year-over-year in early 2024, per BLS, the highest in decades. Auto insurance costs rose about 54% in total between 2020 and 2024. Childcare peaked at about 5.2% annual growth — but that follows decades of childcare costs rising at nearly twice the rate of overall inflation. Between 1990 and 2024, childcare costs rose 263% while the overall CPI rose 133%, according to KPMG.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">These four categories — food, shelter, insurance, and childcare — hit low-income and middle-income families the hardest. The reason is that these families spend a bigger share of their paycheck on necessities than wealthy families do. The BLS CPI is a national average, which means it reflects a basket of goods weighted for the average American. But low-income families spend more than the average on food and housing as a share of their income, so the real inflation rate they experience is higher than what the headline number shows. For childcare, the problem goes beyond inflation — the U.S. Treasury Department has called childcare "a textbook example of a broken market." In 2022, the average cost of childcare for one child in center-based care was $10,853 per year — more than rent in many states. A BLS and Department of Labor joint report found that childcare prices in 2021 exceeded average rent in all 49 states with available data, for families with two young children.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Each of these four categories has a set of industries and agencies that collect the money when prices go up — and the public has limited ability to opt out. For groceries: the four largest grocery chains — Walmart, Kroger, Costco, and Amazon — control about 65% of U.S. grocery sales. The USDA's Economic Research Service (ERS) and the FTC track food prices, but neither has authority to cap what grocery stores charge. For rent: landlords and real estate investment trusts (REITs) earn more when rent goes up. The Department of Housing and Urban Development (HUD) administers rental assistance programs but only covers a fraction of low-income renters. For auto insurance: auto insurers are regulated by state insurance commissioners, not a federal agency. Allstate received a 30% rate increase approval in California in 2023. State Farm, Allstate, Progressive, and GEICO are the four largest auto insurers and together cover most of the country. For childcare: the Child Care and Development Fund (CCDF) at the Department of Health and Human Services (HHS) distributes federal childcare subsidies — about $8 billion per year. That number covers roughly 1.5 million children. The Census Bureau estimates that 12 million children under age 5 need care. The $24 billion in pandemic-era childcare stabilization grants (American Rescue Plan Act, Pub.L. 117-2) expired September 30, 2023. Congress did not renew them.
         </div>
       </div>
     </div>
