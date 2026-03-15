@@ -1043,10 +1043,10 @@
   <div class="room-dropdown" id="room07-dropdown">
     <button class="room-dropdown-btn" onclick="toggleRoom07Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
-      <button class="room-dropdown-item" disabled>Promises vs Results</button>
-      <button class="room-dropdown-item" disabled>What the Record Shows</button>
-      <button class="room-dropdown-item" disabled>What the Law Required</button>
-      <button class="room-dropdown-item" disabled>Pattern Across Agencies</button>
+      <button class="room-dropdown-item" onclick="openScrollModal('before-and-after-scroll')">Promises vs Results</button>
+      <button class="room-dropdown-item" onclick="openGalleryModal('between-words')">What the Record Shows</button>
+      <button class="room-dropdown-item" onclick="openGalleryModal('from-blame-to-diagnosis')">What the Law Required</button>
+      <button class="room-dropdown-item" onclick="openGalleryModal('recognizing')">Pattern Across Agencies</button>
     </div>
   </div>
 </section>
@@ -1838,18 +1838,87 @@
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
 
-<!-- BEFORE AND AFTER GALLERY MODAL -->
-<div id="gallery-modal-before-and-after" class="gallery-modal">
-  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
-  <h2>Before and After</h2>
-  <p class="gallery-intro">When the stakes change, many "firm principles" suddenly bend.</p>
-  <div class="gallery-grid">
-    <img src="/docs/room7/before-and-after/chart1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/before-and-after/chart2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/before-and-after/chart3.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/before-and-after/chart4.png" onclick="openLightbox(this.src)" alt="">
+<!-- ===================== ROOM 7: PROMISES VS RESULTS (Scroll Modal) ===================== -->
+<div id="scroll-modal-before-and-after-scroll" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">07 — PROMISES VS RESULTS</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">CLOSE</button>
   </div>
-  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+  <div class="scroll-modal-content">
+
+    <!-- Chart Block 1: BA1 - Debt Rhetoric Reversals -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Every president promises to control the debt. Every president adds to it anyway.</h3>
+      <img class="chart-image" src="docs/room7/before-and-after/chart1.png" onclick="openLightbox(this.src)" alt="BA1 — Debt Rhetoric Reversals">
+      <img class="chart-image" src="docs/room7/before-and-after/table1.png" onclick="openLightbox(this.src)" alt="BA1 — Debt Rhetoric Reversals Data Table">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows how much the federal debt grew under recent presidents — and how many times Congress raised the debt ceiling. The debt grew by about $9.3 trillion under Obama, $7.8 trillion under Trump, and the FY2024 deficit under Biden was $1.833 trillion. The debt ceiling — the legal limit on how much the government can borrow — has been raised or suspended 78 times since 1960. According to the U.S. Treasury, 49 of those times happened under Republican presidents. 29 happened under Democratic presidents.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When leaders are out of power, they call debt a crisis. When they are in power, they raise the ceiling and keep spending. This has happened under both parties for decades. The debt ceiling is not a spending limit — Congress already voted to spend the money before the ceiling comes up. Raising it just pays the bill that was already due. Families that spend more than they earn face real consequences. The federal government votes to raise its own limit instead.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Treasury Department manages the debt and tracks every dollar borrowed. The Congressional Budget Office scores every spending bill. The Office of Management and Budget sets the president's budget each year. All three agencies have the data showing the gap between what leaders say and what the record shows. Wall Street banks and bond investors profit when the government borrows — they earn interest on every Treasury note sold. The debt ceiling fight is also used by both parties to extract policy wins from the other side. The people who benefit most from keeping this system complex are the same ones writing the rules.
+          <p class="chart-sources"><em>Sources: U.S. Treasury, "Debt Limit" page (home.treasury.gov); Treasury Debt to the Penny (fiscal.treasury.gov); CRFB, "Trump and Biden: The National Debt" (June 2024); Treasury Monthly Treasury Statement, Sept. 2024; CRS Report RL31967.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Block 2: BA2 - War & Military Spending Reversals -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Four presidents promised restraint. Four presidents expanded military action.</h3>
+      <img class="chart-image" src="docs/room7/before-and-after/chart2.png" onclick="openLightbox(this.src)" alt="BA2 — War & Military Spending Reversals">
+      <img class="chart-image" src="docs/room7/before-and-after/table2.png" onclick="openLightbox(this.src)" alt="BA2 — War & Military Spending Reversals Data Table">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows military actions and spending under four administrations. George W. Bush, who campaigned on a "humble foreign policy," launched wars in Afghanistan in October 2001 and Iraq in March 2003. Barack Obama, who promised to end the mindset that led to war, expanded drone operations to at least 7 countries — the Bureau of Investigative Journalism documented 542 to 563 strikes in Pakistan, Yemen, and Somalia alone. Donald Trump, who promised to end endless wars, pushed the defense budget to $740.5 billion in FY2021. Joe Biden, who paused some Saudi arms sales early in his term, approved a $650 million weapons sale to Saudi Arabia in November 2021 — confirmed by the Defense Security Cooperation Agency.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Each of these leaders told voters they would do less, not more, when it came to war and military spending. The record shows the opposite. Once in office, the pressure to maintain operations, protect contracts, and respond to global events pushed every administration in the same direction. American troops and civilians in other countries pay the human cost. Voters who chose these leaders based on peace promises got something different every time.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Department of Defense is the largest single item in the federal discretionary budget. Defense contractors — including Raytheon, Lockheed Martin, Boeing, and General Dynamics — receive hundreds of billions in contracts each year. The Defense Security Cooperation Agency approves foreign arms sales. Members of Congress on the Armed Services Committee often represent districts where defense plants are located. Cutting military spending means cutting jobs in those districts. That is why the budget grows regardless of which party is in power.
+          <p class="chart-sources"><em>Sources: CRS Report RL31133; CRS Report RS21405; Bureau of Investigative Journalism, "Obama's Covert Drone War in Numbers" (Jan. 2017); CRS Report R46714 (Mar. 2021); DSCA Transmittal No. 20-11 (Nov. 4, 2021); P.L. 116-283 (FY2021 NDAA).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Block 3: BA3 - Surveillance & Policing Reversals -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Leaders who criticized government surveillance kept it — and expanded it.</h3>
+      <img class="chart-image" src="docs/room7/before-and-after/chart3.png" onclick="openLightbox(this.src)" alt="BA3 — Surveillance & Policing Reversals">
+      <img class="chart-image" src="docs/room7/before-and-after/table3.png" onclick="openLightbox(this.src)" alt="BA3 — Surveillance & Policing Reversals Data Table">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows three cases where leaders took office after criticizing surveillance and policing, then continued or grew the same programs. Barack Obama, as a senator, criticized warrantless wiretapping and signaled opposition to FISA expansion. As president, he signed the FISA Amendments Act reauthorization on December 30, 2012. Donald Trump claimed surveillance laws were being misused against him. As president, he signed the FISA Section 702 reauthorization on January 19, 2018. Joe Biden ran on policing reform and accountability. His FY2023 budget proposed $37 billion in public safety spending — including funds for hiring officers, but also for mental health response, community violence programs, and justice reform. The 1033 program, which transfers surplus military gear to local police, has continued across all administrations and now involves roughly 6,300 law enforcement agencies.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Surveillance laws are hard to undo once they exist. Every president who has inherited these tools has chosen to keep them. The argument is always the same: the tools are needed for national security. The people being watched have no say in that decision. The 1033 program means local police departments across the country have armored vehicles and military-grade equipment — equipment designed for war zones, not neighborhoods. No administration has ended it.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Foreign Intelligence Surveillance Court operates in secret. The National Security Agency, the FBI, and the CIA all have budgets that are partially or fully classified. The Defense Logistics Agency runs the 1033 program and has transferred over $7.6 billion in military equipment to police departments since the program began. Defense contractors benefit when old military gear is replaced with new gear — the 1033 transfers create space in the procurement pipeline. The DOJ distributes grants to local law enforcement through programs like COPS. Every administration funds these programs because the agencies that run them are permanent — they outlast any president.
+          <p class="chart-sources"><em>Sources: Congress.gov, P.L. 112-238 (FISA Reauth 2012); Congress.gov, P.L. 115-118 (FISA Reauth 2018); CRS Report R47477; White House Fact Sheet, "Safer America Plan" (Aug. 1, 2022); DLA LESO/1033 Program FAQ (dla.mil, updated Feb. 2025); CRS Report RS20549.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Block 4: BA4 - Poverty & Economic Reversals -->
+    <div class="chart-block">
+      <h3 class="chart-hook">They promised to help working families. The numbers tell a different story.</h3>
+      <img class="chart-image" src="docs/room7/before-and-after/chart4.png" onclick="openLightbox(this.src)" alt="BA4 — Poverty & Economic Reversals">
+      <img class="chart-image" src="docs/room7/before-and-after/table4.png" onclick="openLightbox(this.src)" alt="BA4 — Poverty & Economic Reversals Data Table">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four measures of economic hardship. Since 1979, worker pay has grown at less than one-third the rate of productivity — meaning the economy got more efficient, but most workers did not see the gains. This long-run gap is documented by the Economic Policy Institute using BLS data and has persisted across every administration of both parties. When the expanded Child Tax Credit expired in January 2022, the Census Bureau's Supplemental Poverty Measure showed child poverty more than doubled — from 5.2% in 2021 to 12.4% in 2022, the fastest single-year increase on record. HUD's 2023 Report to Congress documented 8.53 million households with worst-case housing needs — a record high. The National Low Income Housing Coalition's 2025 Gap Report found a shortage of 7.1 million affordable homes for the lowest-income renters: for every 100 who need one, only 35 exist.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The Child Tax Credit expansion worked. When it was in place, it cut child poverty to the lowest level ever recorded. Congress let it expire anyway. The housing shortage is not a natural disaster — it is the result of decades of policy choices that favored homeowners and developers over renters. The productivity-pay gap means workers are producing more value every year but taking home a shrinking share of it. Every administration since 1979 has promised to help working families. The gap between productivity and pay has kept growing.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Internal Revenue Service administers the Child Tax Credit. Congress controls whether it is expanded, made permanent, or allowed to expire. HUD runs Section 8 vouchers and public housing — but Congress has never fully funded either program, turning away roughly 3 in 4 eligible families. The Department of Labor sets the federal minimum wage, which has not changed since 2009. Landlords, real estate investment trusts, and property developers benefit when housing supply stays low and rents stay high. The agencies that have the power to close these gaps — IRS, HUD, DOL, Congress — each point to the others when asked why nothing has changed.
+          <p class="chart-sources"><em>Sources: EPI, "The Productivity-Pay Gap" (epi.org, updated 2024); EPI, "State of Working America Data Library" (2024); Census Bureau P60-280, "Poverty in the United States: 2022" (Sept. 2023); HUD PD&R, "Worst Case Housing Needs: 2023 Report to Congress" (huduser.gov); NLIHC, "The Gap: A Shortage of Affordable Homes" (Mar. 2025).</em></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- BETWEEN WORDS AND OUTCOMES GALLERY MODAL -->
