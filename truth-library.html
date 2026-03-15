@@ -1044,7 +1044,7 @@
     <button class="room-dropdown-btn" onclick="toggleRoom07Dropdown()">Enter Room</button>
     <div class="room-dropdown-menu">
       <button class="room-dropdown-item" onclick="openScrollModal('before-and-after-scroll')">Promises vs Results</button>
-      <button class="room-dropdown-item" onclick="openGalleryModal('between-words')">What the Record Shows</button>
+      <button class="room-dropdown-item" onclick="openScrollModal('between-words')">What the Record Shows</button>
       <button class="room-dropdown-item" onclick="openGalleryModal('from-blame-to-diagnosis')">What the Law Required</button>
       <button class="room-dropdown-item" onclick="openGalleryModal('recognizing')">Pattern Across Agencies</button>
     </div>
@@ -1921,18 +1921,83 @@
   </div>
 </div>
 
-<!-- BETWEEN WORDS AND OUTCOMES GALLERY MODAL -->
-<div id="gallery-modal-between-words" class="gallery-modal">
-  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
-  <h2>The Gap Between Words and Outcomes</h2>
-  <p class="gallery-intro">Budget votes, enforcement priorities, and contracts tell a different story.</p>
-  <div class="gallery-grid">
-    <img src="/docs/room7/between-words/chart1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/between-words/chart2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/between-words/chart3.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/between-words/chart4.png" onclick="openLightbox(this.src)" alt="">
+<!-- ===================== ROOM 7: WHAT THE RECORD SHOWS (Scroll Modal) ===================== -->
+<div id="scroll-modal-between-words" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">07 — WHAT THE RECORD SHOWS</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">CLOSE</button>
   </div>
-  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: GO1 — Families: Words vs Budget Outcomes -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The government spends more on tax breaks for the wealthy than it spends helping families survive.</h3>
+      <img class="chart-image" src="docs/room7/between-words/chart1.png" onclick="openLightbox(this.src)" alt="GO1 — Families: Words vs Budget Outcomes">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart compares four numbers. First, child poverty more than doubled in a single year — from 5.2% to 12.4% — when Congress let the expanded Child Tax Credit expire in January 2022. That is the Census Bureau's own measure. Second, Congress passed cuts to SNAP — the food stamp program — of $186 billion over 10 years in 2025. Third, the federal government gives away $1.8 trillion every year in tax breaks — things like deductions and credits that mostly help people who already have money. That number comes from the Joint Committee on Taxation. Fourth, the federal government paid $970 billion in interest on the national debt in FY2025 alone — more than it spends on Medicaid, education, or housing.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When the Child Tax Credit was expanded, child poverty hit the lowest point ever recorded. Congress let it expire anyway. At the same time, the government kept $1.8 trillion in tax breaks on the books — most of which go to the top earners. A family with kids gets a few hundred dollars. A corporation gets a deduction worth millions. The $186 billion in SNAP cuts means fewer food benefits for people who are already struggling. These are not accidents. These are choices.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The IRS administers tax expenditures — the $1.8 trillion in deductions, exclusions, and credits written into the tax code. The Treasury Department collects the data. The Joint Committee on Taxation scores the cost. Congress writes the rules. Wealthy individuals and corporations have lobbyists who fight to keep every tax break in place. Low-income families do not have the same access. The USDA runs SNAP. Congress controls its budget. When cuts come, they come from the programs with the least political power behind them — not the ones with the most.
+          <p class="chart-sources"><em>Sources: Census Bureau P60-280 (Sept. 2023); JCT JCX-48-24 (Dec. 2024); CBO Monthly Budget Review, Nov. 2025; CBO/CBPP scoring of the One Big Beautiful Bill Act, 2025.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: GO2 — Fairness: Words vs Enforcement -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The rules say everyone is treated equally. The record shows something different.</h3>
+      <img class="chart-image" src="docs/room7/between-words/chart2.png" onclick="openLightbox(this.src)" alt="GO2 — Fairness: Words vs Enforcement">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four enforcement gaps. First, the IRS audits low-income filers — people earning under $25,000 — at 5.5 times the rate of all other taxpayers. This comes from TRAC at Syracuse University using IRS data from FY2022. Second, federal white-collar prosecutions — cases against fraud, bribery, and financial crimes — have dropped by about 50% since 2001 and hit a record low of 4,180 cases in FY2022. Third, GAO found that 28 to 33 percent of public housing units fail inspections — meaning people living there have mold, broken heat, or unsafe conditions that HUD's own rules say are not allowed. Fourth, state and local governments collected $16 billion in fines and fees from people in the justice system in FY2019, according to the Urban Institute using Census Bureau data.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">If you make $20,000 a year and claim the Earned Income Tax Credit, you are more likely to get audited than a millionaire. The IRS targets EITC claimants because their returns are cheaper and faster to audit — not because they cheat more. Meanwhile, the people who run companies that commit fraud face fewer and fewer federal prosecutions every year. People living in public housing — who have no other options — are stuck in units that fail the government's own safety standards. And fines and fees that seem small to some people can push a low-income family into debt, job loss, or jail.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The IRS decides who to audit based on staffing and technology. For decades, Congress underfunded the IRS — making it cheaper to audit simple returns than complex ones. The Department of Justice controls white-collar prosecution priorities. When enforcement budgets shrink, complex cases get dropped first. HUD sets the inspection standards for public housing but does not always enforce them — local housing authorities run the day-to-day, and violations can sit open for years. State and local courts set fines and fees that fund their own operations — giving them a financial reason to keep collecting, even from people who cannot afford to pay.
+          <p class="chart-sources"><em>Sources: TRAC/Syracuse University, IRS Audit Report (Jan. 2023); TRAC DOJ prosecution data (FY2022); GAO-19-202 (2019); Urban Institute, "Following the Money on Fines and Fees" (Jan. 2022); U.S. Census Bureau Annual Survey of State and Local Government Finances (FY2019).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: GO3 — Dignity: Words vs Contract Flow -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The government promises dignity for seniors and veterans. The money tells a different story.</h3>
+      <img class="chart-image" src="docs/room7/between-words/chart3.png" onclick="openLightbox(this.src)" alt="GO3 — Dignity: Words vs Contract Flow">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows where federal money flows versus where the need is. Medicare Advantage insurance companies made a gross margin of $1,730 per enrollee in 2021 — that is the difference between what the government paid them and what they actually spent on patient care. This comes from KFF using data filed with insurance regulators. The top 5 defense contractors — Lockheed Martin, RTX, Boeing, Northrop Grumman, and General Dynamics — received $132.9 billion in DoD contract awards in FY2024, according to CRS data from SAM.gov. HUD's Housing Choice Voucher program paid out $30 billion in FY2024 to help low-income families afford rent. And GAO found that defense weapon programs average 46 to 53 percent cost overruns — meaning programs consistently cost nearly twice what contractors originally promised.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">Medicare Advantage was created to save money by letting private insurers manage Medicare. Instead, insurers have found ways to make the government overpay. MedPAC — the congressional watchdog — estimates the government overpays Medicare Advantage plans by tens of billions every year. That money comes out of the Medicare trust fund, which affects what all seniors pay in premiums. Defense cost overruns mean taxpayers pay for the same weapon twice — once at the promised price, and again when the bill comes in higher. GAO has flagged this pattern for decades. The contracts keep coming anyway.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          CMS — the Centers for Medicare and Medicaid Services — pays Medicare Advantage insurers using a formula based on how sick enrollees are. Insurers have an incentive to make patients look sicker on paper than they are — a practice called upcoding. HHS OIG has found billions in overpayments linked to this practice. DoD awards contracts through a procurement system that GAO has repeatedly found allows contractors to lowball initial bids, then collect more as costs rise. The top 5 contractors have combined lobbying operations that spent hundreds of millions of dollars over the past decade. HUD's voucher program is funded annually by Congress — which means it can be cut at any time, and landlords in low-income markets often refuse to accept it anyway.
+          <p class="chart-sources"><em>Sources: KFF, Health Insurer Financial Performance (Feb. 2023); CRS IF10600, FY2024 data from SAM.gov; HUD Press Release No. 24-112 (May 2024); GAO-15-342SP (2015); GAO-16-187T (2015).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: GO4 — Poverty: Words vs Outcomes -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Real wages barely moved. Child poverty went up. Hunger went up. The record is clear.</h3>
+      <img class="chart-image" src="docs/room7/between-words/chart4.png" onclick="openLightbox(this.src)" alt="GO4 — Poverty: Words vs Outcomes">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four poverty measures together. Real wages — what your paycheck can actually buy after prices go up — grew just 0.8% over a 12-month period, according to the Bureau of Labor Statistics. HUD's 2023 Report to Congress found 8.53 million households had worst-case housing needs — meaning they paid more than half their income on rent or lived in badly damaged housing. The Census Bureau's Supplemental Poverty Measure found child poverty at 13.4% in 2024 — still more than double what it was in 2021 before the Child Tax Credit expired. And USDA found that 13.5% of U.S. households — 18 million families — faced food insecurity at some point in 2023, the highest rate in over a decade.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">These four numbers are connected. When wages don't grow, families can't save. When they can't save, one missed paycheck means choosing between rent and food. When housing costs too much, food insecurity goes up. When food insecurity goes up, children can't focus in school. The government tracks all of these numbers every year. The agencies that report them — BLS, HUD, Census, USDA — publish the data clearly. The problem is not that the data is hidden. The problem is that the data keeps getting worse and the policy response keeps coming up short.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Department of Labor tracks wages through the Bureau of Labor Statistics but does not set a minimum wage high enough to close the gap. The federal minimum wage has been $7.25 since 2009 — 16 years without a change. HUD tracks worst-case housing needs but has never received enough funding from Congress to house everyone who qualifies for help. The Census Bureau measures poverty every year and publishes the numbers. USDA measures food insecurity every year and publishes those numbers too. All of this data exists. The agencies that collect it answer to Congress. Congress sets the budgets that determine whether the numbers get better or worse.
+          <p class="chart-sources"><em>Sources: BLS Real Earnings news releases (CES survey, CPI-U deflated); HUD PD&R, Worst Case Housing Needs: 2023 Report to Congress (huduser.gov); Census Bureau P60-284, Poverty in the United States: 2024 (Sept. 2025); USDA ERS ERR-337, Household Food Security in the United States in 2023 (Sept. 2024).</em></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- RECOGNIZING SCRIPTS GALLERY MODAL -->
