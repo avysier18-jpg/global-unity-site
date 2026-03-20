@@ -2014,18 +2014,83 @@
   <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
 </div>
 
-<!-- FROM BLAME TO DIAGNOSIS GALLERY MODAL -->
-<div id="gallery-modal-from-blame-to-diagnosis" class="gallery-modal">
-  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
-  <h2>From Blame to Diagnosis</h2>
-  <p class="gallery-intro">What would have to be different in the system for this same problem to stop repeating?</p>
-  <div class="gallery-grid">
-    <img src="/docs/room7/from-blame-to-diagnosis/chart1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/from-blame-to-diagnosis/chart2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/from-blame-to-diagnosis/chart3.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/from-blame-to-diagnosis/chart4.png" onclick="openLightbox(this.src)" alt="">
+<!-- FROM BLAME TO DIAGNOSIS SCROLL MODAL -->
+<div id="modal-from-blame-to-diagnosis" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">07 — WHAT THE LAW REQUIRED</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">CLOSE</button>
   </div>
-  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: FD1 — Incentives Over Individuals -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The system is not broken. It is working exactly the way it was built — just not for you.</h3>
+      <img class="chart-image" src="docs/room7/from-blame-to-diagnosis/chart1.png" onclick="openLightbox(this.src)" alt="FD1 — Incentives Over Individuals">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four ways the federal government is structured to respond to incentives, not people. First, about 60% of the federal budget is mandatory spending — money already locked in by law for programs like Social Security, Medicare, and Medicaid. That comes from the Congressional Budget Office's FY2025 numbers. Congress cannot easily change most of it year to year. Second, the Government Accountability Office's 2025 High Risk List flags 38 program areas as vulnerable to waste, fraud, or failure — areas the government itself says need urgent attention. Third, in 2024 alone, companies and industries spent $4.4 billion lobbying the federal government, a new record according to OpenSecrets using Senate disclosure data. Fourth, institutional risk aversion — the culture inside agencies that punishes bold action and rewards doing nothing — keeps problems in place even when officials know what needs to change.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When 60% of the budget is already locked in, Congress only really controls about 40 cents of every dollar. The 38 high-risk areas on the GAO list have been flagged for years — some for decades. The $4.4 billion in lobbying means industries that benefit from the current system can spend enormous amounts to keep it from changing. And when the culture inside agencies rewards playing it safe over fixing problems, even good-faith officials face pressure to leave things alone. The people harmed by these systems are real. The incentives keeping those systems in place are also real.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Office of Management and Budget sets the president's budget each year. But mandatory spending is written into permanent law — changing Social Security or Medicare requires an act of Congress, which requires 60 votes in the Senate, which requires avoiding a filibuster. That is a high bar. The $4.4 billion in lobbying comes from health care, finance, defense, and energy industries — the same industries most affected by federal regulation. The Senate Office of Public Records tracks lobbying disclosures, and OpenSecrets makes the data public. GAO has issued over 5,480 open recommendations to federal agencies. If all of them were acted on, the financial savings could be between $106 and $208 billion. Most sit unanswered.
+          <p class="chart-sources"><em>Sources: CBO, Budget and Economic Outlook: 2025 to 2035 (Jan. 2025); GAO-25-107743, High-Risk Series (Feb. 2025); OpenSecrets / Senate Office of Public Records, 2024 lobbying totals; GAO-24-107146, Open GAO Recommendations (July 2024).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: FD2 — Regulatory Capture -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The people writing the rules used to work for — and will go back to — the industries they regulate.</h3>
+      <img class="chart-image" src="docs/room7/from-blame-to-diagnosis/chart2.png" onclick="openLightbox(this.src)" alt="FD2 — Regulatory Capture">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four measures of regulatory capture — what happens when the agencies meant to oversee industries end up serving them instead. First, of senior Pentagon officials who went through the revolving door into the private sector, nearly 90% became registered lobbyists for defense contractors, according to POGO's 2018 "Brass Parachutes" report. Second, between 2010 and 2018, nearly 2,900 bills based on model legislation written by ALEC — the American Legislative Exchange Council, funded by major corporations — were introduced in state legislatures across the country, according to a USA Today and Center for Public Integrity investigation. Third, federal lobbying spending hit a record $4.4 billion in 2024 (OpenSecrets). Fourth, GAO found in 2021 that 1,718 former senior Pentagon acquisition officials went to work at just 14 major defense contractors over a five-year period — the same companies they were responsible for overseeing while in government.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When the people who used to run a program go to work for the companies that benefit from it, the line between regulator and industry disappears. ALEC's model bills let corporations write the laws that govern them, then get those laws introduced by state legislators who may not know where the language came from. The revolving door between Pentagon and defense contractors means the same people who approve billion-dollar contracts later lobby for them. This is not illegal in most cases. It is the structure.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The Office of Government Ethics sets post-employment rules for federal officials, but enforcement is limited and cooling-off periods are often just one to two years. The Lobbying Disclosure Act requires registration and reporting, but does not prevent former officials from lobbying their old agencies. ALEC is a 501(c)(3) nonprofit — meaning corporations can fund it with tax-deductible donations, and it does not have to disclose its donors. The 14 defense contractors identified in GAO's 2021 report include Lockheed Martin, Raytheon, Boeing, General Dynamics, and Northrop Grumman — the same companies that received $132.9 billion in DoD contracts in FY2024.
+          <p class="chart-sources"><em>Sources: POGO, "Brass Parachutes" (Nov. 2018); USA Today / Center for Public Integrity, ALEC investigation (2019); OpenSecrets / Senate Office of Public Records (2024); GAO-21-104311, Post-Government Employment (Sept. 2021).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: FD3 — Fragmented Accountability -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When everyone is in charge, no one is responsible.</h3>
+      <img class="chart-image" src="docs/room7/from-blame-to-diagnosis/chart3.png" onclick="openLightbox(this.src)" alt="FD3 — Fragmented Accountability">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four measures of how fragmented the federal government is. First, GAO found that more than 30 separate federal entities are involved in disaster response and recovery — FEMA, the Army Corps of Engineers, HUD, SBA, and dozens more — all with overlapping roles and no single point of accountability (GAO-23-104956, 2022). Second, 26 separate federal programs across 8 agencies address homelessness, obligating about $2.8 billion in FY2010 — and yet homelessness has persisted and grown (GAO-12-491, 2012). Third, at least 8 primary federal financial regulators oversee the banking and investment system: the Fed, the OCC, the FDIC, the NCUA, the SEC, the CFTC, the CFPB, and the FHFA. Each has a different mandate, different authority, and different rules. Fourth, GAO's 2025 annual report on duplication and fragmentation found that its recommendations since 2011 have produced $725 billion in cumulative savings — and another $100 billion or more remains on the table from 589 unresolved issues.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">After a hurricane, a family might have to navigate FEMA for temporary housing, SBA for a small business loan, HUD for long-term assistance, and their state government — all at the same time, all with different forms and deadlines. When 30 agencies each have a piece of disaster response, coordination failures are not accidents. They are built in. The same is true for homelessness and financial regulation. Fragmentation is not just inefficient. It means problems persist because no single agency has both the authority and the resources to fix them.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Congress creates new programs in response to crises — but rarely eliminates old ones. Each program has its own budget, its own staff, and its own congressional oversight committee. Committees have an incentive to protect the programs they oversee, because those programs justify the committee's own existence. GAO has identified $100 billion or more in savings still available from eliminating overlap — but each of those savings would require Congress to cut something that someone is currently funded to defend. OMB coordinates across agencies but cannot eliminate programs. Only Congress can.
+          <p class="chart-sources"><em>Sources: GAO-23-104956, Disaster Recovery (Nov. 2022); GAO-25-108216, Disaster Assistance (Feb. 2025); GAO-12-491, Homelessness Programs (May 2012); CRS R44918, Financial Regulation (Oct. 2023); GAO-25-107604, Annual Duplication Report (May 2025).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: FD4 — Incentive to Preserve Crises -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Some industries make more money when problems stay unsolved. The data shows which ones.</h3>
+      <img class="chart-image" src="docs/room7/from-blame-to-diagnosis/chart4.png" onclick="openLightbox(this.src)" alt="FD4 — Incentive to Preserve Crises">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart shows four industries where the financial structure rewards keeping a crisis in place. First, U.S. banks collectively earned approximately $700 billion in net interest income in 2024 — the money banks make from the gap between what they charge on loans and what they pay on deposits. This comes from FDIC Quarterly Banking Profile data. Higher interest rates mean bigger spreads, which means more income — giving banks a financial stake in interest rate environments that hurt borrowers. Second, investors made approximately 25% of all single-family home purchases at the peak of recent market activity (CoreLogic, 2024) — buying homes as financial assets in the same market where families are trying to find a place to live. Third, in Ferguson, Missouri, the DOJ's 2015 civil rights investigation found that fines and fees made up 23% of the city's general revenue — creating a direct financial incentive for the city to issue more fines to its own residents. Fourth, U.S. healthcare administrative costs consume approximately 34% of all health spending, according to a peer-reviewed study in the Annals of Internal Medicine — waste built into the billing, coding, and insurance paperwork system that employs millions of people and generates revenue for thousands of companies.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">When a bank earns more money from higher interest rates, it has less reason to push for policies that lower borrowing costs for families. When investors can buy 25% of available homes, fewer homes are available for buyers who need them to live in. When a city government earns revenue from fines, police have a financial reason to issue more tickets to the people who can least afford to fight them. When 34 cents of every healthcare dollar goes to paperwork instead of care, the people processing that paperwork have jobs that depend on the system staying complex. These are not corrupt individuals making bad choices. These are structures that reward the wrong outcomes.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The FDIC supervises banks and publishes quarterly profit data. The Federal Reserve sets interest rate policy through the Open Market Committee — decisions that directly affect bank net interest income. No federal agency regulates how much of the housing market investors can purchase. The DOJ Civil Rights Division investigated Ferguson and published its findings in 2015, but the fine-and-fee model it documented exists in hundreds of municipalities across the country. CMS — the Centers for Medicare and Medicaid Services — administers Medicare and Medicaid but operates within a billing system built around private insurance codes that require administrative overhead. Congress would need to restructure the entire billing architecture to change the 34% figure. There is no industry lobby for simplifying it.
+          <p class="chart-sources"><em>Sources: FDIC Quarterly Banking Profile Q4 2024 (fdic.gov); CoreLogic Investor Activity Report (2024); DOJ, "Investigation of the Ferguson Police Department" (March 2015); Himmelstein et al., "Health Care Administrative Costs in the United States and Canada," Annals of Internal Medicine (Jan. 2020).</em></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- CIVIC PATHWAYS GALLERY MODAL -->
