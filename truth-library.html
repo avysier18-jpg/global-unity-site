@@ -1046,7 +1046,7 @@
       <button class="room-dropdown-item" onclick="openScrollModal('before-and-after-scroll')">Promises vs Results</button>
       <button class="room-dropdown-item" onclick="openScrollModal('between-words')">What the Record Shows</button>
       <button class="room-dropdown-item" onclick="openScrollModal('from-blame-to-diagnosis')">What the Law Required</button>
-      <button class="room-dropdown-item" onclick="openGalleryModal('recognizing')">Pattern Across Agencies</button>
+      <button class="room-dropdown-item" onclick="openScrollModal('recognizing')">Pattern Across Agencies</button>
     </div>
   </div>
 </section>
@@ -2000,18 +2000,83 @@
   </div>
 </div>
 
-<!-- RECOGNIZING SCRIPTS GALLERY MODAL -->
-<div id="gallery-modal-recognizing" class="gallery-modal">
-  <button class="gallery-modal-close" onclick="closeGalleryModal()">×</button>
-  <h2>Recognizing Scripts</h2>
-  <p class="gallery-intro">These phrases show up over and over when someone in power doesn't want to change.</p>
-  <div class="gallery-grid">
-    <img src="/docs/room7/recognizing/chart1.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/recognizing/chart2.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/recognizing/chart3.png" onclick="openLightbox(this.src)" alt="">
-    <img src="/docs/room7/recognizing/chart4.png" onclick="openLightbox(this.src)" alt="">
+<!-- RECOGNIZING SCRIPTS SCROLL MODAL -->
+<div id="scroll-modal-recognizing" class="scroll-modal-overlay">
+  <div class="scroll-modal-header">
+    <span class="scroll-modal-title">07 — PATTERN ACROSS AGENCIES</span>
+    <button class="scroll-modal-close" onclick="closeScrollModal()">CLOSE</button>
   </div>
-  <p class="gallery-disclaimer">This data supports the patterns shown in the Mirror. It does not replace statutory records.</p>
+  <div class="scroll-modal-content">
+
+    <!-- Chart 1: RS1 — The Delay Script -->
+    <div class="chart-block">
+      <h3 class="chart-hook">Every time reform gets close, a reason appears for why right now is the wrong moment.</h3>
+      <img class="chart-image" src="docs/room7/recognizing/chart1.png" onclick="openLightbox(this.src)" alt="RS1 — The Delay Script">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart documents four cases where the same script — "now is not the time" — was used to block reform across different policy areas. The federal minimum wage has been $7.25 since 2009 — the longest freeze in history. Every attempt to raise it has been met with a reason why this particular moment is wrong: the recession, the recovery, the pandemic, inflation. The George Floyd Justice in Policing Act passed the House twice — in 2020 and 2021 — and died in the Senate both times, blocked by demands for "more study" and "bipartisan process." Federal housing reform proposals have been stalled for years by arguments about local control and market disruption. And Congress has passed a full budget on time just 4 times since 1977 — using Continuing Resolutions as a substitute while claiming there is "not enough time" to do the actual work.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The delay script is powerful because it does not say "never." It says "not yet." That sounds reasonable. But the next moment always brings a new reason to wait. The minimum wage has been delayed through every economic condition that exists — boom, bust, crisis, and recovery. The George Floyd Act did not fail because Congress disagreed with it. It failed because specific senators refused to remove qualified immunity protections for police, dressed that refusal up as a need for more negotiation, and ran out the clock. When the script works, nothing changes — and no one has to say they were against it.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          The National Restaurant Association spent millions opposing every minimum wage bill for 16 years, arguing the timing was always wrong. The U.S. Chamber of Commerce acknowledged $7.25 was outdated — then still opposed raising it. The Fraternal Order of Police opposed the George Floyd Act by calling for more discussion while protecting qualified immunity. The National Association of Realtors spent $86 million on lobbying in 2024 — more than any organization in the country — opposing federal housing reform at every turn. Congressional leaders pass Continuing Resolutions instead of budgets because the CR requires less political accountability than a real vote. GAO documented that CRs cost the government real money — in one case, a contract nearly tripled in cost because a CR prevented agencies from locking in a fixed price.
+          <p class="chart-sources"><em>Sources: EPI, "A History of the Federal Minimum Wage" (2024); George Floyd Justice in Policing Act legislative history, 116th–119th Congress; FOP statement on the George Floyd Act (March 2021); NAR lobbying disclosures, OpenSecrets (2024); Pew Research Center, "Congress Has Long Struggled to Pass Spending Bills on Time" (Oct. 2025); GAO-18-368T (2018); GAO-26-107065 (2026).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 2: RS2 — The Inevitability Script -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When officials say "we have no choice," the question worth asking is: who made that true?</h3>
+      <img class="chart-image" src="docs/room7/recognizing/chart2.png" onclick="openLightbox(this.src)" alt="RS2 — The Inevitability Script">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart documents four cases where policy decisions were presented as inevitable rather than chosen. During the 2008 financial crisis, Treasury Secretary Henry Paulson told Congress that $5.5 trillion in wealth would disappear by 2 p.m. if TARP was not passed — framing a choice as an emergency with only one exit. Banks received the money, then paid $5.3 billion in bonuses at Citigroup alone while millions of families lost their homes. Between 2022 and 2023, the Federal Reserve raised interest rates 11 times, with Chair Jerome Powell stating it was "the only measures we have" — while mortgage rates doubled and critics pointed out rate hikes could not fix supply chain problems or the war in Ukraine. On culture war legislation, officials have described their actions as responses to things "the left started" — framing political choices as protective reactions with no alternative. And mandatory minimum sentencing laws passed in 1986 were presented as unavoidable emergency responses to a drug crisis — then built a prison system that disproportionately locked up Black Americans for decades.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The inevitability script removes accountability. If there was no choice, no one is responsible for the outcome. But choices were made. Congress chose to bail out banks with no conditions requiring them to freeze foreclosures. The Fed chose rate hikes knowing the documented effect on mortgage costs and unemployment. Officials chose to sign culture war legislation while describing it as a forced response. Congress chose to write the 100-to-1 crack-to-powder cocaine sentencing disparity in four months without hearings or scientific review. The Sentencing Commission — created by the same government — later concluded the disparity was unjustified. Congress rejected the finding. The choice to do nothing is still a choice.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          TARP recipient banks spent $114 million on lobbying and campaign contributions in 2008 while receiving $295 billion in taxpayer money — then rushed to repay TARP specifically to escape executive pay restrictions. The Fed's rate-hiking cycle increased bank net interest income dramatically while pushing mortgage payments up 47% for families buying homes. Anti-trans legislation correlated with electoral polling — a senior Abbott campaign adviser privately described trans youth targeting as a "75–80% winner." Drug companies received mandatory minimum laws that suppressed generic competition and strengthened patent enforcement while the prison population tripled. The people who had "no choice" consistently ended up better off than the people those choices were made about.
+          <p class="chart-sources"><em>Sources: Treasury Secretary Paulson Congressional testimony, Sept. 23, 2008; NY AG Cuomo report on TARP bonuses (2009); SIGTARP reports (2009–2011); Federal Reserve FOMC meeting records (2022–2023); Sen. Warren hearing exchanges with Chair Powell (2022–2023); Anti-Drug Abuse Act of 1986 legislative history; ACLU, "Crack Cocaine Report" (2006); U.S. Sentencing Commission 1995 report to Congress; Eric Sterling interview, NBC News (2016).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 3: RS3 — The Complexity Script -->
+    <div class="chart-block">
+      <h3 class="chart-hook">When the system benefits from being hard to understand, "it's too complex" is not a description — it is a defense.</h3>
+      <img class="chart-image" src="docs/room7/recognizing/chart3.png" onclick="openLightbox(this.src)" alt="RS3 — The Complexity Script">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart documents four cases where complexity was used to block reform. The American Hospital Association sued in federal court to stop a rule requiring hospitals to publish their prices, arguing the data would "create widespread confusion." U.S. drug prices average 2.78 times the prices in other countries — countries that regulate pricing without the complexity that American hospitals claim makes it impossible. HUD cited data limitations as a reason not to enforce fair housing rules — limitations documented in a 2010 GAO report that recommended fixing them, which the government then failed to do for 15 years. The SEC's climate disclosure rule was opposed by the U.S. Chamber of Commerce and the Business Roundtable as "massively costly and unworkable" — and eventually killed. And the tax preparation industry spent $93 million lobbying to keep the IRS from offering free tax filing, keeping millions of Americans paying for a service other countries get for free.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The complexity script is self-reinforcing. The more complex a system is, the more credible the claim that fixing it is too hard. But the complexity is often manufactured. Intuit lobbied for a non-compete clause that prevented the IRS from building its own free tool — then used complexity as the reason the IRS could not do it. Hospital pricing is opaque because hospitals negotiated in secret — then used that secrecy as evidence that transparency was impractical. HUD's data gaps existed because Congress underfunded data collection — then those gaps were cited to eliminate data requirements. The people who benefit from complexity also fund the arguments for keeping it.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          Intuit (TurboTax) spent over $47 million on federal lobbying since 2003 to block free IRS filing. H&R Block spent tens of millions more. The entire tax preparation industry — a market that exists because tax filing is kept artificially complicated — collectively spent $93 million. PhRMA spent nearly $150 million on federal lobbying in 2025 alone, opposing drug price negotiation. The American Hospital Association, Association of American Medical Colleges, and Federation of American Hospitals all joined the lawsuit against price transparency. The U.S. Chamber of Commerce and Business Roundtable funded opposition to SEC disclosure rules. When the IRS finally built Direct File in 2024 — a program with a 90% satisfaction rate — the Trump administration shut it down in November 2025. The argument was that the private sector could do it better. The private sector had spent two decades lobbying to prevent the government from trying.
+          <p class="chart-sources"><em>Sources: AHA v. Becerra, D.C. Circuit (2020); RAND, "Prescription Drug Prices in the U.S." (Feb. 2024); GAO-10-905 (2010); Harvard JCHS, "Assessing Fair Housing" (2015); U.S. Chamber of Commerce comment letter on SEC climate rule (July 2022); ProPublica, "Inside TurboTax's 20-Year Fight" (2019); OpenSecrets, tax prep lobbying data (2023); IRS Direct File program data (2024–2025); Treasury Report on Replacement of Direct File (2025).</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart 4: RS4 — The Protection Script -->
+    <div class="chart-block">
+      <h3 class="chart-hook">The people most harmed by a system are often used as the reason not to change it.</h3>
+      <img class="chart-image" src="docs/room7/recognizing/chart4.png" onclick="openLightbox(this.src)" alt="RS4 — The Protection Script">
+      <p class="chart-subheading">What you're seeing</p>
+      <p class="chart-explanation">This chart documents four cases where reform opponents invoked the vulnerability of the people the reform was meant to help. The National Apartment Association and National Association of Realtors argue that rent control "hurts tenants" by reducing housing supply — a real economic finding from San Francisco, but one the industry funds at scale and applies everywhere regardless of local conditions. Republican officials called student loan relief "unfair" to people who paid their loans or didn't go to college — using the language of fairness to oppose relief for people carrying $1.7 trillion in debt. PhRMA and major drug companies argued that allowing Medicare to negotiate drug prices would "kill innovation" and hurt patients waiting for cures — while those same companies spent more on stock buybacks than on research. And the George Floyd Justice in Policing Act was called dangerous to public safety by police unions and Republican officials — even though the bill did not defund police, and research shows crime fell in cities that enacted police reforms.</p>
+      <p class="chart-subheading">Why it matters</p>
+      <p class="chart-connection">The protection script is the most sophisticated of the four because it uses real facts selectively. Economists do find that some rent control policies reduce housing supply. That finding — funded by landlord associations — then gets applied as a blanket argument against every renter protection everywhere. The "innovation" argument about drug prices uses genuine uncertainty about future drug development to protect present profit margins that the industry's own financial filings do not support. The script works by making reform advocates argue against their own constituents — "you say you want to help renters, but your policy hurts renters." The goal is not to win the argument. The goal is to make the argument complicated enough that nothing changes.</p>
+      <div class="chart-follow-money">
+        <div class="chart-follow-money-label">Follow the money</div>
+        <div class="chart-follow-money-content">
+          NAR spent $86 million lobbying in 2024 — the top lobbying spender in the United States — much of it opposing rent regulation. The National Apartment Association tracked and opposed 196 rent control bills in 2023. PhRMA spent nearly $150 million lobbying in 2025. The House Oversight Committee found the 14 largest drug companies spent $577 billion on buybacks and dividends from 2016 to 2020 — $56 billion more than they spent on R&D. Ten House Democrats who echoed PhRMA's innovation concerns in a 2021 letter received 2.5 times as much pharma PAC money as those who did not. The Fraternal Order of Police spent millions opposing police accountability legislation. The Congressional Budget Office estimated the IRA drug negotiation provisions would reduce the number of new drugs by 13 out of 1,300 over 30 years — less than 1%. The FDA approved 55 new drugs in 2023 — the second-highest count in 30 years. The predicted catastrophe did not happen. The argument had already succeeded.
+          <p class="chart-sources"><em>Sources: Diamond, McQuade, Qian, "The Effects of Rent Control Expansion" (AER, 2019); NAA rent control tracking (2023); House Republican Policy Committee, "The Inequity of Student Loan Forgiveness" (2022); Biden v. Nebraska, 597 U.S. 1 (2023); PhRMA lobbying totals, OpenSecrets (2025); House Oversight Committee, drug company buybacks report (July 2021); CBO score of IRA drug pricing provisions (2022); FDA novel drug approvals data (2023–2024); Commonwealth Fund, IRA drug pricing impact analysis (May 2025); Center for American Progress, police reform and crime study (Nov. 2020).</em></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <!-- FROM BLAME TO DIAGNOSIS SCROLL MODAL -->
