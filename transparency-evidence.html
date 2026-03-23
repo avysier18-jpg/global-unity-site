@@ -87,43 +87,46 @@
     <style>
         /* ============================================
            TRANSPARENCY & EVIDENCE - EDITORIAL LAYOUT
-           Matches truth-library visual language
+           Matches truth-library visual language exactly
            ============================================ */
 
+        /* Hero Section */
         .te-hero {
-            min-height: 60vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 120px 24px 60px;
+            padding: 120px 24px 80px;
             background: #0a192f;
             text-align: center;
         }
         .te-hero-title {
-            font-size: clamp(3rem, 10vw, 7rem);
+            font-size: clamp(4rem, 14vw, 10rem);
             font-weight: 900;
             color: #ccd6f6;
             line-height: 0.85;
             letter-spacing: -0.04em;
-            margin: 0 0 40px 0;
+            margin: 0 0 60px 0;
             text-transform: uppercase;
         }
         .te-hero-sub {
             font-size: clamp(1rem, 2vw, 1.25rem);
             color: #8892b0;
-            max-width: 640px;
+            max-width: 600px;
             margin: 0 auto;
             line-height: 1.6;
         }
 
-        /* Evidence sections */
+        /* Evidence Room Sections */
         .te-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            min-height: 50vh;
-            align-items: start;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 48px;
+            position: relative;
+            border-bottom: 1px solid #1d3a5f;
         }
         .te-section:nth-child(odd) {
             background: #0a192f;
@@ -131,86 +134,105 @@
         .te-section:nth-child(even) {
             background: #112240;
         }
+        .te-section:last-of-type {
+            border-bottom: none;
+        }
 
-        .te-section-left {
-            padding: 80px 48px;
+        .te-section-header {
             position: relative;
+            margin-bottom: 40px;
         }
         .te-section-number {
-            font-size: clamp(5rem, 12vw, 9rem);
+            position: absolute;
+            top: -40px;
+            left: 0;
+            font-size: clamp(100px, 20vw, 150px);
             font-weight: 900;
-            color: rgba(100, 255, 218, 0.08);
+            color: #64ffda;
+            opacity: 0.08;
             line-height: 1;
-            margin-bottom: -40px;
             letter-spacing: -0.05em;
-            display: block;
+            z-index: 0;
+            pointer-events: none;
         }
         .te-section-title {
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            position: relative;
+            z-index: 1;
+            font-size: clamp(2rem, 6vw, 3.5rem);
             font-weight: 900;
             color: #ccd6f6;
-            line-height: 0.95;
+            line-height: 0.9;
             letter-spacing: -0.03em;
-            margin: 0 0 16px 0;
+            margin: 0 0 24px 0;
             text-transform: uppercase;
         }
         .te-section-hook {
-            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            position: relative;
+            z-index: 1;
+            font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+            color: #ccd6f6;
+            max-width: 600px;
+            line-height: 1.4;
+            margin: 0 0 12px 0;
+        }
+        .te-section-desc {
+            position: relative;
+            z-index: 1;
+            font-size: clamp(1rem, 2vw, 1.15rem);
             color: #8892b0;
+            max-width: 600px;
             line-height: 1.5;
-            margin: 0;
-            max-width: 400px;
+            margin: 0 0 40px 0;
         }
 
-        .te-section-right {
-            padding: 80px 48px;
+        /* Evidence Links - Vertical Menu Style */
+        .te-evidence-list {
             display: flex;
             flex-direction: column;
             gap: 0;
+            max-width: 500px;
         }
         .te-evidence-link {
             display: block;
-            padding: 16px 0;
+            padding: 18px 0 18px 20px;
             color: #ccd6f6;
             text-decoration: none;
-            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            font-size: clamp(1rem, 2vw, 1.2rem);
             font-weight: 500;
             letter-spacing: 0.01em;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-            transition: color 0.2s ease;
-        }
-        .te-evidence-link:first-child {
-            border-top: 1px solid rgba(100, 255, 218, 0.1);
+            border-left: 3px solid #64ffda;
+            transition: all 0.2s ease;
+            background: transparent;
         }
         .te-evidence-link:hover {
             color: #64ffda;
-        }
-        .te-evidence-link::before {
-            content: ‘>’;
-            color: #64ffda;
-            margin-right: 12px;
-            font-weight: 700;
-            opacity: 0;
-            transition: opacity 0.2s ease, margin-right 0.2s ease;
-        }
-        .te-evidence-link:hover::before {
-            opacity: 1;
+            background: rgba(100, 255, 218, 0.05);
+            padding-left: 28px;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 960px) {
+            .te-hero {
+                padding: 100px 20px 60px;
+                min-height: auto;
+            }
             .te-section {
-                grid-template-columns: 1fr;
-            }
-            .te-section-left {
-                padding: 48px 24px 24px;
-            }
-            .te-section-right {
-                padding: 0 24px 48px;
+                padding: 60px 24px;
+                min-height: auto;
             }
             .te-section-number {
-                font-size: clamp(3rem, 15vw, 5rem);
-                margin-bottom: -20px;
+                font-size: clamp(60px, 25vw, 100px);
+                top: -20px;
+            }
+            .te-section-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem);
+            }
+            .te-evidence-link {
+                padding: 14px 0 14px 16px;
+            }
+            .te-evidence-link:hover {
+                padding-left: 24px;
             }
         }
     </style>
@@ -228,12 +250,13 @@
 
         <!-- 01 — Monetary & Economic Evidence -->
         <section class=”te-section”>
-            <div class=”te-section-left”>
+            <div class=”te-section-header”>
                 <span class=”te-section-number”>01</span>
                 <h2 class=”te-section-title”>Monetary &amp; Economic Evidence</h2>
-                <p class=”te-section-hook”>Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
+                <p class=”te-section-hook”>Where does your money actually go?</p>
+                <p class=”te-section-desc”>Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
             </div>
-            <div class=”te-section-right”>
+            <div class=”te-evidence-list”>
                 <a class=”te-evidence-link” href=”/docs/monetary/”>Inflation vs Wages Data</a>
                 <a class=”te-evidence-link” href=”/docs/housing/”>Housing Cost &amp; Rent Burden</a>
                 <a class=”te-evidence-link” href=”/docs/monetary/fed-hearings/”>Federal Reserve Hearings &amp; Transcripts</a>
@@ -242,12 +265,13 @@
 
         <!-- 02 — Congress & Mirror Evidence -->
         <section class=”te-section”>
-            <div class=”te-section-left”>
+            <div class=”te-section-header”>
                 <span class=”te-section-number”>02</span>
                 <h2 class=”te-section-title”>Congress &amp; Mirror Evidence</h2>
-                <p class=”te-section-hook”>How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
+                <p class=”te-section-hook”>What do they say vs. what do they do?</p>
+                <p class=”te-section-desc”>How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
             </div>
-            <div class=”te-section-right”>
+            <div class=”te-evidence-list”>
                 <a class=”te-evidence-link” href=”/docs/congress/flip-tables/”>Senate &amp; House Flip Tables</a>
                 <a class=”te-evidence-link” href=”/docs/congress/heatmaps/”>Narrative Heatmaps</a>
                 <a class=”te-evidence-link” href=”/docs/congress/scripts/”>Script &amp; Soundbite Archives</a>
@@ -256,12 +280,13 @@
 
         <!-- 03 — Human Impact & Lived Evidence -->
         <section class=”te-section”>
-            <div class=”te-section-left”>
+            <div class=”te-section-header”>
                 <span class=”te-section-number”>03</span>
                 <h2 class=”te-section-title”>Human Impact &amp; Lived Evidence</h2>
-                <p class=”te-section-hook”>Behind every chart is a real life navigating the system every day.</p>
+                <p class=”te-section-hook”>What does the system cost real people?</p>
+                <p class=”te-section-desc”>Behind every chart is a real life navigating the system every day.</p>
             </div>
-            <div class=”te-section-right”>
+            <div class=”te-evidence-list”>
                 <a class=”te-evidence-link” href=”/docs/human-impact/testimonies/”>Cost of Living Testimonies</a>
                 <a class=”te-evidence-link” href=”/docs/human-impact/case-studies/”>Case Studies &amp; Stories</a>
                 <a class=”te-evidence-link” href=”/docs/human-impact/health/”>Stress, Health &amp; Stability</a>
@@ -270,12 +295,13 @@
 
         <!-- 04 — Agencies, Programs & APA Evidence -->
         <section class=”te-section”>
-            <div class=”te-section-left”>
+            <div class=”te-section-header”>
                 <span class=”te-section-number”>04</span>
                 <h2 class=”te-section-title”>Agencies, Programs &amp; APA Evidence</h2>
-                <p class=”te-section-hook”>Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
+                <p class=”te-section-hook”>Who writes the rules you live by?</p>
+                <p class=”te-section-desc”>Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
             </div>
-            <div class=”te-section-right”>
+            <div class=”te-evidence-list”>
                 <a class=”te-evidence-link” href=”/docs/agencies/profiles/”>Agency Profiles &amp; Powers</a>
                 <a class=”te-evidence-link” href=”/docs/agencies/apa-filings/”>APA Filings &amp; Records</a>
                 <a class=”te-evidence-link” href=”/docs/agencies/program-outcomes/”>Program Outcomes &amp; Gaps</a>
@@ -284,12 +310,13 @@
 
         <!-- 05 — Methods & Sources -->
         <section class=”te-section”>
-            <div class=”te-section-left”>
+            <div class=”te-section-header”>
                 <span class=”te-section-number”>05</span>
                 <h2 class=”te-section-title”>Methods &amp; Sources</h2>
-                <p class=”te-section-hook”>Public, checkable sources — no hidden leaks, no private surveillance.</p>
+                <p class=”te-section-hook”>How do we know what we claim?</p>
+                <p class=”te-section-desc”>Public, checkable sources — no hidden leaks, no private surveillance.</p>
             </div>
-            <div class=”te-section-right”>
+            <div class=”te-evidence-list”>
                 <a class=”te-evidence-link” href=”/docs/meta/data-sources/”>Data Sources</a>
                 <a class=”te-evidence-link” href=”/docs/meta/methods/”>Methodology Notes</a>
                 <a class=”te-evidence-link” href=”/docs/meta/transparency-commitments/”>Transparency Commitments</a>
