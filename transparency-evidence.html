@@ -235,6 +235,69 @@
                 padding-left: 24px;
             }
         }
+
+        /* ============================================
+           EVIDENCE-SECTION STYLING (FORCE CSS)
+           ============================================ */
+        .evidence-section {
+            min-height: 100vh;
+            padding: 120px 80px;
+            position: relative;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .evidence-section .section-number {
+            font-size: 180px;
+            font-weight: 900;
+            color: #64ffda;
+            opacity: 0.06;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .evidence-section .section-title {
+            font-size: 52px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .evidence-section .section-hook {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .evidence-section .section-sub {
+            font-size: 15px;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 40px;
+        }
+
+        .evidence-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .evidence-links a {
+            color: #64ffda;
+            font-size: 18px;
+            text-decoration: none;
+            border-left: 2px solid #64ffda;
+            padding-left: 16px;
+            transition: opacity 0.2s;
+        }
+
+        .evidence-links a:hover {
+            opacity: 0.7;
+        }
     </style>
 
     <main>
@@ -249,79 +312,69 @@
         </section>
 
         <!-- 01 — Monetary & Economic Evidence -->
-        <section class=”te-section”>
-            <div class=”te-section-header”>
-                <span class=”te-section-number”>01</span>
-                <h2 class=”te-section-title”>Monetary &amp; Economic Evidence</h2>
-                <p class=”te-section-hook”>Where does your money actually go?</p>
-                <p class=”te-section-desc”>Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
+        <div class=”evidence-section”>
+            <span class=”section-number”>01</span>
+            <h2 class=”section-title”>Monetary &amp; Economic Evidence</h2>
+            <p class=”section-hook”>Where does your money actually go?</p>
+            <p class=”section-sub”>Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
+            <div class=”evidence-links”>
+                <a href=”/docs/monetary/”>Inflation vs Wages Data</a>
+                <a href=”/docs/housing/”>Housing Cost &amp; Rent Burden</a>
+                <a href=”/docs/monetary/fed-hearings/”>Federal Reserve Hearings &amp; Transcripts</a>
             </div>
-            <div class=”te-evidence-list”>
-                <a class=”te-evidence-link” href=”/docs/monetary/”>Inflation vs Wages Data</a>
-                <a class=”te-evidence-link” href=”/docs/housing/”>Housing Cost &amp; Rent Burden</a>
-                <a class=”te-evidence-link” href=”/docs/monetary/fed-hearings/”>Federal Reserve Hearings &amp; Transcripts</a>
-            </div>
-        </section>
+        </div>
 
         <!-- 02 — Congress & Mirror Evidence -->
-        <section class=”te-section”>
-            <div class=”te-section-header”>
-                <span class=”te-section-number”>02</span>
-                <h2 class=”te-section-title”>Congress &amp; Mirror Evidence</h2>
-                <p class=”te-section-hook”>What do they say vs. what do they do?</p>
-                <p class=”te-section-desc”>How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
+        <div class=”evidence-section”>
+            <span class=”section-number”>02</span>
+            <h2 class=”section-title”>Congress &amp; Mirror Evidence</h2>
+            <p class=”section-hook”>What do they say vs. what do they do?</p>
+            <p class=”section-sub”>How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
+            <div class=”evidence-links”>
+                <a href=”/docs/congress/flip-tables/”>Senate &amp; House Flip Tables</a>
+                <a href=”/docs/congress/heatmaps/”>Narrative Heatmaps</a>
+                <a href=”/docs/congress/scripts/”>Script &amp; Soundbite Archives</a>
             </div>
-            <div class=”te-evidence-list”>
-                <a class=”te-evidence-link” href=”/docs/congress/flip-tables/”>Senate &amp; House Flip Tables</a>
-                <a class=”te-evidence-link” href=”/docs/congress/heatmaps/”>Narrative Heatmaps</a>
-                <a class=”te-evidence-link” href=”/docs/congress/scripts/”>Script &amp; Soundbite Archives</a>
-            </div>
-        </section>
+        </div>
 
         <!-- 03 — Human Impact & Lived Evidence -->
-        <section class=”te-section”>
-            <div class=”te-section-header”>
-                <span class=”te-section-number”>03</span>
-                <h2 class=”te-section-title”>Human Impact &amp; Lived Evidence</h2>
-                <p class=”te-section-hook”>What does the system cost real people?</p>
-                <p class=”te-section-desc”>Behind every chart is a real life navigating the system every day.</p>
+        <div class=”evidence-section”>
+            <span class=”section-number”>03</span>
+            <h2 class=”section-title”>Human Impact &amp; Lived Evidence</h2>
+            <p class=”section-hook”>What does the system cost real people?</p>
+            <p class=”section-sub”>Behind every chart is a real life navigating the system every day.</p>
+            <div class=”evidence-links”>
+                <a href=”/docs/human-impact/testimonies/”>Cost of Living Testimonies</a>
+                <a href=”/docs/human-impact/case-studies/”>Case Studies &amp; Stories</a>
+                <a href=”/docs/human-impact/health/”>Stress, Health &amp; Stability</a>
             </div>
-            <div class=”te-evidence-list”>
-                <a class=”te-evidence-link” href=”/docs/human-impact/testimonies/”>Cost of Living Testimonies</a>
-                <a class=”te-evidence-link” href=”/docs/human-impact/case-studies/”>Case Studies &amp; Stories</a>
-                <a class=”te-evidence-link” href=”/docs/human-impact/health/”>Stress, Health &amp; Stability</a>
-            </div>
-        </section>
+        </div>
 
         <!-- 04 — Agencies, Programs & APA Evidence -->
-        <section class=”te-section”>
-            <div class=”te-section-header”>
-                <span class=”te-section-number”>04</span>
-                <h2 class=”te-section-title”>Agencies, Programs &amp; APA Evidence</h2>
-                <p class=”te-section-hook”>Who writes the rules you live by?</p>
-                <p class=”te-section-desc”>Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
+        <div class=”evidence-section”>
+            <span class=”section-number”>04</span>
+            <h2 class=”section-title”>Agencies, Programs &amp; APA Evidence</h2>
+            <p class=”section-hook”>Who writes the rules you live by?</p>
+            <p class=”section-sub”>Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
+            <div class=”evidence-links”>
+                <a href=”/docs/agencies/profiles/”>Agency Profiles &amp; Powers</a>
+                <a href=”/docs/agencies/apa-filings/”>APA Filings &amp; Records</a>
+                <a href=”/docs/agencies/program-outcomes/”>Program Outcomes &amp; Gaps</a>
             </div>
-            <div class=”te-evidence-list”>
-                <a class=”te-evidence-link” href=”/docs/agencies/profiles/”>Agency Profiles &amp; Powers</a>
-                <a class=”te-evidence-link” href=”/docs/agencies/apa-filings/”>APA Filings &amp; Records</a>
-                <a class=”te-evidence-link” href=”/docs/agencies/program-outcomes/”>Program Outcomes &amp; Gaps</a>
-            </div>
-        </section>
+        </div>
 
         <!-- 05 — Methods & Sources -->
-        <section class=”te-section”>
-            <div class=”te-section-header”>
-                <span class=”te-section-number”>05</span>
-                <h2 class=”te-section-title”>Methods &amp; Sources</h2>
-                <p class=”te-section-hook”>How do we know what we claim?</p>
-                <p class=”te-section-desc”>Public, checkable sources — no hidden leaks, no private surveillance.</p>
+        <div class=”evidence-section”>
+            <span class=”section-number”>05</span>
+            <h2 class=”section-title”>Methods &amp; Sources</h2>
+            <p class=”section-hook”>How do we know what we claim?</p>
+            <p class=”section-sub”>Public, checkable sources — no hidden leaks, no private surveillance.</p>
+            <div class=”evidence-links”>
+                <a href=”/docs/meta/data-sources/”>Data Sources</a>
+                <a href=”/docs/meta/methods/”>Methodology Notes</a>
+                <a href=”/docs/meta/transparency-commitments/”>Transparency Commitments</a>
             </div>
-            <div class=”te-evidence-list”>
-                <a class=”te-evidence-link” href=”/docs/meta/data-sources/”>Data Sources</a>
-                <a class=”te-evidence-link” href=”/docs/meta/methods/”>Methodology Notes</a>
-                <a class=”te-evidence-link” href=”/docs/meta/transparency-commitments/”>Transparency Commitments</a>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer class="site-footer">
