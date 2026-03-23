@@ -84,255 +84,215 @@
 </header>
 
 
-    <main class="container">
-        <!-- Page header -->
-        <div class="page-header">
-            <h1 class="page-title">TRANSPARENCY &amp; EVIDENCE</h1>
-            <p class="page-subtitle">
+    <style>
+        /* ============================================
+           TRANSPARENCY & EVIDENCE - EDITORIAL LAYOUT
+           Matches truth-library visual language
+           ============================================ */
+
+        .te-hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 60px;
+            background: #0a192f;
+            text-align: center;
+        }
+        .te-hero-title {
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 900;
+            color: #ccd6f6;
+            line-height: 0.85;
+            letter-spacing: -0.04em;
+            margin: 0 0 40px 0;
+            text-transform: uppercase;
+        }
+        .te-hero-sub {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #8892b0;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Evidence sections */
+        .te-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            min-height: 50vh;
+            align-items: start;
+        }
+        .te-section:nth-child(odd) {
+            background: #0a192f;
+        }
+        .te-section:nth-child(even) {
+            background: #112240;
+        }
+
+        .te-section-left {
+            padding: 80px 48px;
+            position: relative;
+        }
+        .te-section-number {
+            font-size: clamp(5rem, 12vw, 9rem);
+            font-weight: 900;
+            color: rgba(100, 255, 218, 0.08);
+            line-height: 1;
+            margin-bottom: -40px;
+            letter-spacing: -0.05em;
+            display: block;
+        }
+        .te-section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            color: #ccd6f6;
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+            margin: 0 0 16px 0;
+            text-transform: uppercase;
+        }
+        .te-section-hook {
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            color: #8892b0;
+            line-height: 1.5;
+            margin: 0;
+            max-width: 400px;
+        }
+
+        .te-section-right {
+            padding: 80px 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .te-evidence-link {
+            display: block;
+            padding: 16px 0;
+            color: #ccd6f6;
+            text-decoration: none;
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+            transition: color 0.2s ease;
+        }
+        .te-evidence-link:first-child {
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        .te-evidence-link:hover {
+            color: #64ffda;
+        }
+        .te-evidence-link::before {
+            content: ‘>’;
+            color: #64ffda;
+            margin-right: 12px;
+            font-weight: 700;
+            opacity: 0;
+            transition: opacity 0.2s ease, margin-right 0.2s ease;
+        }
+        .te-evidence-link:hover::before {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .te-section {
+                grid-template-columns: 1fr;
+            }
+            .te-section-left {
+                padding: 48px 24px 24px;
+            }
+            .te-section-right {
+                padding: 0 24px 48px;
+            }
+            .te-section-number {
+                font-size: clamp(3rem, 15vw, 5rem);
+                margin-bottom: -20px;
+            }
+        }
+    </style>
+
+    <main>
+        <!-- Hero -->
+        <section class=”te-hero”>
+            <h1 class=”te-hero-title”>TRANSPARENCY &amp; EVIDENCE</h1>
+            <p class=”te-hero-sub”>
                 This page is the front door into the documents, charts, transcripts, and data behind the Truth Library.
-                Every tile points to a folder in <code>/docs</code> where evidence can live, so anyone—citizen, journalist,
-                or official—can verify claims for themselves.
+                Every link points to a folder in <code>/docs</code> where evidence can live, so anyone — citizen, journalist,
+                or official — can verify claims for themselves.
             </p>
-        </div>
+        </section>
 
-        <!-- How to use this page -->
-        <section class="library-room">
-            <h2>How to Use This Page</h2>
-            <div class="grid-3">
-                <article class="tile">
-                    <h3>1 · Pick a Topic</h3>
-                    <p>
-                        Choose the area you care about most: monetary policy, housing, Congress behavior, agencies, or
-                        human impact. Each category groups related documents together so you don’t have to hunt.
-                    </p>
-                </article>
-                <article class="tile">
-                    <h3>2 · Open the Evidence Folder</h3>
-                    <p>
-                        Each tile links into a dedicated folder under <code>/docs</code> with reports, charts, and notes.
-                        These start as placeholders and grow over time as more material is added.
-                    </p>
-                </article>
-                <article class="tile">
-                    <h3>3 · Cross-Check With the Truth Library</h3>
-                    <p>
-                        Use the Truth Library rooms to understand the patterns, then use this page to see the receipts.
-                        Together, they form a Mirror: understanding plus verification.
-                    </p>
-                </article>
+        <!-- 01 — Monetary & Economic Evidence -->
+        <section class=”te-section”>
+            <div class=”te-section-left”>
+                <span class=”te-section-number”>01</span>
+                <h2 class=”te-section-title”>Monetary &amp; Economic Evidence</h2>
+                <p class=”te-section-hook”>Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
+            </div>
+            <div class=”te-section-right”>
+                <a class=”te-evidence-link” href=”/docs/monetary/”>Inflation vs Wages Data</a>
+                <a class=”te-evidence-link” href=”/docs/housing/”>Housing Cost &amp; Rent Burden</a>
+                <a class=”te-evidence-link” href=”/docs/monetary/fed-hearings/”>Federal Reserve Hearings &amp; Transcripts</a>
             </div>
         </section>
 
-        <!-- Monetary & Economic Evidence -->
-        <section class="library-room">
-            <h2 class="room-title">Monetary &amp; Economic Evidence</h2>
-            <p class="room-intro">
-                Evidence related to prices, wages, debt, and the behavior of the Federal Reserve and financial system.
-            </p>
-            <div class="grid-3">
-                <article class="tile">
-                    <h3>Inflation vs Wages Data</h3>
-                    <p>
-                        Time series showing how consumer prices and average wages have moved relative to each other,
-                        with notes on methodology and sources.
-                    </p>
-                    <a class="tile-link" href="/docs/monetary/">
-                        Open monetary evidence folder →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Housing Cost &amp; Rent Burden</h3>
-                    <p>
-                        Charts and tables documenting rent-to-income ratios, home price indices, and regional disparities
-                        in housing affordability.
-                    </p>
-                    <a class="tile-link" href="/docs/housing/">
-                        Open housing evidence folder →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Federal Reserve Hearings &amp; Transcripts</h3>
-                    <p>
-                        Annotated excerpts and links to Senate Banking hearings with the same Fed Chair under different
-                        administrations, highlighting narrative shifts and consistent patterns.
-                    </p>
-                    <a class="tile-link" href="/docs/monetary/fed-hearings/">
-                        Open Fed hearings evidence →
-                    </a>
-                </article>
+        <!-- 02 — Congress & Mirror Evidence -->
+        <section class=”te-section”>
+            <div class=”te-section-left”>
+                <span class=”te-section-number”>02</span>
+                <h2 class=”te-section-title”>Congress &amp; Mirror Evidence</h2>
+                <p class=”te-section-hook”>How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
+            </div>
+            <div class=”te-section-right”>
+                <a class=”te-evidence-link” href=”/docs/congress/flip-tables/”>Senate &amp; House Flip Tables</a>
+                <a class=”te-evidence-link” href=”/docs/congress/heatmaps/”>Narrative Heatmaps</a>
+                <a class=”te-evidence-link” href=”/docs/congress/scripts/”>Script &amp; Soundbite Archives</a>
             </div>
         </section>
 
-        <!-- Congress & Mirror Evidence -->
-        <section class="library-room">
-            <h2 class="room-title">Congress &amp; Mirror Evidence</h2>
-            <p class="room-intro">
-                Documents that show how congressional behavior, rhetoric, and priorities change over time,
-                and how those shifts map onto incentives.
-            </p>
-            <div class="grid-3">
-                <article class="tile">
-                    <h3>Senate and House Flip Tables</h3>
-                    <p>
-                        Side-by-side tables of statements and votes by the same senators across multiple sessions,
-                        organized by topic (debt, inflation, policing, war, etc.).
-                    </p>
-                    <a class="tile-link" href="/docs/congress/flip-tables/">
-                        Open Senate flip tables →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Narrative Heatmaps</h3>
-                    <p>
-                        Visuals showing when certain words or arguments spike in hearings and media,
-                        aligned with changes in power or policy debates.
-                    </p>
-                    <a class="tile-link" href="/docs/congress/heatmaps/">
-                        Open narrative heatmap evidence →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Script &amp; Soundbite Archives</h3>
-                    <p>
-                        Curated clips and transcripts capturing recurring phrases such as “now is not the time”
-                        or “we have no choice,” used in different contexts.
-                    </p>
-                    <a class="tile-link" href="/docs/congress/scripts/">
-                        Open script archive →
-                    </a>
-                </article>
+        <!-- 03 — Human Impact & Lived Evidence -->
+        <section class=”te-section”>
+            <div class=”te-section-left”>
+                <span class=”te-section-number”>03</span>
+                <h2 class=”te-section-title”>Human Impact &amp; Lived Evidence</h2>
+                <p class=”te-section-hook”>Behind every chart is a real life navigating the system every day.</p>
+            </div>
+            <div class=”te-section-right”>
+                <a class=”te-evidence-link” href=”/docs/human-impact/testimonies/”>Cost of Living Testimonies</a>
+                <a class=”te-evidence-link” href=”/docs/human-impact/case-studies/”>Case Studies &amp; Stories</a>
+                <a class=”te-evidence-link” href=”/docs/human-impact/health/”>Stress, Health &amp; Stability</a>
             </div>
         </section>
 
-        <!-- Agencies & APA Evidence -->
-        <section class="library-room">
-            <h2 class="room-title">Agencies, Programs &amp; APA Evidence</h2>
-            <p class="room-intro">
-                Evidence drawn from agency rulemaking, guidance, public data, and APA-focused oversight efforts.
-            </p>
-            <div class="grid-3">
-                <article class="tile">
-                    <h3>Agency Profiles &amp; Powers</h3>
-                    <p>
-                        Short briefs on what HUD, FHFA, Treasury, the Fed, and other key agencies are authorized to do,
-                        with references to statutes and official documents.
-                    </p>
-                    <a class="tile-link" href="/docs/agencies/profiles/">
-                        Open agency profiles evidence →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>APA Filings &amp; Records</h3>
-                    <p>
-                        Public-facing versions of Administrative Procedure Act filings, including filings, responses,
-                        and supporting materials where possible.
-                    </p>
-                    <a class="tile-link" href="/docs/agencies/apa-filings/">
-                        Open APA evidence →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Program Outcomes &amp; Gaps</h3>
-                    <p>
-                        Data showing the difference between what programs promised and what they delivered, collected
-                        from official reports and independent audits.
-                    </p>
-                    <a class="tile-link" href="/docs/agencies/program-outcomes/">
-                        Open program outcome evidence →
-                    </a>
-                </article>
+        <!-- 04 — Agencies, Programs & APA Evidence -->
+        <section class=”te-section”>
+            <div class=”te-section-left”>
+                <span class=”te-section-number”>04</span>
+                <h2 class=”te-section-title”>Agencies, Programs &amp; APA Evidence</h2>
+                <p class=”te-section-hook”>Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
+            </div>
+            <div class=”te-section-right”>
+                <a class=”te-evidence-link” href=”/docs/agencies/profiles/”>Agency Profiles &amp; Powers</a>
+                <a class=”te-evidence-link” href=”/docs/agencies/apa-filings/”>APA Filings &amp; Records</a>
+                <a class=”te-evidence-link” href=”/docs/agencies/program-outcomes/”>Program Outcomes &amp; Gaps</a>
             </div>
         </section>
 
-        <!-- Human Impact & Stories Evidence -->
-        <section class="library-room">
-            <h2 class="room-title">Human Impact &amp; Lived Evidence</h2>
-            <p class="room-intro">
-                Behind every chart is a real life. This section anchors formal evidence to the lived experience
-                of people navigating the system every day.
-            </p>
-            <div class="grid-3">
-                <article class="tile">
-                    <h3>Cost of Living Testimonies</h3>
-                    <p>
-                        Anonymized, aggregated snapshots from “Rising Together” submissions, organized by theme
-                        and context (housing, healthcare, work, education).
-                    </p>
-                    <a class="tile-link" href="/docs/human-impact/testimonies/">
-                        Open testimonies evidence →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Case Studies &amp; Stories</h3>
-                    <p>
-                        Narrative summaries that combine data with real stories, showing how abstract policies
-                        translate into concrete outcomes in people’s lives.
-                    </p>
-                    <a class="tile-link" href="/docs/human-impact/case-studies/">
-                        Open case study evidence →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Stress, Health &amp; Stability</h3>
-                    <p>
-                        Research summaries and data on how financial instability affects mental health, physical health,
-                        family relationships, and long-term opportunity.
-                    </p>
-                    <a class="tile-link" href="/docs/human-impact/health/">
-                        Open stress &amp; health evidence →
-                    </a>
-                </article>
+        <!-- 05 — Methods & Sources -->
+        <section class=”te-section”>
+            <div class=”te-section-left”>
+                <span class=”te-section-number”>05</span>
+                <h2 class=”te-section-title”>Methods &amp; Sources</h2>
+                <p class=”te-section-hook”>Public, checkable sources — no hidden leaks, no private surveillance.</p>
             </div>
-        </section>
-
-        <!-- Methods & Sources -->
-        <section class="library-room">
-            <h2 class="room-title">Methods &amp; Sources</h2>
-            <p class="room-intro">
-                This project uses public, checkable sources: official statistics, hearings, agency documents,
-                and direct submissions from affected people. No hidden leaks, no private surveillance.
-            </p>
-            <div class="grid-3">
-                <article class="tile">
-                    <h3>Data Sources</h3>
-                    <p>
-                        Links to public data platforms (such as FRED, Census, BLS, CBO, GAO) and notes on
-                        how series were chosen and processed.
-                    </p>
-                    <a class="tile-link" href="/docs/meta/data-sources/">
-                        Open data source notes →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Methodology Notes</h3>
-                    <p>
-                        Simple explanations of how charts, tables, and comparisons were built—what they show,
-                        and what their limitations are.
-                    </p>
-                    <a class="tile-link" href="/docs/meta/methods/">
-                        Open methodology notes →
-                    </a>
-                </article>
-
-                <article class="tile">
-                    <h3>Transparency Commitments</h3>
-                    <p>
-                        A living statement of how evidence is collected, how errors will be corrected, and
-                        how the community can challenge or improve the work.
-                    </p>
-                    <a class="tile-link" href="/docs/meta/transparency-commitments/">
-                        Open transparency statement →
-                    </a>
-                </article>
+            <div class=”te-section-right”>
+                <a class=”te-evidence-link” href=”/docs/meta/data-sources/”>Data Sources</a>
+                <a class=”te-evidence-link” href=”/docs/meta/methods/”>Methodology Notes</a>
+                <a class=”te-evidence-link” href=”/docs/meta/transparency-commitments/”>Transparency Commitments</a>
             </div>
         </section>
     </main>
