@@ -5,6 +5,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Transparency & Evidence | Mirror</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* ============================================
+           TRANSPARENCY & EVIDENCE - EDITORIAL LAYOUT
+           (Matches truth-library exactly)
+           ============================================ */
+
+        /* Hero Section */
+        .tl-hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 120px;
+            background: #0a192f;
+            text-align: center;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .tl-hero-title {
+            font-size: clamp(4rem, 14vw, 10rem);
+            font-weight: 900;
+            color: #ccd6f6;
+            line-height: 0.85;
+            letter-spacing: -0.04em;
+            margin: 0 0 60px 0;
+            text-transform: uppercase;
+        }
+        .tl-hero-content {
+            max-width: 600px;
+        }
+        .tl-hero-sub {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #8892b0;
+            margin: 0 0 16px 0;
+            line-height: 1.5;
+        }
+        .tl-hero-sub-small {
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+            color: #64ffda;
+            margin: 24px 0 16px 0;
+            letter-spacing: 0.02em;
+        }
+        .tl-hero-instruction {
+            font-size: 0.9rem;
+            color: #ccd6f6;
+            margin: 0 0 24px 0;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .tl-hero-btn {
+            display: inline-block;
+            padding: 18px 56px;
+            background: transparent;
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .tl-hero-btn:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+
+        /* Room Sections */
+        .tl-room {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 48px;
+            position: relative;
+        }
+        .tl-room:nth-child(odd) {
+            background: #0a192f;
+        }
+        .tl-room:nth-child(even) {
+            background: #112240;
+        }
+        .tl-room-number {
+            font-size: clamp(4rem, 10vw, 7rem);
+            font-weight: 900;
+            color: rgba(100, 255, 218, 0.08);
+            line-height: 1;
+            margin-bottom: -30px;
+            letter-spacing: -0.05em;
+        }
+        .tl-room-title {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            color: #ccd6f6;
+            line-height: 0.9;
+            letter-spacing: -0.03em;
+            margin: 0 0 24px 0;
+            text-transform: uppercase;
+        }
+        .tl-room-desc {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #8892b0;
+            max-width: 500px;
+            line-height: 1.6;
+            margin: 0 0 16px 0;
+        }
+        .tl-room-hook {
+            font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+            color: #ccd6f6;
+            max-width: 500px;
+            line-height: 1.4;
+            margin: 0 0 12px 0;
+        }
+        .tl-room-ground {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: #8892b0;
+            max-width: 500px;
+            line-height: 1.5;
+            margin: 0 0 16px 0;
+        }
+        .tl-room-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            color: #64ffda;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        .tl-room-btn {
+            display: inline-block;
+            width: fit-content;
+            max-width: 280px;
+            padding: 14px 40px;
+            background: #64ffda;
+            color: #0a192f;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+        }
+        .tl-room-btn:hover {
+            background: #9efff0;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 960px) {
+            .tl-hero {
+                padding: 40px 20px;
+            }
+            .tl-room {
+                padding: 60px 24px;
+                min-height: auto;
+            }
+            .tl-room-number {
+                font-size: clamp(3rem, 15vw, 5rem);
+                margin-bottom: -20px;
+            }
+            .tl-room-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem);
+            }
+            .tl-room-title br {
+                display: none;
+            }
+        }
+
+        /* Room Dropdown */
+        .room-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .room-dropdown-btn {
+            display: inline-block;
+            width: fit-content;
+            max-width: 280px;
+            padding: 14px 40px;
+            background: #64ffda;
+            color: #0a192f;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+        }
+        .room-dropdown-btn:hover {
+            background: #9efff0;
+            transform: translateY(-2px);
+        }
+        .room-dropdown-btn::after {
+            content: ' ▾';
+            font-size: 0.75em;
+        }
+        .room-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 8px;
+            background: #112240;
+            border: 1px solid #1d3a5f;
+            border-radius: 8px;
+            min-width: 280px;
+            z-index: 100;
+            overflow: hidden;
+        }
+        .room-dropdown.active .room-dropdown-menu {
+            display: block;
+        }
+        .room-dropdown-item {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            background: none;
+            border: none;
+            text-align: left;
+            color: #ccd6f6;
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .room-dropdown-item:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+    </style>
 </head>
 <body>
 <!-- Mega menu blur backdrop -->
@@ -84,330 +319,102 @@
 </header>
 
 
-    <style>
-        /* ============================================
-           TRANSPARENCY & EVIDENCE - EDITORIAL LAYOUT
-           Matches truth-library visual language exactly
-           ============================================ */
+<!-- HERO SECTION -->
+<section class="tl-hero">
+  <h1 class="tl-hero-title">TRANSPARENCY<br>&amp; EVIDENCE</h1>
+  <div class="tl-hero-content">
+    <p class="tl-hero-sub">This is the front door into the documents, charts, transcripts, and data behind the Truth Library.</p>
+    <p class="tl-hero-sub">Every link points to evidence anyone can verify — citizen, journalist, or official.</p>
+    <p class="tl-hero-sub-small">Public records. Checkable sources. Five sections.</p>
+    <p class="tl-hero-instruction">Start with 01.</p>
+    <a href="#room-01" class="tl-hero-btn">Begin</a>
+  </div>
+</section>
 
-        /* Hero Section */
-        .te-hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 120px 24px 80px;
-            background: #0a192f;
-            text-align: center;
-        }
-        .te-hero-title {
-            font-size: clamp(4rem, 14vw, 10rem);
-            font-weight: 900;
-            color: #ccd6f6;
-            line-height: 0.85;
-            letter-spacing: -0.04em;
-            margin: 0 0 60px 0;
-            text-transform: uppercase;
-        }
-        .te-hero-sub {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: #8892b0;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+<!-- ROOM 01 -->
+<section class="tl-room" id="room-01">
+  <span class="tl-room-number">01</span>
+  <h2 class="tl-room-title">MONETARY &amp;<br>ECONOMIC</h2>
+  <p class="tl-room-hook">Where does your money actually go?</p>
+  <p class="tl-room-ground">Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
+  <span class="tl-room-tag">Evidence</span>
+  <div class="room-dropdown" id="room01-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleDropdown('room01-dropdown')">View Evidence</button>
+    <div class="room-dropdown-menu">
+      <a class="room-dropdown-item" href="/docs/monetary/">Inflation vs Wages Data</a>
+      <a class="room-dropdown-item" href="/docs/housing/">Housing Cost &amp; Rent Burden</a>
+      <a class="room-dropdown-item" href="/docs/monetary/fed-hearings/">Federal Reserve Hearings &amp; Transcripts</a>
+    </div>
+  </div>
+</section>
 
-        /* Evidence Room Sections */
-        .te-section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px 48px;
-            position: relative;
-            border-bottom: 1px solid #1d3a5f;
-        }
-        .te-section:nth-child(odd) {
-            background: #0a192f;
-        }
-        .te-section:nth-child(even) {
-            background: #112240;
-        }
-        .te-section:last-of-type {
-            border-bottom: none;
-        }
+<!-- ROOM 02 -->
+<section class="tl-room" id="room-02">
+  <span class="tl-room-number">02</span>
+  <h2 class="tl-room-title">CONGRESS &amp;<br>MIRROR</h2>
+  <p class="tl-room-hook">What do they say vs. what do they do?</p>
+  <p class="tl-room-ground">How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
+  <span class="tl-room-tag">Records</span>
+  <div class="room-dropdown" id="room02-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleDropdown('room02-dropdown')">View Evidence</button>
+    <div class="room-dropdown-menu">
+      <a class="room-dropdown-item" href="/docs/congress/flip-tables/">Senate &amp; House Flip Tables</a>
+      <a class="room-dropdown-item" href="/docs/congress/heatmaps/">Narrative Heatmaps</a>
+      <a class="room-dropdown-item" href="/docs/congress/scripts/">Script &amp; Soundbite Archives</a>
+    </div>
+  </div>
+</section>
 
-        .te-section-header {
-            position: relative;
-            margin-bottom: 40px;
-        }
-        .te-section-number {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            font-size: clamp(100px, 20vw, 150px);
-            font-weight: 900;
-            color: #64ffda;
-            opacity: 0.08;
-            line-height: 1;
-            letter-spacing: -0.05em;
-            z-index: 0;
-            pointer-events: none;
-        }
-        .te-section-title {
-            position: relative;
-            z-index: 1;
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            font-weight: 900;
-            color: #ccd6f6;
-            line-height: 0.9;
-            letter-spacing: -0.03em;
-            margin: 0 0 24px 0;
-            text-transform: uppercase;
-        }
-        .te-section-hook {
-            position: relative;
-            z-index: 1;
-            font-size: clamp(1.3rem, 2.5vw, 1.5rem);
-            font-weight: 600;
-            color: #ccd6f6;
-            max-width: 600px;
-            line-height: 1.4;
-            margin: 0 0 12px 0;
-        }
-        .te-section-desc {
-            position: relative;
-            z-index: 1;
-            font-size: clamp(1rem, 2vw, 1.15rem);
-            color: #8892b0;
-            max-width: 600px;
-            line-height: 1.5;
-            margin: 0 0 40px 0;
-        }
+<!-- ROOM 03 -->
+<section class="tl-room" id="room-03">
+  <span class="tl-room-number">03</span>
+  <h2 class="tl-room-title">HUMAN<br>IMPACT</h2>
+  <p class="tl-room-hook">What does the system cost real people?</p>
+  <p class="tl-room-ground">Behind every chart is a real life navigating the system every day.</p>
+  <span class="tl-room-tag">Stories</span>
+  <div class="room-dropdown" id="room03-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleDropdown('room03-dropdown')">View Evidence</button>
+    <div class="room-dropdown-menu">
+      <a class="room-dropdown-item" href="/docs/human-impact/testimonies/">Cost of Living Testimonies</a>
+      <a class="room-dropdown-item" href="/docs/human-impact/case-studies/">Case Studies &amp; Stories</a>
+      <a class="room-dropdown-item" href="/docs/human-impact/health/">Stress, Health &amp; Stability</a>
+    </div>
+  </div>
+</section>
 
-        /* Evidence Links - Vertical Menu Style */
-        .te-evidence-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            max-width: 500px;
-        }
-        .te-evidence-link {
-            display: block;
-            padding: 18px 0 18px 20px;
-            color: #ccd6f6;
-            text-decoration: none;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            font-weight: 500;
-            letter-spacing: 0.01em;
-            border-left: 3px solid #64ffda;
-            transition: all 0.2s ease;
-            background: transparent;
-        }
-        .te-evidence-link:hover {
-            color: #64ffda;
-            background: rgba(100, 255, 218, 0.05);
-            padding-left: 28px;
-        }
+<!-- ROOM 04 -->
+<section class="tl-room" id="room-04">
+  <span class="tl-room-number">04</span>
+  <h2 class="tl-room-title">AGENCIES &amp;<br>APA</h2>
+  <p class="tl-room-hook">Who writes the rules you live by?</p>
+  <p class="tl-room-ground">Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
+  <span class="tl-room-tag">Oversight</span>
+  <div class="room-dropdown" id="room04-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleDropdown('room04-dropdown')">View Evidence</button>
+    <div class="room-dropdown-menu">
+      <a class="room-dropdown-item" href="/docs/agencies/profiles/">Agency Profiles &amp; Powers</a>
+      <a class="room-dropdown-item" href="/docs/agencies/apa-filings/">APA Filings &amp; Records</a>
+      <a class="room-dropdown-item" href="/docs/agencies/program-outcomes/">Program Outcomes &amp; Gaps</a>
+    </div>
+  </div>
+</section>
 
-        /* Responsive */
-        @media (max-width: 960px) {
-            .te-hero {
-                padding: 100px 20px 60px;
-                min-height: auto;
-            }
-            .te-section {
-                padding: 60px 24px;
-                min-height: auto;
-            }
-            .te-section-number {
-                font-size: clamp(60px, 25vw, 100px);
-                top: -20px;
-            }
-            .te-section-title {
-                font-size: clamp(1.8rem, 8vw, 2.5rem);
-            }
-            .te-evidence-link {
-                padding: 14px 0 14px 16px;
-            }
-            .te-evidence-link:hover {
-                padding-left: 24px;
-            }
-        }
-
-        /* ============================================
-           EVIDENCE-SECTION STYLING (FORCE CSS)
-           ============================================ */
-        .evidence-section {
-            min-height: 100vh;
-            padding: 120px 80px;
-            position: relative;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-        }
-
-        .evidence-section .section-number {
-            font-size: 180px;
-            font-weight: 900;
-            color: #64ffda;
-            opacity: 0.06;
-            position: absolute;
-            top: 60px;
-            left: 60px;
-            line-height: 1;
-            pointer-events: none;
-        }
-
-        .evidence-section .section-title {
-            font-size: 52px;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: #ffffff;
-            margin-bottom: 16px;
-            position: relative;
-        }
-
-        .evidence-section .section-hook {
-            font-size: 22px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .evidence-section .section-sub {
-            font-size: 15px;
-            color: rgba(255,255,255,0.45);
-            margin-bottom: 40px;
-        }
-
-        .evidence-links {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .evidence-links a {
-            color: #64ffda;
-            font-size: 18px;
-            text-decoration: none;
-            border-left: 2px solid #64ffda;
-            padding-left: 16px;
-            transition: opacity 0.2s;
-        }
-
-        .evidence-links a:hover {
-            opacity: 0.7;
-        }
-
-        /* Additional te- classes for new markup */
-        .te-section-sub {
-            font-size: 15px;
-            color: rgba(255,255,255,0.45);
-            margin-bottom: 40px;
-        }
-        .te-links {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        .te-links a {
-            color: #64ffda;
-            font-size: 18px;
-            text-decoration: none;
-            border-left: 2px solid #64ffda;
-            padding-left: 16px;
-        }
-        .te-links a:hover {
-            opacity: 0.7;
-        }
-    </style>
-
-    <main>
-        <!-- Hero -->
-        <section class=”te-hero”>
-            <h1 class=”te-hero-title”>TRANSPARENCY &amp; EVIDENCE</h1>
-            <p class=”te-hero-sub”>
-                This page is the front door into the documents, charts, transcripts, and data behind the Truth Library.
-                Every link points to a folder in <code>/docs</code> where evidence can live, so anyone — citizen, journalist,
-                or official — can verify claims for themselves.
-            </p>
-        </section>
-
-        <!-- 01 — Monetary & Economic Evidence -->
-        <section class=”te-section”>
-            <span class=”te-section-number”>01</span>
-            <div class=”te-section-inner”>
-                <h2 class=”te-section-title”>MONETARY &amp; ECONOMIC EVIDENCE</h2>
-                <p class=”te-section-hook”>Where does your money actually go?</p>
-                <p class=”te-section-sub”>Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
-                <div class=”te-links”>
-                    <a href=”/docs/monetary/”>Inflation vs Wages Data</a>
-                    <a href=”/docs/housing/”>Housing Cost &amp; Rent Burden</a>
-                    <a href=”/docs/monetary/fed-hearings/”>Federal Reserve Hearings &amp; Transcripts</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 02 — Congress & Mirror Evidence -->
-        <section class=”te-section”>
-            <span class=”te-section-number”>02</span>
-            <div class=”te-section-inner”>
-                <h2 class=”te-section-title”>CONGRESS &amp; MIRROR EVIDENCE</h2>
-                <p class=”te-section-hook”>What do they say vs. what do they do?</p>
-                <p class=”te-section-sub”>How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
-                <div class=”te-links”>
-                    <a href=”/docs/congress/flip-tables/”>Senate &amp; House Flip Tables</a>
-                    <a href=”/docs/congress/heatmaps/”>Narrative Heatmaps</a>
-                    <a href=”/docs/congress/scripts/”>Script &amp; Soundbite Archives</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 03 — Human Impact & Lived Evidence -->
-        <section class=”te-section”>
-            <span class=”te-section-number”>03</span>
-            <div class=”te-section-inner”>
-                <h2 class=”te-section-title”>HUMAN IMPACT &amp; LIVED EVIDENCE</h2>
-                <p class=”te-section-hook”>What does the system cost real people?</p>
-                <p class=”te-section-sub”>Behind every chart is a real life navigating the system every day.</p>
-                <div class=”te-links”>
-                    <a href=”/docs/human-impact/testimonies/”>Cost of Living Testimonies</a>
-                    <a href=”/docs/human-impact/case-studies/”>Case Studies &amp; Stories</a>
-                    <a href=”/docs/human-impact/health/”>Stress, Health &amp; Stability</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 04 — Agencies, Programs & APA Evidence -->
-        <section class=”te-section”>
-            <span class=”te-section-number”>04</span>
-            <div class=”te-section-inner”>
-                <h2 class=”te-section-title”>AGENCIES, PROGRAMS &amp; APA EVIDENCE</h2>
-                <p class=”te-section-hook”>Who writes the rules you live by?</p>
-                <p class=”te-section-sub”>Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
-                <div class=”te-links”>
-                    <a href=”/docs/agencies/profiles/”>Agency Profiles &amp; Powers</a>
-                    <a href=”/docs/agencies/apa-filings/”>APA Filings &amp; Records</a>
-                    <a href=”/docs/agencies/program-outcomes/”>Program Outcomes &amp; Gaps</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 05 — Methods & Sources -->
-        <section class=”te-section”>
-            <span class=”te-section-number”>05</span>
-            <div class=”te-section-inner”>
-                <h2 class=”te-section-title”>METHODS &amp; SOURCES</h2>
-                <p class=”te-section-hook”>How do we know what we claim?</p>
-                <p class=”te-section-sub”>Public, checkable sources — no hidden leaks, no private surveillance.</p>
-                <div class=”te-links”>
-                    <a href=”/docs/meta/data-sources/”>Data Sources</a>
-                    <a href=”/docs/meta/methods/”>Methodology Notes</a>
-                    <a href=”/docs/meta/transparency-commitments/”>Transparency Commitments</a>
-                </div>
-            </div>
-        </section>
-    </main>
+<!-- ROOM 05 -->
+<section class="tl-room" id="room-05">
+  <span class="tl-room-number">05</span>
+  <h2 class="tl-room-title">METHODS &amp;<br>SOURCES</h2>
+  <p class="tl-room-hook">How do we know what we claim?</p>
+  <p class="tl-room-ground">Public, checkable sources — no hidden leaks, no private surveillance.</p>
+  <span class="tl-room-tag">Trust</span>
+  <div class="room-dropdown" id="room05-dropdown">
+    <button class="room-dropdown-btn" onclick="toggleDropdown('room05-dropdown')">View Evidence</button>
+    <div class="room-dropdown-menu">
+      <a class="room-dropdown-item" href="/docs/meta/data-sources/">Data Sources</a>
+      <a class="room-dropdown-item" href="/docs/meta/methods/">Methodology Notes</a>
+      <a class="room-dropdown-item" href="/docs/meta/transparency-commitments/">Transparency Commitments</a>
+    </div>
+  </div>
+</section>
 
     <footer class="site-footer">
         <div class="container footer-layout">
@@ -434,7 +441,7 @@
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; 2025 Mirror. All rights reserved.</p>
+            <p>&copy; 2026 Mirror. All rights reserved.</p>
         </div>
     </footer>
 
@@ -461,6 +468,31 @@
       });
     });
   })();
+
+  // Dropdown toggle function
+  function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    const allDropdowns = document.querySelectorAll('.room-dropdown');
+
+    // Close all other dropdowns
+    allDropdowns.forEach(function(d) {
+      if (d.id !== id) {
+        d.classList.remove('active');
+      }
+    });
+
+    // Toggle this dropdown
+    dropdown.classList.toggle('active');
+  }
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.room-dropdown')) {
+      document.querySelectorAll('.room-dropdown').forEach(function(d) {
+        d.classList.remove('active');
+      });
+    }
+  });
 </script>
 </body>
 </html>
