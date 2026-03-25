@@ -77,10 +77,15 @@
         .tl-room {
             min-height: 70vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             padding: 80px 48px;
             position: relative;
+        }
+        .tl-room-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 500px;
         }
         .tl-room:nth-child(odd) {
             background: #0a192f;
@@ -332,85 +337,95 @@
 
 <!-- ROOM 01 -->
 <section class="tl-room" id="room-01">
-  <span class="tl-room-number">01</span>
-  <h2 class="tl-room-title">MONETARY &amp;<br>ECONOMIC</h2>
-  <p class="tl-room-hook">Where does your money actually go?</p>
-  <p class="tl-room-ground">Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
-  <span class="tl-room-tag">Evidence</span>
-  <div class="room-dropdown" id="room01-dropdown">
-    <button class="room-dropdown-btn" onclick="toggleDropdown('room01-dropdown')">View Evidence</button>
-    <div class="room-dropdown-menu">
-      <a class="room-dropdown-item" href="/docs/monetary/">Inflation vs Wages Data</a>
-      <a class="room-dropdown-item" href="/docs/housing/">Housing Cost &amp; Rent Burden</a>
-      <a class="room-dropdown-item" href="/docs/monetary/fed-hearings/">Federal Reserve Hearings &amp; Transcripts</a>
+  <div class="tl-room-content">
+    <span class="tl-room-number">01</span>
+    <h2 class="tl-room-title">MONETARY &amp;<br>ECONOMIC</h2>
+    <p class="tl-room-hook">Where does your money actually go?</p>
+    <p class="tl-room-ground">Prices, wages, debt, and the behavior of the Federal Reserve and financial system.</p>
+    <span class="tl-room-tag">Evidence</span>
+    <div class="room-dropdown" id="room01-dropdown">
+      <button class="room-dropdown-btn" onclick="toggleDropdown('room01-dropdown')">View Evidence</button>
+      <div class="room-dropdown-menu">
+        <a class="room-dropdown-item" href="/docs/monetary/">Inflation vs Wages Data</a>
+        <a class="room-dropdown-item" href="/docs/housing/">Housing Cost &amp; Rent Burden</a>
+        <a class="room-dropdown-item" href="/docs/monetary/fed-hearings/">Federal Reserve Hearings &amp; Transcripts</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ROOM 02 -->
 <section class="tl-room" id="room-02">
-  <span class="tl-room-number">02</span>
-  <h2 class="tl-room-title">CONGRESS &amp;<br>MIRROR</h2>
-  <p class="tl-room-hook">What do they say vs. what do they do?</p>
-  <p class="tl-room-ground">How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
-  <span class="tl-room-tag">Records</span>
-  <div class="room-dropdown" id="room02-dropdown">
-    <button class="room-dropdown-btn" onclick="toggleDropdown('room02-dropdown')">View Evidence</button>
-    <div class="room-dropdown-menu">
-      <a class="room-dropdown-item" href="/docs/congress/flip-tables/">Senate &amp; House Flip Tables</a>
-      <a class="room-dropdown-item" href="/docs/congress/heatmaps/">Narrative Heatmaps</a>
-      <a class="room-dropdown-item" href="/docs/congress/scripts/">Script &amp; Soundbite Archives</a>
+  <div class="tl-room-content">
+    <span class="tl-room-number">02</span>
+    <h2 class="tl-room-title">CONGRESS &amp;<br>MIRROR</h2>
+    <p class="tl-room-hook">What do they say vs. what do they do?</p>
+    <p class="tl-room-ground">How congressional behavior, rhetoric, and priorities shift over time — and why.</p>
+    <span class="tl-room-tag">Records</span>
+    <div class="room-dropdown" id="room02-dropdown">
+      <button class="room-dropdown-btn" onclick="toggleDropdown('room02-dropdown')">View Evidence</button>
+      <div class="room-dropdown-menu">
+        <a class="room-dropdown-item" href="/docs/congress/flip-tables/">Senate &amp; House Flip Tables</a>
+        <a class="room-dropdown-item" href="/docs/congress/heatmaps/">Narrative Heatmaps</a>
+        <a class="room-dropdown-item" href="/docs/congress/scripts/">Script &amp; Soundbite Archives</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ROOM 03 -->
 <section class="tl-room" id="room-03">
-  <span class="tl-room-number">03</span>
-  <h2 class="tl-room-title">HUMAN<br>IMPACT</h2>
-  <p class="tl-room-hook">What does the system cost real people?</p>
-  <p class="tl-room-ground">Behind every chart is a real life navigating the system every day.</p>
-  <span class="tl-room-tag">Stories</span>
-  <div class="room-dropdown" id="room03-dropdown">
-    <button class="room-dropdown-btn" onclick="toggleDropdown('room03-dropdown')">View Evidence</button>
-    <div class="room-dropdown-menu">
-      <a class="room-dropdown-item" href="/docs/human-impact/testimonies/">Cost of Living Testimonies</a>
-      <a class="room-dropdown-item" href="/docs/human-impact/case-studies/">Case Studies &amp; Stories</a>
-      <a class="room-dropdown-item" href="/docs/human-impact/health/">Stress, Health &amp; Stability</a>
+  <div class="tl-room-content">
+    <span class="tl-room-number">03</span>
+    <h2 class="tl-room-title">HUMAN<br>IMPACT</h2>
+    <p class="tl-room-hook">What does the system cost real people?</p>
+    <p class="tl-room-ground">Behind every chart is a real life navigating the system every day.</p>
+    <span class="tl-room-tag">Stories</span>
+    <div class="room-dropdown" id="room03-dropdown">
+      <button class="room-dropdown-btn" onclick="toggleDropdown('room03-dropdown')">View Evidence</button>
+      <div class="room-dropdown-menu">
+        <a class="room-dropdown-item" href="/docs/human-impact/testimonies/">Cost of Living Testimonies</a>
+        <a class="room-dropdown-item" href="/docs/human-impact/case-studies/">Case Studies &amp; Stories</a>
+        <a class="room-dropdown-item" href="/docs/human-impact/health/">Stress, Health &amp; Stability</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ROOM 04 -->
 <section class="tl-room" id="room-04">
-  <span class="tl-room-number">04</span>
-  <h2 class="tl-room-title">AGENCIES &amp;<br>APA</h2>
-  <p class="tl-room-hook">Who writes the rules you live by?</p>
-  <p class="tl-room-ground">Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
-  <span class="tl-room-tag">Oversight</span>
-  <div class="room-dropdown" id="room04-dropdown">
-    <button class="room-dropdown-btn" onclick="toggleDropdown('room04-dropdown')">View Evidence</button>
-    <div class="room-dropdown-menu">
-      <a class="room-dropdown-item" href="/docs/agencies/profiles/">Agency Profiles &amp; Powers</a>
-      <a class="room-dropdown-item" href="/docs/agencies/apa-filings/">APA Filings &amp; Records</a>
-      <a class="room-dropdown-item" href="/docs/agencies/program-outcomes/">Program Outcomes &amp; Gaps</a>
+  <div class="tl-room-content">
+    <span class="tl-room-number">04</span>
+    <h2 class="tl-room-title">AGENCIES &amp;<br>APA</h2>
+    <p class="tl-room-hook">Who writes the rules you live by?</p>
+    <p class="tl-room-ground">Agency rulemaking, guidance, public data, and APA-focused oversight efforts.</p>
+    <span class="tl-room-tag">Oversight</span>
+    <div class="room-dropdown" id="room04-dropdown">
+      <button class="room-dropdown-btn" onclick="toggleDropdown('room04-dropdown')">View Evidence</button>
+      <div class="room-dropdown-menu">
+        <a class="room-dropdown-item" href="/docs/agencies/profiles/">Agency Profiles &amp; Powers</a>
+        <a class="room-dropdown-item" href="/docs/agencies/apa-filings/">APA Filings &amp; Records</a>
+        <a class="room-dropdown-item" href="/docs/agencies/program-outcomes/">Program Outcomes &amp; Gaps</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ROOM 05 -->
 <section class="tl-room" id="room-05">
-  <span class="tl-room-number">05</span>
-  <h2 class="tl-room-title">METHODS &amp;<br>SOURCES</h2>
-  <p class="tl-room-hook">How do we know what we claim?</p>
-  <p class="tl-room-ground">Public, checkable sources — no hidden leaks, no private surveillance.</p>
-  <span class="tl-room-tag">Trust</span>
-  <div class="room-dropdown" id="room05-dropdown">
-    <button class="room-dropdown-btn" onclick="toggleDropdown('room05-dropdown')">View Evidence</button>
-    <div class="room-dropdown-menu">
-      <a class="room-dropdown-item" href="/docs/meta/data-sources/">Data Sources</a>
-      <a class="room-dropdown-item" href="/docs/meta/methods/">Methodology Notes</a>
-      <a class="room-dropdown-item" href="/docs/meta/transparency-commitments/">Transparency Commitments</a>
+  <div class="tl-room-content">
+    <span class="tl-room-number">05</span>
+    <h2 class="tl-room-title">METHODS &amp;<br>SOURCES</h2>
+    <p class="tl-room-hook">How do we know what we claim?</p>
+    <p class="tl-room-ground">Public, checkable sources — no hidden leaks, no private surveillance.</p>
+    <span class="tl-room-tag">Trust</span>
+    <div class="room-dropdown" id="room05-dropdown">
+      <button class="room-dropdown-btn" onclick="toggleDropdown('room05-dropdown')">View Evidence</button>
+      <div class="room-dropdown-menu">
+        <a class="room-dropdown-item" href="/docs/meta/data-sources/">Data Sources</a>
+        <a class="room-dropdown-item" href="/docs/meta/methods/">Methodology Notes</a>
+        <a class="room-dropdown-item" href="/docs/meta/transparency-commitments/">Transparency Commitments</a>
+      </div>
     </div>
   </div>
 </section>
